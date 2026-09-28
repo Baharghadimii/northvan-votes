@@ -1,0 +1,23 @@
+[project]
+name = "northvan-votes"
+version = "0.1.0"
+description = "Issue-first voter guide for the North Vancouver Oct 17, 2026 general local election"
+requires-python = ">=3.10"
+dependencies = [
+    "requests>=2.31",
+    "beautifulsoup4>=4.12",
+    "lxml>=5.1",
+    "pydantic>=2.6",
+    "pyyaml>=6.0",
+    "pdfplumber>=0.11",
+    "anthropic>=0.40.0",
+    "python-dotenv>=1.0",
+    "tenacity>=8.2",
+]
+
+[tool.setuptools]
+packages = ["pipeline"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"

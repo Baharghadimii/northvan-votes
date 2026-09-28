@@ -1,0 +1,67 @@
+# Members seated during the 2022-2026 term, per municipality.
+#
+# Two jobs:
+#   1. Flag incumbents among the 2026 candidates.
+#   2. Resolve bare surnames in council minutes ("Opposed: Councillors BACK and
+#      POPE") to one specific person.
+#
+# Surnames collide ACROSS municipalities (BACK and BELL both appear in each), so
+# resolution is always scoped to one roster. Never merge these lists.
+#
+# If a surname in the minutes is not listed here the build fails loudly rather
+# than guessing -- which is also how a mid-term appointment or byelection winner
+# we missed would surface. Do not "fix" such a failure by loosening matching;
+# add the member here after confirming from the minutes.
+
+cnv:
+  source: https://www.cnv.org/City-Hall/Council-Meetings/Council-Agendas,-Minutes-and-Videos
+  note: >-
+    Confirmed against the PRESENT list in the September 21, 2026 Regular Council
+    minutes, which seated all seven members.
+  members:
+    - surname: BUCHANAN
+      given: Linda
+      office: mayor
+    - surname: BACK
+      given: Holly
+      office: council
+    - surname: BELL
+      given: Don
+      office: council
+    - surname: GIRARD
+      given: Angela
+      office: council
+    - surname: MCILROY
+      given: Jessica
+      office: council
+    - surname: SHAHRIARI
+      given: Shervin
+      office: council
+    - surname: VALENTE
+      given: Tony
+      office: council
+
+dnv:
+  source: https://www.dnv.org/government-administration/mayor-and-councillors
+  members:
+    - surname: LITTLE
+      given: Mike
+      office: mayor
+    - surname: BACK
+      given: Jordan
+      office: council
+    - surname: FORBES
+      given: Betty
+      office: council
+    - surname: HANSON
+      given: Jim
+      office: council
+    - surname: MAH
+      given: Herman
+      office: council
+    - surname: MURI
+      given: Lisa
+      office: council
+    - surname: POPE
+      given: Catherine
+      office: council
