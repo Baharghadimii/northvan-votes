@@ -54,6 +54,9 @@ class Position(BaseModel):
     """A candidate's stated position: a literal span of one Source."""
 
     category: str
+    # Named local flashpoints this span touches (wastewater plant, amalgamation,
+    # ...). Cross-cutting, so a span can carry a category and flashpoints at once.
+    flashpoints: list[str] = Field(default_factory=list)
     quote: str
     source_url: str
     source_type: SourceType

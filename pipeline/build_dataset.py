@@ -11,12 +11,13 @@ import json
 import sys
 from pathlib import Path
 
-from pipeline.models import Candidate
+from pipeline.models import Candidate, Position
 from pipeline.scrape_cnv import scrape as scrape_cnv
 from pipeline.scrape_dnv import scrape as scrape_dnv
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "candidates.json"
+POSITIONS = ROOT / "data" / "positions.json"
 
 # Field as it stood at the close of nominations, Sept 11 2026.
 EXPECTED_COUNTS = {
@@ -79,8 +80,26 @@ def review_flags(candidates: list[Candidate]) -> list[str]:
     ]
 
 
+def attach_positions(candidates: list[Candidate]) -> None:
+    """Merge tagger output, if it has been run. Unknown ids are a hard error:
+    a stale positions file must not silently attach a quote to nobody."""
+    if not POSITIONS.exists():
+        return
+    tagged = json.loads(POSITIONS.read_text(encoding="utf-8"))
+    by_id = {c.id: c for c in candidates}
+    unknown = sorted(set(tagged) - set(by_id))
+    if unknown:
+        raise BuildError(
+            f"data/positions.json references unknown candidate ids: {unknown}. "
+            "Re-run pipeline.tag_positions against the current field."
+        )
+    for cid, raw in tagged.items():
+        by_id[cid].positions = [Position(**p) for p in raw]
+
+
 def build(refresh: bool = False) -> list[Candidate]:
     candidates = scrape_cnv(refresh=refresh) + scrape_dnv(refresh=refresh)
+    attach_positions(candidates)
     candidates.sort(key=lambda c: (c.municipality, c.office, c.surname, c.name))
     check_counts(candidates)
     check_ids_unique(candidates)

@@ -1,0 +1,320 @@
+# Issue taxonomy.
+#
+# SEED ONLY. These ten came from a frequency pass over the 48 official candidate
+# statements (see pipeline/topics.py). Release 2 re-derives and re-ranks them
+# from four years of council minutes, so expect this file to change once the
+# minutes pipeline runs. Ranking on the site is by council activity, never by
+# the order written here.
+#
+# `keywords` do NOT decide what gets published. They narrow which passages are
+# worth sending to the tagger and act as a fallback when no API key is present.
+# Every published quote is a validated verbatim span -- see pipeline/models.py.
+
+categories:
+  - id: transportation
+    label: Traffic & transportation
+    description: >-
+      Getting around the North Shore: congestion, bridges and crossings, transit
+      and SeaBus, cycling and walking, parking, road safety.
+    keywords:
+      - transportation
+      - traffic
+      - congestion
+      - gridlock
+      - transit
+      - bus
+      - seabus
+      - skytrain
+      - rapid transit
+      - light rail
+      - bridge
+      - ironworkers
+      - second narrows
+      - lions gate
+      - third crossing
+      - crossing
+      - commute
+      - active transportation
+      - cycling
+      - bike
+      - bike lane
+      - sidewalk
+      - pedestrian
+      - spirit trail
+      - parking
+      - mobility pricing
+      - road safety
+
+  - id: housing
+    label: Housing & affordability
+    description: >-
+      Supply, affordability, rental and non-market housing, secondary suites and
+      coach houses, homelessness.
+    keywords:
+      - housing
+      - affordable
+      - affordability
+      - rental
+      - renters
+      - tenant
+      - non-market
+      - below market
+      - co-op
+      - homes
+      - home ownership
+      - first-time
+      - secondary suite
+      - coach house
+      - missing middle
+      - supply
+      - homeless
+      - homelessness
+      - shelter
+
+  - id: taxes-and-spending
+    label: Property taxes & spending
+    description: >-
+      Property tax levels, municipal budgets, capital spending, debt, value for
+      money and cost control.
+    keywords:
+      - property tax
+      - property taxes
+      - taxes
+      - taxpayer
+      - taxpayers
+      - tax dollar
+      - budget
+      - spending
+      - overspending
+      - fiscal
+      - deficit
+      - debt
+      - cost overrun
+      - value for money
+      - waste
+      - affordable for
+      - user fees
+
+  - id: development-and-growth
+    label: Development & growth
+    description: >-
+      Rezoning and development approvals, the Official Community Plan, density,
+      town and village centres, neighbourhood character, permitting speed.
+    keywords:
+      - development
+      - developer
+      - rezoning
+      - zoning
+      - official community plan
+      - ocp
+      - density
+      - densification
+      - highrise
+      - high-rise
+      - tower
+      - neighbourhood character
+      - town centre
+      - village centre
+      - growth
+      - sprawl
+      - permit
+      - permitting
+      - approval process
+      - transit-oriented
+
+  - id: parks-environment-climate
+    label: Parks, environment & climate
+    description: >-
+      Parks and green space, the urban forest, creeks and biodiversity, climate
+      action, emissions, sea level rise.
+    keywords:
+      - park
+      - parks
+      - green space
+      - greenspace
+      - trail
+      - trails
+      - environment
+      - environmental
+      - climate
+      - emissions
+      - carbon
+      - sustainability
+      - tree
+      - trees
+      - urban forest
+      - creek
+      - salmon
+      - biodiversity
+      - habitat
+      - sea level
+      - waterfront
+
+  - id: public-safety-emergency
+    label: Public safety & emergency preparedness
+    description: >-
+      Policing, fire and rescue, wildfire risk, emergency preparedness, crime and
+      community safety.
+    keywords:
+      - public safety
+      - safety
+      - police
+      - policing
+      - rcmp
+      - crime
+      - fire
+      - fire hall
+      - rescue
+      - wildfire
+      - emergency
+      - preparedness
+      - earthquake
+      - flood
+      - hazard
+
+  - id: childcare-seniors-services
+    label: Childcare, seniors & community services
+    description: >-
+      Child care, services for seniors and youth, recreation facilities,
+      libraries, health and social supports.
+    keywords:
+      - child care
+      - childcare
+      - daycare
+      - senior
+      - seniors
+      - youth
+      - recreation
+      - rec centre
+      - community centre
+      - library
+      - pool
+      - arena
+      - health
+      - mental health
+      - substance use
+      - accessibility
+      - inclusion
+      - social services
+
+  - id: local-economy
+    label: Local economy & small business
+    description: >-
+      Small business and main streets, jobs and employment land, tourism, the
+      film sector, the commercial tax base.
+    keywords:
+      - business
+      - businesses
+      - small business
+      - economy
+      - economic
+      - jobs
+      - employment
+      - entrepreneur
+      - retail
+      - main street
+      - shop local
+      - tourism
+      - film
+      - industrial
+      - commercial
+      - tax base
+      - red tape
+
+  - id: governance-and-transparency
+    label: Governance & transparency
+    description: >-
+      How decisions get made: openness and accountability, public consultation,
+      City-District cooperation and amalgamation, regional bodies, oversight.
+    keywords:
+      - governance
+      - transparency
+      - transparent
+      - accountable
+      - accountability
+      - oversight
+      - consultation
+      - consult
+      - engagement
+      - listen
+      - open government
+      - amalgamation
+      - reunification
+      - two municipalities
+      - metro vancouver
+      - regional
+      - inquiry
+      - collaborate
+      - collaboration
+      - conflict of interest
+
+  - id: schools-education
+    label: Schools & education
+    description: >-
+      School District 44 business: student outcomes, staffing, special education,
+      school capacity and capital, budgets. Primarily the trustee races.
+    keywords:
+      - school
+      - schools
+      - education
+      - student
+      - students
+      - teacher
+      - teachers
+      - classroom
+      - curriculum
+      - literacy
+      - special education
+      - inclusive education
+      - school board
+      - trustee
+      - sd44
+      - school district
+      - seismic
+      - catchment
+      - graduation
+
+# Cross-cutting, named local flashpoints. These are not categories; an item or
+# quote can carry a flashpoint tag and a category tag at once. Matching is by
+# exact phrase because the value here is precision, not recall.
+flashpoints:
+  - id: wastewater-treatment-plant
+    label: North Shore Wastewater Treatment Plant
+    description: >-
+      The Metro Vancouver plant whose cost estimate rose from roughly $700M in
+      2013 to $3.86B by 2024, and the share North Shore taxpayers carry.
+    phrases:
+      - wastewater treatment plant
+      - wastewater plant
+      - north shore wastewater
+      - treatment plant
+
+  - id: harry-jerome
+    label: Harry Jerome Community Recreation Centre
+    phrases:
+      - harry jerome
+
+  - id: amalgamation
+    label: Amalgamation / reunification
+    description: >-
+      Whether the City and District should merge. The District maintains a
+      standing "Reunification" file.
+    phrases:
+      - amalgamation
+      - amalgamate
+      - reunification
+      - reunify
+
+  - id: third-crossing
+    label: A third crossing / new bridge
+    phrases:
+      - third crossing
+      - new crossing
+      - second narrows
+      - ironworkers memorial
+      - new bridge
+
+  - id: spirit-trail
+    label: Spirit Trail
+    phrases:
+      - spirit trail
