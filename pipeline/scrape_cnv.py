@@ -19,7 +19,7 @@ from bs4 import BeautifulSoup, Tag
 
 from pipeline.fetching import fetch, retrieved_at
 from pipeline.models import Candidate, Source
-from pipeline.names import candidate_id, display_name, split_listing
+from pipeline.names import candidate_id, display_name, split_listing, unwrap_url
 from pipeline.rosters import is_incumbent
 
 URL = (
@@ -131,11 +131,11 @@ def _parse_body(body: Tag) -> dict:
             continue
         key = _social_key(href)
         if key:
-            out["socials"].setdefault(key, href)
+            out["socials"].setdefault(key, unwrap_url(href))
         elif href.startswith("http") and "cnv.org" not in href:
             out.setdefault("website", None)
             if out["website"] is None:
-                out["website"] = href
+                out["website"] = unwrap_url(href)
 
     return out
 

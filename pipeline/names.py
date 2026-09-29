@@ -51,3 +51,28 @@ def candidate_id(municipality: str, office: str, surname: str, given: str) -> st
 
 def display_name(surname: str, given: str) -> str:
     return f"{prettify(given)} {prettify(surname)}".strip()
+
+
+def unwrap_url(url: str) -> str:
+    """Normalise a link a candidate pasted into their nomination form.
+
+    Some were copied out of Facebook, which wraps outbound links in
+    l.facebook.com/l.php?u=<encoded>&h=... — following that would cite Facebook
+    as the source instead of the candidate's own site.
+    """
+    from urllib.parse import parse_qs, urlparse, urlunparse
+
+    parsed = urlparse(url.strip())
+    if parsed.netloc.endswith("facebook.com") and parsed.path == "/l.php":
+        target = parse_qs(parsed.query).get("u", [None])[0]
+        if target:
+            return unwrap_url(target)
+
+    # Hosts are case-insensitive; paths are not.
+    if parsed.netloc:
+        parsed = parsed._replace(netloc=parsed.netloc.lower())
+    # Strip Facebook's click-tracking parameter if it rode along.
+    if "fbclid=" in parsed.query:
+        kept = [p for p in parsed.query.split("&") if not p.startswith("fbclid=")]
+        parsed = parsed._replace(query="&".join(kept))
+    return urlunparse(parsed)

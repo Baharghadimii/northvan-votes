@@ -14,7 +14,7 @@ from datetime import date
 
 from pipeline.fetching import fetch, retrieved_at
 from pipeline.models import Candidate, Source
-from pipeline.names import candidate_id, display_name, split_listing
+from pipeline.names import candidate_id, display_name, split_listing, unwrap_url
 from pipeline.rosters import is_incumbent
 
 PAGE_URL = "https://www.dnv.org/government-administration/see-who-is-running"
@@ -129,9 +129,9 @@ def _parse_section(section: dict, office: str, retrieved: date) -> Candidate:
                     continue
                 key = SOCIAL_LABELS.get(label.strip().lower())
                 if key:
-                    socials.setdefault(key, href)
+                    socials.setdefault(key, unwrap_url(href))
                 elif label.strip().lower() == "website" and website is None:
-                    website = href
+                    website = unwrap_url(href)
             continue
 
         if in_statement and node_type in ("paragraph", "bulletList"):

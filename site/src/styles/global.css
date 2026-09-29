@@ -370,14 +370,32 @@ button.star[aria-pressed="true"] { color: #c99a2e; }
 /* ---------- support ---------- */
 
 .support-line { font-size: 0.87rem; }
+
+/* Buy Me a Coffee's own yellow. Kept identical in light and dark mode: it is a
+   recognised button and readers scan for the colour, not for our palette.
+   Dark text on #ffdd00 clears WCAG AA comfortably in both themes. */
 a.bmc {
-  display: inline-flex; align-items: center; gap: 7px;
-  padding: 5px 13px; border-radius: 999px;
-  background: var(--surface-2); border: 1px solid var(--border-strong);
-  color: var(--text); text-decoration: none; font-weight: 550;
-  font-size: 0.87rem; white-space: nowrap;
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 9px 18px; border-radius: 999px;
+  background: #ffdd00; border: 1px solid #e0c200;
+  color: #14140f; text-decoration: none;
+  font-weight: 700; font-size: 0.92rem; white-space: nowrap;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.14);
+  transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
-a.bmc:hover { border-color: var(--accent); color: var(--accent-text); }
-a.bmc-big { font-size: 0.95rem; padding: 9px 18px; }
+a.bmc span { font-size: 1.05em; }
+a.bmc:hover {
+  background: #ffe84d; color: #14140f;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.18);
+}
+a.bmc:active { transform: translateY(0); box-shadow: 0 1px 2px rgb(0 0 0 / 0.14); }
+a.bmc:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
+
+a.bmc-big { font-size: 1.02rem; padding: 12px 24px; }
+
+.support-line {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px;
+}
 .support-block { margin-top: 28px; }
 @media print { .support-line, .support-block { display: none; } }
