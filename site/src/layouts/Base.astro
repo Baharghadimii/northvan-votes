@@ -10,9 +10,14 @@ interface Props {
   shuffle?: boolean;
   /** Pages that should offer star-to-shortlist on each candidate. */
   shortlist?: boolean;
+  /** Set by a page that renders its own large countdown, so the thin strip
+   *  at the top is not saying the same thing twice. */
+  ownCountdown?: boolean;
 }
 
-const { title, description, shuffle = false, shortlist = false } = Astro.props;
+const {
+  title, description, shuffle = false, shortlist = false, ownCountdown = false,
+} = Astro.props;
 const path = Astro.url.pathname;
 const full = title === "North Van Votes" ? title : `${title} — North Van Votes`;
 
@@ -39,9 +44,11 @@ const nav = [
   <body>
     <a class="skip" href="#main">Skip to content</a>
 
-    <div class="countdown">
-      <div class="wrap"><Countdown /></div>
-    </div>
+    {!ownCountdown && (
+      <div class="countdown">
+        <div class="wrap"><Countdown /></div>
+      </div>
+    )}
 
     <header class="site-header">
       <div class="wrap">
