@@ -1,0 +1,5 @@
+# North Van Votes — a public voter guide. Please index it.
+User-agent: *
+Allow: /
+
+Sitemap: https://northvanvotes.ca/sitemap-index.xml

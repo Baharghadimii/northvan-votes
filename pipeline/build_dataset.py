@@ -22,6 +22,7 @@ POSITIONS = ROOT / "data" / "positions.json"
 # canonical, reviewable artefact.
 SITE_DATA = ROOT / "site" / "src" / "data" / "candidates.json"
 SITE_TAXONOMY = ROOT / "site" / "src" / "data" / "taxonomy.json"
+PHOTOS = ROOT / "data" / "photos.json"
 
 # Field as it stood at the close of nominations, Sept 11 2026.
 EXPECTED_COUNTS = {
@@ -84,6 +85,22 @@ def review_flags(candidates: list[Candidate]) -> list[str]:
     ]
 
 
+def attach_photos(candidates: list[Candidate]) -> None:
+    """Point photos at our own origin.
+
+    Left hotlinked, every visitor's browser would fetch images from cnv.org and
+    images.dnv.org — a third-party request we cannot make promises about on a
+    site that tells readers it tracks nobody — and the pictures would disappear
+    whenever either municipality tidies its media library after the election.
+    """
+    if not PHOTOS.exists():
+        return
+    local = json.loads(PHOTOS.read_text(encoding="utf-8"))
+    for c in candidates:
+        if c.id in local:
+            c.photo_url = local[c.id]
+
+
 def attach_positions(candidates: list[Candidate]) -> None:
     """Merge tagger output, if it has been run. Unknown ids are a hard error:
     a stale positions file must not silently attach a quote to nobody."""
@@ -104,6 +121,7 @@ def attach_positions(candidates: list[Candidate]) -> None:
 def build(refresh: bool = False) -> list[Candidate]:
     candidates = scrape_cnv(refresh=refresh) + scrape_dnv(refresh=refresh)
     attach_positions(candidates)
+    attach_photos(candidates)
     candidates.sort(key=lambda c: (c.municipality, c.office, c.surname, c.name))
     check_counts(candidates)
     check_ids_unique(candidates)
