@@ -13,6 +13,7 @@
 categories:
   - id: transportation
     label: Traffic & transportation
+    hue: 202
     description: >-
       Getting around the North Shore: congestion, bridges and crossings, transit
       and SeaBus, cycling and walking, parking, road safety.
@@ -47,6 +48,7 @@ categories:
 
   - id: housing
     label: Housing & affordability
+    hue: 25
     description: >-
       Supply, affordability, rental and non-market housing, secondary suites and
       coach houses, homelessness.
@@ -73,6 +75,7 @@ categories:
 
   - id: taxes-and-spending
     label: Property taxes & spending
+    hue: 48
     description: >-
       Property tax levels, municipal budgets, capital spending, debt, value for
       money and cost control.
@@ -97,6 +100,7 @@ categories:
 
   - id: development-and-growth
     label: Development & growth
+    hue: 322
     description: >-
       Rezoning and development approvals, the Official Community Plan, density,
       town and village centres, neighbourhood character, permitting speed.
@@ -124,6 +128,7 @@ categories:
 
   - id: parks-environment-climate
     label: Parks, environment & climate
+    hue: 142
     description: >-
       Parks and green space, the urban forest, creeks and biodiversity, climate
       action, emissions, sea level rise.
@@ -152,6 +157,7 @@ categories:
 
   - id: public-safety-emergency
     label: Public safety & emergency preparedness
+    hue: 265
     description: >-
       Policing, fire and rescue, wildfire risk, emergency preparedness, crime and
       community safety.
@@ -174,6 +180,7 @@ categories:
 
   - id: childcare-seniors-services
     label: Childcare, seniors & community services
+    hue: 350
     description: >-
       Child care, services for seniors and youth, recreation facilities,
       libraries, health and social supports.
@@ -199,6 +206,7 @@ categories:
 
   - id: local-economy
     label: Local economy & small business
+    hue: 78
     description: >-
       Small business and main streets, jobs and employment land, tourism, the
       film sector, the commercial tax base.
@@ -223,6 +231,7 @@ categories:
 
   - id: governance-and-transparency
     label: Governance & transparency
+    hue: 172
     description: >-
       How decisions get made: openness and accountability, public consultation,
       City-District cooperation and amalgamation, regional bodies, oversight.
@@ -250,6 +259,7 @@ categories:
 
   - id: schools-education
     label: Schools & education
+    hue: 188
     description: >-
       School District 44 business: student outcomes, staffing, special education,
       school capacity and capital, budgets. Primarily the trustee races.

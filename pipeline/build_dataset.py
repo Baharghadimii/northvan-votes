@@ -149,6 +149,7 @@ def write_taxonomy() -> None:
                 "id": c["id"],
                 "label": c["label"],
                 "description": " ".join(str(c.get("description", "")).split()),
+                "hue": c.get("hue", 172),
             }
             for c in data["categories"]
         ],

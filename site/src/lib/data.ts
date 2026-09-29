@@ -44,6 +44,8 @@ export interface Category {
   id: string;
   label: string;
   description: string;
+  /** Hue that tints this topic's card. Identifies a subject, not a position. */
+  hue: number;
 }
 
 export interface Flashpoint {

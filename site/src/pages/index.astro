@@ -38,7 +38,7 @@ const allRaces = races();
 
   <div class="grid grid-2 grid-3" style="margin-top:18px">
     {cats.map((c) => (
-      <a class="card issue-card" href={`/issues/${c.id}/`}>
+      <a class="card issue-card" href={`/issues/${c.id}/`} style={`--cat-hue:${c.hue}`}>
         <h3>{c.label}</h3>
         <p>{c.description}</p>
         <div class="count">

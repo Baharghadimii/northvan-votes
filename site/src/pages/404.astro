@@ -17,7 +17,7 @@ const top = categoriesByCoverage().slice(0, 6);
   <h2>Most-discussed issues</h2>
   <div class="grid grid-2 grid-3" style="margin-top:14px">
     {top.map((c) => (
-      <a class="card issue-card" href={`/issues/${c.id}/`}>
+      <a class="card issue-card" href={`/issues/${c.id}/`} style={`--cat-hue:${c.hue}`}>
         <h3>{c.label}</h3>
         <div class="count">{c.count} of {candidates.length} candidates</div>
       </a>

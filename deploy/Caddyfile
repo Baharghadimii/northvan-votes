@@ -20,8 +20,9 @@ northvanvotes.ca {
 		-Server
 	}
 
-	# Astro fingerprints these filenames, so they can never go stale.
-	@immutable path /_astro/*
+	# Astro fingerprints these filenames, so they can never go stale. Fonts are
+	# self-hosted and replaced only by a redeploy.
+	@immutable path /_astro/* /fonts/*
 	header @immutable Cache-Control "public, max-age=31536000, immutable"
 
 	# Photos are named by candidate id; they change only on a redeploy.

@@ -2,51 +2,61 @@
   "categories": [
     {
       "description": "Getting around the North Shore: congestion, bridges and crossings, transit and SeaBus, cycling and walking, parking, road safety.",
+      "hue": 202,
       "id": "transportation",
       "label": "Traffic & transportation"
     },
     {
       "description": "Supply, affordability, rental and non-market housing, secondary suites and coach houses, homelessness.",
+      "hue": 25,
       "id": "housing",
       "label": "Housing & affordability"
     },
     {
       "description": "Property tax levels, municipal budgets, capital spending, debt, value for money and cost control.",
+      "hue": 48,
       "id": "taxes-and-spending",
       "label": "Property taxes & spending"
     },
     {
       "description": "Rezoning and development approvals, the Official Community Plan, density, town and village centres, neighbourhood character, permitting speed.",
+      "hue": 322,
       "id": "development-and-growth",
       "label": "Development & growth"
     },
     {
       "description": "Parks and green space, the urban forest, creeks and biodiversity, climate action, emissions, sea level rise.",
+      "hue": 142,
       "id": "parks-environment-climate",
       "label": "Parks, environment & climate"
     },
     {
       "description": "Policing, fire and rescue, wildfire risk, emergency preparedness, crime and community safety.",
+      "hue": 265,
       "id": "public-safety-emergency",
       "label": "Public safety & emergency preparedness"
     },
     {
       "description": "Child care, services for seniors and youth, recreation facilities, libraries, health and social supports.",
+      "hue": 350,
       "id": "childcare-seniors-services",
       "label": "Childcare, seniors & community services"
     },
     {
       "description": "Small business and main streets, jobs and employment land, tourism, the film sector, the commercial tax base.",
+      "hue": 78,
       "id": "local-economy",
       "label": "Local economy & small business"
     },
     {
       "description": "How decisions get made: openness and accountability, public consultation, City-District cooperation and amalgamation, regional bodies, oversight.",
+      "hue": 172,
       "id": "governance-and-transparency",
       "label": "Governance & transparency"
     },
     {
       "description": "School District 44 business: student outcomes, staffing, special education, school capacity and capital, budgets. Primarily the trustee races.",
+      "hue": 188,
       "id": "schools-education",
       "label": "Schools & education"
     }
