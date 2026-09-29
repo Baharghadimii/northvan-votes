@@ -66,6 +66,14 @@ request per second, everything cached to `data/raw/` so re-runs never touch a
 volunteer's campaign site twice. **nsnews.com is Cloudflare-blocked to automated
 access and is never scraped** — link to their coverage, don't ingest it.
 
+## One operational rule: never pay to promote this
+
+Elections BC lists "websites or blogs" and "any free communication on the
+internet" as **not** election advertising under LECFA. The line is *placement
+cost*. A boosted post, a Google ad, or paid canvassing pointing at this site
+would convert it into election advertising and trigger third-party sponsor
+registration. Organic sharing is fine. Don't buy ads for it.
+
 ## Not built yet
 
 Release 2: four years of council minutes (~250 PDFs, confirmed machine-readable
