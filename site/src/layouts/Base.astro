@@ -1,6 +1,7 @@
 ---
 import "~/styles/global.css";
-import { ELECTION_DAY } from "~/lib/data";
+import Countdown from "~/components/Countdown.astro";
+import Support from "~/components/Support.astro";
 
 interface Props {
   title: string;
@@ -14,13 +15,6 @@ interface Props {
 const { title, description, shuffle = false, shortlist = false } = Astro.props;
 const path = Astro.url.pathname;
 const full = title === "North Van Votes" ? title : `${title} — North Van Votes`;
-
-const days = Math.max(
-  0,
-  Math.round(
-    (new Date(`${ELECTION_DAY}T00:00:00`).getTime() - Date.now()) / 86400000,
-  ),
-);
 
 const nav = [
   { href: "/", label: "Issues" },
@@ -46,11 +40,7 @@ const nav = [
     <a class="skip" href="#main">Skip to content</a>
 
     <div class="countdown">
-      <div class="wrap">
-        {days > 0
-          ? `Election day is Saturday, October 17, 2026 — ${days} day${days === 1 ? "" : "s"} away.`
-          : "Election day is Saturday, October 17, 2026."}
-      </div>
+      <div class="wrap"><Countdown /></div>
     </div>
 
     <header class="site-header">
@@ -86,6 +76,7 @@ const nav = [
           See <a href="/methodology/">how this was built</a>, including how to ask
           for a correction.
         </p>
+        <Support />
       </div>
     </footer>
 

@@ -336,3 +336,48 @@ button.star[aria-pressed="true"] { color: #c99a2e; }
   .shortlist-bar, button.star, .notice { display: none; }
   .ballot-race { break-inside: avoid; }
 }
+
+/* ---------- countdown ---------- */
+
+.countdown-inline { display: flex; flex-wrap: wrap; gap: 0 6px; align-items: baseline; }
+.countdown-inline .cd-compact { font-weight: 650; font-variant-numeric: tabular-nums; }
+.countdown-inline .cd-sub { color: var(--accent-text); opacity: 0.75; }
+@media (max-width: 620px) { .countdown-inline .cd-sub { display: none; } }
+
+.countdown-hero {
+  background: var(--surface); border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius); padding: 18px 20px; margin: 22px 0 8px;
+  box-shadow: var(--shadow);
+}
+.countdown-hero .cd-label {
+  display: block; font-size: 0.85rem; letter-spacing: 0.04em;
+  text-transform: uppercase; color: var(--text-muted); margin-bottom: 10px;
+}
+.cd-clock { display: flex; flex-wrap: wrap; gap: 10px 26px; }
+.cd-unit { min-width: 62px; }
+.cd-unit b {
+  display: block; font-size: clamp(1.7rem, 1.3rem + 1.6vw, 2.5rem);
+  line-height: 1; font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em; color: var(--accent-text);
+}
+.cd-unit span { font-size: 0.78rem; color: var(--text-faint); }
+.countdown-hero .cd-sub {
+  display: block; margin-top: 12px; font-size: 0.9rem; color: var(--text-muted);
+}
+@media print { .countdown-hero, .countdown-inline { display: none; } }
+
+/* ---------- support ---------- */
+
+.support-line { font-size: 0.87rem; }
+a.bmc {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 5px 13px; border-radius: 999px;
+  background: var(--surface-2); border: 1px solid var(--border-strong);
+  color: var(--text); text-decoration: none; font-weight: 550;
+  font-size: 0.87rem; white-space: nowrap;
+}
+a.bmc:hover { border-color: var(--accent); color: var(--accent-text); }
+a.bmc-big { font-size: 0.95rem; padding: 9px 18px; }
+.support-block { margin-top: 28px; }
+@media print { .support-line, .support-block { display: none; } }

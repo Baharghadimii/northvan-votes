@@ -1,0 +1,105 @@
+---
+import { ADVANCE_OPENS, POLLS_OPEN, POLLS_CLOSE } from "~/lib/election";
+
+interface Props {
+  /** "bar" is the thin header strip; "hero" is the large homepage block. */
+  variant?: "bar" | "hero";
+}
+const { variant = "bar" } = Astro.props;
+const id = `cd-${Math.random().toString(36).slice(2, 9)}`;
+---
+
+<div class={variant === "hero" ? "countdown-hero" : "countdown-inline"} id={id} data-countdown>
+  <span class="cd-label" data-cd-label>Election day is Saturday, October 17, 2026.</span>
+  {variant === "hero" && (
+    <div class="cd-clock" data-cd-clock hidden>
+      <div class="cd-unit"><b data-cd-d>–</b><span>days</span></div>
+      <div class="cd-unit"><b data-cd-h>–</b><span>hours</span></div>
+      <div class="cd-unit"><b data-cd-m>–</b><span>minutes</span></div>
+      <div class="cd-unit"><b data-cd-s>–</b><span>seconds</span></div>
+    </div>
+  )}
+  {variant === "bar" && <span class="cd-compact" data-cd-compact></span>}
+  <span class="cd-sub" data-cd-sub></span>
+</div>
+
+<script is:inline define:vars={{ id, ADVANCE_OPENS, POLLS_OPEN, POLLS_CLOSE }}>
+  (function () {
+    var root = document.getElementById(id);
+    if (!root) return;
+
+    var advance = Date.parse(ADVANCE_OPENS);
+    var open = Date.parse(POLLS_OPEN);
+    var close = Date.parse(POLLS_CLOSE);
+
+    var label = root.querySelector("[data-cd-label]");
+    var sub = root.querySelector("[data-cd-sub]");
+    var compact = root.querySelector("[data-cd-compact]");
+    var clock = root.querySelector("[data-cd-clock]");
+    var d = root.querySelector("[data-cd-d]");
+    var h = root.querySelector("[data-cd-h]");
+    var m = root.querySelector("[data-cd-m]");
+    var s = root.querySelector("[data-cd-s]");
+
+    function plural(n, word) { return n + " " + word + (n === 1 ? "" : "s"); }
+
+    function phase(now) {
+      // Each phase answers a different question, so the copy changes with it
+      // rather than counting down to one fixed instant all month.
+      if (now < advance) {
+        return { target: advance, lead: "Advance voting opens in",
+                 sub: "General voting day is Saturday, October 17." };
+      }
+      if (now < open) {
+        return { target: open, lead: "General voting day in",
+                 sub: "Advance voting is open now — you do not have to wait." };
+      }
+      if (now < close) {
+        return { target: close, lead: "Polls close in",
+                 sub: "Voting places are open until 8:00 p.m." };
+      }
+      return { target: null, lead: "Voting has closed.",
+               sub: "Results are published by each municipality." };
+    }
+
+    function tick() {
+      var now = Date.now();
+      var p = phase(now);
+
+      if (p.target === null) {
+        if (label) label.textContent = p.lead;
+        if (compact) compact.textContent = "";
+        if (clock) clock.hidden = true;
+        if (sub) sub.textContent = p.sub;
+        return;
+      }
+
+      var left = Math.max(0, p.target - now);
+      var secs = Math.floor(left / 1000);
+      var days = Math.floor(secs / 86400);
+      var hours = Math.floor((secs % 86400) / 3600);
+      var mins = Math.floor((secs % 3600) / 60);
+      var rem = secs % 60;
+
+      if (clock) {
+        clock.hidden = false;
+        if (label) label.textContent = p.lead;
+        if (d) d.textContent = String(days);
+        if (h) h.textContent = String(hours).padStart(2, "0");
+        if (m) m.textContent = String(mins).padStart(2, "0");
+        if (s) s.textContent = String(rem).padStart(2, "0");
+      } else if (compact) {
+        if (label) label.textContent = p.lead + " ";
+        compact.textContent =
+          days > 0 ? plural(days, "day") + ", " + plural(hours, "hour")
+          : hours > 0 ? plural(hours, "hour") + ", " + plural(mins, "minute")
+          : plural(mins, "minute") + ", " + plural(rem, "second");
+      }
+      if (sub) sub.textContent = p.sub;
+    }
+
+    tick();
+    // A seconds display needs a second; the header strip does not.
+    setInterval(tick, clock ? 1000 : 30000);
+  })();
+</script>

@@ -1,5 +1,6 @@
 ---
 import Base from "~/layouts/Base.astro";
+import Support from "~/components/Support.astro";
 import { candidates, categories, formatDate } from "~/lib/data";
 
 const withStatement = candidates.filter((c) => c.sources.length > 0);
@@ -144,6 +145,8 @@ const retrieved = withStatement[0]?.sources[0]?.retrieved;
     funded by, and accepts nothing from, anyone running in this election or
     anyone advocating for or against them. It carries no advertising.
   </p>
+
+  <Support variant="block" />
 
   <div class="notice">
     <p>

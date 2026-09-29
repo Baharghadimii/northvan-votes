@@ -1,0 +1,31 @@
+---
+import { supportUrl, SUPPORT_BLURB } from "~/lib/support";
+
+interface Props { variant?: "footer" | "block" }
+const { variant = "footer" } = Astro.props;
+const url = supportUrl();
+---
+
+{url && (variant === "footer" ? (
+  <p class="support-line">
+    {SUPPORT_BLURB}{" "}
+    <a class="bmc" href={url} rel="noopener nofollow" target="_blank">
+      <span aria-hidden="true">☕</span> Buy me a coffee
+    </a>
+  </p>
+) : (
+  <div class="card support-block">
+    <h3 style="margin-bottom:6px">Support this site</h3>
+    <p style="margin-bottom:12px; color:var(--text-muted); font-size:0.93rem">
+      {SUPPORT_BLURB}
+    </p>
+    <a class="bmc bmc-big" href={url} rel="noopener nofollow" target="_blank">
+      <span aria-hidden="true">☕</span> Buy me a coffee
+    </a>
+    <p style="margin:12px 0 0; font-size:0.83rem; color:var(--text-faint)">
+      Contributions are not accepted from candidates in this election or from
+      anyone campaigning for or against one, and they buy nothing on this
+      site — not placement, not wording, not ordering.
+    </p>
+  </div>
+))}

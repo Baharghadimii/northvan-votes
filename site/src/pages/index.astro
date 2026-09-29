@@ -1,5 +1,6 @@
 ---
 import Base from "~/layouts/Base.astro";
+import Countdown from "~/components/Countdown.astro";
 import { categoriesByCoverage, candidates, races } from "~/lib/data";
 
 const cats = categoriesByCoverage();
@@ -19,6 +20,8 @@ const allRaces = races();
     read what each of them has actually said about it — in their own words, with
     a link to the source.
   </p>
+
+  <Countdown variant="hero" />
 
   <div class="stat-row">
     <div class="stat"><b>{candidates.length}</b><span>candidates, both municipalities</span></div>
