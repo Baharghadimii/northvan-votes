@@ -8,7 +8,8 @@
 set -euo pipefail
 
 VPS="${NVV_VPS:-209.250.232.171}"
-VPS_USER="${NVV_VPS_USER:-$USER}"
+VPS_USER="${NVV_VPS_USER:-root}"
+SSH_KEY="${NVV_SSH_KEY:-$HOME/.ssh/vultr_etsy}"
 WEBROOT="${NVV_WEBROOT:-/var/www/northvanvotes}"
 
 cd "$(dirname "${BASH_SOURCE[0]}")/.."
@@ -22,8 +23,13 @@ npm --prefix site run build
 echo "==> Uploading to ${VPS_USER}@${VPS}:${WEBROOT}"
 # --delete removes files that no longer exist, so a withdrawn candidate's page
 # actually disappears instead of lingering.
-rsync -az --delete --human-readable --info=stats1 \
+# macOS ships rsync 2.6.9, which has no --info=stats1; --stats works on both.
+rsync -az --delete --human-readable --stats \
+  -e "ssh -i ${SSH_KEY}" \
   site/dist/ "${VPS_USER}@${VPS}:${WEBROOT}/"
+
+# Caddy runs as its own user and only needs to read.
+ssh -i "${SSH_KEY}" "${VPS_USER}@${VPS}" "chown -R caddy:caddy ${WEBROOT}"
 
 echo "==> Verifying"
 curl -sS -o /dev/null -w "  https://northvanvotes.ca -> %{http_code} in %{time_total}s\n" \

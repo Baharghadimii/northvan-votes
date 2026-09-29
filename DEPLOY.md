@@ -21,6 +21,17 @@ registrar and point the nameservers at Cloudflare afterwards:
 Consider grabbing `northvanvotes.com` too (~$15) so nobody else points it
 somewhere odd mid-campaign. Park it and redirect.
 
+## Current state (set up 2026-09-29)
+
+The VPS is **already configured and serving**. Caddy v2.11.4 is installed and
+running, ports 80/443 are open in `ufw`, the site is at
+`/var/www/northvanvotes`, and `xray` (the VPN, port 27372) and
+`market-research-agent-swarm` (port 5000) were left untouched.
+
+**Only DNS remains.** See "Pointing the domain" below.
+
+To redeploy after any change: `bash deploy/deploy.sh`
+
 ## 2a. Hosting on your own VPS
 
 `deploy/` has everything: a `Caddyfile`, a one-time `setup-vps.sh`, and
@@ -69,15 +80,31 @@ caps at 100 GB/month.
 
 Every push to `main` redeploys automatically.
 
-## 3. Point the domain
+## 3. Pointing the domain (VPS + Cloudflare proxy)
 
-1. In Cloudflare, **Add a site**, enter `northvanvotes.ca`
-2. Copy the two nameservers it gives you
-3. At your registrar, replace the existing nameservers with those two
-4. Back in **Pages → your project → Custom domains**, add `northvanvotes.ca`
-   and `www.northvanvotes.ca`
+The order matters. Caddy proves it controls the domain over plain HTTP, so give
+it a clear path to do that **before** turning the proxy on.
 
-DNS propagation is usually minutes, occasionally a few hours. SSL is automatic.
+1. Cloudflare → **Add a site** → `northvanvotes.ca`. Copy the two nameservers.
+2. At the registrar (Porkbun), replace the nameservers with those two.
+3. In Cloudflare **DNS**, add:
+
+   | Type | Name | Content | Proxy |
+   |---|---|---|---|
+   | A | `northvanvotes.ca` | `209.250.232.171` | **DNS only** (grey) |
+   | CNAME | `www` | `northvanvotes.ca` | **DNS only** (grey) |
+
+4. Wait for it to resolve, then load `https://northvanvotes.ca`. Caddy fetches a
+   Let's Encrypt certificate on that first request — about 30 seconds.
+5. **Only once that works**, flip both records to **Proxied** (orange) and set
+   **SSL/TLS → Full (strict)**.
+
+Going straight to proxied can leave Caddy unable to complete the ACME challenge
+and stuck retrying. Grey first is foolproof and costs one extra minute.
+
+Once proxied: Cloudflare's Vancouver edge serves North Vancouver readers,
+Frankfurt is hit only on a cache miss, and the origin IP — the same box running
+your VPN and the Etsy pipeline — stops being public.
 
 ## 4. Before it goes public
 
