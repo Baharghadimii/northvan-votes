@@ -21,7 +21,32 @@ registrar and point the nameservers at Cloudflare afterwards:
 Consider grabbing `northvanvotes.com` too (~$15) so nobody else points it
 somewhere odd mid-campaign. Park it and redirect.
 
-## 2. Host on Cloudflare Pages
+## 2a. Hosting on your own VPS
+
+`deploy/` has everything: a `Caddyfile`, a one-time `setup-vps.sh`, and
+`deploy.sh` which builds on the Mac and rsyncs `dist/` up. The VPS only serves
+files — no Node, no build step, nothing competing with the Etsy pipeline for
+memory.
+
+```bash
+scp -r deploy 209.250.232.171:~/northvan-votes/    # or git clone on the box
+ssh 209.250.232.171 'bash ~/northvan-votes/deploy/setup-vps.sh'
+bash deploy/deploy.sh
+```
+
+Caddy issues and renews TLS by itself — no certbot, no renewal cron.
+
+**Two things measured on 2026-09-29 that matter for this choice:**
+
+- **The VPS is in Frankfurt** (Vultr, AS20473). Every request from a North
+  Vancouver phone crosses the Atlantic and a continent. For reference, from this
+  machine `cnv.org` connects in ~28 ms and a Cloudflare edge in ~24 ms.
+- **Ports 80 and 443 time out** from outside, so the firewall will need opening
+  (Vultr's cloud firewall as well as `ufw`).
+
+Neither is a blocker, but put Cloudflare's free proxy in front of it — see below.
+
+## 2b. Host on Cloudflare Pages
 
 Free, unlimited bandwidth, global CDN, free SSL. Bandwidth matters here: traffic
 will spike on **October 7** and **October 17**, which is exactly when a metered
