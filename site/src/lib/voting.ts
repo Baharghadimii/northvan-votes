@@ -6,7 +6,7 @@
  *  update `verified`.
  */
 
-export const VERIFIED = "2026-09-28";
+export const VERIFIED = "2026-09-29";
 
 export interface VotingPlace { name: string; address: string; note?: string }
 export interface AdvanceDay { date: string; hours: string; places: VotingPlace[] }
@@ -101,12 +101,16 @@ export const VOTING: Record<"cnv" | "dnv", MunicipalityVoting> = {
         { name: "Norgate Elementary School", address: "1295 Sowden Street" },
         { name: "Parkgate Community Centre", address: "3625 Banff Court" },
         { name: "Ross Road Elementary School", address: "2875 Bushnell Place" },
+        { name: "Seycove Secondary School", address: "1204 Caledonia Avenue" },
+        { name: "Sherwood Park Elementary School", address: "4085 Dollar Road" },
+        { name: "Upper Lynn Elementary School", address: "1540 Coleman Street" },
+        { name: "Windsor Secondary School", address: "931 Broadview Drive" },
       ],
     },
     special:
       "A special voting opportunity runs Saturday, October 10, 9:00 a.m. – 4:00 p.m. at Lions Gate Hospital (231 East 15th Street) for inpatients at Lions Gate Hospital, North Shore Hospice and the HOpe Centre.",
     extras: [
-      "The District lists 22 voting places for general voting day; the list here is taken from its page and may be incomplete — check the source before you travel.",
+      "Curbside voting, priority access and other assistance are available at District voting places.",
     ],
   },
 };
