@@ -18,6 +18,10 @@ from pipeline.scrape_dnv import scrape as scrape_dnv
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "candidates.json"
 POSITIONS = ROOT / "data" / "positions.json"
+# The site imports this copy at build time; data/candidates.json stays the
+# canonical, reviewable artefact.
+SITE_DATA = ROOT / "site" / "src" / "data" / "candidates.json"
+SITE_TAXONOMY = ROOT / "site" / "src" / "data" / "taxonomy.json"
 
 # Field as it stood at the close of nominations, Sept 11 2026.
 EXPECTED_COUNTS = {
@@ -109,17 +113,62 @@ def build(refresh: bool = False) -> list[Candidate]:
 
 def write(candidates: list[Candidate]) -> None:
     payload = [json.loads(c.model_dump_json()) for c in candidates]
-    OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(
+    blob = json.dumps(payload, indent=2, ensure_ascii=False, sort_keys=True) + "\n"
+    for target in (OUT, SITE_DATA):
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text(blob, encoding="utf-8")
+
+
+def write_taxonomy() -> None:
+    """Publish the taxonomy the site renders labels from, so page copy and the
+    tagger can never drift apart."""
+    import yaml
+
+    data = yaml.safe_load((ROOT / "config" / "categories.yaml").read_text(encoding="utf-8"))
+    payload = {
+        "categories": [
+            {
+                "id": c["id"],
+                "label": c["label"],
+                "description": " ".join(str(c.get("description", "")).split()),
+            }
+            for c in data["categories"]
+        ],
+        "flashpoints": [
+            {
+                "id": f["id"],
+                "label": f["label"],
+                "description": " ".join(str(f.get("description", "")).split()),
+            }
+            for f in data.get("flashpoints", [])
+        ],
+    }
+    SITE_TAXONOMY.parent.mkdir(parents=True, exist_ok=True)
+    SITE_TAXONOMY.write_text(
         json.dumps(payload, indent=2, ensure_ascii=False, sort_keys=True) + "\n",
         encoding="utf-8",
     )
 
 
+def check_categories_known(candidates: list[Candidate]) -> None:
+    """A position tagged with a category the site has no label for would render
+    as a blank heading. Fail instead."""
+    import yaml
+
+    data = yaml.safe_load((ROOT / "config" / "categories.yaml").read_text(encoding="utf-8"))
+    known = {c["id"] for c in data["categories"]}
+    seen = {p.category for c in candidates for p in c.positions}
+    unknown = sorted(seen - known)
+    if unknown:
+        raise BuildError(f"positions use unknown categories: {unknown}")
+
+
 def main() -> int:
     refresh = "--refresh" in sys.argv
     candidates = build(refresh=refresh)
+    check_categories_known(candidates)
     write(candidates)
+    write_taxonomy()
 
     print(f"{len(candidates)} candidates -> {OUT.relative_to(ROOT)}")
     for muni in ("cnv", "dnv"):

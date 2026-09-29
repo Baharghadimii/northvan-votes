@@ -1,0 +1,133 @@
+---
+import Base from "~/layouts/Base.astro";
+import { VOTING, VERIFIED } from "~/lib/voting";
+import { formatDate, races } from "~/lib/data";
+
+const munis = ["cnv", "dnv"] as const;
+const allRaces = races();
+---
+
+<Base
+  title="How to vote"
+  description="Which North Vancouver municipality you vote in, when and where to vote, and what ID to bring for October 17, 2026."
+>
+  <h1>How to vote on October 17</h1>
+  <p class="lede">
+    North Vancouver is two separate municipalities with two separate ballots.
+    Sorting out which one you're in is the first thing to do — everything else
+    follows from it.
+  </p>
+
+  <div class="notice">
+    <p>
+      <strong>Advance voting starts Wednesday, October 7</strong> in both
+      municipalities. You do not have to wait for the 17th.
+    </p>
+  </div>
+
+  <h2>Which one am I in?</h2>
+  <p>
+    They are genuinely different local governments, each with its own mayor and
+    council. You vote in exactly one of them — whichever you live in (or, if you
+    own property here without living here, whichever the property is in).
+  </p>
+  <ul>
+    <li>
+      <strong>City of North Vancouver</strong> — the smaller, denser area around
+      Lonsdale and the waterfront, roughly between the Capilano River and Lynn
+      Creek south of about 29th Street.
+    </li>
+    <li>
+      <strong>District of North Vancouver</strong> — the larger area wrapping
+      around it: Lynn Valley, Deep Cove, Edgemont, Capilano Highlands, Seymour,
+      Parkgate, Blueridge and the North Shore mountains.
+    </li>
+  </ul>
+  <p>
+    If you are not sure, the reliable test is your property tax or utility
+    bill — it names the municipality that issued it. You can also call the
+    election office for either one; they will tell you in a minute.
+    We deliberately do not guess from your address here, because being told the
+    wrong ballot is worse than being told to check.
+  </p>
+
+  <h2>What to bring</h2>
+  <p>
+    <strong>Two pieces of ID</strong>, at least one showing your signature, together
+    proving your name and residential address. A BC driver's licence, BC Services
+    Card, passport, utility bill, property tax notice, credit or debit card, or
+    student ID all count. If neither document shows your address, you can make a
+    solemn declaration at the voting place. You do not need to register in
+    advance — you can register when you vote.
+  </p>
+
+  {munis.map((key) => {
+    const m = VOTING[key];
+    return (
+      <section style="margin-top:36px">
+        <div class="race-heading"><h2>{m.name}</h2></div>
+
+        <h3 style="margin-top:18px">Advance voting</h3>
+        <div class="grid grid-2">
+          {m.advance.map((day) => (
+            <div class="card">
+              <strong>{day.date}</strong>
+              <div class="candidate-meta">{day.hours}</div>
+              <ul style="margin:8px 0 0; padding-left:18px; font-size:0.9rem">
+                {day.places.map((p) => (
+                  <li>{p.name}<br /><span style="color:var(--text-faint)">{p.address}</span></li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <h3 style="margin-top:22px">General voting day — Saturday, October 17</h3>
+        <p class="candidate-meta">Open {m.generalDay.hours}. You may vote at any of these places.</p>
+        <ul style="columns:2; column-gap:30px; font-size:0.92rem; padding-left:18px">
+          {m.generalDay.places.map((p) => (
+            <li style="break-inside:avoid; margin-bottom:5px">
+              {p.name}<br />
+              <span style="color:var(--text-faint)">{p.address}</span>
+              {p.note === "curbside" && <span class="tag" style="margin-left:5px">curbside</span>}
+            </li>
+          ))}
+        </ul>
+
+        {m.special && <p class="candidate-meta">{m.special}</p>}
+        {m.extras.map((e) => <p class="candidate-meta">{e}</p>)}
+
+        <p style="font-size:0.85rem; color:var(--text-faint)">
+          Source: <a href={m.source} rel="noopener">{m.name} election page</a> ·
+          {" "}Elections office {m.contact.phone},
+          {" "}<a href={`mailto:${m.contact.email}`}>{m.contact.email}</a>
+        </p>
+      </section>
+    );
+  })}
+
+  <h2 style="margin-top:38px">What's on your ballot</h2>
+  <ul class="linklist">
+    {allRaces.map((r) => (
+      <li>
+        <a class="tag" href={`/candidates/#${r.key}`} style="text-decoration:none">
+          {r.label} — choose {r.seats} of {r.candidates.length}
+        </a>
+      </li>
+    ))}
+  </ul>
+  <p class="candidate-meta" style="margin-top:10px">
+    School trustees for School District 44 are elected by voters in both
+    municipalities, but on separate ballots with different candidates.
+  </p>
+
+  <div class="notice" style="margin-top:28px">
+    <p>
+      Dates, hours and locations here were transcribed from the two municipal
+      websites and last checked on {formatDate(VERIFIED)}. They are the ones that
+      matter on the day, so if anything here disagrees with the official page,
+      believe the official page and please
+      {" "}<a href="/methodology/#corrections">tell us</a>.
+    </p>
+  </div>
+</Base>

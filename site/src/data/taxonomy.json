@@ -1,0 +1,81 @@
+{
+  "categories": [
+    {
+      "description": "Getting around the North Shore: congestion, bridges and crossings, transit and SeaBus, cycling and walking, parking, road safety.",
+      "id": "transportation",
+      "label": "Traffic & transportation"
+    },
+    {
+      "description": "Supply, affordability, rental and non-market housing, secondary suites and coach houses, homelessness.",
+      "id": "housing",
+      "label": "Housing & affordability"
+    },
+    {
+      "description": "Property tax levels, municipal budgets, capital spending, debt, value for money and cost control.",
+      "id": "taxes-and-spending",
+      "label": "Property taxes & spending"
+    },
+    {
+      "description": "Rezoning and development approvals, the Official Community Plan, density, town and village centres, neighbourhood character, permitting speed.",
+      "id": "development-and-growth",
+      "label": "Development & growth"
+    },
+    {
+      "description": "Parks and green space, the urban forest, creeks and biodiversity, climate action, emissions, sea level rise.",
+      "id": "parks-environment-climate",
+      "label": "Parks, environment & climate"
+    },
+    {
+      "description": "Policing, fire and rescue, wildfire risk, emergency preparedness, crime and community safety.",
+      "id": "public-safety-emergency",
+      "label": "Public safety & emergency preparedness"
+    },
+    {
+      "description": "Child care, services for seniors and youth, recreation facilities, libraries, health and social supports.",
+      "id": "childcare-seniors-services",
+      "label": "Childcare, seniors & community services"
+    },
+    {
+      "description": "Small business and main streets, jobs and employment land, tourism, the film sector, the commercial tax base.",
+      "id": "local-economy",
+      "label": "Local economy & small business"
+    },
+    {
+      "description": "How decisions get made: openness and accountability, public consultation, City-District cooperation and amalgamation, regional bodies, oversight.",
+      "id": "governance-and-transparency",
+      "label": "Governance & transparency"
+    },
+    {
+      "description": "School District 44 business: student outcomes, staffing, special education, school capacity and capital, budgets. Primarily the trustee races.",
+      "id": "schools-education",
+      "label": "Schools & education"
+    }
+  ],
+  "flashpoints": [
+    {
+      "description": "The Metro Vancouver plant whose cost estimate rose from roughly $700M in 2013 to $3.86B by 2024, and the share North Shore taxpayers carry.",
+      "id": "wastewater-treatment-plant",
+      "label": "North Shore Wastewater Treatment Plant"
+    },
+    {
+      "description": "",
+      "id": "harry-jerome",
+      "label": "Harry Jerome Community Recreation Centre"
+    },
+    {
+      "description": "Whether the City and District should merge. The District maintains a standing \"Reunification\" file.",
+      "id": "amalgamation",
+      "label": "Amalgamation / reunification"
+    },
+    {
+      "description": "",
+      "id": "third-crossing",
+      "label": "A third crossing / new bridge"
+    },
+    {
+      "description": "",
+      "id": "spirit-trail",
+      "label": "Spirit Trail"
+    }
+  ]
+}

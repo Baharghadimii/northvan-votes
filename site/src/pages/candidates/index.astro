@@ -1,0 +1,54 @@
+---
+import Base from "~/layouts/Base.astro";
+import CandidateLine from "~/components/CandidateLine.astro";
+import { races, candidates, seededShuffle, BUILD_SEED, categoryById } from "~/lib/data";
+
+const allRaces = races();
+---
+
+<Base
+  title="All candidates"
+  description="Every candidate for mayor, council and school trustee in the City and District of North Vancouver, October 17, 2026."
+  shuffle
+  shortlist
+>
+  <h1>All {candidates.length} candidates</h1>
+  <p class="lede">
+    You vote in one municipality only — the City or the District, never both.
+    <a href="/how-to-vote/">Which one am I in?</a>
+  </p>
+
+  <div class="order-note">
+    <span>Listed in <span data-order-label>randomised</span> order within each race.</span>
+    <button type="button" data-order-toggle hidden>Sort A–Z</button>
+  </div>
+
+  {allRaces.map((race) => (
+    <section id={race.key}>
+      <div class="race-heading">
+        <h2>{race.label}</h2>
+        <span class="seats">{race.candidates.length} running · you elect {race.seats}</span>
+      </div>
+      <div class="grid grid-2" data-shuffle style="margin-top:14px">
+        {seededShuffle(race.candidates, BUILD_SEED + race.key.length).map((c) => {
+          const topics = [...new Set(c.positions.map((p) => p.category))];
+          return (
+            <div class="card" data-sortkey={c.surname + " " + c.name}>
+              <CandidateLine candidate={c}>
+                <div style="margin-top:8px; display:flex; flex-wrap:wrap; gap:5px">
+                  {topics.length > 0 ? (
+                    topics.map((t) => <span class="tag">{categoryById(t)?.label ?? t}</span>)
+                  ) : c.sources.length > 0 ? (
+                    <span class="tag">Statement has no issue positions</span>
+                  ) : (
+                    <span class="tag">No statement published</span>
+                  )}
+                </div>
+              </CandidateLine>
+            </div>
+          );
+        })}
+      </div>
+    </section>
+  ))}
+</Base>

@@ -1,0 +1,26 @@
+---
+import type { Candidate } from "~/lib/data";
+import Avatar from "./Avatar.astro";
+import { MUNICIPALITIES_SHORT, OFFICES } from "~/lib/data";
+
+interface Props { candidate: Candidate; showRace?: boolean; }
+const { candidate, showRace = false } = Astro.props;
+---
+<div class="candidate-row" data-candidate-id={candidate.id} data-candidate-name={candidate.name} data-candidate-race={`${candidate.municipality}-${candidate.office}`}>
+  <Avatar candidate={candidate} />
+  <div style="min-width:0">
+    <div class="candidate-name">
+      <a href={`/candidates/${candidate.id}/`}>{candidate.name}</a>
+      {candidate.incumbent && <span class="tag tag-incumbent" style="margin-left:6px">Incumbent</span>}
+    </div>
+    <div class="candidate-meta">
+      {showRace && <>{MUNICIPALITIES_SHORT[candidate.municipality]} — {OFFICES[candidate.office]} · </>}
+      {candidate.website ? (
+        <a href={candidate.website} rel="noopener nofollow">Campaign site</a>
+      ) : (
+        <span>No campaign site listed</span>
+      )}
+    </div>
+    <slot />
+  </div>
+</div>

@@ -1,0 +1,166 @@
+---
+import Base from "~/layouts/Base.astro";
+import { candidates, categories, formatDate } from "~/lib/data";
+
+const withStatement = candidates.filter((c) => c.sources.length > 0);
+const withPositions = candidates.filter((c) => c.positions.length > 0);
+const quoted = candidates.reduce((n, c) => n + c.positions.length, 0);
+const statementOnly = withStatement.filter((c) => c.positions.length === 0);
+const retrieved = withStatement[0]?.sources[0]?.retrieved;
+---
+
+<Base
+  title="How this was built"
+  description="Sources, tagging method, limitations and corrections policy for North Van Votes."
+>
+  <h1>How this was built</h1>
+  <p class="lede">
+    This page exists so you can check the site rather than trust it. It covers
+    where every quote came from, how topics were assigned, what the method
+    misses, and how to get something fixed.
+  </p>
+
+  <div class="stat-row">
+    <div class="stat"><b>{candidates.length}</b><span>candidates</span></div>
+    <div class="stat"><b>{withStatement.length}</b><span>published a statement</span></div>
+    <div class="stat"><b>{withPositions.length}</b><span>have a quoted position</span></div>
+    <div class="stat"><b>{quoted}</b><span>quoted passages</span></div>
+  </div>
+
+  <h2>Where the words come from</h2>
+  <p>
+    Every quote is taken from a candidate's own official statement, filed with
+    their municipality by the nomination deadline and published unedited by that
+    municipality:
+  </p>
+  <ul>
+    <li>
+      <a href="https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles" rel="noopener">
+        City of North Vancouver — Candidate Profiles
+      </a>
+    </li>
+    <li>
+      <a href="https://www.dnv.org/government-administration/see-who-is-running" rel="noopener">
+        District of North Vancouver — See who is running
+      </a>
+    </li>
+  </ul>
+  <p>
+    Statements were retrieved on {retrieved && formatDate(retrieved)}. Neither
+    municipality verifies the accuracy of what candidates write, and neither does
+    this site. Contact details, photos, nomination documents and campaign links
+    come from the same two pages.
+  </p>
+
+  <h2>How quotes are guaranteed to be verbatim</h2>
+  <p>This is the part that matters most, so it is worth being precise about.</p>
+  <p>
+    Topic tagging is done by a language model, but the model is never allowed to
+    produce text. Each statement is split into numbered sentences, the model is
+    shown those numbered sentences, and it replies with <em>sentence
+    numbers</em> only. The site's own code then cuts those exact characters out
+    of the stored source document.
+  </p>
+  <p>
+    That means a paraphrase or an invented quote is not something the process
+    tries to detect — it is something the process cannot produce. Every passage
+    is additionally re-checked against its source before publishing, and any
+    passage that does not match character-for-character is dropped rather than
+    shown. The worst error the method can make is quoting a real sentence under a
+    topic you would not have filed it under.
+  </p>
+
+  <h2>What the site does not do</h2>
+  <ul>
+    <li>
+      <strong>No ratings, scores, grades or endorsements.</strong> Every candidate
+      gets identical fields and identical space.
+    </li>
+    <li>
+      <strong>No conclusions from silence.</strong> Where a candidate has not
+      addressed a topic, the site says the sources checked did not cover it. That
+      is a fact about our reading, not a judgement about them.
+    </li>
+    <li>
+      <strong>No alphabetical advantage.</strong> Candidates within a race are
+      listed in a randomised order that changes per browsing session. You can
+      switch to A–Z with the button on any list.
+    </li>
+    <li>
+      <strong>No tracking.</strong> No analytics, no cookies, no accounts. Your
+      shortlist, if you make one, stays in your own browser.
+    </li>
+  </ul>
+
+  <h2>Known limitations</h2>
+  <ul>
+    <li>
+      Candidate statements are short — a few hundred words. A candidate with
+      detailed policy on their own website may look thinner here than they are.
+      Their campaign link is always shown; follow it.
+    </li>
+    <li>
+      {statementOnly.length} candidates published a statement that sets out no
+      position on any tracked topic — usually because it is biography rather than
+      policy. They are listed as such, not as silent.
+    </li>
+    <li>
+      The {categories.length} topics are a starting set drawn from what
+      candidates themselves wrote about most. They are not an official list and
+      they are not exhaustive.
+    </li>
+    <li>
+      One sentence can legitimately belong to two topics, so the same quote
+      sometimes appears in two places.
+    </li>
+    <li>
+      Nothing here is scraped from news coverage, all-candidates meetings, social
+      media or interviews. Those are real sources of candidates' views; they are
+      simply outside what this site claims to cover.
+    </li>
+  </ul>
+
+  <h2 id="corrections">Corrections</h2>
+  <p>
+    If a quote misrepresents you, a topic is wrong, a link is broken, or
+    something on the voting page is out of date, say so and it will be fixed
+    within 48 hours — or the item will be removed while it is checked.
+    Candidates, campaigns and readers are all equally welcome to ask.
+  </p>
+  <p>
+    <a href="mailto:corrections@northvanvotes.ca">corrections@northvanvotes.ca</a>
+  </p>
+  <p class="candidate-meta">
+    Corrections that are a matter of record — a wrong link, a mis-transcribed
+    date — are simply fixed. A request to remove or reword an accurate quotation
+    from a published statement will be declined, with the reason given; the
+    statement is a public document and the quote will keep pointing at it.
+  </p>
+
+  <h2>Independence</h2>
+  <p>
+    North Van Votes is not affiliated with any candidate, campaign, elector
+    organization, political party, municipality or school district. It is not
+    funded by, and accepts nothing from, anyone running in this election or
+    anyone advocating for or against them. It carries no advertising.
+  </p>
+
+  <div class="notice">
+    <p>
+      <strong>Regulatory status.</strong> BC's Local Elections Campaign Financing
+      Act governs third-party election advertising. This site is built to sit
+      outside that: it neither promotes nor opposes any candidate, it treats
+      every candidate identically, and it publishes only their own words.
+      Elections BC has been asked to confirm that reading, and their answer will
+      be recorded here. Elections BC can be reached at 1-800-661-8683.
+    </p>
+  </div>
+
+  <h2>Built on the open record</h2>
+  <p>
+    The whole thing is a small pipeline that downloads public documents, caches
+    them, extracts quotes, and renders static pages. The cached source documents
+    are kept alongside the code so the dataset can be rebuilt and checked by
+    anyone.
+  </p>
+</Base>

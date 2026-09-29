@@ -1,0 +1,132 @@
+---
+import Base from "~/layouts/Base.astro";
+import { candidates, races } from "~/lib/data";
+
+// Minimal lookup so the page can render a list held only in the reader's browser.
+const lookup = Object.fromEntries(
+  candidates.map((c) => [
+    c.id,
+    { name: c.name, race: `${c.municipality}-${c.office}`, incumbent: c.incumbent },
+  ]),
+);
+const raceMeta = Object.fromEntries(
+  races().map((r) => [r.key, { label: r.label, seats: r.seats }]),
+);
+---
+
+<Base
+  title="Your ballot list"
+  description="The candidates you starred, grouped by race and ready to print."
+>
+  <h1>Your ballot list</h1>
+  <p class="lede">
+    The candidates you starred while browsing, grouped by race so you can check
+    you have picked the right number. Print it or leave it open on your phone.
+  </p>
+
+  <div id="empty" class="notice">
+    <p>
+      You haven't starred anyone yet. Look for the ☆ beside a candidate on the
+      <a href="/candidates/">candidates page</a> or any
+      <a href="/">issue page</a>.
+    </p>
+  </div>
+
+  <div id="ballot"></div>
+
+  <p id="actions" hidden style="margin-top:20px; display:flex; gap:12px; flex-wrap:wrap">
+    <button type="button" class="chip" onclick="window.print()">Print this list</button>
+    <button type="button" class="chip" id="clear">Clear the list</button>
+  </p>
+
+  <div class="notice" style="margin-top:28px">
+    <p>
+      This list is stored only in this browser. It is never sent anywhere, so it
+      will not follow you to another device — and nobody, including us, can see
+      it. A starred candidate is not a vote and nothing here is submitted.
+    </p>
+  </div>
+
+  <script is:inline define:vars={{ lookup, raceMeta }}>
+    (function () {
+      var KEY = "nvv:shortlist";
+      var order = Object.keys(raceMeta);
+
+      function read() {
+        try { return JSON.parse(localStorage.getItem(KEY) || "[]"); }
+        catch (e) { return []; }
+      }
+
+      function render() {
+        var picked = read().filter(function (id) { return lookup[id]; });
+        var box = document.getElementById("ballot");
+        var empty = document.getElementById("empty");
+        var actions = document.getElementById("actions");
+        box.innerHTML = "";
+
+        if (picked.length === 0) {
+          empty.hidden = false;
+          actions.hidden = true;
+          return;
+        }
+        empty.hidden = true;
+        actions.hidden = false;
+
+        order.forEach(function (key) {
+          var meta = raceMeta[key];
+          var mine = picked.filter(function (id) { return lookup[id].race === key; });
+          if (mine.length === 0) return;
+
+          var sec = document.createElement("section");
+          sec.className = "ballot-race card";
+
+          var h = document.createElement("h3");
+          h.textContent = meta.label;
+          sec.appendChild(h);
+
+          var note = document.createElement("p");
+          note.className = "candidate-meta";
+          note.style.margin = "0";
+          if (mine.length > meta.seats) {
+            note.className += " overpick";
+            note.textContent =
+              "You have starred " + mine.length + " but only " + meta.seats +
+              " can be elected. A ballot with too many marks in a race is not counted.";
+          } else if (mine.length < meta.seats) {
+            note.textContent =
+              mine.length + " of " + meta.seats + " — you may vote for " +
+              (meta.seats - mine.length) + " more, or fewer if you prefer.";
+          } else {
+            note.textContent = mine.length + " of " + meta.seats + " — that is a full slate.";
+          }
+          sec.appendChild(note);
+
+          var ol = document.createElement("ol");
+          mine.forEach(function (id) {
+            var li = document.createElement("li");
+            var a = document.createElement("a");
+            a.href = "/candidates/" + id + "/";
+            a.textContent = lookup[id].name;
+            li.appendChild(a);
+            if (lookup[id].incumbent) {
+              var em = document.createElement("span");
+              em.className = "candidate-meta";
+              em.textContent = " (incumbent)";
+              li.appendChild(em);
+            }
+            ol.appendChild(li);
+          });
+          sec.appendChild(ol);
+          box.appendChild(sec);
+        });
+      }
+
+      document.getElementById("clear").addEventListener("click", function () {
+        try { localStorage.removeItem(KEY); } catch (e) {}
+        render();
+      });
+
+      render();
+    })();
+  </script>
+</Base>

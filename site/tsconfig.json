@@ -1,0 +1,11 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    // JSX transform is configured by @astrojs/react. Setting "jsx" here made
+    // esbuild emit _jsxDEV calls against the production runtime, which fails at
+    // hydration with "_jsxDEV is not a function".
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": { "~/*": ["src/*"] }
+  }
+}

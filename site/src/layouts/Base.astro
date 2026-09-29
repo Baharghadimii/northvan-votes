@@ -1,0 +1,222 @@
+---
+import "~/styles/global.css";
+import { ELECTION_DAY } from "~/lib/data";
+
+interface Props {
+  title: string;
+  description?: string;
+  /** Pages that list candidates opt in to the per-session order shuffle. */
+  shuffle?: boolean;
+  /** Pages that should offer star-to-shortlist on each candidate. */
+  shortlist?: boolean;
+}
+
+const { title, description, shuffle = false, shortlist = false } = Astro.props;
+const path = Astro.url.pathname;
+const full = title === "North Van Votes" ? title : `${title} — North Van Votes`;
+
+const days = Math.max(
+  0,
+  Math.round(
+    (new Date(`${ELECTION_DAY}T00:00:00`).getTime() - Date.now()) / 86400000,
+  ),
+);
+
+const nav = [
+  { href: "/", label: "Issues" },
+  { href: "/candidates/", label: "Candidates" },
+  { href: "/compare/", label: "Compare" },
+  { href: "/meetings/", label: "Meetings" },
+  { href: "/how-to-vote/", label: "How to vote" },
+  { href: "/methodology/", label: "Methodology" },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{full}</title>
+    {description && <meta name="description" content={description} />}
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <div class="countdown">
+      <div class="wrap">
+        {days > 0
+          ? `Election day is Saturday, October 17, 2026 — ${days} day${days === 1 ? "" : "s"} away.`
+          : "Election day is Saturday, October 17, 2026."}
+      </div>
+    </div>
+
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="/">North Van <span>Votes</span></a>
+        <nav class="site-nav" aria-label="Main">
+          {nav.map((item) => (
+            <a href={item.href} aria-current={path === item.href ? "page" : undefined}>
+              {item.label}
+            </a>
+          ))}
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="wrap">
+        <slot />
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>
+          <strong>North Van Votes</strong> is an independent, non-partisan guide to
+          the October 17, 2026 general local election in the City and District of
+          North Vancouver. It is not affiliated with any candidate, campaign,
+          elector organization, or municipality.
+        </p>
+        <p>
+          Every quote is reproduced verbatim from a source linked beside it.
+          Candidates are listed in a randomised order and treated identically.
+          See <a href="/methodology/">how this was built</a>, including how to ask
+          for a correction.
+        </p>
+      </div>
+    </footer>
+
+    {shortlist && (
+      <div class="shortlist-bar" id="shortlist-bar" hidden>
+        <span><strong id="shortlist-count">0 candidates</strong> on your ballot list</span>
+        <a href="/shortlist/">View and print</a>
+      </div>
+    )}
+
+    {shuffle && (
+      <script is:inline>
+        // Candidate order within each race is randomised per browsing session so
+        // no one gains from an alphabetical ballot. The server already renders a
+        // randomised (not alphabetical) order, so this degrades safely without
+        // JavaScript. Readers can switch to alphabetical; the choice is kept.
+        (function () {
+          var KEY = "nvv:order";
+          var SEEDKEY = "nvv:seed";
+          function seed() {
+            var s = sessionStorage.getItem(SEEDKEY);
+            if (!s) {
+              s = String(Math.floor(Math.random() * 4294967295));
+              sessionStorage.setItem(SEEDKEY, s);
+            }
+            return Number(s) >>> 0;
+          }
+          function rng(s) {
+            return function () {
+              s ^= s << 13; s >>>= 0;
+              s ^= s >> 17;
+              s ^= s << 5; s >>>= 0;
+              return s / 4294967295;
+            };
+          }
+          function apply(mode) {
+            var next = rng(seed());
+            document.querySelectorAll("[data-shuffle]").forEach(function (box) {
+              var kids = Array.prototype.slice.call(box.children);
+              if (mode === "alpha") {
+                kids.sort(function (a, b) {
+                  return (a.dataset.sortkey || "").localeCompare(b.dataset.sortkey || "");
+                });
+              } else {
+                for (var i = kids.length - 1; i > 0; i--) {
+                  var j = Math.floor(next() * (i + 1));
+                  var t = kids[i]; kids[i] = kids[j]; kids[j] = t;
+                }
+              }
+              kids.forEach(function (k) { box.appendChild(k); });
+            });
+            document.querySelectorAll("[data-order-label]").forEach(function (el) {
+              el.textContent = mode === "alpha" ? "alphabetical" : "randomised";
+            });
+            document.querySelectorAll("[data-order-toggle]").forEach(function (b) {
+              b.textContent = mode === "alpha" ? "Shuffle order" : "Sort A–Z";
+            });
+          }
+          try {
+            var mode = localStorage.getItem(KEY) === "alpha" ? "alpha" : "shuffle";
+            apply(mode);
+            document.querySelectorAll("[data-order-toggle]").forEach(function (b) {
+              b.hidden = false;
+              b.addEventListener("click", function () {
+                mode = mode === "alpha" ? "shuffle" : "alpha";
+                try { localStorage.setItem(KEY, mode); } catch (e) {}
+                apply(mode);
+              });
+            });
+          } catch (e) {
+            /* private mode or blocked storage: keep the server's random order */
+          }
+        })();
+      </script>
+    )}
+
+    {shortlist && (
+      <script is:inline>
+        // Star-to-shortlist. Deliberately plain: one script for the whole page
+        // rather than an interactive component per candidate, so a list of 18
+        // candidates costs nothing to render.
+        //
+        // The shortlist lives only in this browser. Nothing is sent anywhere,
+        // which is why there is no sync and no account.
+        (function () {
+          var KEY = "nvv:shortlist";
+          function read() {
+            try { return JSON.parse(localStorage.getItem(KEY) || "[]"); }
+            catch (e) { return []; }
+          }
+          function write(ids) {
+            try { localStorage.setItem(KEY, JSON.stringify(ids)); } catch (e) {}
+          }
+          var picked = read();
+
+          function paint() {
+            document.querySelectorAll("[data-star]").forEach(function (b) {
+              var on = picked.indexOf(b.dataset.star) !== -1;
+              b.setAttribute("aria-pressed", on ? "true" : "false");
+              b.title = on ? "Remove from your ballot list" : "Add to your ballot list";
+              b.querySelector("span").textContent = on ? "\u2605" : "\u2606";
+            });
+            var bar = document.getElementById("shortlist-bar");
+            if (!bar) return;
+            var n = picked.length;
+            bar.hidden = n === 0;
+            var count = document.getElementById("shortlist-count");
+            if (count) count.textContent = n + (n === 1 ? " candidate" : " candidates");
+          }
+
+          document.querySelectorAll("[data-candidate-id]").forEach(function (row) {
+            var id = row.dataset.candidateId;
+            var name = row.dataset.candidateName || "this candidate";
+            var btn = document.createElement("button");
+            btn.type = "button";
+            btn.className = "star";
+            btn.dataset.star = id;
+            btn.setAttribute("aria-label", "Add " + name + " to your ballot list");
+            btn.innerHTML = "<span aria-hidden=\"true\">\u2606</span>";
+            btn.addEventListener("click", function () {
+              var i = picked.indexOf(id);
+              if (i === -1) picked.push(id); else picked.splice(i, 1);
+              write(picked);
+              paint();
+            });
+            row.appendChild(btn);
+          });
+
+          paint();
+        })();
+      </script>
+    )}
+  </body>
+</html>

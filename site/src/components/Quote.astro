@@ -1,0 +1,27 @@
+---
+import type { Candidate, Position } from "~/lib/data";
+import { sourceFor, formatDate, flashpointById } from "~/lib/data";
+
+interface Props { candidate: Candidate; position: Position; }
+const { candidate, position } = Astro.props;
+
+const source = sourceFor(candidate, position.source_url);
+// Statement paragraphs are joined with blank lines upstream; preserve them.
+const paragraphs = position.quote.split(/\n{2,}/).filter(Boolean);
+const label =
+  position.source_type === "official_statement"
+    ? "Official candidate statement"
+    : "Campaign website";
+---
+<figure class="quote" style="margin-inline:0">
+  <blockquote style="margin:0">
+    {paragraphs.map((p) => <p>{p}</p>)}
+  </blockquote>
+  <figcaption class="source-line">
+    {position.flashpoints.map((f) => (
+      <span class="tag" style="margin-right:6px">{flashpointById(f)?.label ?? f}</span>
+    ))}
+    <a href={position.source_url} rel="noopener">{label}</a>
+    {source && <> · retrieved {formatDate(source.retrieved)}</>}
+  </figcaption>
+</figure>

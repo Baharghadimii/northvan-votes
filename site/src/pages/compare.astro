@@ -1,0 +1,46 @@
+---
+import Base from "~/layouts/Base.astro";
+import CompareGrid from "~/components/CompareGrid";
+import { candidates, categories, races } from "~/lib/data";
+
+// Ship only what the grid needs, not the whole dataset.
+const payload = candidates.map((c) => {
+  const byCategory: Record<string, string[]> = {};
+  for (const p of c.positions) {
+    (byCategory[p.category] ??= []).push(p.quote);
+  }
+  return {
+    id: c.id,
+    name: c.name,
+    incumbent: c.incumbent,
+    race: `${c.municipality}-${c.office}`,
+    sortkey: `${c.surname} ${c.name}`,
+    hasStatement: c.sources.length > 0,
+    byCategory,
+  };
+});
+
+const racesList = races().map((r) => ({ key: r.key, label: r.label, seats: r.seats }));
+const cats = categories.map((c) => ({ id: c.id, label: c.label }));
+---
+
+<Base
+  title="Compare candidates"
+  description="Put North Vancouver's 2026 candidates side by side and read what each has said on every issue."
+>
+  <h1>Compare candidates side by side</h1>
+  <p class="lede">
+    Choose a race, then pick up to six candidates. Each row is an issue; each
+    cell is what that candidate actually wrote about it. Empty means the sources
+    we checked did not cover it — not that they disagree.
+  </p>
+
+  <CompareGrid client:load candidates={payload} racesList={racesList} categories={cats} />
+
+  <div class="notice" style="margin-top:30px">
+    <p>
+      The comparison you build is stored in this page's address, so you can copy
+      the link from your browser and send it to someone.
+    </p>
+  </div>
+</Base>

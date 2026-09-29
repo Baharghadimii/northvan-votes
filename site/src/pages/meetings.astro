@@ -1,0 +1,73 @@
+---
+import Base from "~/layouts/Base.astro";
+import { MEETINGS, MEETINGS_SOURCE, MEETINGS_VERIFIED } from "~/lib/meetings";
+import { formatDate } from "~/lib/data";
+
+const today = new Date().toISOString().slice(0, 10);
+const sorted = [...MEETINGS].sort((a, b) => a.date.localeCompare(b.date));
+const upcoming = sorted.filter((m) => m.date >= today);
+const past = sorted.filter((m) => m.date < today).reverse();
+---
+
+<Base
+  title="All-candidates meetings"
+  description="Public meetings where you can hear North Vancouver's 2026 candidates in person."
+>
+  <h1>Hear them in person</h1>
+  <p class="lede">
+    A written statement is a few hundred words. A meeting is where candidates
+    answer questions they did not choose. These are the public events community
+    organisations have listed.
+  </p>
+
+  {upcoming.length > 0 ? (
+    <>
+      <h2>Still to come</h2>
+      <div class="grid grid-2">
+        {upcoming.map((m) => (
+          <div class="card">
+            <strong>{formatDate(m.date)}</strong>
+            <div class="candidate-meta">{m.time}</div>
+            <p style="margin:8px 0 4px">{m.location}</p>
+            <div class="candidate-meta">
+              Hosted by {m.hostUrl ? <a href={m.hostUrl} rel="noopener nofollow">{m.host}</a> : m.host}
+            </div>
+          </div>
+        ))}
+      </div>
+    </>
+  ) : (
+    <div class="notice"><p>No further meetings are listed. Any that remain may be announced late — check the District's list.</p></div>
+  )}
+
+  {past.length > 0 && (
+    <>
+      <h2 style="margin-top:34px">Already held</h2>
+      <p class="candidate-meta">
+        Kept here so you know what you missed. Some hosts post recordings —
+        follow the host link.
+      </p>
+      <ul style="font-size:0.93rem">
+        {past.map((m) => (
+          <li style="margin-bottom:6px">
+            <strong>{formatDate(m.date)}</strong> — {m.location},
+            {" "}{m.hostUrl ? <a href={m.hostUrl} rel="noopener nofollow">{m.host}</a> : m.host}
+          </li>
+        ))}
+      </ul>
+    </>
+  )}
+
+  <div class="notice" style="margin-top:28px">
+    <p>
+      These events are organised by community groups, not by either municipality
+      and not by this site. Listing one is not an endorsement of the host or the
+      format. Times and rooms change — confirm with the host before you travel.
+    </p>
+    <p style="font-size:0.85rem; color:var(--text-faint); margin:0">
+      Transcribed from the <a href={MEETINGS_SOURCE} rel="noopener">District of
+      North Vancouver's list</a>, which may not include every event. Last checked
+      {" "}{formatDate(MEETINGS_VERIFIED)}.
+    </p>
+  </div>
+</Base>

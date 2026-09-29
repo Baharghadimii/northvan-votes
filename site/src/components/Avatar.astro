@@ -1,0 +1,16 @@
+---
+import type { Candidate } from "~/lib/data";
+interface Props { candidate: Candidate; }
+const { candidate } = Astro.props;
+const initials = candidate.name
+  .split(/\s+/)
+  .map((p) => p[0])
+  .join("")
+  .slice(0, 2)
+  .toUpperCase();
+---
+{candidate.photo_url ? (
+  <img class="avatar" src={candidate.photo_url} alt="" loading="lazy" decoding="async" width="56" height="56" />
+) : (
+  <div class="avatar avatar-fallback" aria-hidden="true">{initials}</div>
+)}

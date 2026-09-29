@@ -1,0 +1,74 @@
+---
+import Base from "~/layouts/Base.astro";
+import { categoriesByCoverage, candidates, races } from "~/lib/data";
+
+const cats = categoriesByCoverage();
+const withStatement = candidates.filter((c) => c.sources.length > 0).length;
+const tagged = candidates.filter((c) => c.positions.length > 0).length;
+const allRaces = races();
+---
+
+<Base
+  title="North Van Votes"
+  description="What every candidate in the October 17, 2026 North Vancouver election has said, organised by issue. Independent and non-partisan."
+>
+  <h1>Start with an issue, not a name.</h1>
+  <p class="lede">
+    Fifty-nine people are running for mayor, council and school trustee across
+    the City and District of North Vancouver. Pick a topic you care about and
+    read what each of them has actually said about it — in their own words, with
+    a link to the source.
+  </p>
+
+  <div class="stat-row">
+    <div class="stat"><b>{candidates.length}</b><span>candidates, both municipalities</span></div>
+    <div class="stat"><b>{withStatement}</b><span>published a statement</span></div>
+    <div class="stat"><b>{tagged}</b><span>said something on at least one issue</span></div>
+  </div>
+
+  <h2 id="issues" style="margin-top:32px">Browse by issue</h2>
+  <p style="color:var(--text-muted); font-size:0.92rem; max-width:46rem">
+    Counts show how many of the 59 candidates have addressed each topic in a
+    source we could find. A low count means few candidates wrote about it, not
+    that it is unimportant.
+  </p>
+
+  <div class="grid grid-2 grid-3" style="margin-top:18px">
+    {cats.map((c) => (
+      <a class="card issue-card" href={`/issues/${c.id}/`}>
+        <h3>{c.label}</h3>
+        <p>{c.description}</p>
+        <div class="count">
+          {c.count === 0
+            ? "No candidate has addressed this"
+            : `${c.count} of ${candidates.length} candidates`}
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <h2 style="margin-top:44px">Or start with your ballot</h2>
+  <p style="color:var(--text-muted); font-size:0.92rem">
+    You vote in one municipality only. Not sure which?
+    <a href="/how-to-vote/">Find out here.</a>
+  </p>
+  <ul class="linklist" style="margin-top:12px">
+    {allRaces.map((r) => (
+      <li>
+        <a class="tag" href={`/candidates/#${r.key}`} style="text-decoration:none">
+          {r.label} — {r.candidates.length} running, {r.seats} elected
+        </a>
+      </li>
+    ))}
+  </ul>
+
+  <div class="notice" style="margin-top:36px">
+    <p>
+      <strong>This site quotes, it does not rate.</strong> There are no scores,
+      grades or endorsements here. Every candidate gets the same fields and the
+      same space, quotes are reproduced word for word, and where someone has not
+      addressed a topic the site says exactly that rather than drawing a
+      conclusion. <a href="/methodology/">How this was built.</a>
+    </p>
+  </div>
+</Base>

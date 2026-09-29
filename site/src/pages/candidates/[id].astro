@@ -1,0 +1,122 @@
+---
+import Base from "~/layouts/Base.astro";
+import Avatar from "~/components/Avatar.astro";
+import Quote from "~/components/Quote.astro";
+import {
+  candidates, categories, MUNICIPALITIES, OFFICES, SEATS,
+  formatDate, type Candidate,
+} from "~/lib/data";
+
+export function getStaticPaths() {
+  return candidates.map((c) => ({ params: { id: c.id }, props: { candidate: c } }));
+}
+
+const { candidate } = Astro.props as { candidate: Candidate };
+
+const byCategory = categories
+  .map((cat) => ({
+    cat,
+    positions: candidate.positions.filter((p) => p.category === cat.id),
+  }))
+  .filter((g) => g.positions.length > 0);
+
+const untouched = categories.filter(
+  (cat) => !candidate.positions.some((p) => p.category === cat.id),
+);
+
+const seats = SEATS[`${candidate.municipality}-${candidate.office}`];
+const statement = candidate.sources.find((s) => s.type === "official_statement");
+const socialOrder = ["website", "facebook", "instagram", "twitter", "linkedin", "youtube", "bluesky", "threads", "tiktok"];
+const socials = Object.entries(candidate.socials).sort(
+  (a, b) => socialOrder.indexOf(a[0]) - socialOrder.indexOf(b[0]),
+);
+const SOCIAL_LABELS: Record<string, string> = {
+  facebook: "Facebook", instagram: "Instagram", twitter: "X", linkedin: "LinkedIn",
+  youtube: "YouTube", bluesky: "Bluesky", threads: "Threads", tiktok: "TikTok",
+};
+---
+
+<Base
+  title={candidate.name}
+  description={`${candidate.name}, candidate for ${OFFICES[candidate.office]} in the ${MUNICIPALITIES[candidate.municipality]}, 2026.`}
+>
+  <p style="font-size:0.88rem"><a href="/candidates/">← All candidates</a></p>
+
+  <div class="candidate-row" style="align-items:center; gap:18px; margin-bottom:6px">
+    <Avatar candidate={candidate} />
+    <div>
+      <h1 style="margin-bottom:2px">{candidate.name}</h1>
+      <p style="margin:0; color:var(--text-muted)">
+        {OFFICES[candidate.office]} candidate · {MUNICIPALITIES[candidate.municipality]}
+        {candidate.incumbent && <span class="tag tag-incumbent" style="margin-left:8px">Incumbent</span>}
+      </p>
+    </div>
+  </div>
+
+  <p style="color:var(--text-faint); font-size:0.88rem">
+    {seats === 1
+      ? "One is elected to this office."
+      : `${seats} are elected to this office.`}
+  </p>
+
+  <ul class="linklist" style="margin:16px 0 24px">
+    {candidate.website && <li><a href={candidate.website} rel="noopener nofollow">Campaign website</a></li>}
+    {candidate.email && <li><a href={`mailto:${candidate.email}`}>{candidate.email}</a></li>}
+    {candidate.phone && <li>{candidate.phone}</li>}
+    {socials.map(([k, url]) => (
+      <li><a href={url} rel="noopener nofollow">{SOCIAL_LABELS[k] ?? k}</a></li>
+    ))}
+    {candidate.nomination_docs.map((d) => (
+      <li><a href={d} rel="noopener">Nomination documents</a></li>
+    ))}
+    {candidate.financial_disclosure.map((d) => (
+      <li><a href={d} rel="noopener">Financial disclosure</a></li>
+    ))}
+  </ul>
+
+  <h2>Where they stand</h2>
+  {byCategory.length === 0 ? (
+    <div class="notice">
+      <p>
+        {statement
+          ? "This candidate published a statement, but it does not set out a position on any of the issues this site tracks. You can read it in full below."
+          : "This candidate has not published a statement with either municipality, and we found no campaign website to read."}
+      </p>
+    </div>
+  ) : (
+    byCategory.map((g) => (
+      <section style="margin-bottom:22px">
+        <h3 style="margin-bottom:2px">
+          <a href={`/issues/${g.cat.id}/`} style="text-decoration:none">{g.cat.label}</a>
+        </h3>
+        {g.positions.map((p) => <Quote candidate={candidate} position={p} />)}
+      </section>
+    ))
+  )}
+
+  {untouched.length > 0 && byCategory.length > 0 && (
+    <details class="silent">
+      <summary>Topics not covered in the sources we checked ({untouched.length})</summary>
+      <ul>
+        {untouched.map((c) => (
+          <li><a href={`/issues/${c.id}/`}>{c.label}</a></li>
+        ))}
+      </ul>
+    </details>
+  )}
+
+  {statement && (
+    <section style="margin-top:34px">
+      <h2>Full statement, as published</h2>
+      <p style="font-size:0.85rem; color:var(--text-faint)">
+        Reproduced exactly as it appears on the
+        <a href={statement.url} rel="noopener"> {MUNICIPALITIES[candidate.municipality]} website</a>,
+        retrieved {formatDate(statement.retrieved)}. Neither the municipality nor
+        this site has verified its accuracy.
+      </p>
+      <div class="card" style="font-family:var(--font-serif)">
+        {statement.text.split(/\n{2,}/).map((p) => <p>{p}</p>)}
+      </div>
+    </section>
+  )}
+</Base>

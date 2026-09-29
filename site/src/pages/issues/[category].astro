@@ -1,0 +1,120 @@
+---
+import Base from "~/layouts/Base.astro";
+import CandidateLine from "~/components/CandidateLine.astro";
+import Quote from "~/components/Quote.astro";
+import {
+  categories, candidates, races, positionsFor,
+  seededShuffle, BUILD_SEED, type Category,
+} from "~/lib/data";
+
+export function getStaticPaths() {
+  return categories.map((c) => ({ params: { category: c.id }, props: { category: c } }));
+}
+
+const { category } = Astro.props as { category: Category };
+
+const speakers = candidates.filter((c) =>
+  c.positions.some((p) => p.category === category.id),
+);
+
+// Someone with no source at all is a different case from someone who published
+// a statement and did not mention this. Keep them separate; conflating them
+// would imply a choice the first group never made.
+const silentWithStatement = candidates.filter(
+  (c) => c.sources.length > 0 && !c.positions.some((p) => p.category === category.id),
+);
+const noSource = candidates.filter((c) => c.sources.length === 0);
+
+const grouped = races(speakers);
+---
+
+<Base
+  title={category.label}
+  description={`What North Vancouver's 2026 candidates have said about ${category.label.toLowerCase()}.`}
+  shuffle
+  shortlist
+>
+  <p style="font-size:0.88rem"><a href="/">← All issues</a></p>
+  <h1>{category.label}</h1>
+  <p class="lede">{category.description}</p>
+
+  <div class="stat-row">
+    <div class="stat">
+      <b>{speakers.length}</b>
+      <span>of {candidates.length} candidates have addressed this</span>
+    </div>
+    <div class="stat">
+      <b>{speakers.reduce((n, c) => n + positionsFor(c, category.id).length, 0)}</b>
+      <span>quoted passages</span>
+    </div>
+  </div>
+
+  {speakers.length === 0 ? (
+    <div class="notice">
+      <p>No candidate has addressed this topic in any source we could find.</p>
+    </div>
+  ) : (
+    <>
+      <div class="order-note">
+        <span>
+          Candidates are listed in <span data-order-label>randomised</span> order
+          within each race.
+        </span>
+        <button type="button" data-order-toggle hidden>Sort A–Z</button>
+      </div>
+
+      {grouped.map((race) => (
+        <section>
+          <div class="race-heading">
+            <h2>{race.label}</h2>
+            <span class="seats">
+              {race.candidates.length} of {candidates.filter(
+                (c) => c.municipality === race.municipality && c.office === race.office,
+              ).length} in this race · you elect {race.seats}
+            </span>
+          </div>
+          <div class="grid" data-shuffle style="margin-top:14px">
+            {seededShuffle(race.candidates, BUILD_SEED + category.id.length).map((c) => (
+              <div class="card" data-sortkey={c.surname + " " + c.name}>
+                <CandidateLine candidate={c}>
+                  {positionsFor(c, category.id).map((p) => (
+                    <Quote candidate={c} position={p} />
+                  ))}
+                </CandidateLine>
+              </div>
+            ))}
+          </div>
+        </section>
+      ))}
+    </>
+  )}
+
+  {silentWithStatement.length > 0 && (
+    <details class="silent">
+      <summary>
+        {silentWithStatement.length} candidates published a statement that did not
+        mention this topic
+      </summary>
+      <p style="font-size:0.86rem;color:var(--text-muted);margin:10px 0 0">
+        They may still have views on it. This only records that the sources we
+        checked did not cover it.
+      </p>
+      <ul>
+        {silentWithStatement.map((c) => (
+          <li><a href={`/candidates/${c.id}/`}>{c.name}</a></li>
+        ))}
+      </ul>
+    </details>
+  )}
+
+  {noSource.length > 0 && (
+    <details class="silent">
+      <summary>{noSource.length} candidates have not published a statement at all</summary>
+      <ul>
+        {noSource.map((c) => (
+          <li><a href={`/candidates/${c.id}/`}>{c.name}</a></li>
+        ))}
+      </ul>
+    </details>
+  )}
+</Base>
