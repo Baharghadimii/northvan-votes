@@ -8,6 +8,7 @@ rather than warn.
 from __future__ import annotations
 
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -111,8 +112,49 @@ def attach_campaign_pages(candidates: list[Candidate]) -> None:
 # A candidate's own site repeats its pitch across pages, so the same sentence
 # is legitimately extracted several times. Left alone that produced 124 passages
 # for one candidate, 16% of them identical — a page nobody would read.
+# A passage longer than this stops being a quotation and becomes a page dump;
+# the worst was 5,102 characters. Trimmed at a sentence boundary so the span
+# stays a literal slice of the source.
+MAX_QUOTE_CHARS = 700
 MAX_PER_CATEGORY = 2
 MAX_PER_BACKGROUND_KIND = 2
+
+
+def _trim(p: Position, source_text: str) -> Position:
+    """Shorten an over-long passage at a sentence boundary, keeping it exact."""
+    if len(p.quote) <= MAX_QUOTE_CHARS:
+        return p
+    window = p.quote[:MAX_QUOTE_CHARS]
+    cut = max(window.rfind(". "), window.rfind("! "), window.rfind("? "))
+    if cut < MAX_QUOTE_CHARS // 3:
+        cut = window.rfind(" ")           # no sentence break: fall back to a word
+    if cut <= 0:
+        return p
+    end = cut + 1
+    p.quote = p.quote[:end].rstrip()
+    p.char_end = p.char_start + len(p.quote)
+    # The slice must still match the source exactly, or it does not ship.
+    if not p.verify_against(source_text):
+        raise BuildError(f"trimming broke the span for {p.source_url}")
+    return p
+
+
+def _words(text: str) -> set[str]:
+    return set(re.findall(r"[a-z']+", text.lower()))
+
+
+def _overlaps(a: Position, b: Position) -> bool:
+    """True when one passage is substantially the other.
+
+    Campaign sites repeat a paragraph with a different lead-in, so two
+    extractions can share most of their words while differing in the first
+    sixty characters. Comparing openings missed 142 such pairs.
+    """
+    wa, wb = _words(a.quote), _words(b.quote)
+    if not wa or not wb:
+        return False
+    small, big = (wa, wb) if len(wa) <= len(wb) else (wb, wa)
+    return len(small & big) / len(small) > 0.7
 
 
 def _rank(p: Position) -> tuple:
@@ -135,6 +177,8 @@ def _prune(items: list[Position], cap: int) -> list[Position]:
             continue
         if per_category.get(p.category, 0) >= cap:
             continue
+        if any(_overlaps(p, k) for k in kept):
+            continue
         seen_exact.add(norm)
         seen_open.add(opening)
         per_category[p.category] = per_category.get(p.category, 0) + 1
@@ -149,6 +193,10 @@ def _prune(items: list[Position], cap: int) -> list[Position]:
 def prune_duplicates(candidates: list[Candidate]) -> tuple[int, int]:
     before = sum(len(c.positions) + len(c.background) for c in candidates)
     for c in candidates:
+        for p in list(c.positions) + list(c.background):
+            source = c.source_for(p.source_url)
+            if source:
+                _trim(p, source.text)
         c.positions = _prune(c.positions, MAX_PER_CATEGORY)
         c.background = _prune(c.background, MAX_PER_BACKGROUND_KIND)
     after = sum(len(c.positions) + len(c.background) for c in candidates)

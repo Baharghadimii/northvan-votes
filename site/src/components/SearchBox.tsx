@@ -26,21 +26,6 @@ function highlight(quote: string, terms: string[]) {
   return quote.split(re);
 }
 
-/** Show the part of a long quote that actually contains the match. */
-function window_(quote: string, terms: string[], span = 260): string {
-  if (quote.length <= span || !terms.length) return quote;
-  const low = quote.toLowerCase();
-  let at = -1;
-  for (const t of terms) {
-    const i = low.indexOf(t.toLowerCase());
-    if (i !== -1 && (at === -1 || i < at)) at = i;
-  }
-  if (at === -1) return quote.slice(0, span) + "…";
-  const start = Math.max(0, at - 90);
-  const end = Math.min(quote.length, start + span);
-  return (start > 0 ? "…" : "") + quote.slice(start, end).trim() + (end < quote.length ? "…" : "");
-}
-
 export default function SearchBox({ passages }: Props) {
   const [q, setQ] = useState("");
   const [kind, setKind] = useState<"all" | "position" | "background">("all");
@@ -143,7 +128,7 @@ export default function SearchBox({ passages }: Props) {
                 <div className="candidate-meta">{p.r} · {p.c}</div>
                 <figure className="quote" style={{ marginInline: 0 }}>
                   <blockquote style={{ margin: 0 }}>
-                    {highlight(window_(p.q, terms), terms).map((chunk, j) =>
+                    {highlight(p.q, terms).map((chunk, j) =>
                       terms.some((t) => chunk.toLowerCase() === t.toLowerCase())
                         ? <mark key={j}>{chunk}</mark>
                         : <span key={j}>{chunk}</span>,
