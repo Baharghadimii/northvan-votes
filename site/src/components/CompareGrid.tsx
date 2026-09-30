@@ -90,11 +90,13 @@ export default function CompareGrid({ candidates, racesList, categories }: Props
       <div className="compare-controls">
         <label>
           <span>Race</span>
-          <select value={race} onChange={(e) => changeRace(e.target.value)}>
-            {racesList.map((r) => (
-              <option key={r.key} value={r.key}>{r.label}</option>
-            ))}
-          </select>
+          <span className="select-wrap">
+            <select value={race} onChange={(e) => changeRace(e.target.value)}>
+              {racesList.map((r) => (
+                <option key={r.key} value={r.key}>{r.label}</option>
+              ))}
+            </select>
+          </span>
         </label>
         <p className="compare-hint">
           {raceMeta && raceMeta.seats > 1

@@ -341,11 +341,35 @@ details.silent li { margin-bottom: 3px; break-inside: avoid; }
 
 .compare-controls { margin: 18px 0 10px; }
 .compare-controls label { display: inline-flex; flex-direction: column; gap: 4px; font-size: 0.85rem; color: var(--text-muted); }
+/* Native select arrows sit hard against the border, and padding moves the text
+   rather than the arrow. Drawing our own gives it room. */
 .compare-controls select {
-  font: inherit; padding: 7px 10px; border-radius: var(--radius);
-  border: 1px solid var(--border-strong); background: var(--surface); color: var(--text);
+  font: inherit;
+  padding: 8px 40px 8px 12px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--text);
   max-width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
 }
+.compare-controls .select-wrap { position: relative; display: inline-block; max-width: 100%; }
+.compare-controls .select-wrap::after {
+  content: "";
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  width: 10px;
+  height: 6px;
+  transform: translateY(-50%);
+  background-color: var(--text-muted);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  pointer-events: none;
+}
+.compare-controls select:hover { border-color: var(--accent); }
+.compare-controls select:focus-visible { border-color: var(--accent); }
 .compare-hint { font-size: 0.87rem; color: var(--text-muted); margin: 10px 0; }
 
 .chip-row { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 8px; }
@@ -601,10 +625,16 @@ a.bmc-big { font-size: 1.02rem; padding: 12px 24px; }
   z-index: 1;
 }
 
-/* Anything genuinely interactive has to clear the stretched layer. */
-.card-link .candidate-meta a,
-.card-link button.star {
+/* Anything genuinely interactive has to clear the stretched layer. Note the
+   star keeps position:absolute — giving it position:relative here to raise it
+   dropped it back into the flex flow, so it drifted with the content width
+   instead of pinning to the corner. z-index works on it either way. */
+.card-link .candidate-meta a {
   position: relative;
+  z-index: 2;
+}
+.card-link button.star {
+  position: absolute;
   z-index: 2;
 }
 
