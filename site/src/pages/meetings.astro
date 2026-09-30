@@ -16,8 +16,8 @@ const past = sorted.filter((m) => m.date < today).reverse();
   <h1>Hear them in person</h1>
   <p class="lede">
     A written statement is a few hundred words. A meeting is where candidates
-    answer questions they did not choose. These are the public events community
-    organisations have listed.
+    answer questions they didn't choose. These are the public events community
+    groups have listed.
   </p>
 
   {upcoming.length > 0 ? (
@@ -37,15 +37,15 @@ const past = sorted.filter((m) => m.date < today).reverse();
       </div>
     </>
   ) : (
-    <div class="notice"><p>No further meetings are listed. Any that remain may be announced late — check the District's list.</p></div>
+    <div class="notice"><p>No more meetings are listed. Late additions happen, so it's worth checking the District's list.</p></div>
   )}
 
   {past.length > 0 && (
     <>
       <h2 style="margin-top:34px">Already held</h2>
       <p class="candidate-meta">
-        Kept here so you know what you missed. Some hosts post recordings —
-        follow the host link.
+        Kept here so you know what you missed. Some hosts post recordings, so
+        follow the link.
       </p>
       <ul style="font-size:0.93rem">
         {past.map((m) => (
@@ -60,14 +60,14 @@ const past = sorted.filter((m) => m.date < today).reverse();
 
   <div class="notice" style="margin-top:28px">
     <p>
-      These events are organised by community groups, not by either municipality
-      and not by this site. Listing one is not an endorsement of the host or the
-      format. Times and rooms change — confirm with the host before you travel.
+      Community groups organise these, not the municipalities and not me. Listing
+      one isn't an endorsement of the host or the format. Times and rooms change,
+      so confirm with the host before you travel.
     </p>
     <p style="font-size:0.85rem; color:var(--text-faint); margin:0">
-      Transcribed from the <a href={MEETINGS_SOURCE} rel="noopener">District of
-      North Vancouver's list</a>, which may not include every event. Last checked
-      {" "}{formatDate(MEETINGS_VERIFIED)}.
+      I took this from the <a href={MEETINGS_SOURCE} rel="noopener">District's
+      list</a>, which may not include every event. Last checked{" "}
+      {formatDate(MEETINGS_VERIFIED)}.
     </p>
   </div>
 </Base>

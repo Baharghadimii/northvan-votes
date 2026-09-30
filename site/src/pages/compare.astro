@@ -30,17 +30,17 @@ const cats = categories.map((c) => ({ id: c.id, label: c.label }));
 >
   <h1>Compare candidates side by side</h1>
   <p class="lede">
-    Choose a race, then pick up to six candidates. Each row is an issue; each
-    cell is what that candidate actually wrote about it. Empty means the sources
-    we checked did not cover it — not that they disagree.
+    Pick a race, then up to six candidates. Each row is an issue and each cell
+    is what that candidate actually wrote about it. An empty cell means the
+    sources I checked didn't cover it. It doesn't mean they disagree.
   </p>
 
   <CompareGrid client:load candidates={payload} racesList={racesList} categories={cats} />
 
   <div class="notice" style="margin-top:30px">
     <p>
-      The comparison you build is stored in this page's address, so you can copy
-      the link from your browser and send it to someone.
+      Whatever you pick is stored in this page's address, so you can copy the link
+      from your browser and send it to someone.
     </p>
   </div>
 </Base>
