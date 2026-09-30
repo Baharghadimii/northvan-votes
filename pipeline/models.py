@@ -95,6 +95,9 @@ class Candidate(BaseModel):
     financial_disclosure: list[str] = Field(default_factory=list)
     sources: list[Source] = Field(default_factory=list)
     positions: list[Position] = Field(default_factory=list)
+    # Who they are and what they have done, as opposed to what they would do.
+    # Same verbatim-span guarantee; `category` holds a background type id.
+    background: list[Position] = Field(default_factory=list)
 
     @property
     def has_statement(self) -> bool:

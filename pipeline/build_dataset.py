@@ -18,6 +18,7 @@ from pipeline.scrape_dnv import scrape as scrape_dnv
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "candidates.json"
 POSITIONS = ROOT / "data" / "positions.json"
+BACKGROUND = ROOT / "data" / "background.json"
 # The site imports this copy at build time; data/candidates.json stays the
 # canonical, reviewable artefact.
 SITE_DATA = ROOT / "site" / "src" / "data" / "candidates.json"
@@ -64,7 +65,7 @@ def check_ids_unique(candidates: list[Candidate]) -> None:
 def check_positions(candidates: list[Candidate]) -> None:
     """Every quote must be exactly the span it cites. The core invariant."""
     for c in candidates:
-        for p in c.positions:
+        for p in list(c.positions) + list(c.background):
             source = c.source_for(p.source_url)
             if source is None:
                 raise BuildError(f"{c.id}: position cites {p.source_url!r}, not among its sources")
@@ -79,9 +80,9 @@ def review_flags(candidates: list[Candidate]) -> list[str]:
     """A candidate with a statement but no positions looks identical on the site
     to one who said nothing. Surface it rather than publishing it quietly."""
     return [
-        f"{c.id} ({c.name}) has a statement but zero tagged positions"
+        f"{c.id} ({c.name}) has a statement but nothing tagged at all"
         for c in candidates
-        if c.has_statement and not c.positions
+        if c.has_statement and not c.positions and not c.background
     ]
 
 
@@ -116,6 +117,17 @@ def attach_positions(candidates: list[Candidate]) -> None:
         )
     for cid, raw in tagged.items():
         by_id[cid].positions = [Position(**p) for p in raw]
+
+    if not BACKGROUND.exists():
+        return
+    bg = json.loads(BACKGROUND.read_text(encoding="utf-8"))
+    unknown_bg = sorted(set(bg) - set(by_id))
+    if unknown_bg:
+        raise BuildError(
+            f"data/background.json references unknown candidate ids: {unknown_bg}."
+        )
+    for cid, raw in bg.items():
+        by_id[cid].background = [Position(**p) for p in raw]
 
 
 def build(refresh: bool = False) -> list[Candidate]:
@@ -153,6 +165,14 @@ def write_taxonomy() -> None:
             }
             for c in data["categories"]
         ],
+        "background": [
+            {
+                "id": b["id"],
+                "label": b["label"],
+                "description": " ".join(str(b.get("description", "")).split()),
+            }
+            for b in data.get("background", [])
+        ],
         "flashpoints": [
             {
                 "id": f["id"],
@@ -176,7 +196,8 @@ def check_categories_known(candidates: list[Candidate]) -> None:
 
     data = yaml.safe_load((ROOT / "config" / "categories.yaml").read_text(encoding="utf-8"))
     known = {c["id"] for c in data["categories"]}
-    seen = {p.category for c in candidates for p in c.positions}
+    known |= {b["id"] for b in data.get("background", [])}
+    seen = {p.category for c in candidates for p in list(c.positions) + list(c.background)}
     unknown = sorted(seen - known)
     if unknown:
         raise BuildError(f"positions use unknown categories: {unknown}")
@@ -203,7 +224,8 @@ def main() -> int:
             f"{sum(1 for c in group if c.has_statement):2} statements, "
             f"{sum(1 for c in group if c.website):2} websites, "
             f"{inc} incumbents, "
-            f"{sum(len(c.positions) for c in group)} positions"
+            f"{sum(len(c.positions) for c in group)} positions, "
+            f"{sum(len(c.background) for c in group)} background"
         )
 
     flags = review_flags(candidates)

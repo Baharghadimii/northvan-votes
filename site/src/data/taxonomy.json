@@ -1,4 +1,31 @@
 {
+  "background": [
+    {
+      "description": "Elected or appointed roles: council, school board, advisory committees, commissions, other levels of government.",
+      "id": "public-office",
+      "label": "Public office & committees"
+    },
+    {
+      "description": "Work history, profession, qualifications earned on the job, businesses built or run.",
+      "id": "career",
+      "label": "Career & professional life"
+    },
+    {
+      "description": "Degrees, diplomas, credentials and where they were earned.",
+      "id": "education",
+      "label": "Education"
+    },
+    {
+      "description": "Non-profit boards, volunteering, coaching, service clubs, neighbourhood and parent associations.",
+      "id": "community",
+      "label": "Community & volunteering"
+    },
+    {
+      "description": "How long they have lived here, where they grew up, raising a family in the community.",
+      "id": "local-roots",
+      "label": "Local roots & family"
+    }
+  ],
   "categories": [
     {
       "description": "Getting around the North Shore: congestion, bridges and crossings, transit and SeaBus, cycling and walking, parking, road safety.",

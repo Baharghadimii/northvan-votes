@@ -1,5 +1,6 @@
 [
   {
+    "background": [],
     "email": "sda.cnv.2026@gmail.com",
     "financial_disclosure": [],
     "id": "cnv-council-alexander-sean",
@@ -58,6 +59,44 @@
     "website": "https://www.seanfornorthvan.ca/"
   },
   {
+    "background": [
+      {
+        "category": "public-office",
+        "char_end": 85,
+        "char_start": 0,
+        "flashpoints": [],
+        "quote": "I’m running for another term on City Council because our city is at a critical point.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "public-office",
+        "char_end": 426,
+        "char_start": 272,
+        "flashpoints": [],
+        "quote": "I’ve worked to support responsible growth that protects what we value about our community, while ensuring we don’t place unnecessary burdens on residents.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "career",
+        "char_end": 1093,
+        "char_start": 933,
+        "flashpoints": [],
+        "quote": "I’m committed to continuing this work with steady, thoughtful leadership and bringing my experience in business, education and community leadership to the role.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "community",
+        "char_end": 1093,
+        "char_start": 933,
+        "flashpoints": [],
+        "quote": "I’m committed to continuing this work with steady, thoughtful leadership and bringing my experience in business, education and community leadership to the role.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      }
+    ],
     "email": "info@hollyback.ca",
     "financial_disclosure": [],
     "id": "cnv-council-back-holly",
@@ -91,10 +130,19 @@
       },
       {
         "category": "governance-and-transparency",
-        "char_end": 568,
+        "char_end": 708,
         "char_start": 427,
         "flashpoints": [],
-        "quote": "I believe in accountability, transparency and making decisions that serve the long-term interests of our community—not just short-term fixes.",
+        "quote": "I believe in accountability, transparency and making decisions that serve the long-term interests of our community—not just short-term fixes.\n\nMy experience allows me to ask the right questions, advocate for responsible solutions and stay focused on what matters most to residents.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "public-safety-emergency",
+        "char_end": 271,
+        "char_start": 86,
+        "flashpoints": [],
+        "quote": "We’re experiencing continued growth, and with it come real challenges—from keeping our neighbourhoods safe and managing tax dollars responsibly to making smart infrastructure decisions.",
         "source_type": "official_statement",
         "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
       }
@@ -116,6 +164,26 @@
     "website": "https://www.hollyback.ca"
   },
   {
+    "background": [
+      {
+        "category": "public-office",
+        "char_end": 296,
+        "char_start": 0,
+        "flashpoints": [],
+        "quote": "It has been a privilege to serve my community as a member of City Council.\n\nI approach each issue before Council by listening to the public, applying independent thinking, common sense and using my experience in local government and business to seek the best possible decisions for our community.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "career",
+        "char_end": 296,
+        "char_start": 76,
+        "flashpoints": [],
+        "quote": "I approach each issue before Council by listening to the public, applying independent thinking, common sense and using my experience in local government and business to seek the best possible decisions for our community.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      }
+    ],
     "email": "donbellcampaign@gmail.com",
     "financial_disclosure": [],
     "id": "cnv-council-bell-don",
@@ -198,15 +266,6 @@
       },
       {
         "category": "governance-and-transparency",
-        "char_end": 296,
-        "char_start": 76,
-        "flashpoints": [],
-        "quote": "I approach each issue before Council by listening to the public, applying independent thinking, common sense and using my experience in local government and business to seek the best possible decisions for our community.",
-        "source_type": "official_statement",
-        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
-      },
-      {
-        "category": "governance-and-transparency",
         "char_end": 739,
         "char_start": 556,
         "flashpoints": [],
@@ -243,6 +302,35 @@
     "website": "https://www.donbell.ca"
   },
   {
+    "background": [
+      {
+        "category": "local-roots",
+        "char_end": 421,
+        "char_start": 191,
+        "flashpoints": [],
+        "quote": "I've called North Vancouver home for over 25 years. As a parent, educator, communications professional, and community volunteer, I understand the importance of protecting what makes our city special while preparing for its future.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "career",
+        "char_end": 421,
+        "char_start": 243,
+        "flashpoints": [],
+        "quote": "As a parent, educator, communications professional, and community volunteer, I understand the importance of protecting what makes our city special while preparing for its future.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "community",
+        "char_end": 421,
+        "char_start": 243,
+        "flashpoints": [],
+        "quote": "As a parent, educator, communications professional, and community volunteer, I understand the importance of protecting what makes our city special while preparing for its future.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      }
+    ],
     "email": "tbentz@shaw.ca",
     "financial_disclosure": [],
     "id": "cnv-council-bentz-tammy",
@@ -336,6 +424,53 @@
     "website": null
   },
   {
+    "background": [
+      {
+        "category": "public-office",
+        "char_end": 582,
+        "char_start": 431,
+        "flashpoints": [],
+        "quote": "She served six years on the Social Planning Advisory Committee, including her final two years as Chair, and serves on the Advisory Planning Commission.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "career",
+        "char_end": 763,
+        "char_start": 583,
+        "flashpoints": [],
+        "quote": "As a leadership coach and non-profit founder, Anna advances food security and children’s wellbeing, connecting organizations serving families through the North Shore Kids Festival.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "community",
+        "char_end": 360,
+        "char_start": 143,
+        "flashpoints": [],
+        "quote": "Anna lives her values through year-round public service: give where you live, support local, and commit to the place you choose to call home. She brings eight years of active local civic service to her third campaign.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "community",
+        "char_end": 763,
+        "char_start": 583,
+        "flashpoints": [],
+        "quote": "As a leadership coach and non-profit founder, Anna advances food security and children’s wellbeing, connecting organizations serving families through the North Shore Kids Festival.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "local-roots",
+        "char_end": 142,
+        "char_start": 0,
+        "flashpoints": [],
+        "quote": "Thirteen years ago, Anna Boltenko chose North Vancouver as home. Three months after receiving Canadian citizenship, she first ran for Council.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      }
+    ],
     "email": "person@gmail.com",
     "financial_disclosure": [],
     "id": "cnv-council-boltenko-anna",
@@ -369,10 +504,10 @@
       },
       {
         "category": "development-and-growth",
-        "char_end": 1396,
+        "char_end": 1294,
         "char_start": 1065,
         "flashpoints": [],
-        "quote": "If elected, Anna will champion attainable housing; match growth with infrastructure and services; improve transportation safety and connectivity for everyone; support families and local businesses; and advance climate resilience.\n\nNorth Vancouver can grow without losing its heart—remaining connected, thoughtful, and people-first.",
+        "quote": "If elected, Anna will champion attainable housing; match growth with infrastructure and services; improve transportation safety and connectivity for everyone; support families and local businesses; and advance climate resilience.",
         "source_type": "official_statement",
         "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
       },
@@ -395,11 +530,29 @@
         "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
       },
       {
+        "category": "childcare-seniors-services",
+        "char_end": 1294,
+        "char_start": 1065,
+        "flashpoints": [],
+        "quote": "If elected, Anna will champion attainable housing; match growth with infrastructure and services; improve transportation safety and connectivity for everyone; support families and local businesses; and advance climate resilience.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
         "category": "governance-and-transparency",
         "char_end": 1063,
         "char_start": 765,
         "flashpoints": [],
         "quote": "Anna believes local government grows through partnership among residents, elected leaders, and City staff. As an independent candidate, she will listen, expand neighbourhood conversations, and promote transparent budgets, measurable results, and evidence-based decisions for long-term public value.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "taxes-and-spending",
+        "char_end": 1063,
+        "char_start": 872,
+        "flashpoints": [],
+        "quote": "As an independent candidate, she will listen, expand neighbourhood conversations, and promote transparent budgets, measurable results, and evidence-based decisions for long-term public value.",
         "source_type": "official_statement",
         "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
       }
@@ -421,6 +574,44 @@
     "website": "https://boltenko4northvancouver.ca"
   },
   {
+    "background": [
+      {
+        "category": "local-roots",
+        "char_end": 704,
+        "char_start": 30,
+        "flashpoints": [],
+        "quote": "I am a long‑time North Vancouver resident with deep family and community roots. My wife Karyn, an Education Assistant in School District 44, and I are raising our two sons, Jack and Sam. Jack has recently graduated and is exploring post‑secondary options, and Sam is currently attending Carson Graham. Many residents may have seen me around the community with my black Labrador guide dog, Nadia.\n\nI attended high school and post‑secondary institutions in North Vancouver before beginning a varied career that included small‑business ownership, real estate, and more than twenty years with TD Canada Trust, where I served as Customer Relations Manager for the Pacific Region.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "career",
+        "char_end": 871,
+        "char_start": 427,
+        "flashpoints": [],
+        "quote": "I attended high school and post‑secondary institutions in North Vancouver before beginning a varied career that included small‑business ownership, real estate, and more than twenty years with TD Canada Trust, where I served as Customer Relations Manager for the Pacific Region. For the past nine years, I have been co‑founder of Gateway Navigation CCC Ltd., a social‑impact company focused on inclusion, accessibility, training, and employment.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "education",
+        "char_end": 704,
+        "char_start": 427,
+        "flashpoints": [],
+        "quote": "I attended high school and post‑secondary institutions in North Vancouver before beginning a varied career that included small‑business ownership, real estate, and more than twenty years with TD Canada Trust, where I served as Customer Relations Manager for the Pacific Region.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "community",
+        "char_end": 1153,
+        "char_start": 873,
+        "flashpoints": [],
+        "quote": "As an elected volunteer Board member and Treasurer for Cypress Gardens, I focus on sound governance supported by audited financial reporting and pragmatic decision‑making for maintenance and replacement planning, with a commitment to transparency and meaningful owner involvement.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      }
+    ],
     "email": "davidbrunforcouncil@outlook.com",
     "financial_disclosure": [],
     "id": "cnv-council-brun-david",
@@ -450,6 +641,17 @@
     "website": null
   },
   {
+    "background": [
+      {
+        "category": "career",
+        "char_end": 176,
+        "char_start": 0,
+        "flashpoints": [],
+        "quote": "I grew up on a street where neighbours looked after each other — and after 40 years of asking questions for a living, I'm running for CNV Council to help this city do the same.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      }
+    ],
     "email": "jeremy@jeremy-cato.ca",
     "financial_disclosure": [],
     "id": "cnv-council-cato-jeremy",
@@ -490,6 +692,19 @@
     "website": "https://www.jeremy-cato.ca/"
   },
   {
+    "background": [
+      {
+        "category": "public-office",
+        "char_end": 580,
+        "char_start": 0,
+        "flashpoints": [
+          "harry-jerome"
+        ],
+        "quote": "Since 2018, it has been my privilege to serve you on Council.\n\nI initiated the City's living wage certification, expanded childcare on City lands, strengthened supports for tenants displaced by redevelopment, restored City funding for school playground upgrades and launched the Multicultural Community Festival task force.\n\nI also helped deliver the Harry Jerome Community Recreation and Silver Harbour Centres, the North Shore Neighbourhood House rebuild including affordable rental homes, the Central Lonsdale Business Improvement Area, and the City's first tree canopy target.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      }
+    ],
     "email": "info@angelagirard.ca",
     "financial_disclosure": [],
     "id": "cnv-council-girard-angela",
@@ -574,6 +789,35 @@
     "website": "https://angelagirard.ca"
   },
   {
+    "background": [
+      {
+        "category": "public-office",
+        "char_end": 346,
+        "char_start": 160,
+        "flashpoints": [],
+        "quote": "I have already served on City Council, for two terms ending when I did not run for re-election in 2014. Prior to that I served on the School Board and the NorthVan Recreation Commission.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "community",
+        "char_end": 476,
+        "char_start": 348,
+        "flashpoints": [],
+        "quote": "I am a volunteer at North Shore Neighbourhood House, helping people with tax returns, and at St Andrews Church delivering bread.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "career",
+        "char_end": 810,
+        "char_start": 609,
+        "flashpoints": [],
+        "quote": "I am a CPA, former banker, with experience in mining, forestry, funerals and renewable energy. Today I help companies and First Nations with banking and finance challenges as an independent consultant.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      }
+    ],
     "email": "rguy4northvan@gmail.com",
     "financial_disclosure": [],
     "id": "cnv-council-heywood-guy",
@@ -614,6 +858,17 @@
     "website": "https://rguy4northvan.ca"
   },
   {
+    "background": [
+      {
+        "category": "local-roots",
+        "char_end": 70,
+        "char_start": 0,
+        "flashpoints": [],
+        "quote": "Ken grew up in North Vancouver and has lived in the city over 45 years",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      }
+    ],
     "email": "ken.izatt@gmail.com",
     "financial_disclosure": [],
     "id": "cnv-council-izatt-ken",
@@ -699,6 +954,35 @@
     "website": "https://www.kizatt.ca"
   },
   {
+    "background": [
+      {
+        "category": "local-roots",
+        "char_end": 122,
+        "char_start": 12,
+        "flashpoints": [],
+        "quote": "I’ve grown up and lived in North Vancouver all my life, and I’ve witnessed how this community has transformed.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "local-roots",
+        "char_end": 1132,
+        "char_start": 1045,
+        "flashpoints": [],
+        "quote": "I’m running for City Council because as a son of North Vancouver, I want a future here.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "community",
+        "char_end": 494,
+        "char_start": 310,
+        "flashpoints": [],
+        "quote": "I’ve been the beneficiary of your kindness and generosity throughout my life, and I’ve tried to serve through my civic engagement, teaching, volunteering, advocacy, and public service.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      }
+    ],
     "email": "person@gmail.com",
     "financial_disclosure": [],
     "id": "cnv-council-kolstee-jullian",
@@ -715,18 +999,9 @@
       {
         "category": "development-and-growth",
         "char_end": 244,
-        "char_start": 12,
+        "char_start": 123,
         "flashpoints": [],
-        "quote": "I’ve grown up and lived in North Vancouver all my life, and I’ve witnessed how this community has transformed. That change is only accelerating, and I believe our challenge is to grow while protecting what makes this place our home.",
-        "source_type": "official_statement",
-        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
-      },
-      {
-        "category": "governance-and-transparency",
-        "char_end": 905,
-        "char_start": 690,
-        "flashpoints": [],
-        "quote": "I want to serve our long-term public interest as a councillor who approaches the issues that affect us most by engaging in difficult conversations, building real relationships, and drawing from diverse perspectives.",
+        "quote": "That change is only accelerating, and I believe our challenge is to grow while protecting what makes this place our home.",
         "source_type": "official_statement",
         "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
       },
@@ -758,6 +1033,7 @@
     "website": "https://www.jullian4northvan.ca"
   },
   {
+    "background": [],
     "email": "maxlai@shaw.ca",
     "financial_disclosure": [],
     "id": "cnv-council-lai-max",
@@ -791,10 +1067,10 @@
       },
       {
         "category": "governance-and-transparency",
-        "char_end": 1053,
-        "char_start": 691,
+        "char_end": 929,
+        "char_start": 734,
         "flashpoints": [],
-        "quote": "I want to be that voice for our community. A voice that doesn’t talk down to you but a voice that talks with you. A voice that listens, learns, and understands our current communities’ needs and what are future communities’ needs will be.\n\nTo be a councilor that works with and works for everyone, of all ages, so they can work, live and play on the North Shore.",
+        "quote": "A voice that doesn’t talk down to you but a voice that talks with you. A voice that listens, learns, and understands our current communities’ needs and what are future communities’ needs will be.",
         "source_type": "official_statement",
         "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
       }
@@ -816,6 +1092,35 @@
     "website": "https://maxlai.ca"
   },
   {
+    "background": [
+      {
+        "category": "public-office",
+        "char_end": 110,
+        "char_start": 0,
+        "flashpoints": [],
+        "quote": "Jessica McIlroy has served on North Vancouver city council since being elected in 2018 and re-elected in 2022.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "public-office",
+        "char_end": 1008,
+        "char_start": 242,
+        "flashpoints": [],
+        "quote": "During her time on council she has been a member of the board of directors of the North Vancouver City Library, North Van Arts Council and Lonsdale Energy, been chair of the city’s climate and environment task force, a member of the Metro Vancouver climate action and Indigenous relations committees, and the council representative on the City’s integrated transportation committee. Jessica believes strongly in collaboration and inter-governmental relations and is currently the 3rd Vice President of the Lower Mainland Local Government Association, a member of the BC Municipal Climate Leaders Council, and Vice-Chair of Climate Caucus. In 2025 Jessica was recognized for her leadership and efforts in local government climate action with a national Clean50 award.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "career",
+        "char_end": 241,
+        "char_start": 111,
+        "flashpoints": [],
+        "quote": "Outside of council she works as a director of government relations with one of Canada’s leading national clean energy think tanks.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      }
+    ],
     "email": "info@jessicamcilroy.com",
     "financial_disclosure": [],
     "id": "cnv-council-mcilroy-jessica",
@@ -846,6 +1151,15 @@
         "quote": "Jessica remains dedicated to serving the North Vancouver community and working to find collaborative solutions to building a City that is climate resilient, provides sustainable and effective transportation options, and aims to be inclusive and equitable.",
         "source_type": "official_statement",
         "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "governance-and-transparency",
+        "char_end": 880,
+        "char_start": 625,
+        "flashpoints": [],
+        "quote": "Jessica believes strongly in collaboration and inter-governmental relations and is currently the 3rd Vice President of the Lower Mainland Local Government Association, a member of the BC Municipal Climate Leaders Council, and Vice-Chair of Climate Caucus.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
       }
     ],
     "socials": {
@@ -865,6 +1179,44 @@
     "website": "https://www.jessicamcilroy.com"
   },
   {
+    "background": [
+      {
+        "category": "local-roots",
+        "char_end": 283,
+        "char_start": 0,
+        "flashpoints": [],
+        "quote": "My family's North Vancouver story began more than 30 years ago, when my parents ran a small convenience store near Lonsdale and 15th. I grew up here, and today my wife and I have built our lives in Central Lonsdale.\n\nThis city gave my family a place to call home and shaped who I am.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "career",
+        "char_end": 133,
+        "char_start": 0,
+        "flashpoints": [],
+        "quote": "My family's North Vancouver story began more than 30 years ago, when my parents ran a small convenience store near Lonsdale and 15th.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "career",
+        "char_end": 633,
+        "char_start": 362,
+        "flashpoints": [],
+        "quote": "I bring more than 16 years of experience in finance, strategy, and planning, and I serve as Chair of the City's Advisory Planning Commission. This work has taught me to ask difficult questions, weigh different perspectives, and focus on measurable and practical outcomes.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "public-office",
+        "char_end": 503,
+        "char_start": 362,
+        "flashpoints": [],
+        "quote": "I bring more than 16 years of experience in finance, strategy, and planning, and I serve as Chair of the City's Advisory Planning Commission.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      }
+    ],
     "email": "krishna@krishnanorthvan.ca",
     "financial_disclosure": [],
     "id": "cnv-council-raisinghani-krishna",
@@ -897,7 +1249,7 @@
         "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
       },
       {
-        "category": "public-safety-emergency",
+        "category": "local-economy",
         "char_end": 969,
         "char_start": 827,
         "flashpoints": [],
@@ -906,7 +1258,7 @@
         "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
       },
       {
-        "category": "local-economy",
+        "category": "public-safety-emergency",
         "char_end": 969,
         "char_start": 827,
         "flashpoints": [],
@@ -942,6 +1294,26 @@
     "website": "https://www.krishnanorthvan.ca/"
   },
   {
+    "background": [
+      {
+        "category": "local-roots",
+        "char_end": 101,
+        "char_start": 0,
+        "flashpoints": [],
+        "quote": "I grew up in North Vancouver and live with my spouse, children, and retired mom in my childhood home.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "career",
+        "char_end": 865,
+        "char_start": 731,
+        "flashpoints": [],
+        "quote": "As a public sector scientist, educator, and healthcare worker, I solve complex problems for our community and for individuals in need.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      }
+    ],
     "email": "contact@northvandrew.ca",
     "financial_disclosure": [],
     "id": "cnv-council-robertson-andrew",
@@ -1001,6 +1373,66 @@
     "website": "https://northvandrew.ca"
   },
   {
+    "background": [
+      {
+        "category": "public-office",
+        "char_end": 177,
+        "char_start": 73,
+        "flashpoints": [],
+        "quote": "First elected to Council in 2022, I listen to residents, think independently and stand up for residents.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "public-office",
+        "char_end": 807,
+        "char_start": 327,
+        "flashpoints": [
+          "wastewater-treatment-plant"
+        ],
+        "quote": "I chaired the North Vancouver Museum & Archives Commission and City Library Board, and authored North Vancouver’s Lonsdale Neighbourhood, a local history book.\n\nI supported North Shore Neighbourhood House redevelopment, including housing for families and workers. I championed pedestrian safety, accessibility, mature tree retention and heritage preservation. I raised concerns about wastewater treatment plant costs and strongly supported calls for an independent public inquiry.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "public-office",
+        "char_end": 1168,
+        "char_start": 871,
+        "flashpoints": [
+          "harry-jerome"
+        ],
+        "quote": "On pay parking, I listened to residents and businesses and advocated for 30-minute free curbside parking and 3-hour free parking at Harry Jerome. I opposed the Swim Deck project after concluding that its cost estimate was conceptual and not sufficiently detailed. I stood up for displaced tenants.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "career",
+        "char_end": 326,
+        "char_start": 179,
+        "flashpoints": [],
+        "quote": "I have 35+ years of experience, including teaching project and business management at Langara College and a lifelong commitment to North Vancouver.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "community",
+        "char_end": 486,
+        "char_start": 327,
+        "flashpoints": [],
+        "quote": "I chaired the North Vancouver Museum & Archives Commission and City Library Board, and authored North Vancouver’s Lonsdale Neighbourhood, a local history book.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "local-roots",
+        "char_end": 72,
+        "char_start": 0,
+        "flashpoints": [],
+        "quote": "I have lived in North Vancouver for over 40 years, and I love this City.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      }
+    ],
     "email": "voteshervin@gmail.com",
     "financial_disclosure": [],
     "id": "cnv-council-shahriari-shervin",
@@ -1083,17 +1515,26 @@
       },
       {
         "category": "parks-environment-climate",
-        "char_end": 807,
-        "char_start": 591,
-        "flashpoints": [
-          "wastewater-treatment-plant"
-        ],
-        "quote": "I championed pedestrian safety, accessibility, mature tree retention and heritage preservation. I raised concerns about wastewater treatment plant costs and strongly supported calls for an independent public inquiry.",
+        "char_end": 1386,
+        "char_start": 1170,
+        "flashpoints": [],
+        "quote": "My second-term priorities are public input, traffic flow, transit, affordable housing, protections for displaced tenants, more trees and parks, business vitality, and stewardship of taxpayer dollars.\n\nCandidate Video",
         "source_type": "official_statement",
         "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
       },
       {
-        "category": "parks-environment-climate",
+        "category": "governance-and-transparency",
+        "char_end": 807,
+        "char_start": 687,
+        "flashpoints": [
+          "wastewater-treatment-plant"
+        ],
+        "quote": "I raised concerns about wastewater treatment plant costs and strongly supported calls for an independent public inquiry.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "governance-and-transparency",
         "char_end": 1386,
         "char_start": 1170,
         "flashpoints": [],
@@ -1120,45 +1561,6 @@
         "quote": "My second-term priorities are public input, traffic flow, transit, affordable housing, protections for displaced tenants, more trees and parks, business vitality, and stewardship of taxpayer dollars.\n\nCandidate Video",
         "source_type": "official_statement",
         "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
-      },
-      {
-        "category": "governance-and-transparency",
-        "char_end": 177,
-        "char_start": 73,
-        "flashpoints": [],
-        "quote": "First elected to Council in 2022, I listen to residents, think independently and stand up for residents.",
-        "source_type": "official_statement",
-        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
-      },
-      {
-        "category": "governance-and-transparency",
-        "char_end": 1016,
-        "char_start": 687,
-        "flashpoints": [
-          "wastewater-treatment-plant",
-          "harry-jerome"
-        ],
-        "quote": "I raised concerns about wastewater treatment plant costs and strongly supported calls for an independent public inquiry.\n\nMy first term demonstrated the value of independent thinking. On pay parking, I listened to residents and businesses and advocated for 30-minute free curbside parking and 3-hour free parking at Harry Jerome.",
-        "source_type": "official_statement",
-        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
-      },
-      {
-        "category": "governance-and-transparency",
-        "char_end": 1386,
-        "char_start": 1170,
-        "flashpoints": [],
-        "quote": "My second-term priorities are public input, traffic flow, transit, affordable housing, protections for displaced tenants, more trees and parks, business vitality, and stewardship of taxpayer dollars.\n\nCandidate Video",
-        "source_type": "official_statement",
-        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
-      },
-      {
-        "category": "childcare-seniors-services",
-        "char_end": 1134,
-        "char_start": 1017,
-        "flashpoints": [],
-        "quote": "I opposed the Swim Deck project after concluding that its cost estimate was conceptual and not sufficiently detailed.",
-        "source_type": "official_statement",
-        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
       }
     ],
     "socials": {
@@ -1180,6 +1582,35 @@
     "website": "https://voteshervin.ca"
   },
   {
+    "background": [
+      {
+        "category": "public-office",
+        "char_end": 861,
+        "char_start": 594,
+        "flashpoints": [],
+        "quote": "I volunteered at CNV and APC committee at CNV.\n\nIn October 2022, I was elected as one of the School Trustees for the City Of North Vancouver, and this taught me critical leadership skills, collaborative, diplomacy, boundary management, and collective decision making.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "career",
+        "char_end": 593,
+        "char_start": 154,
+        "flashpoints": [],
+        "quote": "North Vancouver has been my home for 32 years, and with my 26 years of experience as a Registered Nurse for Vancouver Coastal Health, I have dedicated my career to caring for others and advocating for the well-being of our community. As a Steward with BCNU and an Interim Chair for the Coastal Mountain Region, I have honed my leadership skills and developed a profound understanding of the importance of listening to diverse perspectives.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "local-roots",
+        "char_end": 387,
+        "char_start": 154,
+        "flashpoints": [],
+        "quote": "North Vancouver has been my home for 32 years, and with my 26 years of experience as a Registered Nurse for Vancouver Coastal Health, I have dedicated my career to caring for others and advocating for the well-being of our community.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      }
+    ],
     "email": "Lailani4northvan@gmail.com",
     "financial_disclosure": [],
     "id": "cnv-council-tumaneng-lailani",
@@ -1194,7 +1625,7 @@
     "photo_url": "/photos/cnv-council-tumaneng-lailani.jpg",
     "positions": [
       {
-        "category": "housing",
+        "category": "public-safety-emergency",
         "char_end": 1147,
         "char_start": 863,
         "flashpoints": [],
@@ -1212,7 +1643,7 @@
         "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
       },
       {
-        "category": "public-safety-emergency",
+        "category": "housing",
         "char_end": 1147,
         "char_start": 863,
         "flashpoints": [],
@@ -1247,6 +1678,37 @@
     "website": null
   },
   {
+    "background": [
+      {
+        "category": "public-office",
+        "char_end": 575,
+        "char_start": 0,
+        "flashpoints": [
+          "harry-jerome"
+        ],
+        "quote": "Tony Valente is seeking re-election, bringing eight years of Council experience and a proven record of delivering results for the community. He has helped advance investments and community-building initiatives that improve residents’ quality of life, including the new Harry Jerome Community Recreation Centre, Silver Harbour Seniors’ Activity Centre, North Shore Neighbourhood House and Mahon Child Care Centre. He also supported the creation of the Central Lonsdale Business Improvement Area, strengthening local businesses and helping build a thriving commercial district.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "career",
+        "char_end": 1185,
+        "char_start": 922,
+        "flashpoints": [],
+        "quote": "Professionally, Tony has a decade of experience in project delivery, procurement, risk and strategic management in Vancouver and abroad. His expertise in governance, financial oversight and planning informs a practical, evidence-based approach to decision-making.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "education",
+        "char_end": 1333,
+        "char_start": 1187,
+        "flashpoints": [],
+        "quote": "A longtime North Shore resident and St. Thomas Aquinas alumnus, Tony holds a Bachelor of Commerce and an MBA from UBC’s Sauder School of Business.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      }
+    ],
     "email": "tony@tonyvalente.ca",
     "financial_disclosure": [],
     "id": "cnv-council-valente-tony",
@@ -1284,6 +1746,15 @@
         "char_start": 577,
         "flashpoints": [],
         "quote": "Tony is an advocate for responsible growth, community engagement, vibrant public spaces, transportation choice and long-term planning.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "governance-and-transparency",
+        "char_end": 1185,
+        "char_start": 1059,
+        "flashpoints": [],
+        "quote": "His expertise in governance, financial oversight and planning informs a practical, evidence-based approach to decision-making.",
         "source_type": "official_statement",
         "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
       },
@@ -1326,6 +1797,17 @@
     "website": "https://www.tonyvalente.ca"
   },
   {
+    "background": [
+      {
+        "category": "public-office",
+        "char_end": 1192,
+        "char_start": 1068,
+        "flashpoints": [],
+        "quote": "These are the values that have guided me over the past eight years, and the values I will continue to embrace as your Mayor.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      }
+    ],
     "email": "lindabuchanancnv@gmail.com",
     "financial_disclosure": [],
     "id": "cnv-mayor-buchanan-linda",
@@ -1403,6 +1885,7 @@
     "website": "https://lindabuchanan.ca"
   },
   {
+    "background": [],
     "email": null,
     "financial_disclosure": [],
     "id": "cnv-mayor-king-oliver",
@@ -1422,6 +1905,35 @@
     "website": null
   },
   {
+    "background": [
+      {
+        "category": "public-office",
+        "char_end": 486,
+        "char_start": 239,
+        "flashpoints": [],
+        "quote": "I ran for election in 1996, served as Policy Director for the Progressive Democratic Alliance, represented the party on Elections BC’s Election Advisory Committee, and hold an SFU degree in Human and Economic Geography and Business Administration.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "career",
+        "char_end": 486,
+        "char_start": 239,
+        "flashpoints": [],
+        "quote": "I ran for election in 1996, served as Policy Director for the Progressive Democratic Alliance, represented the party on Elections BC’s Election Advisory Committee, and hold an SFU degree in Human and Economic Geography and Business Administration.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "education",
+        "char_end": 486,
+        "char_start": 239,
+        "flashpoints": [],
+        "quote": "I ran for election in 1996, served as Policy Director for the Progressive Democratic Alliance, represented the party on Elections BC’s Election Advisory Committee, and hold an SFU degree in Human and Economic Geography and Business Administration.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      }
+    ],
     "email": "dave@kurvers.net",
     "financial_disclosure": [],
     "id": "cnv-mayor-kurvers-dave",
@@ -1490,6 +2002,44 @@
     "website": "https://vote.kurvers.net/"
   },
   {
+    "background": [
+      {
+        "category": "public-office",
+        "char_end": 827,
+        "char_start": 662,
+        "flashpoints": [],
+        "quote": "Before that, I served as an elected school trustee and on our library board, known as the voice of reason for listening to a room and voting on the merits.\n\nShow up.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "career",
+        "char_end": 182,
+        "char_start": 93,
+        "flashpoints": [],
+        "quote": "After a long career in business, I'm stepping away from it to serve this community again.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "career",
+        "char_end": 563,
+        "char_start": 448,
+        "flashpoints": [],
+        "quote": "I put my employees first for thirty years running businesses, and I was recognized for my servant leadership style.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "community",
+        "char_end": 827,
+        "char_start": 564,
+        "flashpoints": [],
+        "quote": "I bring that same instinct to serving as strata council president today, in a mixed-use building. Before that, I served as an elected school trustee and on our library board, known as the voice of reason for listening to a room and voting on the merits.\n\nShow up.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      }
+    ],
     "email": "mike@mcgraw4mayor.ca",
     "financial_disclosure": [],
     "id": "cnv-mayor-mcgraw-mike",
@@ -1539,6 +2089,53 @@
     "website": "https://mcgraw4mayor.ca/"
   },
   {
+    "background": [
+      {
+        "category": "public-office",
+        "char_end": 1004,
+        "char_start": 749,
+        "flashpoints": [],
+        "quote": "My service with the Architectural Institute of British Columbia (AIBC) and the City of North Vancouver has strengthened my understanding of responsible governance, accountability, public interest, and the importance of listening to different perspectives.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "career",
+        "char_end": 418,
+        "char_start": 0,
+        "flashpoints": [],
+        "quote": "North Vancouver resident, registered architect, business owner, mentor, and community volunteer with more than 30 years of professional experience, including more than 12 years in Canada.\n\nMy connection to education includes experience as a University Teaching Assistant from 2000 to 2002, many years of mentoring emerging professionals, and a family background in education through my mother who is a retired teacher.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "career",
+        "char_end": 1004,
+        "char_start": 593,
+        "flashpoints": [],
+        "quote": "Throughout my career, I have served in leadership, governance, financial oversight, project management, mentoring, and collaborative decision-making roles. My service with the Architectural Institute of British Columbia (AIBC) and the City of North Vancouver has strengthened my understanding of responsible governance, accountability, public interest, and the importance of listening to different perspectives.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "community",
+        "char_end": 418,
+        "char_start": 0,
+        "flashpoints": [],
+        "quote": "North Vancouver resident, registered architect, business owner, mentor, and community volunteer with more than 30 years of professional experience, including more than 12 years in Canada.\n\nMy connection to education includes experience as a University Teaching Assistant from 2000 to 2002, many years of mentoring emerging professionals, and a family background in education through my mother who is a retired teacher.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "local-roots",
+        "char_end": 418,
+        "char_start": 0,
+        "flashpoints": [],
+        "quote": "North Vancouver resident, registered architect, business owner, mentor, and community volunteer with more than 30 years of professional experience, including more than 12 years in Canada.\n\nMy connection to education includes experience as a University Teaching Assistant from 2000 to 2002, many years of mentoring emerging professionals, and a family background in education through my mother who is a retired teacher.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      }
+    ],
     "email": "azizi.school.trustee@gmail.com",
     "financial_disclosure": [],
     "id": "cnv-trustee-azizi-manoochehr",
@@ -1569,15 +2166,6 @@
         "quote": "I am committed to bringing my professional experience, governance skills, collaborative approach, and community perspective to help Build Better Futures for North Vancouver Students.",
         "source_type": "official_statement",
         "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
-      },
-      {
-        "category": "governance-and-transparency",
-        "char_end": 1004,
-        "char_start": 749,
-        "flashpoints": [],
-        "quote": "My service with the Architectural Institute of British Columbia (AIBC) and the City of North Vancouver has strengthened my understanding of responsible governance, accountability, public interest, and the importance of listening to different perspectives.",
-        "source_type": "official_statement",
-        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
       }
     ],
     "socials": {},
@@ -1594,6 +2182,35 @@
     "website": "https://voteazizi.ca/"
   },
   {
+    "background": [
+      {
+        "category": "education",
+        "char_end": 343,
+        "char_start": 41,
+        "flashpoints": [],
+        "quote": "As an immigrant who completed high school in British Columbia, I experienced firsthand how education can open doors, create opportunity, and build a foundation for a better future.\n\nMy journey continued at Capilano University, followed by a Bachelor of Commerce and a Master of Business Administration.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "career",
+        "char_end": 810,
+        "char_start": 493,
+        "flashpoints": [],
+        "quote": "For more than 20 years in the corporate sector, I have led teams, worked with people from diverse backgrounds, managed resources, and made decisions where accountability matters. I have learned that good leadership means listening, asking the right questions, balancing priorities, and being responsible for outcomes.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "local-roots",
+        "char_end": 221,
+        "char_start": 41,
+        "flashpoints": [],
+        "quote": "As an immigrant who completed high school in British Columbia, I experienced firsthand how education can open doors, create opportunity, and build a foundation for a better future.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      }
+    ],
     "email": "peggyhung2000@gmail.com",
     "financial_disclosure": [],
     "id": "cnv-trustee-hung-peggy",
@@ -1649,6 +2266,26 @@
     "website": null
   },
   {
+    "background": [
+      {
+        "category": "local-roots",
+        "char_end": 132,
+        "char_start": 0,
+        "flashpoints": [],
+        "quote": "My name is Senora Navales, long time resident of City of North Vancouver, and I am running for the position of School Board Trustee.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "career",
+        "char_end": 895,
+        "char_start": 692,
+        "flashpoints": [],
+        "quote": "My working experience as a Porter and Ward Aid at Lion's gate Hospital, I have been an active member of HEU, which I listen, support and advocate for my fellow workers, for safe and inclusive work place.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      }
+    ],
     "email": "senoranavales163@gmail.com",
     "financial_disclosure": [],
     "id": "cnv-trustee-navales-senora",
@@ -1695,6 +2332,26 @@
     "website": null
   },
   {
+    "background": [
+      {
+        "category": "community",
+        "char_end": 266,
+        "char_start": 0,
+        "flashpoints": [],
+        "quote": "I’m running for School Trustee because because I’ve spent years volunteering in our schools, including serving as PAC Chair at Westview Elementary and previously as a Big Sister. I’ve had the opportunity to work with parents, teachers, principals and district staff.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "career",
+        "char_end": 695,
+        "char_start": 371,
+        "flashpoints": [],
+        "quote": "My career as a mortgage broker has also shaped how I approach problems. Every day I help people navigate complicated decisions. I listen to what matters to them, explain their options and help them find solutions that work. I’ve learned to ask questions, look at the details and take responsibility for the decisions I make.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      }
+    ],
     "email": "trishlneufeld@gmail.com",
     "financial_disclosure": [],
     "id": "cnv-trustee-neufeld-trish",
@@ -1708,15 +2365,6 @@
     "phone": "604-313-2687",
     "photo_url": "/photos/cnv-trustee-neufeld-trish.jpg",
     "positions": [
-      {
-        "category": "schools-education",
-        "char_end": 1035,
-        "char_start": 697,
-        "flashpoints": [],
-        "quote": "I don’t have all the answers but I know that good decisions start with listening to different perspectives, finding common ground and keeping students at the centre of the conversation.\n\nI would be honoured to bring that approach to the Board and advocate for our community to ensure our strategic direction aligns with our shared vision.",
-        "source_type": "official_statement",
-        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
-      },
       {
         "category": "governance-and-transparency",
         "char_end": 1035,
@@ -1741,6 +2389,35 @@
     "website": "https://trishneufeld-sd44.ca"
   },
   {
+    "background": [
+      {
+        "category": "education",
+        "char_end": 430,
+        "char_start": 117,
+        "flashpoints": [],
+        "quote": "I graduated Bachelor of Arts Major in Philosophy at University of Santo Tomas and undergraduate of Law at San Beda University. We migrated in 1991.\n\nMy passion on social justice and human rights have urged me to pursue Criminology in Douglas College but being new to Canada and a working student has a toll on me.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "career",
+        "char_end": 556,
+        "char_start": 431,
+        "flashpoints": [],
+        "quote": "I worked and earned 22 years experience in payroll, staffing and human resources in unionized setting.\n\nMy commitment to you:",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "local-roots",
+        "char_end": 264,
+        "char_start": 0,
+        "flashpoints": [],
+        "quote": "I am a proud indigenous of the Cordillera Autonomous Region of the Philippines, born and raised in Kalinga province. I graduated Bachelor of Arts Major in Philosophy at University of Santo Tomas and undergraduate of Law at San Beda University. We migrated in 1991.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      }
+    ],
     "email": "e_s_purugganan@yahoo.com",
     "financial_disclosure": [],
     "id": "cnv-trustee-purugganan-ethel",
@@ -1768,6 +2445,44 @@
     "website": null
   },
   {
+    "background": [
+      {
+        "category": "public-office",
+        "char_end": 224,
+        "char_start": 40,
+        "flashpoints": [],
+        "quote": "I am seeking re-election as a North Vancouver School Trustee to build on the progress we have made over the past four years.\n\nIt has been an honour to serve as Trustee and Board Chair.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "public-office",
+        "char_end": 577,
+        "char_start": 378,
+        "flashpoints": [],
+        "quote": "I am proud of what we have accomplished: opening Cloverley Elementary, expanding schools and childcare spaces, and creating more opportunities for students through skilled trades and career pathways.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "community",
+        "char_end": 987,
+        "char_start": 768,
+        "flashpoints": [],
+        "quote": "As a parent, volunteer and community leader, I have contributed to municipal planning, social policy, recreation and transportation, giving me a strong understanding of the connections between our schools and community.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "local-roots",
+        "char_end": 987,
+        "char_start": 711,
+        "flashpoints": [],
+        "quote": "The North Shore has been my home for more than 24 years. As a parent, volunteer and community leader, I have contributed to municipal planning, social policy, recreation and transportation, giving me a strong understanding of the connections between our schools and community.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      }
+    ],
     "email": "antje.wilson03@gmail.com",
     "financial_disclosure": [],
     "id": "cnv-trustee-wilson-antje",
@@ -1781,15 +2496,6 @@
     "phone": "604-418-6901",
     "photo_url": "/photos/cnv-trustee-wilson-antje.jpg",
     "positions": [
-      {
-        "category": "schools-education",
-        "char_end": 164,
-        "char_start": 40,
-        "flashpoints": [],
-        "quote": "I am seeking re-election as a North Vancouver School Trustee to build on the progress we have made over the past four years.",
-        "source_type": "official_statement",
-        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
-      },
       {
         "category": "schools-education",
         "char_end": 709,
@@ -1825,6 +2531,15 @@
         "quote": "I believe good governance means listening, asking thoughtful questions and working collaboratively to make decisions in the best interests of students.",
         "source_type": "official_statement",
         "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "taxes-and-spending",
+        "char_end": 1289,
+        "char_start": 989,
+        "flashpoints": [],
+        "quote": "If re-elected, I will continue advocating for excellent public education, responsible stewardship of public resources, investment in our schools, and opportunities for every student to discover their strengths, pursue their interests and graduate with the knowledge, skills and confidence to succeed.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
       }
     ],
     "socials": {
@@ -1844,6 +2559,55 @@
     "website": "https://www.antjewilson.com"
   },
   {
+    "background": [
+      {
+        "category": "public-office",
+        "char_end": 636,
+        "char_start": 473,
+        "flashpoints": [],
+        "quote": "For the past four years, he has served on the North Vancouver School Board, where he chaired the Audit Committee and helped rebuild the Board’s strategic reserves.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "career",
+        "char_end": 471,
+        "char_start": 276,
+        "flashpoints": [],
+        "quote": "He holds graduate degrees in Developmental Psychology and Education and is the co-founder of the Thinking Playground, a summer camp that helps children and youth develop critical-thinking skills.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "education",
+        "char_end": 471,
+        "char_start": 276,
+        "flashpoints": [],
+        "quote": "He holds graduate degrees in Developmental Psychology and Education and is the co-founder of the Thinking Playground, a summer camp that helps children and youth develop critical-thinking skills.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "community",
+        "char_end": 845,
+        "char_start": 637,
+        "flashpoints": [
+          "wastewater-treatment-plant"
+        ],
+        "quote": "Dan also serves as the spokesperson for the North Shore Neighbourhoods Alliance, a coalition of seven community associations seeking an independent, public inquiry into the Wastewater Treatment Plant project.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "local-roots",
+        "char_end": 275,
+        "char_start": 174,
+        "flashpoints": [],
+        "quote": "A lifelong North Shore resident, Dan lives in Seylynn with his beloved Labrador retriever, Nietzsche.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      }
+    ],
     "email": null,
     "financial_disclosure": [],
     "id": "dnv-council-anderson-daniel",
@@ -1878,9 +2642,9 @@
       {
         "category": "taxes-and-spending",
         "char_end": 1470,
-        "char_start": 846,
+        "char_start": 1018,
         "flashpoints": [],
-        "quote": "This experience has strengthened his commitment to transparency, sound financial oversight, and ensuring regional bodies remain accountable to the communities they serve.\n\nAs a councillor, Dan will work to ensure infrastructure and public facilities keep pace with growth, address transportation gridlock, and protect taxpayers amid rising budgetary pressures. He will advocate for a fair renegotiation of household levies connected to the Wastewater project, meaningful local control over density and zoning, attainable housing for young families, and decisions that protect the balance among people, nature, and community.",
+        "quote": "As a councillor, Dan will work to ensure infrastructure and public facilities keep pace with growth, address transportation gridlock, and protect taxpayers amid rising budgetary pressures. He will advocate for a fair renegotiation of household levies connected to the Wastewater project, meaningful local control over density and zoning, attainable housing for young families, and decisions that protect the balance among people, nature, and community.",
         "source_type": "official_statement",
         "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
       },
@@ -1895,10 +2659,19 @@
       },
       {
         "category": "development-and-growth",
-        "char_end": 1604,
+        "char_end": 1470,
         "char_start": 1018,
         "flashpoints": [],
-        "quote": "As a councillor, Dan will work to ensure infrastructure and public facilities keep pace with growth, address transportation gridlock, and protect taxpayers amid rising budgetary pressures. He will advocate for a fair renegotiation of household levies connected to the Wastewater project, meaningful local control over density and zoning, attainable housing for young families, and decisions that protect the balance among people, nature, and community.\n\nDan is asking voters to join him in restoring local control and building a more liveable, fiscally responsible District of North Van",
+        "quote": "As a councillor, Dan will work to ensure infrastructure and public facilities keep pace with growth, address transportation gridlock, and protect taxpayers amid rising budgetary pressures. He will advocate for a fair renegotiation of household levies connected to the Wastewater project, meaningful local control over density and zoning, attainable housing for young families, and decisions that protect the balance among people, nature, and community.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "governance-and-transparency",
+        "char_end": 172,
+        "char_start": 0,
+        "flashpoints": [],
+        "quote": "Dan Anderson is running for District Council because our community deserves responsible growth, accountable government, and infrastructure that keeps pace with development.",
         "source_type": "official_statement",
         "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
       },
@@ -1916,9 +2689,9 @@
       {
         "category": "governance-and-transparency",
         "char_end": 1604,
-        "char_start": 1207,
+        "char_start": 1472,
         "flashpoints": [],
-        "quote": "He will advocate for a fair renegotiation of household levies connected to the Wastewater project, meaningful local control over density and zoning, attainable housing for young families, and decisions that protect the balance among people, nature, and community.\n\nDan is asking voters to join him in restoring local control and building a more liveable, fiscally responsible District of North Van",
+        "quote": "Dan is asking voters to join him in restoring local control and building a more liveable, fiscally responsible District of North Van",
         "source_type": "official_statement",
         "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
       }
@@ -1937,6 +2710,62 @@
     "website": "https://www.voteanderson.ca"
   },
   {
+    "background": [
+      {
+        "category": "public-office",
+        "char_end": 130,
+        "char_start": 38,
+        "flashpoints": [],
+        "quote": "I am a lifelong resident of the District and have been proud to serve on Council since 2018.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "public-office",
+        "char_end": 527,
+        "char_start": 319,
+        "flashpoints": [],
+        "quote": "During my time on Council, I have also served on a number of community boards and committees, including the Library Board, Museum and Archives Commission, and the District’s Climate Action Advisory Committee.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "career",
+        "char_end": 318,
+        "char_start": 199,
+        "flashpoints": [],
+        "quote": "Professionally, I have spent more than 20 years working in advertising and sales and hold a Bachelor of Music from UBC.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "education",
+        "char_end": 318,
+        "char_start": 199,
+        "flashpoints": [],
+        "quote": "Professionally, I have spent more than 20 years working in advertising and sales and hold a Bachelor of Music from UBC.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "community",
+        "char_end": 527,
+        "char_start": 319,
+        "flashpoints": [],
+        "quote": "During my time on Council, I have also served on a number of community boards and committees, including the Library Board, Museum and Archives Commission, and the District’s Climate Action Advisory Committee.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "local-roots",
+        "char_end": 197,
+        "char_start": 0,
+        "flashpoints": [],
+        "quote": "North Vancouver has always been home. I am a lifelong resident of the District and have been proud to serve on Council since 2018. I live in Lynn Valley with my wife, Signy, and our two young kids.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      }
+    ],
     "email": null,
     "financial_disclosure": [],
     "id": "dnv-council-back-jordan",
@@ -1980,7 +2809,7 @@
         "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
       },
       {
-        "category": "taxes-and-spending",
+        "category": "parks-environment-climate",
         "char_end": 1368,
         "char_start": 1124,
         "flashpoints": [],
@@ -1989,7 +2818,7 @@
         "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
       },
       {
-        "category": "parks-environment-climate",
+        "category": "taxes-and-spending",
         "char_end": 1368,
         "char_start": 1124,
         "flashpoints": [],
@@ -2043,6 +2872,7 @@
     "website": "https://www.jordanback.net/"
   },
   {
+    "background": [],
     "email": null,
     "financial_disclosure": [],
     "id": "dnv-council-bell-trey",
@@ -2062,6 +2892,44 @@
     "website": null
   },
   {
+    "background": [
+      {
+        "category": "public-office",
+        "char_end": 934,
+        "char_start": 711,
+        "flashpoints": [],
+        "quote": "I bring the experience of serving two terms on District Council, a record of community volunteering and nonprofit leadership, and more than 15 years as a professional engineer working on major transportation infrastructure.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "career",
+        "char_end": 934,
+        "char_start": 711,
+        "flashpoints": [],
+        "quote": "I bring the experience of serving two terms on District Council, a record of community volunteering and nonprofit leadership, and more than 15 years as a professional engineer working on major transportation infrastructure.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "community",
+        "char_end": 934,
+        "char_start": 711,
+        "flashpoints": [],
+        "quote": "I bring the experience of serving two terms on District Council, a record of community volunteering and nonprofit leadership, and more than 15 years as a professional engineer working on major transportation infrastructure.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "local-roots",
+        "char_end": 1221,
+        "char_start": 1054,
+        "flashpoints": [],
+        "quote": "I also know what it means to choose North Vancouver, work to find a suitable home, raise my two children here and manage the everyday cost of living in this community.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      }
+    ],
     "email": null,
     "financial_disclosure": [],
     "id": "dnv-council-bond-mathew",
@@ -2081,6 +2949,15 @@
         "char_start": 396,
         "flashpoints": [],
         "quote": "We must maintain and improve infrastructure, transportation and the services people rely on, while understanding long-term costs and demanding accountability for major projects.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "housing",
+        "char_end": 395,
+        "char_start": 133,
+        "flashpoints": [],
+        "quote": "Our neighbours, friends and families should be able to build roots, stay connected and see their future here at every stage of life. The next Council will make tough decisions about affordability and quality of life that will shape our community for generations.",
         "source_type": "official_statement",
         "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
       },
@@ -2121,6 +2998,28 @@
     "website": "https://www.mathewbond.com"
   },
   {
+    "background": [
+      {
+        "category": "career",
+        "char_end": 823,
+        "char_start": 630,
+        "flashpoints": [],
+        "quote": "With more than 30 years of experience in both the public and private sectors, I have developed a proven ability to build strong, collaborative relationships across all sectors of the community.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "local-roots",
+        "char_end": 346,
+        "char_start": 0,
+        "flashpoints": [
+          "third-crossing"
+        ],
+        "quote": "I grew up on the North Shore and raised my family in the Seymour area, where I still live today. As a renter who commutes daily by transit across the Ironworkers Memorial Bridge, I understand firsthand the challenges many residents face, including traffic congestion, the impacts of growth and development, and the shortage of attainable housing.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      }
+    ],
     "email": null,
     "financial_disclosure": [],
     "id": "dnv-council-boyd-daina",
@@ -2229,6 +3128,7 @@
     "website": "https://www.dainaboyd.ca"
   },
   {
+    "background": [],
     "email": null,
     "financial_disclosure": [],
     "id": "dnv-council-forbes-betty",
@@ -2248,6 +3148,35 @@
     "website": null
   },
   {
+    "background": [
+      {
+        "category": "public-office",
+        "char_end": 94,
+        "char_start": 0,
+        "flashpoints": [],
+        "quote": "Born and raised in North Vancouver, Jim Hanson is seeking his fourth term on District Council.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "public-office",
+        "char_end": 1292,
+        "char_start": 1057,
+        "flashpoints": [],
+        "quote": "Jim has served on a variety of boards and committees, including the Policing Committee, Library Board, Heritage Committee, and the Advisory Committee on Disability Issues. Jim chairs the North Shore Standing Committee on Substance Use.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "local-roots",
+        "char_end": 250,
+        "char_start": 0,
+        "flashpoints": [],
+        "quote": "Born and raised in North Vancouver, Jim Hanson is seeking his fourth term on District Council. Jim is married to Ruth Hanson, and together they have two adult children. Jim lives in Blueridge (20+ years) and is a practicing lawyer in North Vancouver.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      }
+    ],
     "email": null,
     "financial_disclosure": [],
     "id": "dnv-council-hanson-jim",
@@ -2317,6 +3246,17 @@
     "website": "https://www.jimhansondnv.ca"
   },
   {
+    "background": [
+      {
+        "category": "local-roots",
+        "char_end": 65,
+        "char_start": 0,
+        "flashpoints": [],
+        "quote": "I grew up on the North Shore, and now I’m raising my family here.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      }
+    ],
     "email": null,
     "financial_disclosure": [],
     "id": "dnv-council-kyle-aidan",
@@ -2332,10 +3272,10 @@
     "positions": [
       {
         "category": "housing",
-        "char_end": 497,
+        "char_end": 330,
         "char_start": 179,
         "flashpoints": [],
-        "quote": "But increasingly, the math doesn’t work. Their kids can’t afford to stay, their parents can’t find somewhere smaller nearby, and the math doesn’t work. This election comes down to one question: Can people stay here? I believe we can make room for the future without taking away what people value about the North Shore.",
+        "quote": "But increasingly, the math doesn’t work. Their kids can’t afford to stay, their parents can’t find somewhere smaller nearby, and the math doesn’t work.",
         "source_type": "official_statement",
         "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
       },
@@ -2370,10 +3310,10 @@
       },
       {
         "category": "development-and-growth",
-        "char_end": 826,
+        "char_end": 578,
         "char_start": 395,
         "flashpoints": [],
-        "quote": "I believe we can make room for the future without taking away what people value about the North Shore. My approach is practical: protect what works, fix what does not, and plan ahead.\n\nHOUSING: Homes for every stage of life, in the right places and close to transit, shops and services. The province has set the rules. We can spend years fighting them, or focus on getting the infrastructure and planning right for North Vancouver.",
+        "quote": "I believe we can make room for the future without taking away what people value about the North Shore. My approach is practical: protect what works, fix what does not, and plan ahead.",
         "source_type": "official_statement",
         "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
       },
@@ -2404,6 +3344,7 @@
     "website": "https://www.aidankyle.ca"
   },
   {
+    "background": [],
     "email": null,
     "financial_disclosure": [],
     "id": "dnv-council-mah-herman",
@@ -2423,6 +3364,35 @@
     "website": null
   },
   {
+    "background": [
+      {
+        "category": "public-office",
+        "char_end": 565,
+        "char_start": 252,
+        "flashpoints": [],
+        "quote": "For the past eight years, I have had the privilege of serving as an elected North Vancouver School Board Trustee. In this role, I have advocated for students & families while working collaboratively with school district staff, the Ministry of Education, families, partner organizations, and our broader community.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "community",
+        "char_end": 1071,
+        "char_start": 566,
+        "flashpoints": [],
+        "quote": "Community service has been an important part of my life for more than two decades. Over the years, I have been honored to serve on the boards of NVDPL, NS Disability Resource Centre, NV Band & Strings Parent Association, NS Safety Council & Presentation House Theatre. I have also volunteered with and participated in committees & initiatives involving the NS Women’s Centre, NS Family Services, NS Restorative Justice Society, MONOVA, Impact NS, Kelty Mental Health, NS Table Matters and Cops for Cancer.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "local-roots",
+        "char_end": 250,
+        "char_start": 0,
+        "flashpoints": [],
+        "quote": "For the past 25 years, I have been proud to call the District of North Vancouver home. As a mother of two young adults, I am deeply grateful that our family has had the opportunity to live, grow, and build lasting connections here on the North Shore.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      }
+    ],
     "email": null,
     "financial_disclosure": [],
     "id": "dnv-council-mann-kulvir",
@@ -2464,6 +3434,44 @@
     "website": "https://www.kulvirmann.ca"
   },
   {
+    "background": [
+      {
+        "category": "public-office",
+        "char_end": 1190,
+        "char_start": 1011,
+        "flashpoints": [],
+        "quote": "I am a two-term elected school trustee, a role that involves responsible decision-making on policy, supporting families and educators, and championing student centred initiatives.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "career",
+        "char_end": 1407,
+        "char_start": 1191,
+        "flashpoints": [],
+        "quote": "I bring over 20 years of career experience in communications, public affairs, & community engagement. I have built my career on strengthening relationships, solving complex challenges, and ensuring people feel heard.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "education",
+        "char_end": 1590,
+        "char_start": 1408,
+        "flashpoints": [],
+        "quote": "With degrees in Urban Geography and Political Science from Queen’s University, I understand community development & good government, and I want to be part of delivering that for you.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "local-roots",
+        "char_end": 1010,
+        "char_start": 845,
+        "flashpoints": [],
+        "quote": "My Experience: Born and raised in Capilano-Highlands, and today my family lives in Lynn Valley. The District of North Vancouver is my home, my community & my people.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      }
+    ],
     "email": null,
     "financial_disclosure": [],
     "id": "dnv-council-munro-linda",
@@ -2487,7 +3495,7 @@
         "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
       },
       {
-        "category": "local-economy",
+        "category": "transportation",
         "char_end": 843,
         "char_start": 263,
         "flashpoints": [],
@@ -2496,7 +3504,7 @@
         "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
       },
       {
-        "category": "transportation",
+        "category": "local-economy",
         "char_end": 843,
         "char_start": 263,
         "flashpoints": [],
@@ -2550,6 +3558,26 @@
     "website": "https://www.lindamunro.ca"
   },
   {
+    "background": [
+      {
+        "category": "local-roots",
+        "char_end": 222,
+        "char_start": 0,
+        "flashpoints": [],
+        "quote": "I am a 61 year resident of the District of North Vancouver, my family first settled here in the 1930’s in Deep Cove. My father and grandfather were small business owners. I am a single mother of 3 young adults, and 2 pups!",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "public-office",
+        "char_end": 357,
+        "char_start": 224,
+        "flashpoints": [],
+        "quote": "I am the longest serving Municipal Councillor on the North Shore, being elected consistently since 1996, serving 30 years in October!",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      }
+    ],
     "email": null,
     "financial_disclosure": [],
     "id": "dnv-council-muri-lisa",
@@ -2643,6 +3671,53 @@
     "website": "http://lisamuri.ca/"
   },
   {
+    "background": [
+      {
+        "category": "public-office",
+        "char_end": 621,
+        "char_start": 443,
+        "flashpoints": [],
+        "quote": "I have served on the Social Planning Advisory Council (SPAC) with the City Council, where I helped advise on grants supporting non-profit organizations and community initiatives.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "career",
+        "char_end": 442,
+        "char_start": 252,
+        "flashpoints": [],
+        "quote": "My professional and volunteer experiences have taken me across different fields, including project management, technology and education, as well as local and international community service.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "community",
+        "char_end": 442,
+        "char_start": 252,
+        "flashpoints": [],
+        "quote": "My professional and volunteer experiences have taken me across different fields, including project management, technology and education, as well as local and international community service.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "community",
+        "char_end": 759,
+        "char_start": 622,
+        "flashpoints": [],
+        "quote": "I have also organized shoreline cleanups and electronic recycling campaigns and volunteered with families navigating times of transition.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "local-roots",
+        "char_end": 250,
+        "char_start": 52,
+        "flashpoints": [],
+        "quote": "I am a passionate community member who is deeply grateful to call Lynn Creek home. My family and I chose North Vancouver because we found a place where we can put down roots for generations to come.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      }
+    ],
     "email": null,
     "financial_disclosure": [],
     "id": "dnv-council-nwabuisi-victoria",
@@ -2718,6 +3793,7 @@
     "website": "https://www.victorianwabuisi.ca"
   },
   {
+    "background": [],
     "email": null,
     "financial_disclosure": [],
     "id": "dnv-council-pope-catherine",
@@ -2737,6 +3813,26 @@
     "website": null
   },
   {
+    "background": [
+      {
+        "category": "career",
+        "char_end": 294,
+        "char_start": 176,
+        "flashpoints": [],
+        "quote": "I’ve worked in the mental health and substance use sector for 17 years. I see first-hand how systems can change lives.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "career",
+        "char_end": 1576,
+        "char_start": 1485,
+        "flashpoints": [],
+        "quote": "I’m a union member and I continue to support the workers that keep our communities running.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      }
+    ],
     "email": null,
     "financial_disclosure": [],
     "id": "dnv-council-wilson-stephanie",
@@ -2812,6 +3908,26 @@
     "website": "https://heystephwilson.ca"
   },
   {
+    "background": [
+      {
+        "category": "career",
+        "char_end": 493,
+        "char_start": 272,
+        "flashpoints": [],
+        "quote": "As a UBC Electrical Engineering graduate, successful real estate developer at GGIQ Developments, and tech entrepreneur who founded StayRunners, Graham Alexander brings world-class systems-thinking to municipal leadership.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "education",
+        "char_end": 493,
+        "char_start": 272,
+        "flashpoints": [],
+        "quote": "As a UBC Electrical Engineering graduate, successful real estate developer at GGIQ Developments, and tech entrepreneur who founded StayRunners, Graham Alexander brings world-class systems-thinking to municipal leadership.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      }
+    ],
     "email": null,
     "financial_disclosure": [],
     "id": "dnv-mayor-alexander-graham",
@@ -2902,6 +4018,7 @@
     "website": "https://www.grahamgalexander.ca"
   },
   {
+    "background": [],
     "email": null,
     "financial_disclosure": [],
     "id": "dnv-mayor-little-mike",
@@ -2921,6 +4038,7 @@
     "website": null
   },
   {
+    "background": [],
     "email": null,
     "financial_disclosure": [],
     "id": "dnv-mayor-nieweler-stephan",
@@ -2940,6 +4058,7 @@
     "website": null
   },
   {
+    "background": [],
     "email": null,
     "financial_disclosure": [],
     "id": "dnv-mayor-pucci-paolo",
@@ -2959,6 +4078,53 @@
     "website": null
   },
   {
+    "background": [
+      {
+        "category": "local-roots",
+        "char_end": 450,
+        "char_start": 320,
+        "flashpoints": [],
+        "quote": "I have lived in North Vancouver for 38 years. I built my career here, raised my family here, and care deeply about this community.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "career",
+        "char_end": 450,
+        "char_start": 366,
+        "flashpoints": [],
+        "quote": "I built my career here, raised my family here, and care deeply about this community.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "career",
+        "char_end": 1566,
+        "char_start": 1394,
+        "flashpoints": [],
+        "quote": "I bring an MBA in Global Management, a BSc in Computer Science, experience in business and operations, government and regulatory work, and service on three strata councils.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "education",
+        "char_end": 1566,
+        "char_start": 1394,
+        "flashpoints": [],
+        "quote": "I bring an MBA in Global Management, a BSc in Computer Science, experience in business and operations, government and regulatory work, and service on three strata councils.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "community",
+        "char_end": 1566,
+        "char_start": 1394,
+        "flashpoints": [],
+        "quote": "I bring an MBA in Global Management, a BSc in Computer Science, experience in business and operations, government and regulatory work, and service on three strata councils.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      }
+    ],
     "email": null,
     "financial_disclosure": [],
     "id": "dnv-mayor-zahedi-max",
@@ -2973,20 +4139,13 @@
     "photo_url": "/photos/dnv-mayor-zahedi-max.jpg",
     "positions": [
       {
-        "category": "transportation",
-        "char_end": 1392,
-        "char_start": 1042,
-        "flashpoints": [],
-        "quote": "My priorities are practical: predictable property taxes; housing for families, workers, and seniors that is supported by infrastructure while protecting neighbourhood character and green space; better coordination of road work and a united North Shore voice on transit; responsive municipal services; and stronger wildfire and emergency preparedness.",
-        "source_type": "official_statement",
-        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
-      },
-      {
-        "category": "housing",
-        "char_end": 1392,
-        "char_start": 1042,
-        "flashpoints": [],
-        "quote": "My priorities are practical: predictable property taxes; housing for families, workers, and seniors that is supported by infrastructure while protecting neighbourhood character and green space; better coordination of road work and a united North Shore voice on transit; responsive municipal services; and stronger wildfire and emergency preparedness.",
+        "category": "governance-and-transparency",
+        "char_end": 1040,
+        "char_start": 451,
+        "flashpoints": [
+          "wastewater-treatment-plant"
+        ],
+        "quote": "I am running for Mayor of the District of North Vancouver as an independent—with no slate and no party—because residents deserve a government that listens, explains how public money is spent, and takes responsibility when projects go off track. The North Shore Wastewater Treatment Plant is one example. Metro Vancouver’s estimate rose from about $700 million in 2013 to $3.86 billion in 2024. The plant is necessary, but residents deserve public reporting, independent oversight, and a fair allocation of costs. I will advocate for all three wherever the District has a seat at the table.",
         "source_type": "official_statement",
         "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
       },
@@ -3002,16 +4161,14 @@
       {
         "category": "taxes-and-spending",
         "char_end": 1392,
-        "char_start": 696,
-        "flashpoints": [
-          "wastewater-treatment-plant"
-        ],
-        "quote": "The North Shore Wastewater Treatment Plant is one example. Metro Vancouver’s estimate rose from about $700 million in 2013 to $3.86 billion in 2024. The plant is necessary, but residents deserve public reporting, independent oversight, and a fair allocation of costs. I will advocate for all three wherever the District has a seat at the table.\n\nMy priorities are practical: predictable property taxes; housing for families, workers, and seniors that is supported by infrastructure while protecting neighbourhood character and green space; better coordination of road work and a united North Shore voice on transit; responsive municipal services; and stronger wildfire and emergency preparedness.",
+        "char_start": 755,
+        "flashpoints": [],
+        "quote": "Metro Vancouver’s estimate rose from about $700 million in 2013 to $3.86 billion in 2024. The plant is necessary, but residents deserve public reporting, independent oversight, and a fair allocation of costs. I will advocate for all three wherever the District has a seat at the table.\n\nMy priorities are practical: predictable property taxes; housing for families, workers, and seniors that is supported by infrastructure while protecting neighbourhood character and green space; better coordination of road work and a united North Shore voice on transit; responsive municipal services; and stronger wildfire and emergency preparedness.",
         "source_type": "official_statement",
         "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
       },
       {
-        "category": "development-and-growth",
+        "category": "housing",
         "char_end": 1392,
         "char_start": 1042,
         "flashpoints": [],
@@ -3020,7 +4177,7 @@
         "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
       },
       {
-        "category": "parks-environment-climate",
+        "category": "transportation",
         "char_end": 1392,
         "char_start": 1042,
         "flashpoints": [],
@@ -3040,20 +4197,27 @@
       {
         "category": "local-economy",
         "char_end": 318,
-        "char_start": 0,
+        "char_start": 164,
         "flashpoints": [],
-        "quote": "Practical Leadership, Strong North Vancouver, United Canada Canada faces economic uncertainty, including tariff pressure and trade disputes with the United States. In difficult times, we must stand united as Canadians: supporting local businesses, protecting household budgets, and treating every tax dollar with care.",
+        "quote": "In difficult times, we must stand united as Canadians: supporting local businesses, protecting household budgets, and treating every tax dollar with care.",
         "source_type": "official_statement",
         "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
       },
       {
-        "category": "governance-and-transparency",
-        "char_end": 1040,
-        "char_start": 451,
-        "flashpoints": [
-          "wastewater-treatment-plant"
-        ],
-        "quote": "I am running for Mayor of the District of North Vancouver as an independent—with no slate and no party—because residents deserve a government that listens, explains how public money is spent, and takes responsibility when projects go off track. The North Shore Wastewater Treatment Plant is one example. Metro Vancouver’s estimate rose from about $700 million in 2013 to $3.86 billion in 2024. The plant is necessary, but residents deserve public reporting, independent oversight, and a fair allocation of costs. I will advocate for all three wherever the District has a seat at the table.",
+        "category": "development-and-growth",
+        "char_end": 1392,
+        "char_start": 1042,
+        "flashpoints": [],
+        "quote": "My priorities are practical: predictable property taxes; housing for families, workers, and seniors that is supported by infrastructure while protecting neighbourhood character and green space; better coordination of road work and a united North Shore voice on transit; responsive municipal services; and stronger wildfire and emergency preparedness.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "parks-environment-climate",
+        "char_end": 1392,
+        "char_start": 1042,
+        "flashpoints": [],
+        "quote": "My priorities are practical: predictable property taxes; housing for families, workers, and seniors that is supported by infrastructure while protecting neighbourhood character and green space; better coordination of road work and a united North Shore voice on transit; responsive municipal services; and stronger wildfire and emergency preparedness.",
         "source_type": "official_statement",
         "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
       }
@@ -3077,6 +4241,26 @@
     "website": "https://maxformayor.ca/"
   },
   {
+    "background": [
+      {
+        "category": "community",
+        "char_end": 890,
+        "char_start": 302,
+        "flashpoints": [],
+        "quote": "I have been actively involved in a number of organizations related to children including President of Highlands Little League, North Shore Girls Softball, Director of Canuck Place; previous Chair of North Vancouver Chamber of Commerce as well as Not For Profit organizations including Chair of North Shore Community Foundation and a current director of The Hollyburn Society.\n\nOver the years I have also coached various youth sports teams including baseball, softball, hockey and football. In May 2024 I was presented a District of North Vancouver Community Service token of appreciation.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "local-roots",
+        "char_end": 300,
+        "char_start": 113,
+        "flashpoints": [],
+        "quote": "I have been a North Vancouver District resident for close to 40 years and all four of our children were students with the School District in Elementary, French Immersion and High Schools.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      }
+    ],
     "email": null,
     "financial_disclosure": [],
     "id": "dnv-trustee-boehm-mike",
@@ -3091,7 +4275,7 @@
     "photo_url": null,
     "positions": [
       {
-        "category": "governance-and-transparency",
+        "category": "schools-education",
         "char_end": 1155,
         "char_start": 892,
         "flashpoints": [],
@@ -3114,6 +4298,35 @@
     "website": null
   },
   {
+    "background": [
+      {
+        "category": "community",
+        "char_end": 336,
+        "char_start": 0,
+        "flashpoints": [],
+        "quote": "For the past eight years, it has been my honour to serve as Chair of the North Vancouver School District Parent Advisory Council (NVPAC/DPAC). During that time, I have engaged, collaborated, and worked alongside students, families and staff, gaining a deeper understanding of the opportunities and challenges within our school district.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "community",
+        "char_end": 1265,
+        "char_start": 985,
+        "flashpoints": [],
+        "quote": "In 2024, I was honoured to receive the George Matthews Award for Excellence in Parent Leadership from the British Columbia Confederation of Parent Advisory Councils (BCCPAC), recognizing my commitment to supporting students and families across the North Vancouver School District.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "career",
+        "char_end": 665,
+        "char_start": 554,
+        "flashpoints": [],
+        "quote": "My professional experience in operations and governance has taught me that good decisions begin with listening.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      }
+    ],
     "email": null,
     "financial_disclosure": [],
     "id": "dnv-trustee-branston-jennifer",
@@ -3128,20 +4341,29 @@
     "photo_url": "/photos/dnv-trustee-branston-jennifer.jpg",
     "positions": [
       {
-        "category": "governance-and-transparency",
-        "char_end": 983,
-        "char_start": 554,
-        "flashpoints": [],
-        "quote": "My professional experience in operations and governance has taught me that good decisions begin with listening. I understand the important distinction between governance and operations. Good governance means asking thoughtful questions, considering different perspectives, making informed decisions and ensuring public resources are used responsibly. It also means building trust through transparency, respect and accountability.",
-        "source_type": "official_statement",
-        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
-      },
-      {
         "category": "schools-education",
         "char_end": 552,
         "char_start": 337,
         "flashpoints": [],
         "quote": "Students, families and staff deserve to know their voices matter, to feel heard and respected, and to be supported as essential partners in both our school communities and within the broader public education sector.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "schools-education",
+        "char_end": 1395,
+        "char_start": 1266,
+        "flashpoints": [],
+        "quote": "I care deeply about our North Vancouver schools and the people who make them such an important and special part of our community.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "governance-and-transparency",
+        "char_end": 983,
+        "char_start": 554,
+        "flashpoints": [],
+        "quote": "My professional experience in operations and governance has taught me that good decisions begin with listening. I understand the important distinction between governance and operations. Good governance means asking thoughtful questions, considering different perspectives, making informed decisions and ensuring public resources are used responsibly. It also means building trust through transparency, respect and accountability.",
         "source_type": "official_statement",
         "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
       }
@@ -3162,6 +4384,35 @@
     "website": "https://www.jenniferbranston.ca"
   },
   {
+    "background": [
+      {
+        "category": "career",
+        "char_end": 467,
+        "char_start": 0,
+        "flashpoints": [],
+        "quote": "I am a professional actor, theatre arts instructor and a non-BCTF member of the Association of BC Drama Educators. My 40-year career has included teaching students age 3 to adult, developing curriculum, and helping connect families with arts education opportunities. Through my work as Performing Arts Education Coordinator at Evergreen Arts (Coquitlam 2014- 2018), I’ve seen how creative learning can build confidence, communication skills, and a sense of belonging.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "career",
+        "char_end": 993,
+        "char_start": 785,
+        "flashpoints": [],
+        "quote": "For the past 5 years I have also been working as a Constituency Advisor in MLA Susie Chant’s community office. I have knowledge of provincial government operations and the powers of the Ministry of Education.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "career",
+        "char_end": 1773,
+        "char_start": 1686,
+        "flashpoints": [],
+        "quote": "Fun fact: I played the role of Wiggens in 1992’s Academy Award-winning film Unforgiven.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      }
+    ],
     "email": null,
     "financial_disclosure": [],
     "id": "dnv-trustee-charrois-michael",
@@ -3201,6 +4452,15 @@
         "quote": "I believe this job involves listening to concerns, knowing who or where to direct those concerns and using relationships to effect change.\n\nI understand the board’s fiduciary responsibility which includes ensuring any child in the district has access to a quality education, liaising with community organizations and social services to provide non-educational supports for kids, maintaining facilities and passing a balanced annual budget.",
         "source_type": "official_statement",
         "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "childcare-seniors-services",
+        "char_end": 1433,
+        "char_start": 1134,
+        "flashpoints": [],
+        "quote": "I understand the board’s fiduciary responsibility which includes ensuring any child in the district has access to a quality education, liaising with community organizations and social services to provide non-educational supports for kids, maintaining facilities and passing a balanced annual budget.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
       }
     ],
     "socials": {},
@@ -3217,6 +4477,26 @@
     "website": null
   },
   {
+    "background": [
+      {
+        "category": "public-office",
+        "char_end": 225,
+        "char_start": 138,
+        "flashpoints": [],
+        "quote": "Having served as a School Trustee for four terms, I have seen that evolution firsthand.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "public-office",
+        "char_end": 549,
+        "char_start": 358,
+        "flashpoints": [],
+        "quote": "Throughout my time on the Board, I have worked to keep students at the centre of decision-making. I am known for listening and bringing concerns forward, even when I may not personally agree.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      }
+    ],
     "email": null,
     "financial_disclosure": [],
     "id": "dnv-trustee-gerlach-cyndi",
@@ -3283,6 +4563,17 @@
     "website": "https://www.cyndigerlach.ca"
   },
   {
+    "background": [
+      {
+        "category": "career",
+        "char_end": 650,
+        "char_start": 0,
+        "flashpoints": [],
+        "quote": "I have spent more than 23 years in public education, seeing firsthand the difference a great teacher and a strong school can make in the lives of students, families, and communities. I have worked as a secondary teacher, special education teacher, IB educator, and Vice Principal. I've taught in Ontario, Hong Kong, and British Columbia, giving me a broad perspective on education and the needs of students and school communities.\n\nThroughout my career, I have supported students with diverse learning needs, worked to uphold high educational standards, and collaborated with families, educators, and support staff to build strong school communities.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      }
+    ],
     "email": null,
     "financial_disclosure": [],
     "id": "dnv-trustee-haines-rob",
@@ -3296,6 +4587,15 @@
     "phone": null,
     "photo_url": "/photos/dnv-trustee-haines-rob.jpg",
     "positions": [
+      {
+        "category": "schools-education",
+        "char_end": 650,
+        "char_start": 432,
+        "flashpoints": [],
+        "quote": "Throughout my career, I have supported students with diverse learning needs, worked to uphold high educational standards, and collaborated with families, educators, and support staff to build strong school communities.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
       {
         "category": "schools-education",
         "char_end": 1535,
@@ -3320,6 +4620,35 @@
     "website": "https://www.robhaines.ca/"
   },
   {
+    "background": [
+      {
+        "category": "career",
+        "char_end": 588,
+        "char_start": 391,
+        "flashpoints": [],
+        "quote": "With over 20 years of global leadership experience in finance, strategy, and governance, the focus remains on translating public resources into measurable, real-world impact inside every classroom.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "community",
+        "char_end": 389,
+        "char_start": 211,
+        "flashpoints": [],
+        "quote": "Over the past decade, I have grown deep roots here volunteering in our schools, serving on non-profit boards, and bringing financial literacy directly into elementary classrooms.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "local-roots",
+        "char_end": 389,
+        "char_start": 0,
+        "flashpoints": [],
+        "quote": "As a mother of two children in our public schools, I care deeply about the education our students experience today and the world we are preparing them for tomorrow.​Lynn Valley and North Vancouver are our home. Over the past decade, I have grown deep roots here volunteering in our schools, serving on non-profit boards, and bringing financial literacy directly into elementary classrooms.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      }
+    ],
     "email": null,
     "financial_disclosure": [],
     "id": "dnv-trustee-khan-raheela",
@@ -3350,24 +4679,6 @@
         "quote": "Running for School Trustee is rooted in a single priority: putting students first and translating district resources into classroom excellence. Every child deserves an education that equips them with the confidence, resilience, and practical life skills to thrive: empowering them not simply to navigate the world around them, but to shape it.",
         "source_type": "official_statement",
         "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
-      },
-      {
-        "category": "taxes-and-spending",
-        "char_end": 879,
-        "char_start": 391,
-        "flashpoints": [],
-        "quote": "With over 20 years of global leadership experience in finance, strategy, and governance, the focus remains on translating public resources into measurable, real-world impact inside every classroom. Strong governance is about delivering fiscal responsibility that puts classrooms first, championing future-focused education that prepares youth for life beyond graduation, and cultivating a school culture where every student feels a deep sense of belonging and every educator is supported.",
-        "source_type": "official_statement",
-        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
-      },
-      {
-        "category": "governance-and-transparency",
-        "char_end": 879,
-        "char_start": 589,
-        "flashpoints": [],
-        "quote": "Strong governance is about delivering fiscal responsibility that puts classrooms first, championing future-focused education that prepares youth for life beyond graduation, and cultivating a school culture where every student feels a deep sense of belonging and every educator is supported.",
-        "source_type": "official_statement",
-        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
       }
     ],
     "socials": {},
@@ -3384,6 +4695,7 @@
     "website": "https://www.raheelakhan.com"
   },
   {
+    "background": [],
     "email": null,
     "financial_disclosure": [],
     "id": "dnv-trustee-nickerson-laura",
@@ -3403,6 +4715,7 @@
     "website": null
   },
   {
+    "background": [],
     "email": null,
     "financial_disclosure": [],
     "id": "dnv-trustee-north-layne",
@@ -3422,6 +4735,7 @@
     "website": null
   },
   {
+    "background": [],
     "email": null,
     "financial_disclosure": [],
     "id": "dnv-trustee-perfecto-raphael",
@@ -3441,6 +4755,44 @@
     "website": null
   },
   {
+    "background": [
+      {
+        "category": "career",
+        "char_end": 391,
+        "char_start": 116,
+        "flashpoints": [],
+        "quote": "Operational Expertise: My professional background is in finance, operations, and organizational efficiency. I have an eagle eye for unnecessary bottlenecks, and genuinely enjoy the process of untangling inefficiencies to improve processes and thoughtfully allocate resources.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "community",
+        "char_end": 865,
+        "char_start": 710,
+        "flashpoints": [],
+        "quote": "Community Experience: I have served on non-profit boards supporting children and volunteered with several community-based organizations on the north shore.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "local-roots",
+        "char_end": 604,
+        "char_start": 393,
+        "flashpoints": [],
+        "quote": "Personally Invested: With 4 young children in (or about to enter) the North Van public school system, I am personally committed to ensuring our schools provide excellent educational experiences in the long-term.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "local-roots",
+        "char_end": 1464,
+        "char_start": 1286,
+        "flashpoints": [],
+        "quote": "I was lucky to grow up in North Van and attend school in the district. School fairs, sports days, and family dances created happy memories as well as a strong sense of community.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      }
+    ],
     "email": null,
     "financial_disclosure": [],
     "id": "dnv-trustee-rinfret-ainslie",
@@ -3465,10 +4817,10 @@
       },
       {
         "category": "schools-education",
-        "char_end": 708,
+        "char_end": 604,
         "char_start": 393,
         "flashpoints": [],
-        "quote": "Personally Invested: With 4 young children in (or about to enter) the North Van public school system, I am personally committed to ensuring our schools provide excellent educational experiences in the long-term. I also have an up-close understanding of the realities families experience as they navigate the system.",
+        "quote": "Personally Invested: With 4 young children in (or about to enter) the North Van public school system, I am personally committed to ensuring our schools provide excellent educational experiences in the long-term.",
         "source_type": "official_statement",
         "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
       },
@@ -3489,15 +4841,6 @@
         "quote": "I want to give back by contributing to a strong, effective, and forward-looking public school system for the next generation.",
         "source_type": "official_statement",
         "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
-      },
-      {
-        "category": "taxes-and-spending",
-        "char_end": 391,
-        "char_start": 116,
-        "flashpoints": [],
-        "quote": "Operational Expertise: My professional background is in finance, operations, and organizational efficiency. I have an eagle eye for unnecessary bottlenecks, and genuinely enjoy the process of untangling inefficiencies to improve processes and thoughtfully allocate resources.",
-        "source_type": "official_statement",
-        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
       }
     ],
     "socials": {},
@@ -3514,6 +4857,26 @@
     "website": null
   },
   {
+    "background": [
+      {
+        "category": "public-office",
+        "char_end": 357,
+        "char_start": 0,
+        "flashpoints": [],
+        "quote": "It has been an honour serving as a School Trustee with the North Vancouver Board of Education since 2018, including as Vice-Chair and Board Chair.\n\nOver the past eight years, I have worked with students, families, educators, staff, and community partners to support student success, strengthen public education, and advance equitable learning opportunities.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "career",
+        "char_end": 1117,
+        "char_start": 817,
+        "flashpoints": [],
+        "quote": "I am Interim Associate University Librarian, Collections, at the University of British Columbia and an Honorary Lecturer at the Allard School of Law. My experience in higher education and public-sector leadership has reinforced the importance of sound governance, and stewardship of public resources.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      }
+    ],
     "email": null,
     "financial_disclosure": [],
     "id": "dnv-trustee-tsiakos-george",
@@ -3537,15 +4900,6 @@
         "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
       },
       {
-        "category": "schools-education",
-        "char_end": 1441,
-        "char_start": 1216,
-        "flashpoints": [],
-        "quote": "North Vancouver has much to be proud of in its public education system, and I look forward to building on that success. I remain committed to bringing people together and supporting the well-being and growth of every student.",
-        "source_type": "official_statement",
-        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
-      },
-      {
         "category": "governance-and-transparency",
         "char_end": 816,
         "char_start": 582,
@@ -3560,6 +4914,15 @@
         "char_start": 967,
         "flashpoints": [],
         "quote": "My experience in higher education and public-sector leadership has reinforced the importance of sound governance, and stewardship of public resources.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "taxes-and-spending",
+        "char_end": 816,
+        "char_start": 582,
+        "flashpoints": [],
+        "quote": "My priorities are student and staff well-being, inclusive learning, support for diverse learners, Truth and Reconciliation, responsible use of technology and innovation, fiscal responsibility, sustainability, and effective governance.",
         "source_type": "official_statement",
         "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
       }

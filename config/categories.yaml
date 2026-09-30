@@ -328,3 +328,139 @@ flashpoints:
     label: Spirit Trail
     phrases:
       - spirit trail
+
+# Biographical background, extracted the same way as positions: the model picks
+# sentences, the code cuts the characters. Candidates write a lot about who they
+# are and what they have done, and until now all of it was discarded — which
+# left people whose statement is a biography rather than a platform looking as
+# though they had said nothing at all.
+background:
+  - id: public-office
+    label: Public office & committees
+    description: >-
+      Elected or appointed roles: council, school board, advisory committees,
+      commissions, other levels of government.
+    keywords:
+      - councillor
+      - council member
+      - trustee
+      - mayor
+      - elected
+      - re-election
+      - seeking a
+      - term on
+      - committee
+      - commission
+      - board of
+      - chaired
+      - chair of
+      - appointed
+      - served on
+      - member of parliament
+      - mla
+      - mp
+
+  - id: career
+    label: Career & professional life
+    description: >-
+      Work history, profession, qualifications earned on the job, businesses
+      built or run.
+    keywords:
+      - career
+      - worked
+      - work as
+      - profession
+      - engineer
+      - lawyer
+      - teacher
+      - nurse
+      - doctor
+      - planner
+      - architect
+      - accountant
+      - realtor
+      - founder
+      - co-founder
+      - owner
+      - business owner
+      - entrepreneur
+      - manager
+      - director
+      - executive
+      - consultant
+      - retired
+
+  - id: education
+    label: Education
+    description: Degrees, diplomas, credentials and where they were earned.
+    keywords:
+      - degree
+      - bachelor
+      - master
+      - mba
+      - phd
+      - doctorate
+      - diploma
+      - graduated
+      - graduate of
+      - studied
+      - university
+      - college
+      - ubc
+      - sfu
+      - bcit
+      - capilano university
+      - designation
+      - certified
+      - licensed
+
+  - id: community
+    label: Community & volunteering
+    description: >-
+      Non-profit boards, volunteering, coaching, service clubs, neighbourhood
+      and parent associations.
+    keywords:
+      - volunteer
+      - volunteered
+      - coached
+      - coaching
+      - non-profit
+      - nonprofit
+      - not-for-profit
+      - society
+      - association
+      - rotary
+      - lions club
+      - pac
+      - parent advisory
+      - neighbourhood house
+      - food bank
+      - hospice
+      - fundraising
+      - charity
+      - giving back
+
+  - id: local-roots
+    label: Local roots & family
+    description: >-
+      How long they have lived here, where they grew up, raising a family in
+      the community.
+    keywords:
+      - grew up
+      - born and raised
+      - lived here
+      - have lived
+      - lifelong
+      - long-time resident
+      - longtime resident
+      - moved to north vancouver
+      - raising
+      - raised my
+      - my family
+      - my wife
+      - my husband
+      - my children
+      - my kids
+      - our children
+      - years in north vancouver
+      - calls north vancouver home

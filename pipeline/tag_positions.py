@@ -30,6 +30,7 @@ ROOT = Path(__file__).resolve().parent.parent
 CATEGORIES_FILE = ROOT / "config" / "categories.yaml"
 CANDIDATES_FILE = ROOT / "data" / "candidates.json"
 OUT = ROOT / "data" / "positions.json"
+OUT_BG = ROOT / "data" / "background.json"
 
 MODEL = "claude-opus-5"
 MIN_WORDS = 15  # a span shorter than this is a fragment, not a position
@@ -42,6 +43,15 @@ MIN_WORDS = 15  # a span shorter than this is a fragment, not a position
 def load_taxonomy() -> tuple[list[dict], list[dict]]:
     data = yaml.safe_load(CATEGORIES_FILE.read_text(encoding="utf-8"))
     return data["categories"], data.get("flashpoints", [])
+
+
+def load_background() -> list[dict]:
+    data = yaml.safe_load(CATEGORIES_FILE.read_text(encoding="utf-8"))
+    return data.get("background", [])
+
+
+def background_ids() -> list[str]:
+    return [b["id"] for b in load_background()]
 
 
 def category_ids() -> list[str]:
@@ -147,6 +157,40 @@ class Assignments(BaseModel):
     assignments: list[Assignment]
 
 
+def _background_prompt() -> str:
+    """Prompt for the biography pass.
+
+    Kept separate from the issues pass because the judgement is different:
+    here we want what someone has done, not what they promise to do.
+    """
+    kinds = load_background()
+    lines = [
+        "You are pulling out biographical background from a candidate's "
+        "election statement, so voters can see who someone is and what they "
+        "have actually done before asking for their vote.",
+        "",
+        "You will be given the statement split into numbered sentences. For "
+        "each kind of background below, return the ids of sentences that "
+        "describe it.",
+        "",
+        "Rules:",
+        "- Return sentence ids only. Never write, summarise or paraphrase text.",
+        "- Facts about the person, not promises about the future. 'I will "
+        "push for better transit' is a position, not background. 'I chaired "
+        "the transportation committee' is background.",
+        "- Slogans, values and appeals for votes are not background.",
+        "- A sentence may fit more than one kind, or none.",
+        "- Prefer consecutive sentences when the thought runs across them.",
+        "- Omit a kind entirely rather than stretching to fill it.",
+        "",
+        "Kinds of background:",
+    ]
+    for k in kinds:
+        desc = " ".join(str(k.get("description", "")).split())
+        lines.append(f"- {k['id']}: {k['label']} -- {desc}")
+    return "\n".join(lines)
+
+
 def _system_prompt() -> str:
     cats, _ = load_taxonomy()
     lines = [
@@ -176,7 +220,7 @@ def _system_prompt() -> str:
     return "\n".join(lines)
 
 
-def tag_with_claude(source: dict, client) -> list[Position]:
+def _claude_pass(source: dict, client, system: str, allowed: set[str]) -> list[Position]:
     text = source["text"]
     sentences = split_sentences(text)
     if not sentences:
@@ -184,7 +228,6 @@ def tag_with_claude(source: dict, client) -> list[Position]:
 
     numbered = "\n".join(f"[{s.id}] {s.text}" for s in sentences)
     valid_ids = {s.id for s in sentences}
-    allowed = set(category_ids())
 
     response = client.messages.parse(
         model=MODEL,
@@ -193,7 +236,7 @@ def tag_with_claude(source: dict, client) -> list[Position]:
         system=[
             {
                 "type": "text",
-                "text": _system_prompt(),
+                "text": system,
                 "cache_control": {"type": "ephemeral"},
             }
         ],
@@ -204,11 +247,39 @@ def tag_with_claude(source: dict, client) -> list[Position]:
     out: list[Position] = []
     for a in response.parsed_output.assignments:
         if a.category not in allowed:
-            continue  # model invented a category; drop rather than publish it
+            continue  # model invented a label; drop rather than publish it
         ids = [i for i in a.sentence_ids if i in valid_ids]
         out.extend(
             _positions_from_ids(
                 text, source["url"], source["type"], sentences, a.category, ids
+            )
+        )
+    return out
+
+
+def tag_with_claude(source: dict, client) -> list[Position]:
+    return _claude_pass(source, client, _system_prompt(), set(category_ids()))
+
+
+def tag_background_with_claude(source: dict, client) -> list[Position]:
+    return _claude_pass(source, client, _background_prompt(), set(background_ids()))
+
+
+def tag_background_by_keywords(source: dict) -> list[Position]:
+    kinds = load_background()
+    text = source["text"]
+    sentences = split_sentences(text)
+    out: list[Position] = []
+    for kind in kinds:
+        multiword = [k for k in kind["keywords"] if " " in k]
+        ids = [
+            s.id for s in sentences
+            if keyword_hits(s.text, kind["keywords"]) >= 2
+            or keyword_hits(s.text, multiword) >= 1
+        ]
+        out.extend(
+            _positions_from_ids(
+                text, source["url"], source["type"], sentences, kind["id"], ids
             )
         )
     return out
@@ -232,27 +303,39 @@ def main() -> int:
             return 1
 
     result: dict[str, list[dict]] = {}
+    background: dict[str, list[dict]] = {}
     for i, cand in enumerate(candidates, 1):
         positions: list[Position] = []
+        bg: list[Position] = []
         for source in cand["sources"]:
             if use_keywords:
                 positions.extend(tag_by_keywords(source))
+                bg.extend(tag_background_by_keywords(source))
             else:
                 positions.extend(tag_with_claude(source, client))
+                bg.extend(tag_background_with_claude(source, client))
         if positions:
             result[cand["id"]] = [json.loads(p.model_dump_json()) for p in positions]
+        if bg:
+            background[cand["id"]] = [json.loads(p.model_dump_json()) for p in bg]
         print(
-            f"  [{i:2}/{len(candidates)}] {cand['name']:28} {len(positions):2} positions",
+            f"  [{i:2}/{len(candidates)}] {cand['name']:26} "
+            f"{len(positions):2} positions  {len(bg):2} background",
             flush=True,
         )
 
-    OUT.write_text(
-        json.dumps(result, indent=2, ensure_ascii=False, sort_keys=True) + "\n",
-        encoding="utf-8",
-    )
-    total = sum(len(v) for v in result.values())
+    for path, payload in ((OUT, result), (OUT_BG, background)):
+        path.write_text(
+            json.dumps(payload, indent=2, ensure_ascii=False, sort_keys=True) + "\n",
+            encoding="utf-8",
+        )
     mode = "keyword fallback" if use_keywords else MODEL
-    print(f"\n{total} positions across {len(result)} candidates ({mode}) -> {OUT.name}")
+    print(
+        f"\n{sum(len(v) for v in result.values())} positions across "
+        f"{len(result)} candidates, and "
+        f"{sum(len(v) for v in background.values())} background passages across "
+        f"{len(background)} ({mode})"
+    )
     return 0
 
 

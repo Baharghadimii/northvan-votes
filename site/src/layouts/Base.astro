@@ -13,10 +13,14 @@ interface Props {
   /** Set by a page that renders its own large countdown, so the thin strip
    *  at the top is not saying the same thing twice. */
   ownCountdown?: boolean;
+  /** Same idea for the coffee button: a page showing the full support block
+   *  does not also want the footer line a few centimetres below it. */
+  ownSupport?: boolean;
 }
 
 const {
-  title, description, shuffle = false, shortlist = false, ownCountdown = false,
+  title, description, shuffle = false, shortlist = false,
+  ownCountdown = false, ownSupport = false,
 } = Astro.props;
 const path = Astro.url.pathname;
 const full = title === "North Van Votes" ? title : `${title} — North Van Votes`;
@@ -84,7 +88,7 @@ const nav = [
           for a correction. Questions, corrections or anything else:
           <a href="mailto:hello@northvanvotes.ca">hello@northvanvotes.ca</a>.
         </p>
-        <Support />
+        {!ownSupport && <Support />}
       </div>
     </footer>
 

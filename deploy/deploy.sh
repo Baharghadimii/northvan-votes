@@ -18,7 +18,28 @@ echo "==> Rebuilding the dataset (asserts before it will publish anything)"
 .venv/bin/python -m pipeline.build_dataset
 
 echo "==> Building the site"
-npm --prefix site run build
+# Astro reports a per-page render failure as [ERROR] but still exits 0 and
+# still writes dist/, so `set -e` alone will not catch it. Deploying that
+# output with --delete removes every page that failed to build: it once wiped
+# all 59 candidate pages off the live site.
+BUILD_LOG="$(mktemp)"
+npm --prefix site run build 2>&1 | tee "$BUILD_LOG"
+if grep -q "\[ERROR\]" "$BUILD_LOG"; then
+  echo
+  echo "!! The build reported errors. Nothing has been uploaded." >&2
+  grep "\[ERROR\]" "$BUILD_LOG" | head -5 >&2
+  exit 1
+fi
+
+# A sanity floor on what we are about to ship. Catches a build that "succeeds"
+# while silently producing far fewer pages than it should.
+PAGES=$(find site/dist -name "*.html" | wc -l | tr -d " ")
+CANDIDATES=$(find site/dist/candidates -mindepth 1 -maxdepth 1 -type d | wc -l | tr -d " ")
+echo "==> Built ${PAGES} pages, ${CANDIDATES} candidate pages"
+if [ "$PAGES" -lt 70 ] || [ "$CANDIDATES" -lt 59 ]; then
+  echo "!! Too few pages built (expected 70+ and 59 candidates). Not uploading." >&2
+  exit 1
+fi
 
 echo "==> Uploading to ${VPS_USER}@${VPS}:${WEBROOT}"
 # --delete removes files that no longer exist, so a withdrawn candidate's page

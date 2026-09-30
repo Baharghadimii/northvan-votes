@@ -38,6 +38,8 @@ export interface Candidate {
   financial_disclosure: string[];
   sources: Source[];
   positions: Position[];
+  /** Who they are and what they have done, rather than what they would do. */
+  background: Position[];
 }
 
 export interface Category {
@@ -57,6 +59,7 @@ export interface Flashpoint {
 export const candidates = raw as Candidate[];
 export const categories = taxonomy.categories as Category[];
 export const flashpoints = taxonomy.flashpoints as Flashpoint[];
+export const backgroundKinds = (taxonomy as any).background as Category[];
 
 export const MUNICIPALITIES: Record<Municipality, string> = {
   cnv: "City of North Vancouver",
@@ -121,6 +124,10 @@ export function races(pool: Candidate[] = candidates): Race[] {
 
 export function categoryById(id: string): Category | undefined {
   return categories.find((c) => c.id === id);
+}
+
+export function backgroundKindById(id: string): Category | undefined {
+  return backgroundKinds.find((b) => b.id === id);
 }
 
 export function flashpointById(id: string): Flashpoint | undefined {

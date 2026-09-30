@@ -565,3 +565,14 @@ a.bmc-big { font-size: 1.02rem; padding: 12px 24px; }
 .facewall-caption {
   font-size: 0.86rem; color: var(--text-faint); margin: 0 0 4px;
 }
+
+/* ---------- candidate background ---------- */
+
+.bg-grid { display: grid; gap: 18px; }
+@media (min-width: 720px) { .bg-grid { grid-template-columns: repeat(2, 1fr); } }
+.bg-item h3 {
+  margin: 0 0 2px; font-size: 0.82rem; font-family: var(--font);
+  font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;
+  color: var(--text-faint);
+}
+.bg-item .quote { font-size: 0.98rem; margin-top: 6px; }
