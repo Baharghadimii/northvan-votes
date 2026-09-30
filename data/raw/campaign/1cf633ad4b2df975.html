@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Mathew Bond, candidate for District of North Vancouver Council in 2026.">
+  <meta name="theme-color" content="#007f8f">
+  <title>Mathew Bond for DNV Council</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    @view-transition {
+      navigation: auto;
+    }
+
+    .site-header { view-transition-name: campaign-header; }
+    .election-banner { view-transition-name: election-strip; }
+
+    ::view-transition-old(root) {
+      animation: 380ms cubic-bezier(0.4, 0, 1, 1) both page-out;
+    }
+
+    ::view-transition-new(root) {
+      animation: 650ms cubic-bezier(0.16, 1, 0.3, 1) both page-in;
+    }
+
+    ::view-transition-group(campaign-header),
+    ::view-transition-group(election-strip) {
+      animation-duration: 520ms;
+      animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    :root {
+      --header-left-edge: clamp(1rem, 2vw, 1.5rem);
+    }
+
+    .site-header .brand {
+      padding-left: var(--header-left-edge);
+    }
+
+    .site-nav .nav-donate,
+    .site-nav .nav-donate:visited {
+      background: var(--yellow);
+      border-left-color: var(--yellow);
+      color: var(--ink);
+    }
+
+    .site-nav .nav-donate:hover,
+    .site-nav .nav-donate:focus-visible {
+      background: #fff38c;
+      color: var(--ink);
+    }
+
+    .election-banner {
+      background: var(--yellow);
+      padding: 0.65rem clamp(1.5rem, 7vw, 7rem);
+      padding-left: var(--header-left-edge);
+    }
+
+    .election-banner .section-inner {
+      margin: 0;
+      max-width: none;
+    }
+
+    .election-banner .vote-bond {
+      background: transparent;
+      font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+      letter-spacing: 0.08em;
+      line-height: 1.2;
+      margin: 0;
+      padding: 0;
+      transform: none;
+    }
+
+    .election-banner .vote-bond br { display: none; }
+
+    .brand {
+      transform-origin: left center;
+      will-change: transform;
+      transition:
+        filter 300ms ease,
+        transform 300ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .brand:hover,
+    .brand:focus-visible {
+      filter: brightness(1.08);
+      transform: translateX(2px) scale(0.965);
+    }
+
+    .site-nav a {
+      isolation: isolate;
+      overflow: hidden;
+      position: relative;
+      transition:
+        background-color 220ms ease,
+        color 220ms ease,
+        letter-spacing 300ms cubic-bezier(0.16, 1, 0.3, 1),
+        transform 300ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .site-nav a::after {
+      background: currentColor;
+      bottom: 0.55rem;
+      content: "";
+      height: 2px;
+      left: 1rem;
+      opacity: 0.8;
+      position: absolute;
+      right: 1rem;
+      transform: scaleX(0);
+      transform-origin: left center;
+      transition: transform 320ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .site-nav a:hover,
+    .site-nav a:focus-visible {
+      letter-spacing: 0.02em;
+      transform: translateY(-2px) scale(0.98);
+    }
+
+    .site-nav a:hover::after,
+    .site-nav a:focus-visible::after,
+    .site-nav a[aria-current="page"]::after {
+      transform: scaleX(1);
+    }
+
+    .site-nav a[aria-current="page"]::after { opacity: 0.45; }
+    .site-nav a[aria-current="page"]:hover::after { opacity: 0.9; }
+
+    .site-nav a,
+    .button,
+    .text-link {
+      transition:
+        background-color 180ms ease,
+        color 180ms ease,
+        transform 180ms ease;
+    }
+
+    .site-nav a:hover,
+    .button:hover,
+    .text-link:hover {
+      transform: translateY(-2px);
+    }
+
+    .portrait img {
+      animation: portrait-settle 1.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    .hero-copy > * {
+      animation: hero-rise 900ms cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    .hero-copy > :nth-child(2) { animation-delay: 140ms; }
+
+    .motion-ready .reveal-section {
+      filter: blur(8px);
+      opacity: 0;
+      transform: translateY(52px) scale(0.985);
+      transition:
+        filter 900ms cubic-bezier(0.16, 1, 0.3, 1),
+        opacity 900ms cubic-bezier(0.16, 1, 0.3, 1),
+        transform 900ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .motion-ready .reveal-section.is-visible {
+      filter: blur(0);
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    .motion-ready .reveal-section .split-copy > div,
+    .motion-ready .reveal-section .priority-grid article {
+      opacity: 0;
+      transform: translateY(24px);
+      transition:
+        opacity 700ms cubic-bezier(0.16, 1, 0.3, 1),
+        transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .motion-ready .reveal-section.is-visible .split-copy > div,
+    .motion-ready .reveal-section.is-visible .priority-grid article {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .motion-ready .reveal-section.is-visible .split-copy > div:nth-child(2),
+    .motion-ready .reveal-section.is-visible .priority-grid article:nth-child(2) {
+      transition-delay: 120ms;
+    }
+
+    .motion-ready .reveal-section.is-visible .priority-grid article:nth-child(3) {
+      transition-delay: 240ms;
+    }
+
+    @keyframes hero-rise {
+      from { opacity: 0; transform: translateY(34px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes portrait-settle {
+      from { filter: saturate(0.75); opacity: 0; transform: scale(1.08); }
+      to { filter: saturate(1); opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes page-out {
+      to { filter: blur(5px); opacity: 0; transform: translateY(-14px) scale(0.995); }
+    }
+
+    @keyframes page-in {
+      from { filter: blur(7px); opacity: 0; transform: translateY(18px) scale(1.008); }
+      to { filter: blur(0); opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .motion-ready .reveal-section {
+        filter: none;
+        opacity: 1;
+        transform: none;
+      }
+
+      ::view-transition-old(root),
+      ::view-transition-new(root) {
+        animation: none;
+      }
+    }
+  </style>
+</head>
+<body>
+   <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Mathew Bond home">
+      <span>Mathew Bond</span>
+      <strong>For DNV Council</strong>
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="about.html">About</a>
+      <a class="nav-donate" href="support.html">Support</a>
+    </nav>
+  </header>
+
+  <section class="election-banner" aria-label="Election date">
+    <div class="section-inner">
+      <p class="vote-bond">SAT, OCT 17 — VOTE BOND</p>
+    </div>
+  </section>
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="place">District of North Vancouver</p>
+        <h1 id="page-title" class="campaign-headline">A District for all to thrive for generations to come. </h1>
+      </div>
+      <div class="portrait">
+        <img src="assets/mathew-bond-2022.jpg" alt="Mathew Bond outdoors in North Vancouver" width="1800" height="1200">
+      
+      </div>
+    </section>
+    <section class="section-band" id="why" aria-labelledby="why-title">
+      <div class="section-inner split-copy">
+        <div><p class="eyebrow">Why this election matters</p><h2 id="why-title">Tough decisions about affordability and quality of life</h2></div>
+        <div><p>The next Council will make tough decisions to balance affordability and quality of life. District residents are paying hundreds of millions of dollars for the over-runs at Metro Vancouver's Wastewater Treatment Plant. We cannot allow failures on that scale to happen again. We must invest responsibly in infrastructure, transportation, public facilities and services to maintain and improve the quality of life we've all come to enjoy.</p></div>
+      </div>
+    </section>
+    <section class="content-band priorities" aria-labelledby="priorities-title">
+      <div class="section-inner">
+        <p class="eyebrow">Three decision priorities</p><h2 id="priorities-title">What Council needs to get right</h2>
+        <div class="priority-grid">
+          <article><h3>Accountability for major costs</h3><p>Major capital projects need careful oversight and clear accountability. Council must understand costs and risks, test assumptions, demand clear reporting and explain the consequences to residents.</p></article>
+          <article><h3>Responsible investment in daily life</h3><p>Infrastructure, transportation, public facilities and services shape daily life in North Vancouver. The District must maintain what people rely on, plan ahead and invest with a clear understanding of long-term value and cost.</p></article>
+          <article><h3>A community where people can make a good life</h3><p>Affordability and quality of life belong in the same conversation. People at every stage of life should be able to build roots, stay connected and see a future in North Vancouver.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="content-band experience" aria-labelledby="experience-title">
+      <div class="section-inner split-copy">
+        <div><p class="eyebrow">What Mathew brings</p><h2 id="experience-title">Diverse experience makes Council stronger</h2></div>
+        <div><p>Every candidate cares deeply about our community. Council is strongest when its members each bring their unique experience to the table and test decisions from more than one perspective.</p><p>I bring two terms on District Council, a record of community volunteering and nonprofit leadership, and more than 15 years as a professional engineer working on major transportation infrastructure. I also know from my own life what it means to choose North Vancouver, work to find a suitable home, raise children here and manage the everyday cost of living in this community. Together, these experiences help me bring people together, work through complex problems and keep Council decisions grounded in how they affect daily life.</p><a class="text-link" href="about.html">More about Mathew</a></div>
+      </div>
+    </section>
+    <section class="content-band personal" aria-labelledby="personal-title">
+      <div class="section-inner split-copy">
+        <div><p class="eyebrow">Why I’m running</p><h2 id="personal-title">A community where we can all make a good life</h2></div>
+        <div><p>Our neighbours, friends and families can build roots, stay connected and thrive in North Vancouver at every stage of life. That vision guided me when I was elected to Council in 2014, a few months before my eldest daughter was born. She is now eleven and her sister is nine. Building a healthier, happier and more resilient community has never mattered more to me.</p><p>I am running again to help Council make responsible decisions, protect what people value about North Vancouver, and keep building a community where we can all make a good life.</p></div>
+      </div>
+    </section>
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="section-inner">
+        <p class="eyebrow">Support the campaign</p>
+        <h2 id="cta-title">Help elect Mathew Bond to Council</h2>
+        <p>You can donate, volunteer or request a sign to help the campaign reach more neighbours across the District.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="support.html">See ways to help</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><p>Authorized by Mathew Bond, financial agent, <a href="mailto:mathew@mathewbond.com">mathew@mathewbond.com</a></p></footer>
+  <script>
+    document.documentElement.classList.add("motion-ready");
+
+    const revealSections = document.querySelectorAll("main > section:not(.hero)");
+    revealSections.forEach((section) => section.classList.add("reveal-section"));
+
+    if ("IntersectionObserver" in window) {
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+
+      revealSections.forEach((section) => revealObserver.observe(section));
+    } else {
+      revealSections.forEach((section) => section.classList.add("is-visible"));
+    }
+  </script>
+</body>
+</html>

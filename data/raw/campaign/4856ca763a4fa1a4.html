@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>McGraw for Mayor | City of North Vancouver</title>
+<meta name="description" content="Mike McGraw is running for Mayor of the City of North Vancouver. Show up. Listen. Lead.">
+<link rel="canonical" href="https://mcgraw4mayor.ca/">
+<!-- Open Graph / social share tags, added Sept 2026. Previously the site had
+     none at all, so Facebook/etc. fell back to a stale scrape from weeks
+     earlier and kept serving it from cache regardless of page changes.
+     og:image points at the current live hero photo (MikeMcGraw_HeroImage2-web.jpg,
+     swapped in Sept 11, 2026) via an absolute URL, which Facebook requires.
+     After deploying, use Facebook's Sharing Debugger (developers.facebook.com/
+     tools/debug/) and click "Scrape Again" to clear their cache immediately -
+     otherwise a stale preview can persist for weeks even with correct tags. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="McGraw for Mayor">
+<meta property="og:title" content="McGraw for Mayor | City of North Vancouver">
+<meta property="og:description" content="Mike McGraw is running for Mayor of the City of North Vancouver. Show up. Listen. Lead.">
+<meta property="og:url" content="https://mcgraw4mayor.ca/">
+<meta property="og:image" content="https://mcgraw4mayor.ca/MikeMcGraw_HeroImage2-web.jpg">
+<meta property="og:image:width" content="1800">
+<meta property="og:image:height" content="1350">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="McGraw for Mayor | City of North Vancouver">
+<meta name="twitter:description" content="Mike McGraw is running for Mayor of the City of North Vancouver. Show up. Listen. Lead.">
+<meta name="twitter:image" content="https://mcgraw4mayor.ca/MikeMcGraw_HeroImage2-web.jpg">
+<!-- Structured data (JSON-LD), added Sept 2026 alongside the sitemap,
+     robots.txt, and canonical tags - part of the same fix. Marks this page
+     as the canonical entity page for the campaign (GovernmentOrganization,
+     since this is a campaign/civic site rather than a business), giving
+     Google an explicit machine-readable signal for which URL is primary.
+     Kept minimal and factual - no claims beyond what's stated elsewhere on
+     the site. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "GovernmentOrganization",
+  "name": "McGraw for Mayor",
+  "alternateName": "Mike McGraw for Mayor, City of North Vancouver",
+  "url": "https://mcgraw4mayor.ca/",
+  "logo": "https://mcgraw4mayor.ca/MikeMcGraw_HeroImage2-web.jpg",
+  "sameAs": [
+    "https://www.facebook.com/McGraw4Mayor",
+    "https://www.instagram.com/mcgraw4mayor/"
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "Mike McGraw"
+  }
+}
+</script>
+<!-- Home page. Split hero (evergreen panel + framed horizontal portrait) chosen
+     deliberately. The hero photo (MikeMcGraw_HeroImage-web.jpg, added July 14,
+     2026) is high-resolution enough now for a full-bleed variant if ever
+     wanted — see home-copy.md's design-decision note — but the split layout
+     is being kept as-is unless asked to change it.
+     TAGLINE IS NOT FINAL - it lives in exactly one place, marked below. -->
+<link rel="stylesheet" href="index.css">
+<!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://plausible.io/js/pa-gha2tCsJoSxSVJ9wrJj2r.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class='wordmark' href='/'><span class="mark">&#9650;</span>McGraw <span>for Mayor</span></a>
+    <nav id="site-nav">
+      <a class='active' href='/'>Home</a><a href='/about'>Meet Mike</a><a href='/issues'>Priorities</a>
+      <a href='/next-north-van'>Next North Van</a><a href='/get-involved'>Get Involved</a><a href='/donate'>Donate</a><a href='/ask-mike'>Ask Mike</a>
+    </nav>
+    <div class="header-cta">
+      <a class='hdr-btn ghost' href='/get-involved#volunteer-form'>Volunteer</a>
+      <a class='hdr-btn solid' href='/donate'>Donate</a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="toggleNav(this)">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Full-bleed split hero — Sept 2026 preview, layout ported from the
+     mcgraw-site-redesign-2 package's .hero-v2 pattern. Copy is untouched:
+     same H1, same subline, same three solid buttons (see the July 17, 2026
+     note in index.css above .hero a.solid for why all three stay solid
+     rather than the source package's solid+outline mix). The package's new
+     subtagline, hero-meta trust/date badges are intentionally left out here,
+     not yet reviewed. -->
+<div class="hero">
+  <div class="hero-panel">
+    <!-- TAGLINE: working text only, not final (brief §4). Swap this ONE string. -->
+    <h1>Show up.<br>Listen.<br>Lead.</h1>
+    <!-- Hero triad qualifiers — Sept 2026 preview. Fills the panel's plain,
+         empty space below the H1 with Mike's own locked supporting lines
+         from the palm card / door hanger (see feedback-no-financial-honesty
+         -implication memory, "LOCKED TRIAD" section) rather than the
+         reference package's generic subtagline/trust-badge copy, which read
+         as salesy. Wording reused verbatim, not new/unapproved language.
+         Restyled as three left-accented rows (reusing the same accent-bar
+         motif as .quote-block elsewhere on the page) instead of plain
+         stacked text, per Mike's note that the plain version felt bland. -->
+    <div class="hero-triad">
+      <div class="triad-item">
+        <span class="triad-label">Show Up.</span>
+        <p>Regular Meet the Mayor events, open and unscripted.</p>
+      </div>
+      <div class="triad-item">
+        <span class="triad-label">Listen.</span>
+        <p>Meaningful public input before decisions are made, not after.</p>
+      </div>
+      <div class="triad-item">
+        <span class="triad-label">Lead.</span>
+        <p>Pragmatic, disciplined council and community leadership. Business acumen, not talk.</p>
+      </div>
+    </div>
+    <div class="subline">Mike McGraw for Mayor | <span class="nowrap">City of North Vancouver</span></div>
+    <div class="buttons">
+      <a class='btn solid' href='/donate'>Donate</a>
+      <a class='btn solid' href='/get-involved'>Volunteer</a>
+      <a class='btn solid' href='/ask-mike'>Ask Mike</a>
+    </div>
+  </div>
+  <!-- Sept 11, 2026: hero photo swapped from the outdoor shot to an indoor
+       office portrait, per Mike's request; see CLAUDE.md for crop/source
+       notes. -->
+  <figure class="hero-media">
+    <img src="MikeMcGraw_HeroImage2-web.jpg"
+         alt="Mike McGraw seated at a table, hands clasped, blurred office windows behind him">
+  </figure>
+</div>
+
+<main>
+  <!-- Priorities section (icon row) — Sept 2026 preview, layout/icons ported
+       from mcgraw-site-redesign-2's .priorities-section/.priority-row
+       pattern, replacing the earlier numbered-card ".teasers" treatment
+       below (kept in index.css, commented, in case the card layout is
+       wanted back). Links point at issues.html's existing #pillar-1..4
+       anchors (confirmed against phase1-preview/issues.html), not the
+       source package's differently-named anchors. Pillar copy unchanged
+       from the card version, condensed to one line each to fit the icon
+       row's shorter format. -->
+  <section class="priorities-section">
+    <h2>My priorities for North Vancouver</h2>
+    <div class="hero-rule"></div>
+    <div class="priority-row">
+      <a class='priority-item' href='/issues#pillar-1'>
+        <span class="priority-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#eceee6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 9a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/><path d="M16 9a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/><path d="M2.5 19c.6-3 2.7-5 5.5-5s4.9 2 5.5 5"/><path d="M10.5 14.2c.6-2.4 2.5-4.2 5-4.2s4.6 2 5 4.6"/></svg></span>
+        <h3>Open-door leadership</h3>
+        <p>Regular Meet the Mayor events, open and unscripted. My door is open, and I won't be hard to find.</p>
+      </a>
+      <a class='priority-item' href='/issues#pillar-2'>
+        <span class="priority-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#eceee6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M4 21V10M9 21V10M15 21V10M20 21V10"/><path d="M2 10 12 4l10 6"/></svg></span>
+        <h3>Transparent City Hall</h3>
+        <p>Real debate and public input before decisions are made, not after. Only 22.4% of us voted last time; that's a signal.</p>
+      </a>
+      <a class='priority-item' href='/issues#pillar-3'>
+        <span class="priority-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#eceee6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="12" x2="8" y2="12.01"/><line x1="12" y1="12" x2="12" y2="12.01"/><line x1="16" y1="12" x2="16" y2="12.01"/><line x1="8" y1="16" x2="8" y2="16.01"/><line x1="12" y1="16" x2="12" y2="16.01"/><line x1="16" y1="16" x2="16" y2="16.01"/></svg></span>
+        <h3>Fair, responsible spending</h3>
+        <p>The North Shore covers 37% of the wastewater plant's cost on 8% of the region's population. That's not fair.</p>
+      </a>
+      <a class='priority-item' href='/issues#pillar-4'>
+        <span class="priority-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#eceee6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 10 5l3 2.7"/><path d="M5 10v9.5a1 1 0 0 0 1 1h5v-6h2v6h1"/><circle cx="18" cy="9" r="3.2"/><path d="M18 12.2V21"/></svg></span>
+        <h3>Growth done right</h3>
+        <p>Real growth, on the terms residents were promised, with the public voice back in the room.</p>
+      </a>
+    </div>
+    <a class='more-link' href='/issues'>Read where I stand &rarr;</a>
+  </section>
+
+  <!-- Testimonials panel: horizontal scroller directly below "Read where I stand".
+       Cards are added between the markers by Campaign/Instagram/_tools/testimonial_tool.py
+       (newest last). Never add anything here that has not been cleared by Mike. -->
+  <section class="testimonials-panel" aria-labelledby="testimonials-heading">
+    <div class="tp-top">
+      <div class="tp-head">
+        <div class="tp-rule"></div>
+        <h2 id="testimonials-heading">What People Are Saying</h2>
+        <p class="tp-sub">Real feedback from residents, business owners, and community voices across North Vancouver.</p>
+      </div>
+    <svg class="tp-scenery" viewBox="0 0 320 300" aria-hidden="true" focusable="false">
+      <polygon points="-90,420 128,74 176,138 214,96 420,420" fill="#9fc7bd" opacity=".55"/>
+      <polygon points="-153,420 92,36 132,100 152,76 390,420" fill="#9fc7bd"/>
+      <polygon points="92,36 132,100 152,76 390,420 100,420" fill="#2c7f94" opacity=".22"/>
+      <polygon points="226,112 210,156 242,156" fill="#2f5d4a"/>
+      <polygon points="226,135 204,181 248,181" fill="#2f5d4a"/>
+      <polygon points="226,160 199,208 253,208" fill="#2f5d4a"/>
+      <rect x="223" y="206" width="6" height="14" fill="#2f5d4a"/>
+      <polygon points="262,84 243,141 281,141" fill="#17362b"/>
+      <polygon points="262,114 236,173 288,173" fill="#17362b"/>
+      <polygon points="262,146 229,208 295,208" fill="#17362b"/>
+      <rect x="259" y="206" width="6" height="14" fill="#17362b"/>
+      <polygon points="298,122 284,162 312,162" fill="#2f5d4a"/>
+      <polygon points="298,143 279,184 317,184" fill="#2f5d4a"/>
+      <polygon points="298,165 274,208 322,208" fill="#2f5d4a"/>
+      <rect x="295" y="206" width="6" height="14" fill="#2f5d4a"/>
+    </svg>
+      <svg class="tp-sweep" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+        <path d="M0,152 C520,148 1000,104 1440,14 L1440,160 L0,160 Z" fill="#9fc7bd"/>
+        <path d="M0,170 C520,166 1000,122 1440,32 L1440,160 L0,160 Z" fill="#24586e"/>
+        <path d="M0,180 C520,176 1000,132 1440,42 L1440,160 L0,160 Z" fill="#2f5d4a"/>
+      </svg>
+    </div>
+    <div class="tp-lower">
+      <div class="tp-stage">
+        <button class="tp-arrow tp-prev" type="button" aria-label="Previous testimonials"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <div class="tp-track" tabindex="0" role="region" aria-label="Testimonials, scroll sideways for more">
+          <!-- testimonials:start (managed by Campaign/Instagram/_tools/testimonial_tool.py; order avoids repeating the same descriptor back-to-back) -->
+          <figure class="tp-card" data-testimonial="T-005">
+            <span class="tp-glyph" aria-hidden="true">&ldquo;</span>
+            <blockquote>I’ve known Mike McGraw for over 20 years, since our kids played football together at Handsworth. Since then, I’ve watched him thrive as a successful entrepreneur, have a wonderful family life with<span class="tp-q-dots" aria-hidden="true">&hellip;</span><span class="tp-q-rest"> lots of fun vacations and successful adult children, and serve with dedication as an elected school trustee. Trust is the foundation of leadership, and Mike shows it through savvy financial decision-making, true collaboration and patient listening. He loves North Vancouver and will be a great Mayor.</span></blockquote>
+            <figcaption><div class="tp-rule"></div><div class="tp-foot"><div class="tp-who"><p class="tp-name">Barb Berg</p><p class="tp-role">Retired Director, Western Public Sector, Microsoft Canada</p></div><span class="tp-more" aria-hidden="true"><span class="tp-more-label"></span></span></div></figcaption>
+          </figure>
+          <figure class="tp-card" data-testimonial="T-009">
+            <span class="tp-glyph" aria-hidden="true">&ldquo;</span>
+            <blockquote>I’ve been involved in North Vancouver community issues for more than 30 years — protecting parks, advocating for meaningful public input and working to make our city a better place to live. Over the<span class="tp-q-dots" aria-hidden="true">&hellip;</span><span class="tp-q-rest"> past several months, I’ve had many conversations with Mike McGraw about the challenges facing our city. What has impressed me most is that Mike listens. He asks questions, considers different viewpoints and understands that City Hall belongs to the people who live here. The next four years will bring major decisions about growth, parks, renters, traffic, infrastructure and how we spend public money. I strongly believe Mike can help bring City Hall back to the community — with residents heard, taxpayers respected and North Vancouver’s future carefully planned. That is why I am proud to endorse Mike McGraw for Mayor.</span></blockquote>
+            <figcaption><div class="tp-rule"></div><div class="tp-foot"><div class="tp-who"><p class="tp-name">Ron Polly</p><p class="tp-role">Community Advocate &amp; Long-time North Vancouver Resident</p></div><span class="tp-more" aria-hidden="true"><span class="tp-more-label"></span></span></div></figcaption>
+          </figure>
+          <figure class="tp-card" data-testimonial="T-011">
+            <span class="tp-glyph" aria-hidden="true">&ldquo;</span>
+            <blockquote>I met Mike over 10 years ago when we were volunteering on a North Van community board. Mike is one of the most emotionally intelligent leaders I’ve met. When he says his plan is to show up, listen<span class="tp-q-dots" aria-hidden="true">&hellip;</span><span class="tp-q-rest"> and lead; I have no doubt that is exactly what he will do. He will be an outstanding Mayor for the CNV!</span></blockquote>
+            <figcaption><div class="tp-rule"></div><div class="tp-foot"><div class="tp-who"><p class="tp-name">Jonathan McNair</p><p class="tp-role">North Vancouver City Resident</p></div><span class="tp-more" aria-hidden="true"><span class="tp-more-label"></span></span></div></figcaption>
+          </figure>
+          <figure class="tp-card" data-testimonial="T-002">
+            <span class="tp-glyph" aria-hidden="true">&ldquo;</span>
+            <blockquote>Mike demonstrates strong leadership through his integrity, responsiveness, and proactive approach to problem-solving. He has a remarkable ability to delegate responsibilities appropriately while<span class="tp-q-dots" aria-hidden="true">&hellip;</span><span class="tp-q-rest"> maintaining accountability through diligent follow-up, resulting in effective governance and positive outcomes for our community.</span></blockquote>
+            <figcaption><div class="tp-rule"></div><div class="tp-foot"><div class="tp-who"><p class="tp-name">Ahmet Ozata P.Eng., LEED AP, Principal</p><p class="tp-role">Strata Council member</p></div><span class="tp-more" aria-hidden="true"><span class="tp-more-label"></span></span></div></figcaption>
+          </figure>
+          <figure class="tp-card" data-testimonial="T-004">
+            <span class="tp-glyph" aria-hidden="true">&ldquo;</span>
+            <blockquote>I’ve had the pleasure of witnessing Mike in action as President of our condo’s Strata Council, and I’ve been consistently impressed by his leadership. He is exceptionally responsive, organized, and<span class="tp-q-dots" aria-hidden="true">&hellip;</span><span class="tp-q-rest"> task-oriented. When an issue comes up, he takes it seriously, follows through in a timely manner, and works diligently to find practical and fair solutions. Just as importantly, he believes in being transparent and keeping people informed. I know I can trust Mike to listen, consider different perspectives, and make thoughtful decisions with the best interests of our community in mind. He is a driven leader who truly cares about our building and the people who live here. His commitment, accessibility, fairness, and ability to get things done have made a real difference, and I’m extremely appreciative of the time, effort, and dedication Mike has put into our building and the people who call it home. Knowing Mike and seeing how he leads, I can only imagine the positive impact he could have in a larger role serving North Vancouver.</span></blockquote>
+            <figcaption><div class="tp-rule"></div><div class="tp-foot"><div class="tp-who"><p class="tp-name">Julie Hayles</p><p class="tp-role">Neighbour</p></div><span class="tp-more" aria-hidden="true"><span class="tp-more-label"></span></span></div></figcaption>
+          </figure>
+          <figure class="tp-card" data-testimonial="T-003">
+            <span class="tp-glyph" aria-hidden="true">&ldquo;</span>
+            <blockquote>Mike has been the chair of the Strata Council where I own a condo. He would do an excellent job as Mayor of North Vancouver. As a member of the board I have seen over a few years how hard Mike works<span class="tp-q-dots" aria-hidden="true">&hellip;</span><span class="tp-q-rest"> and how committed he is to getting things successfully accomplished. Mike is respectful of others and understands governance processes very well. I have felt extremely fortunate that Mike was chair of our board and I have great confidence he would bring those same skills to the role of Mayor.</span></blockquote>
+            <figcaption><div class="tp-rule"></div><div class="tp-foot"><div class="tp-who"><p class="tp-name">Lynn Parish</p><p class="tp-role">Strata Council member</p></div><span class="tp-more" aria-hidden="true"><span class="tp-more-label"></span></span></div></figcaption>
+          </figure>
+          <figure class="tp-card" data-testimonial="T-006">
+            <span class="tp-glyph" aria-hidden="true">&ldquo;</span>
+            <blockquote>I’ve known Mike McGraw for about 20 years, first as a customer at my business, then socially. Over the years I’ve seen how measured, smart, and thoughtful he is, and how well he listens. He served on<span class="tp-q-dots" aria-hidden="true">&hellip;</span><span class="tp-q-rest"> the CNV school board, and now that he’s retired from his business, he’s back and focused on fixing this city’s issues, economic and otherwise. You can count on him to bring some real common sense to City governance, which has been sorely lacking for a long time. I like Mike very much. He’s a stickler for detail, process, and rules, and one of the most trustworthy people I’ve ever met. He says what he means and means what he says, which is refreshing in a world of bafflegab politics. I highly and unreservedly endorse Mike McGraw for Mayor of The City of North Vancouver.</span></blockquote>
+            <figcaption><div class="tp-rule"></div><div class="tp-foot"><div class="tp-who"><p class="tp-name">Brian Wilson</p><p class="tp-role">Owner, Integra Tire</p></div><span class="tp-more" aria-hidden="true"><span class="tp-more-label"></span></span></div></figcaption>
+          </figure>
+          <figure class="tp-card" data-testimonial="T-010">
+            <span class="tp-glyph" aria-hidden="true">&ldquo;</span>
+            <blockquote>As president of the largest residential strata in the City, I vetted Mike firsthand. He listens, respects residents, and will honour the social contract of the OCP. He brings business acumen, fiscal<span class="tp-q-dots" aria-hidden="true">&hellip;</span><span class="tp-q-rest"> discipline, and an open-door policy. Proud to stand as an official nominator for our next Mayor.</span></blockquote>
+            <figcaption><div class="tp-rule"></div><div class="tp-foot"><div class="tp-who"><p class="tp-name">Richard Short</p><p class="tp-role">Lonsdale area resident</p></div><span class="tp-more" aria-hidden="true"><span class="tp-more-label"></span></span></div></figcaption>
+          </figure>
+          <figure class="tp-card" data-testimonial="T-012">
+            <span class="tp-glyph" aria-hidden="true">&ldquo;</span>
+            <blockquote>I spent 30 years as a corporate consultant specializing in organizational development. … I was skilled at assessing talent. Mike McGraw is a highly skilled leader. At this pivotal time in the City of<span class="tp-q-dots" aria-hidden="true">&hellip;</span><span class="tp-q-rest"> North Vancouver, we require a Mayor who will work with Council focused on meeting or exceeding the needs of the 68,000 plus residents before all others. I’ve had the chance to work with Mike closely and can personally attest to his strong value-based approach to problem solving. He is warm and funny, he listens and learns, he gives a damn, and it shows. His tool kit includes many years of being a servant leader, a manager committed to the well being of his staff. Mike learned that running a business required he become a prudent and fiscally responsible manager of the company’s resources, which is exactly what the City needs right now. And he will bring fairness and balance back to decision making. … Not many people would sell their business and retire, then volunteer to run for public office, Mike did. … Electing Mike McGraw as Mayor along with new, fresh voices on Council will transform how the City of North Vancouver operates and delivers services to all of us who call CNV home.</span></blockquote>
+            <figcaption><div class="tp-rule"></div><div class="tp-foot"><div class="tp-who"><p class="tp-name">Dennis Hilton</p><p class="tp-role">St. Andrews area resident</p></div><span class="tp-more" aria-hidden="true"><span class="tp-more-label"></span></span></div></figcaption>
+          </figure>
+          <figure class="tp-card" data-testimonial="T-013">
+            <span class="tp-glyph" aria-hidden="true">&ldquo;</span>
+            <blockquote>Mike McGraw’s run for mayor is the much needed breath of fresh air the City of North Vancouver’s residents have been hoping for in 2 long decades. It’s about time we had a mayor whose interests are<span class="tp-q-dots" aria-hidden="true">&hellip;</span><span class="tp-q-rest"> rooted in the public good, and I can’t wait to help him get elected on October 17th.</span></blockquote>
+            <figcaption><div class="tp-rule"></div><div class="tp-foot"><div class="tp-who"><p class="tp-name">Alborz Jaberolansar</p><p class="tp-role">Campaign Manager</p></div><span class="tp-more" aria-hidden="true"><span class="tp-more-label"></span></span></div></figcaption>
+          </figure>
+          <figure class="tp-card" data-testimonial="T-007">
+            <span class="tp-glyph" aria-hidden="true">&ldquo;</span>
+            <blockquote>Having Mike as our strata president has given me a front-row seat to what genuine community leadership looks like. He’s remarkably proactive, always stepping up to handle building priorities head-on<span class="tp-q-dots" aria-hidden="true">&hellip;</span><span class="tp-q-rest">, and consistently takes residents’ needs into account before major decisions are made. Mike has also managed our budget with real fiscal discipline, keeping our strata fees stable and predictable without sacrificing quality or upkeep. He’s fair, transparent, and as approachable as they come. Mike brings people together to solve practical problems, and those exact qualities will make him an outstanding Mayor for the City of North Vancouver</span></blockquote>
+            <figcaption><div class="tp-rule"></div><div class="tp-foot"><div class="tp-who"><p class="tp-name">Kian Khoshnevis</p><p class="tp-role">Neighbour</p></div><span class="tp-more" aria-hidden="true"><span class="tp-more-label"></span></span></div></figcaption>
+          </figure>
+          <figure class="tp-card" data-testimonial="T-008">
+            <span class="tp-glyph" aria-hidden="true">&ldquo;</span>
+            <blockquote>I’ve worked with Mike McGraw on our strata council for over two years. As president, he has been accessible to residents, fair with suppliers and effective in addressing issues. Most importantly, he<span class="tp-q-dots" aria-hidden="true">&hellip;</span><span class="tp-q-rest"> has fostered a collaborative environment on the strata council where everyone plays to their strengths to get things done.</span></blockquote>
+            <figcaption><div class="tp-rule"></div><div class="tp-foot"><div class="tp-who"><p class="tp-name">Chris Best</p><p class="tp-role">Strata Council member</p></div><span class="tp-more" aria-hidden="true"><span class="tp-more-label"></span></span></div></figcaption>
+          </figure>
+          <figure class="tp-card" data-testimonial="T-001">
+            <span class="tp-glyph" aria-hidden="true">&ldquo;</span>
+            <blockquote>As our Strata President, Mike is always approachable, great communicator, attention to detail, gets the job done and keeps costs in check.</blockquote>
+            <figcaption><div class="tp-rule"></div><div class="tp-foot"><div class="tp-who"><p class="tp-name">Laurie</p><p class="tp-role">Neighbour</p></div></div></figcaption>
+          </figure>
+          <!-- testimonials:end -->
+        </div>
+        <button class="tp-arrow tp-next" type="button" aria-label="Next testimonials"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+      <div class="tp-dots" role="group" aria-label="Choose a page of testimonials"></div>
+    </div>
+  </section>
+  <script src="testimonials.js"></script>
+
+  <!-- "What's on your mind" invite band — Sept 2026 preview, ported from
+       mcgraw-site-redesign-2's .band-invite pattern. Points at the working
+       Ask Mike form, same as the header/footer CTAs. -->
+  <section class="band-invite">
+    <div class="band-invite-row">
+      <h2>What&rsquo;s on your mind, North Vancouver?</h2>
+      <a class='btn-invite' href='/ask-mike'>Ask Mike</a>
+    </div>
+  </section>
+
+  <!-- "Why I'm running" — Sept 2026 preview. Replaces the earlier welcome-row
+       paragraph's "trust between residents and City Hall is broken" framing
+       (flagged some time ago as not ideal — see feedback-no-financial-honesty
+       -implication memory) with copy grounded in Mike's own public words and
+       closing on his locked "Show Up. Listen. Lead." triad instead of
+       improvised trust/honesty language. Headline swapped Sept 2026 from an
+       earlier "22.4% turnout" draft (Mike's call: too much weight on one
+       stat) to "I won't be hard to find" — his own palm-card/Facebook line,
+       print-tested already, and a direct tie-in to Show Up. Persona review
+       verdict: Ship (see chat for the full reaction table) - new copy, not
+       previously approved verbatim, flagging for Mike's read. Paragraph
+       tightened further Sept 2026 per Mike's note: dropped "race for mayor"
+       phrasing, "I've raised my three kids here", and the strata
+       council/school board/library board clause - that service history
+       reads as a run-on list without context here and already has its own
+       section on Meet Mike (Track record). This paragraph now stays
+       focused on the business bio + the reason for running. -->
+  <section class="why-running">
+    <div class="grid-2">
+      <div>
+        <div class="eyebrow">Why I&rsquo;m running</div>
+        <h2>I won&rsquo;t be hard to find.</h2>
+        <p class="max-prose">I love this city. North Vancouver has been my home for decades, and I built a software company here that created more than 20 highly skilled, well-paying local jobs. After a long career in business, I&rsquo;m stepping away from it to serve this community again. A lot of people have told me their voice doesn&rsquo;t matter at City Hall, and I think they have a point. I want a council that debates the hard questions instead of rubber-stamping them, with real public input before decisions are made, not after. Rebuilding that starts with showing up and listening, so here&rsquo;s my promise: Show up. Listen. Lead.</p>
+        <a class='more-link' href='/about'>More about Mike &rarr;</a>
+      </div>
+      <div class="quote-block">
+        <p>&ldquo;A lot of people have told me their voice doesn&rsquo;t matter at City Hall. I think they have a point.&rdquo;</p>
+        <cite>Mike McGraw</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- "By the numbers" stats band — Sept 2026 preview restyle. Ported from
+       mcgraw-site-redesign-2's light .stat-band/.stat-grid pattern (replacing
+       the earlier dark rounded box below, kept in index.css commented) and
+       adds source-citation links per that package - same figures as before
+       (22.4% turnout, $3.86B, 37% vs 8%), no new numbers. Citation URLs
+       reused from mcgraw-site-redesign-2/index.html, which had already
+       sourced them (CBC News for the wastewater figures, NS News for
+       turnout) - flagging for Mike's check before this goes live. -->
+  <section class="stat-band">
+    <div class="eyebrow">By the numbers</div>
+    <div class="stat-grid">
+      <div class="stat">
+        <div class="num">$3.86B</div>
+        <div class="label">City exposure to cost overruns on the North Shore Wastewater Treatment Plant</div>
+        <div class="src">Source: <a href="https://www.cbc.ca/news/canada/british-columbia/what-you-need-to-know-north-shore-wastewater-treatment-plant-1.7235368" target="_blank" rel="noopener">CBC News, June 2024</a></div>
+      </div>
+      <div class="stat">
+        <div class="num">37% <span class="num-sub">vs 8%</span></div>
+        <div class="label">Share of regional wastewater costs the North Shore pays, against its share of Metro Vancouver&rsquo;s population</div>
+        <div class="src">Source: <a href="https://www.cbc.ca/news/canada/british-columbia/what-you-need-to-know-north-shore-wastewater-treatment-plant-1.7235368" target="_blank" rel="noopener">CBC News, June 2024</a></div>
+      </div>
+      <div class="stat">
+        <div class="num">22.4%</div>
+        <div class="label">Voter turnout in the 2022 municipal election</div>
+        <div class="src">Source: <a href="https://www.nsnews.com/local-news/entrepreneur-mike-mcgraw-running-for-city-of-north-vancouver-mayor-12564206" target="_blank" rel="noopener">NS News</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="dates-strip">
+      <span><strong>Oct 7-15</strong> - advance voting at City Hall</span>
+      <span><strong>Sat, Oct 17</strong> - general voting day, 8am-8pm</span>
+      <a href='/get-involved'>Details on Get Involved &rarr;</a>
+    </div>
+  </section>
+
+  <!-- "Ready to help?" CTA banner — Phase 1 redesign pass, Sept 2026, replacing
+       the earlier three-card CTA (Ask Mike / Volunteer / Donate) with the
+       approved design package's two-button banner, focused specifically on
+       volunteering and donating. Ask Mike remains reachable via the header
+       CTA and the footer nav below. -->
+  <section class="cta-banner">
+    <div class="cta-banner-text">
+      <h2>Ready to help?</h2>
+      <p>Whether it's five dollars, five minutes, or a free Saturday, there's a way to pitch in that fits.</p>
+    </div>
+    <div class="cta-banner-buttons">
+      <a class='solid' href='/donate'>Donate</a>
+      <a class='outline' href='/get-involved'>Get Involved</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer — Phase 1 redesign pass, Sept 2026, matching the approved design
+     package: brand blurb, Site nav, Connect column (text links, see
+     rationale in footer.css), and a bottom bar with the authorization
+     statement, Privacy link, and election-day line. -->
+<footer class="site-footer">
+  <div class="foot-grid">
+    <div class="foot-brand">
+      <a class='wordmark' href='/'><span class="mark">&#9650;</span>McGraw <span>for Mayor</span></a>
+      <p>Mike McGraw for Mayor, City of North Vancouver. Resident-funded, and proudly so. No property developer money.</p>
+    </div>
+    <div class="foot-col">
+      <h4>Site</h4>
+      <ul>
+        <li><a href='/about'>Meet Mike</a></li>
+        <li><a href='/issues'>Priorities</a></li>
+        <li><a href='/next-north-van'>Next North Van</a></li>
+        <li><a href='/get-involved'>Get Involved</a></li>
+        <li><a href='/donate'>Donate</a></li>
+        <li><a href='/ask-mike'>Ask Mike</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="https://www.facebook.com/McGraw4Mayor" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="https://www.instagram.com/mcgraw4mayor/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="mailto:campaign@mcgraw4mayor.ca">campaign@mcgraw4mayor.ca</a></li>
+        <!-- YouTube slot: hidden until the channel exists (see .yt-slot in
+             footer.css). Once live, remove that CSS rule and set the real
+             href here. -->
+        <li class="yt-slot"><a href="#" target="_blank" rel="noopener">YouTube</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span class="foot-auth">Authorized by Mike McGraw, financial agent, campaign@mcgraw4mayor.ca</span>
+    <span class="foot-copyright">&copy; 2026 McGraw4Mayor.ca</span>
+    <span class="foot-privacy"><a href='/privacy'>Privacy</a></span>
+    <span>City of North Vancouver &middot; Election Day October 17, 2026</span>
+  </div>
+</footer>
+
+<script>
+  function toggleNav(btn) {
+    var nav = document.getElementById('site-nav');
+    var isOpen = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  }
+  // Note: the welcome-video script (loadWelcomeVideo) moved to about.html
+  // along with the video section it belongs to — see about.html, Sept 2026.
+</script>
+
+</body>
+</html>

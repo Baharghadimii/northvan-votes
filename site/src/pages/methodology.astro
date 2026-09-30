@@ -115,6 +115,32 @@ const retrieved = withStatement[0]?.sources[0]?.retrieved;
     </li>
   </ul>
 
+  <h2>Campaign websites</h2>
+  <p>
+    As well as the filed statements I read the candidates' own campaign sites,
+    where they listed one. 39 did. I crawled the pages most likely to hold a
+    platform or a biography, at one request per second, and kept what I found.
+    Quotes from those pages are marked <span class="srctag">Their campaign
+    site</span> so you can tell them from a <span class="srctag srctag-official"
+    >Filed statement</span>. Both are the candidate's own words; one went
+    through a nomination filing and the other didn't.
+  </p>
+  <p>
+    <strong>Six of those sites I couldn't read at all</strong>, because they
+    build their pages with JavaScript that my crawler doesn't run: Sean
+    Alexander, Holly Back, Anna Boltenko, Daina Boyd, Kulvir Mann and Lisa Muri.
+    Their pages here are thinner as a result, and that's a gap in my tooling,
+    not in their campaigns. Go to their sites directly — every candidate page
+    links out.
+  </p>
+  <p>
+    Candidates repeat themselves across their own pages, which is normal and
+    sensible for a campaign but made some pages here unreadable: one candidate
+    came back with 124 passages, a sixth of them word-for-word identical. I
+    now drop repeats and keep at most two passages per topic, preferring the
+    filed statement and the more substantive quote.
+  </p>
+
   <h2>Where this falls short</h2>
   <ul>
     <li>

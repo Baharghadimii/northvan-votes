@@ -8,10 +8,8 @@ const { candidate, position } = Astro.props;
 const source = sourceFor(candidate, position.source_url);
 // Statement paragraphs are joined with blank lines upstream; preserve them.
 const paragraphs = position.quote.split(/\n{2,}/).filter(Boolean);
-const label =
-  position.source_type === "official_statement"
-    ? "Official candidate statement"
-    : "Campaign website";
+const official = position.source_type === "official_statement";
+const label = official ? "Filed statement" : "Their campaign site";
 ---
 <figure class="quote" style="margin-inline:0">
   <blockquote style="margin:0">
@@ -21,7 +19,8 @@ const label =
     {position.flashpoints.map((f) => (
       <span class="tag" style="margin-right:6px">{flashpointById(f)?.label ?? f}</span>
     ))}
-    <a href={position.source_url} rel="noopener">{label}</a>
+    <span class={official ? "srctag srctag-official" : "srctag"}>{label}</span>
+    <a href={position.source_url} rel="noopener">source</a>
     {source && <> · retrieved {formatDate(source.retrieved)}</>}
   </figcaption>
 </figure>

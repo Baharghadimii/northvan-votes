@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Meet Mathew Bond, candidate for District of North Vancouver Council in 2026."><meta name="theme-color" content="#007f8f">
+  <title>About Mathew | Mathew Bond for DNV Council</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/styles.css">
+  <style>
+    @view-transition { navigation: auto; }
+
+    :root { --header-left-edge: clamp(1rem, 2vw, 1.5rem); }
+
+    .site-header { view-transition-name: campaign-header; }
+    .election-banner { view-transition-name: election-strip; }
+
+    .site-header .brand { padding-left: var(--header-left-edge); }
+
+    .site-nav .nav-donate,
+    .site-nav .nav-donate:visited {
+      background: var(--yellow);
+      border-left-color: var(--yellow);
+      color: var(--ink);
+    }
+
+    .site-nav .nav-donate:hover,
+    .site-nav .nav-donate:focus-visible {
+      background: #fff38c;
+      color: var(--ink);
+    }
+
+    ::view-transition-old(root) {
+      animation: 380ms cubic-bezier(0.4, 0, 1, 1) both page-out;
+    }
+
+    ::view-transition-new(root) {
+      animation: 650ms cubic-bezier(0.16, 1, 0.3, 1) both page-in;
+    }
+
+    ::view-transition-group(campaign-header),
+    ::view-transition-group(election-strip) {
+      animation-duration: 520ms;
+      animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes page-out {
+      to { filter: blur(5px); opacity: 0; transform: translateY(-14px) scale(0.995); }
+    }
+
+    @keyframes page-in {
+      from { filter: blur(7px); opacity: 0; transform: translateY(18px) scale(1.008); }
+      to { filter: blur(0); opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    .about-page-title {
+      color: var(--ink);
+      font-size: clamp(3rem, 5vw, 5rem);
+      margin: 0;
+    }
+
+    .about-intro {
+      align-items: center;
+      display: grid;
+      gap: clamp(2rem, 6vw, 5rem);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      margin-bottom: clamp(2.5rem, 6vw, 5rem);
+    }
+
+    .about-intro .lead {
+      border-left: 2px solid var(--ink);
+      margin: 0;
+      max-width: 620px;
+      padding-left: clamp(1.5rem, 3vw, 2.5rem);
+    }
+
+    .about-copy {
+      max-width: none;
+    }
+
+    .community-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: clamp(2rem, 5vw, 4rem);
+    }
+
+    .gallery-slot {
+      aspect-ratio: 4 / 3;
+      background: var(--soft);
+      border: 2px solid var(--ink);
+    }
+
+    .election-banner {
+      background: var(--yellow);
+      padding: 0.65rem clamp(1.5rem, 7vw, 7rem);
+      padding-left: var(--header-left-edge);
+    }
+
+    .election-banner .section-inner {
+      margin: 0;
+      max-width: none;
+    }
+
+    .election-banner .vote-bond {
+      background: transparent;
+      font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+      letter-spacing: 0.08em;
+      line-height: 1.2;
+      margin: 0;
+      padding: 0;
+      transform: none;
+    }
+
+    .election-banner .vote-bond br {
+      display: none;
+    }
+
+    .brand {
+      transform-origin: left center;
+      will-change: transform;
+      transition:
+        filter 300ms ease,
+        transform 300ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .brand:hover,
+    .brand:focus-visible {
+      filter: brightness(1.08);
+      transform: translateX(2px) scale(0.965);
+    }
+
+    .site-nav a {
+      isolation: isolate;
+      overflow: hidden;
+      position: relative;
+      transition:
+        background-color 220ms ease,
+        color 220ms ease,
+        letter-spacing 300ms cubic-bezier(0.16, 1, 0.3, 1),
+        transform 300ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .site-nav a::after {
+      background: currentColor;
+      bottom: 0.55rem;
+      content: "";
+      height: 2px;
+      left: 1rem;
+      opacity: 0.8;
+      position: absolute;
+      right: 1rem;
+      transform: scaleX(0);
+      transform-origin: left center;
+      transition: transform 320ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .site-nav a:hover,
+    .site-nav a:focus-visible {
+      letter-spacing: 0.02em;
+      transform: translateY(-2px) scale(0.98);
+    }
+
+    .site-nav a:hover::after,
+    .site-nav a:focus-visible::after,
+    .site-nav a[aria-current="page"]::after {
+      transform: scaleX(1);
+    }
+
+    .site-nav a[aria-current="page"]::after { opacity: 0.45; }
+    .site-nav a[aria-current="page"]:hover::after { opacity: 0.9; }
+
+    .site-nav a,
+    .button,
+    .text-link {
+      transition:
+        background-color 180ms ease,
+        color 180ms ease,
+        transform 180ms ease;
+    }
+
+    .site-nav a:hover,
+    .button:hover,
+    .text-link:hover {
+      transform: translateY(-2px);
+    }
+
+    .motion-ready .reveal-section {
+      filter: blur(8px);
+      opacity: 0;
+      transform: translateY(48px) scale(0.987);
+      transition:
+        filter 900ms cubic-bezier(0.16, 1, 0.3, 1),
+        opacity 900ms cubic-bezier(0.16, 1, 0.3, 1),
+        transform 900ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .motion-ready .reveal-section.is-visible {
+      filter: blur(0);
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    .motion-ready .reveal-section .section-inner > * {
+      opacity: 0;
+      transform: translateY(20px);
+      transition:
+        opacity 700ms cubic-bezier(0.16, 1, 0.3, 1),
+        transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .motion-ready .reveal-section.is-visible .section-inner > * {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .motion-ready .reveal-section.is-visible .section-inner > :nth-child(2) {
+      transition-delay: 120ms;
+    }
+
+    @media (max-width: 760px) {
+      .about-intro { grid-template-columns: 1fr; }
+
+      .about-intro .lead {
+        border-left: 0;
+        border-top: 2px solid var(--ink);
+        padding-left: 0;
+        padding-top: 1.5rem;
+      }
+
+      .community-gallery { grid-template-columns: 1fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .motion-ready .reveal-section {
+        filter: none;
+        opacity: 1;
+        transform: none;
+      }
+
+      ::view-transition-old(root),
+      ::view-transition-new(root) { animation: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Mathew Bond home"><span>Mathew Bond</span><strong>For DNV Council</strong></a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a aria-current="page" href="about.html">About</a>
+      <a class="nav-donate" href="support.html">Support</a>
+    </nav>
+  </header>
+  <section class="election-banner" aria-label="Election date">
+    <div class="section-inner">
+      <p class="vote-bond">SAT, OCT 17 — VOTE BOND</p>
+    </div>
+  </section>
+  <main>
+    <section class="bio-band" aria-labelledby="page-title">
+      <div class="section-inner">
+        <div class="about-intro">
+          <h1 id="page-title" class="about-page-title">About Mathew</h1>
+          <p class="lead">North Vancouver is where I am raising my two daughters, where I have built deep community connections and where I want to keep contributing to the future of our community.</p>
+        </div>
+        <div class="about-copy">
+          <p>My approach to public service was shaped long before I entered politics. My parents moved from Ontario to the Lower Mainland and built a home-renovation business during the difficult economy of the early 1980s, a business they still run today. As a child, I travelled with my mom as she picked up cheques, paid bills and signed contracts, and I spent time working with my dad on job sites around Metro Vancouver. Their hard work, dedication and determination shaped my character and taught me what it takes to build something that lasts.</p>
+          <p>I graduated from Simon Fraser University in 2008 with a Bachelor of Applied Science in Systems Engineering and a Certificate in Sustainable Community Development. I carried a full-time engineering course load, maintained the grades needed for a scholarship and worked part time to pay my way through university without a student loan.</p>
+          <p>My career has included work in both the private and public sectors. For the first ten years of my engineering career, I travelled across British Columbia, working on complex transportation problems and implementing practical solutions. In 2018, I stepped away from full-time engineering to focus on caring for my young children. During that time, I balanced parenting with consulting engineering, bicycle courier work, community volunteering and service as treasurer of the Lynn Valley Parent Participation Preschool. In 2022, I returned to full-time engineering work. My career now spans more than 15 years and includes major transportation infrastructure projects.</p>
+          <p>Throughout my career, I have kept learning through formal training and by looking at how other communities tackle transportation, land use, housing, sustainability and climate change. That work has taught me to connect the different parts of a problem, test assumptions, identify risks early and follow decisions through to implementation. It has also reinforced my duty as an engineer to put public safety, health, welfare and the natural environment first.</p>
+          <p>I believe in service and giving back to the community. From 2008 to 2013, I served as president of the North Shore Mountain Bike Association. During that time, a volunteer group with more work than time or money grew into an organization with paid staff, strong partnerships with businesses and local governments, and an engaged membership. My role was to help set a clear direction, build the team and nurture the relationships needed to get things done. I am proud that successive boards and staff have continued to grow the organization.</p>
+          <p>In 2014, District residents elected me to Council, and I served two terms through 2022. My roles included serving as alternate to the TransLink Mayors’ Council, Council liaison to the Major Infrastructure Projects Advisory Committee and Heritage Advisory Committee, and a member of the Finance and Audit Committee and Metro Vancouver Housing Committee. I advocated for affordable housing partnerships, safer active transportation and open, accountable public decision-making. That experience taught me what local government can accomplish, where it depends on partnerships, and how much good decisions rely on listening, preparation and clear priorities.</p>
+          <p>I do not pretend to have every answer. I try to listen carefully, ask practical questions and clearly explain the trade-offs in the decisions before us. I am running again because the District faces major decisions about infrastructure, transportation and long-term costs. I want to bring my experience, passion and grounded way of working back to the Council table.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Photo gallery hidden until photographs are ready.
+    <section class="content-band personal" aria-labelledby="community-title">
+      <div class="section-inner">
+        <p class="eyebrow">Photo gallery</p>
+        <h2 id="community-title">Mathew in the community</h2>
+        <div class="community-gallery" aria-label="Space reserved for community photographs">
+          <div class="gallery-slot" aria-hidden="true"></div>
+          <div class="gallery-slot" aria-hidden="true"></div>
+          <div class="gallery-slot" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+    -->
+
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="section-inner">
+        <p class="eyebrow">Support the campaign</p>
+        <h2 id="cta-title">Help elect Mathew Bond to Council</h2>
+        <p>You can donate, volunteer or request a sign to help the campaign reach more neighbours across the District.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="support.html">See ways to help</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><p>Authorized by Mathew Bond, financial agent, <a href="mailto:mathew@mathewbond.com">mathew@mathewbond.com</a></p></footer>
+  <script>
+    document.documentElement.classList.add("motion-ready");
+
+    const revealSections = document.querySelectorAll("main > section");
+    revealSections.forEach((section) => section.classList.add("reveal-section"));
+
+    if ("IntersectionObserver" in window) {
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+
+      revealSections.forEach((section) => revealObserver.observe(section));
+    } else {
+      revealSections.forEach((section) => section.classList.add("is-visible"));
+    }
+  </script>
+</body>
+</html>

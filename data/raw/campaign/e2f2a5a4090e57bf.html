@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>Meet Mike | McGraw for Mayor</title>
+<meta name="description" content="Meet Mike McGraw: business owner, former School Board Trustee, and candidate for Mayor of the City of North Vancouver.">
+<link rel="canonical" href="https://mcgraw4mayor.ca/about.html">
+<!-- Open Graph / social share tags, added Sept 2026 (see index.html head for
+     full rationale). -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="McGraw for Mayor">
+<meta property="og:title" content="Meet Mike | McGraw for Mayor">
+<meta property="og:description" content="Meet Mike McGraw: business owner, former School Board Trustee, and candidate for Mayor of the City of North Vancouver.">
+<meta property="og:url" content="https://mcgraw4mayor.ca/about.html">
+<meta property="og:image" content="https://mcgraw4mayor.ca/MikeMcGraw_HeroImage2-web.jpg">
+<meta property="og:image:width" content="1800">
+<meta property="og:image:height" content="1350">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Meet Mike | McGraw for Mayor">
+<meta name="twitter:description" content="Meet Mike McGraw: business owner, former School Board Trustee, and candidate for Mayor of the City of North Vancouver.">
+<meta name="twitter:image" content="https://mcgraw4mayor.ca/MikeMcGraw_HeroImage2-web.jpg">
+<!-- About page: story + service record + strata callout + hidden endorsements slot.
+     Photo treatment tints casual/phone photos into the site palette (brief §6). -->
+<link rel="stylesheet" href="about.css">
+<!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://plausible.io/js/pa-gha2tCsJoSxSVJ9wrJj2r.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class='wordmark' href='/'><span class="mark">&#9650;</span>McGraw <span>for Mayor</span></a>
+    <nav id="site-nav">
+      <a href='/'>Home</a><a class='active' href='/about'>Meet Mike</a><a href='/issues'>Priorities</a>
+      <a href='/next-north-van'>Next North Van</a><a href='/get-involved'>Get Involved</a><a href='/donate'>Donate</a><a href='/ask-mike'>Ask Mike</a>
+    </nav>
+    <div class="header-cta">
+      <a class='hdr-btn ghost' href='/get-involved#volunteer-form'>Volunteer</a>
+      <a class='hdr-btn solid' href='/donate'>Donate</a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="toggleNav(this)">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="kicker">Meet Mike</div>
+    <h1>A record you can check, not just a promise.</h1>
+  </div>
+</section>
+
+<main>
+  <!-- Welcome video — moved here from the Home page, Sept 2026 preview, so
+       Mike's warm-intro video sits with the rest of his story on Meet Mike.
+       Sept 2026 update: now sits inside .top-row beside the opening
+       paragraph, in the hero-image slot the portrait photo previously
+       occupied, rather than as its own standalone section above. The
+       portrait photo (MikeMcGraw_Mayor_2026-web.jpg) is removed from this
+       spot; file left untouched on disk, unreferenced, in case it's wanted
+       elsewhere. Same click-to-play card and loadWelcomeVideo() logic as
+       before. -->
+  <div class="top-row">
+    <p class="opening">
+      North Vancouver has been part of my life for as long as I can remember, and my
+      roots here go back decades. I live in the City of North Vancouver today, the
+      city I'm running to lead. We raised our three children here. I built
+      a software company
+      here that created more than 20 highly skilled, well-paying local jobs. After a
+      long career in business, I'm stepping away from the private sector to return to
+      public service - because this community has given me a lot, and I'm not done
+      giving back.
+    </p>
+    <div class="video-welcome">
+      <div class="video-card">
+        <div class="caption">A quick hello from Mike</div>
+        <button type="button" class="player-frame" onclick="loadWelcomeVideo(this)" aria-label="Play welcome video from Mike McGraw">
+          <img src="video-poster-placeholder.jpg" alt="Mike McGraw, video welcome message">
+          <span class="play-button">
+            <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Track record band — Sept 2026 preview. Full-bleed --ice-tinted band
+       (matches mcgraw-site-redesign-2's .section-alt, whose --paper-2 color
+       is the identical #eceee6 hex as our existing --ice token) so this
+       section reads as its own distinct band rather than sitting on the
+       same plain background as the rest of the page. -->
+  <section class="track-record-band">
+    <div class="track-record-inner">
+      <div class="kicker">Track record</div>
+      <h2>I've served this community before</h2>
+      <p class="lead-in">
+        None of these jobs come with a spotlight. All of them come with budgets, hard
+        choices, and neighbours counting on you to get it right.
+      </p>
+
+      <!-- Track record — restyled Sept 2026 preview to match
+           mcgraw-site-redesign-2's .timeline/.timeline-item pattern: a small
+           uppercase role-tag + title in one column, description in the other,
+           row dividers instead of the old vertical-rule/node-dot list. Same six
+           roles, same facts; only the strata-president row gets a new one-line
+           description (it had none before) so every row is consistent -
+           flagging that one line for Mike's read, not previously approved
+           verbatim. -->
+      <div class="timeline">
+        <div class="timeline-item">
+          <div><span class="role-tag">Elected</span><div class="role-title">School Board Trustee</div></div>
+          <p class="role-desc">Chosen by voters to help govern our public schools.</p>
+        </div>
+        <div class="timeline-item">
+          <div><span class="role-tag">Governance</span><div class="role-title">District Library Board</div></div>
+          <p class="role-desc">Stewardship of one of our best-loved public institutions.</p>
+        </div>
+        <div class="timeline-item">
+          <div><span class="role-tag">Volunteer</span><div class="role-title">Parent Advisory Council Chair</div></div>
+          <p class="role-desc">The ground floor of public education, where parents meet the system.</p>
+        </div>
+        <div class="timeline-item">
+          <div><span class="role-tag">Advisory board</span><div class="role-title">Cheakamus Centre</div></div>
+          <p class="role-desc">Known to generations as the Outdoor School, now home to an Environmental Learning Centre.</p>
+        </div>
+        <div class="timeline-item">
+          <div><span class="role-tag">Current</span><div class="role-title">Strata Council President</div></div>
+          <p class="role-desc">Managing a complex's finances and governance as a volunteer.</p>
+        </div>
+        <div class="timeline-item">
+          <div><span class="role-tag">Current</span><div class="role-title">Director, Celebrate North Vancouver Society</div></div>
+          <p class="role-desc">Working to bring back North Vancouver's Canada Day Parade.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="photo-row">
+    <figure>
+      <div class="photo-frame">
+        <img src="Mike-NVOS-1-web.jpg" alt="Mike McGraw speaking to a group at Cheakamus Centre">
+      </div>
+      <figcaption>Briefing elected officials on the Outdoor School's new Environmental
+        Learning Centre for elementary students (2011).</figcaption>
+    </figure>
+    <figure>
+      <div class="photo-frame">
+        <img src="Canada_Day-web.jpg" alt="Mike McGraw at Canada Day celebrations in North Vancouver">
+      </div>
+      <figcaption>Celebrating the inaugural Canada Day Stationary Parade with my fellow
+        Society directors (2026): proof of what five committed volunteers can accomplish.
+        Our fifth director, instrumental in the planning, was travelling and much missed
+        in this photo.</figcaption>
+    </figure>
+  </div>
+
+  <section class="strata">
+    <blockquote>
+      "They are managing increasingly complex multimillion-dollar assets,
+      infrastructure, finances, legal risk, community governance... almost the
+      fourth level of government."
+    </blockquote>
+    <cite>Katharine Olson, founder, Groundbreaking Strata - on what strata councils actually do</cite>
+    <p>
+      <strong>That's the job I do today as a volunteer:</strong> budgets, maintenance,
+      legal risk, and the different needs of 57 homes and 10 businesses under one
+      roof. It's unglamorous, and it's exactly the kind of work City Hall is supposed
+      to be good at.
+    </p>
+  </section>
+
+  <!-- Invite card — Phase 1 redesign pass, Sept 2026. Replaces the previous
+       hidden "endorsements" slot (a quote-display section that shipped
+       display:none until quotes arrived) with an always-visible invitation
+       for supporters to share their story, same purpose (an endorsements/
+       supporters slot that works whether populated or empty, brief §7) but
+       a different mechanism: an invite rather than a waiting quote display.
+       New copy here, adapted from the design package and put in Mike's
+       first-person voice — flagging for review, not previously approved
+       verbatim. -->
+  <section class="invite-card">
+    <div class="invite-text">
+      <div class="kicker on-dark">What neighbours are saying</div>
+      <h2>Have we talked at your door, a coffee meet-up, or a community event?</h2>
+      <p>This is where those stories will go. If I've knocked on your door or
+        you've met me somewhere around the city, tell me about it. With your
+        permission, I'd love to share it here.</p>
+    </div>
+    <a class='invite-btn' href='/ask-mike'>Share your story</a>
+  </section>
+
+  <div class="closing">
+    Want to know where I stand? Start with <a href='/issues'>the issues</a>. Want to know
+    something this page didn't answer? <a href='/ask-mike'>Ask Mike</a> - I won't be hard
+    to find.
+  </div>
+</main>
+
+<!-- Footer — Phase 1 redesign pass, Sept 2026, matching the approved design
+     package: brand blurb, Site nav, Connect column (text links, see
+     rationale in footer.css), and a bottom bar with the authorization
+     statement, Privacy link, and election-day line. -->
+<footer class="site-footer">
+  <div class="foot-grid">
+    <div class="foot-brand">
+      <a class='wordmark' href='/'><span class="mark">&#9650;</span>McGraw <span>for Mayor</span></a>
+      <p>Mike McGraw for Mayor, City of North Vancouver. Resident-funded, and proudly so. No property developer money.</p>
+    </div>
+    <div class="foot-col">
+      <h4>Site</h4>
+      <ul>
+        <li><a href='/about'>Meet Mike</a></li>
+        <li><a href='/issues'>Priorities</a></li>
+        <li><a href='/next-north-van'>Next North Van</a></li>
+        <li><a href='/get-involved'>Get Involved</a></li>
+        <li><a href='/donate'>Donate</a></li>
+        <li><a href='/ask-mike'>Ask Mike</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="https://www.facebook.com/McGraw4Mayor" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="https://www.instagram.com/mcgraw4mayor/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="mailto:campaign@mcgraw4mayor.ca">campaign@mcgraw4mayor.ca</a></li>
+        <!-- YouTube slot: hidden until the channel exists (see .yt-slot in
+             footer.css). Once live, remove that CSS rule and set the real
+             href here. -->
+        <li class="yt-slot"><a href="#" target="_blank" rel="noopener">YouTube</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span class="foot-auth">Authorized by Mike McGraw, financial agent, campaign@mcgraw4mayor.ca</span>
+    <span class="foot-copyright">&copy; 2026 McGraw4Mayor.ca</span>
+    <span class="foot-privacy"><a href='/privacy'>Privacy</a></span>
+    <span>City of North Vancouver &middot; Election Day October 17, 2026</span>
+  </div>
+</footer>
+
+<script>
+  function toggleNav(btn) {
+    var nav = document.getElementById('site-nav');
+    var isOpen = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  }
+
+  // Video welcome slot: ships hidden until Mike's short (10-20 second) welcome
+  // video is ready. Moved here from the Home page, Sept 2026 preview — see
+  // .video-welcome CSS in about.css for activation steps. Click-to-play only,
+  // nothing loads from YouTube until the visitor clicks.
+  //
+  // rel=0 alone only limits YouTube's end-screen suggestions to videos from
+  // the same channel; it doesn't remove the "up next" overlay. To stop another
+  // video from following this one, we load the YouTube IFrame API (only after
+  // the visitor clicks play, so this still costs nothing on page load) and
+  // listen for the video ending, then swap the poster/play button back in
+  // instead of letting YouTube show its own end screen.
+  function loadWelcomeVideo(frame) {
+    var videoId = 'sfdTIhnoe9Y';
+    var originalHTML = frame.outerHTML;
+    var container = document.createElement('div');
+    container.className = 'player-frame';
+    container.innerHTML = '<iframe id="welcome-video-player" ' +
+      'src="https://www.youtube-nocookie.com/embed/' + videoId +
+      '?autoplay=1&rel=0&enablejsapi=1&playsinline=1&origin=' + encodeURIComponent(window.location.origin) + '" ' +
+      'title="A quick hello from Mike McGraw" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+    frame.replaceWith(container);
+
+    function attachEndListener() {
+      new YT.Player('welcome-video-player', {
+        events: {
+          onStateChange: function (e) {
+            if (e.data === YT.PlayerState.ENDED) {
+              container.outerHTML = originalHTML;
+            }
+          }
+        }
+      });
+    }
+
+    if (window.YT && window.YT.Player) {
+      attachEndListener();
+    } else {
+      window.onYouTubeIframeAPIReady = attachEndListener;
+      var tag = document.createElement('script');
+      tag.src = 'https://www.youtube.com/iframe_api';
+      document.body.appendChild(tag);
+    }
+  }
+</script>
+
+</body>
+</html>

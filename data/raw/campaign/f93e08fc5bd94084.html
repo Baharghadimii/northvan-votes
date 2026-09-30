@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>Trish Neufeld for School Trustee</title>
+<meta name="description" content="Trish Neufeld is running for School Trustee in North Vancouver. Parent, PAC Chair at Westview Elementary, and a candidate who starts by listening.">
+<meta property="og:title" content="Trish Neufeld for School Trustee">
+<meta property="og:description" content="Keeping students at the centre of the conversation. North Vancouver.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">Trish Neufeld<small>School Trustee &middot; North Vancouver</small></a>
+    <nav class="nav" aria-label="Main">
+      <a href="/" aria-current="page">About</a>
+      <a href="/polls">Your Voice</a>
+      <a href="/contact">Contact</a>
+      <!-- <a href="/blog">Updates</a>  add when the blog goes in -->
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Candidate for School Trustee</p>
+        <h1>Keeping students at the centre of the conversation.</h1>
+        <p class="lede">
+          I’m running for School Trustee because I care about our schools, our
+          community and the experience our kids have growing up here in North
+          Vancouver.
+        </p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="/polls">Tell me what matters to you</a>
+          <a class="btn btn-ghost" href="#updates">Get campaign updates</a>
+        </div>
+      </div>
+      <div class="hero-portrait">
+        <img class="portrait"
+             src="/assets/img/trish.jpg"
+             srcset="/assets/img/trish.jpg 1x, /assets/img/trish_480.jpg 2x"
+             width="260" height="260"
+             alt="Trish Neufeld"
+             fetchpriority="high">
+      </div>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="wrap narrow">
+      <h2>About me</h2>
+      <p>
+        I’ve spent years volunteering in our schools, including serving as PAC
+        Chair at Westview Elementary and previously as a Big Sister. I’ve had
+        the opportunity to work with parents, teachers, principals and district
+        staff. I’ve seen how much can be accomplished when people listen to each
+        other and work toward a common goal.
+      </p>
+      <p>
+        My career as a mortgage broker has also shaped how I approach problems.
+        Every day I help people navigate complicated decisions. I listen to what
+        matters to them, explain their options and help them find solutions that
+        work. I’ve learned to ask questions, look at the details and take
+        responsibility for the decisions I make.
+      </p>
+      <p>
+        I don’t have all the answers. I know that good decisions start with
+        listening to different perspectives, finding common ground and keeping
+        students at the centre of the conversation.
+      </p>
+      <p>
+        I would be honoured to bring that approach to the Board. I want to be a
+        thoughtful voice for our community and help ensure our decisions reflect
+        what matters most to our students and families.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>How I work</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Listening first</h3>
+          <p>
+            Good decisions start with listening to different perspectives and
+            finding common ground, not with arriving at the table already
+            certain.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Rooted in our schools</h3>
+          <p>
+            Years of volunteering, including as PAC Chair at Westview
+            Elementary, working alongside parents, teachers, principals and
+            district staff.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Willing to own the call</h3>
+          <p>
+            A career spent helping people through complicated decisions taught
+            me to ask questions, look at the details, and take responsibility
+            for the choices I make.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="updates" class="section-alt">
+    <div class="wrap narrow">
+      <h2>Get campaign updates</h2>
+      <p>
+        Occasional email about what the Board is deciding and where I stand. No
+        more than a couple of messages a month, and you can unsubscribe from any
+        of them.
+      </p>
+
+      <form class="card" data-endpoint="/api/subscribe"
+            data-success="You are on the list. Thank you."
+            data-hide-on-success="true" novalidate>
+        <div class="fields">
+          <div class="field">
+            <label for="sub-name">First name</label>
+            <input type="text" id="sub-name" name="firstName" autocomplete="given-name">
+          </div>
+          <div class="field">
+            <label for="sub-email">Email address <span aria-hidden="true">*</span></label>
+            <input type="email" id="sub-email" name="email" required autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="sub-postal">Postal code</label>
+            <input type="text" id="sub-postal" name="postalCode" autocomplete="postal-code"
+                   inputmode="text" maxlength="10">
+            <p class="hint">Optional. It helps me understand which parts of the community I am hearing from.</p>
+          </div>
+
+          <div class="hp" aria-hidden="true">
+            <label for="sub-website">Leave this blank</label>
+            <input type="text" id="sub-website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="field">
+            <label class="consent" for="sub-consent">
+              <input type="checkbox" id="sub-consent" name="consent" value="yes">
+              <span>I agree to receive email updates about this campaign. I understand I can unsubscribe at any time.</span>
+            </label>
+          </div>
+
+          <div data-turnstile></div>
+          <button class="btn btn-primary" type="submit">Sign me up</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <p><strong>Trish Neufeld for School Trustee</strong><br>North Vancouver</p>
+      <!-- IMPORTANT: BC rules require election advertising to carry sponsorship
+           information. A campaign website counts as election advertising.
+           Confirm the exact required wording with Elections BC and replace the
+           bracketed parts below before you publish. -->
+      <p class="authorization">
+        Authorized by Trish Neufeld.
+      </p>
+    </div>
+    <nav class="foot-nav" aria-label="Footer">
+      <a href="/">About</a>
+      <a href="/polls">Your Voice</a>
+      <a href="/contact">Contact</a>
+      <a href="/privacy">Privacy</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="/assets/js/config.js"></script>
+<script src="/assets/js/site.js"></script>
+</body>
+</html>

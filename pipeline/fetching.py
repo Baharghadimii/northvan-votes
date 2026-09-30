@@ -116,6 +116,16 @@ def fetch(
     if binary:
         path.write_bytes(resp.content)
         return resp.content
-    # Let requests sniff the encoding, then normalise to utf-8 on disk.
+
+    # RFC 2616 says an unlabelled text/* response is ISO-8859-1, and requests
+    # obeys that. Plenty of small sites serve UTF-8 without declaring it, so
+    # honouring the spec turns every curly apostrophe into "â€™" — which would
+    # then appear, character for character, inside a published quote. Sniff the
+    # real encoding whenever the server did not actually tell us one.
+    declared = (resp.encoding or "").lower()
+    from_header = "charset=" in resp.headers.get("content-type", "").lower()
+    if not from_header or declared in ("iso-8859-1", "latin-1", "ascii"):
+        resp.encoding = resp.apparent_encoding or "utf-8"
+
     path.write_text(resp.text, encoding="utf-8")
     return resp.text

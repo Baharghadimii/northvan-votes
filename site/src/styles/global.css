@@ -628,3 +628,17 @@ a.bmc-big { font-size: 1.02rem; padding: 12px 24px; }
 @media (prefers-reduced-motion: reduce) {
   .card-link:hover { transform: none; }
 }
+
+/* ---------- source provenance ---------- */
+
+/* Filed statements and campaign pages are both the candidate's own words, but
+   one went through a nomination filing and the other did not. Worth seeing
+   without having to read the URL. */
+.srctag {
+  display: inline-block; font-size: 0.68rem; line-height: 1.5;
+  padding: 1px 7px; border-radius: 999px; margin-right: 6px;
+  background: var(--surface-2); color: var(--text-muted);
+  border: 1px solid var(--border);
+  letter-spacing: 0.02em;
+}
+.srctag-official { background: var(--accent-soft); color: var(--accent-text); border-color: transparent; }

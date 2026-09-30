@@ -11,7 +11,7 @@ import json
 import sys
 from pathlib import Path
 
-from pipeline.models import Candidate, Position
+from pipeline.models import Candidate, Position, Source
 from pipeline.scrape_cnv import scrape as scrape_cnv
 from pipeline.scrape_dnv import scrape as scrape_dnv
 
@@ -19,6 +19,7 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "candidates.json"
 POSITIONS = ROOT / "data" / "positions.json"
 BACKGROUND = ROOT / "data" / "background.json"
+CAMPAIGN = ROOT / "data" / "campaign_pages.json"
 # The site imports this copy at build time; data/candidates.json stays the
 # canonical, reviewable artefact.
 SITE_DATA = ROOT / "site" / "src" / "data" / "candidates.json"
@@ -86,6 +87,74 @@ def review_flags(candidates: list[Candidate]) -> list[str]:
     ]
 
 
+def attach_campaign_pages(candidates: list[Candidate]) -> None:
+    """Add crawled campaign pages as additional sources.
+
+    Self-reported, exactly like the filed statement, and labelled as such
+    wherever a quote from one appears. Attached before tagging so positions and
+    background can be drawn from either.
+    """
+    if not CAMPAIGN.exists():
+        return
+    pages = json.loads(CAMPAIGN.read_text(encoding="utf-8"))
+    by_id = {c.id: c for c in candidates}
+    unknown = sorted(set(pages) - set(by_id))
+    if unknown:
+        raise BuildError(f"data/campaign_pages.json has unknown ids: {unknown}")
+    for cid, raw in pages.items():
+        have = {s.url for s in by_id[cid].sources}
+        for entry in raw:
+            if entry["url"] not in have:
+                by_id[cid].sources.append(Source(**entry))
+
+
+# A candidate's own site repeats its pitch across pages, so the same sentence
+# is legitimately extracted several times. Left alone that produced 124 passages
+# for one candidate, 16% of them identical — a page nobody would read.
+MAX_PER_CATEGORY = 2
+MAX_PER_BACKGROUND_KIND = 2
+
+
+def _rank(p: Position) -> tuple:
+    """Best passage first: the filed statement outranks a campaign page, then
+    longer passages, which tend to be the substantive ones rather than a
+    banner slogan."""
+    return (0 if p.source_type == "official_statement" else 1, -len(p.quote))
+
+
+def _prune(items: list[Position], cap: int) -> list[Position]:
+    seen_exact: set[str] = set()
+    seen_open: set[str] = set()
+    per_category: dict[str, int] = {}
+    kept: list[Position] = []
+
+    for p in sorted(items, key=_rank):
+        norm = " ".join(p.quote.split()).lower()
+        opening = norm[:60]
+        if norm in seen_exact or opening in seen_open:
+            continue
+        if per_category.get(p.category, 0) >= cap:
+            continue
+        seen_exact.add(norm)
+        seen_open.add(opening)
+        per_category[p.category] = per_category.get(p.category, 0) + 1
+        kept.append(p)
+
+    # Back to taxonomy order so the page reads consistently.
+    order = {c: i for i, c in enumerate(dict.fromkeys(x.category for x in items))}
+    kept.sort(key=lambda p: (order.get(p.category, 99), _rank(p)))
+    return kept
+
+
+def prune_duplicates(candidates: list[Candidate]) -> tuple[int, int]:
+    before = sum(len(c.positions) + len(c.background) for c in candidates)
+    for c in candidates:
+        c.positions = _prune(c.positions, MAX_PER_CATEGORY)
+        c.background = _prune(c.background, MAX_PER_BACKGROUND_KIND)
+    after = sum(len(c.positions) + len(c.background) for c in candidates)
+    return before, after
+
+
 def attach_photos(candidates: list[Candidate]) -> None:
     """Point photos at our own origin.
 
@@ -132,7 +201,9 @@ def attach_positions(candidates: list[Candidate]) -> None:
 
 def build(refresh: bool = False) -> list[Candidate]:
     candidates = scrape_cnv(refresh=refresh) + scrape_dnv(refresh=refresh)
+    attach_campaign_pages(candidates)
     attach_positions(candidates)
+    prune_duplicates(candidates)
     attach_photos(candidates)
     candidates.sort(key=lambda c: (c.municipality, c.office, c.surname, c.name))
     check_counts(candidates)
@@ -223,6 +294,7 @@ def main() -> int:
             f"  {muni}: {len(group):2} candidates, "
             f"{sum(1 for c in group if c.has_statement):2} statements, "
             f"{sum(1 for c in group if c.website):2} websites, "
+            f"{sum(len(c.sources) for c in group):3} sources, "
             f"{inc} incumbents, "
             f"{sum(len(c.positions) for c in group)} positions, "
             f"{sum(len(c.background) for c in group)} background"
