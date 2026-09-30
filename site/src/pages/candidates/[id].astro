@@ -4,7 +4,7 @@ import Avatar from "~/components/Avatar.astro";
 import Quote from "~/components/Quote.astro";
 import {
   candidates, categories, backgroundKinds, MUNICIPALITIES, OFFICES, SEATS,
-  formatDate, type Candidate,
+  formatDate, UNREADABLE_SITES, type Candidate,
 } from "~/lib/data";
 
 export function getStaticPaths() {
@@ -99,6 +99,16 @@ const SOCIAL_LABELS: Record<string, string> = {
         ))}
       </div>
     </section>
+  )}
+
+  {UNREADABLE_SITES[candidate.id] && (
+    <div class="notice">
+      <p>
+        <strong>There's less here than for some other candidates, and that's on
+        me.</strong> {UNREADABLE_SITES[candidate.id]} What's below comes from
+        their filed statement alone. Their own site is linked above.
+      </p>
+    </div>
   )}
 
   <h2>Where they stand</h2>

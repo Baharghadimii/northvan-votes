@@ -74,16 +74,33 @@ def clean_text(soup: BeautifulSoup) -> str:
         tag.decompose()
 
     body = soup.find("main") or soup.find(attrs={"role": "main"}) or soup.body or soup
-    parts: list[str] = []
-    seen: set[str] = set()
-    for el in body.find_all(["p", "li", "h2", "h3", "blockquote"]):
-        text = re.sub(r"\s+", " ", el.get_text(" ", strip=True)).strip()
-        if len(text) < MIN_PARAGRAPH_CHARS or BOILERPLATE.match(text):
-            continue
-        if text in seen:  # repeated blocks across a template
-            continue
-        seen.add(text)
-        parts.append(text)
+
+    def collect(elements) -> list[str]:
+        parts: list[str] = []
+        seen: set[str] = set()
+        for el in elements:
+            text = re.sub(r"\s+", " ", el.get_text(" ", strip=True)).strip()
+            if len(text) < MIN_PARAGRAPH_CHARS or BOILERPLATE.match(text):
+                continue
+            if text in seen:  # repeated blocks across a template
+                continue
+            seen.add(text)
+            parts.append(text)
+        return parts
+
+    parts = collect(body.find_all(["p", "li", "h2", "h3", "blockquote"]))
+
+    # Some site builders emit prose in divs and spans with no paragraph tags at
+    # all. One candidate's priorities page held 7,000 characters that the tag
+    # list above simply could not see. Fall back to the innermost blocks that
+    # hold text directly, which avoids swallowing a wrapper and its children.
+    if sum(len(x) for x in parts) < MIN_PAGE_CHARS:
+        leaves = [
+            el for el in body.find_all(["div", "section", "article", "span", "td"])
+            if not el.find(["div", "section", "article", "p", "li", "table"])
+        ]
+        parts = collect(leaves)
+
     return "\n\n".join(parts)
 
 
