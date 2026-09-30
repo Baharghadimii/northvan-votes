@@ -576,3 +576,55 @@ a.bmc-big { font-size: 1.02rem; padding: 12px 24px; }
   color: var(--text-faint);
 }
 .bg-item .quote { font-size: 0.98rem; margin-top: 6px; }
+
+/* ---------- whole-card links ---------- */
+
+/* The entire card is a click target for the candidate's page. Done with a
+   stretched pseudo-element rather than by wrapping the card in an <a>: the card
+   already contains a campaign-site link and the shortlist star, and nesting
+   links is invalid HTML and breaks tabbing. This way there is still exactly one
+   link in the tab order for the card, and the controls sit above it. */
+.card-link { position: relative; }
+
+/* .candidate-row is positioned elsewhere (the star hangs off it), and that made
+   it the containing block for the stretched link, so the link only covered the
+   row and not the card's padding. Inside a card-link the card itself is the
+   reference. */
+.card-link .candidate-row { position: static; }
+.card-link button.star { top: 12px; right: 12px; }
+
+.card-link .candidate-name a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius);
+  z-index: 1;
+}
+
+/* Anything genuinely interactive has to clear the stretched layer. */
+.card-link .candidate-meta a,
+.card-link button.star {
+  position: relative;
+  z-index: 2;
+}
+
+.card-link {
+  cursor: pointer;
+  transition: border-color 0.16s ease, box-shadow 0.16s ease, transform 0.16s ease;
+}
+.card-link:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-lift);
+  transform: translateY(-2px);
+}
+.card-link:hover .candidate-name a { color: var(--accent-text); }
+
+/* Keyboard users get the same outline they would on the bare link. */
+.card-link:focus-within {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-lift);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-link:hover { transform: none; }
+}

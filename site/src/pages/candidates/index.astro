@@ -33,7 +33,7 @@ const allRaces = races();
         {seededShuffle(race.candidates, BUILD_SEED + race.key.length).map((c) => {
           const topics = [...new Set(c.positions.map((p) => p.category))];
           return (
-            <div class="card" data-sortkey={c.surname + " " + c.name}>
+            <div class="card card-link" data-sortkey={c.surname + " " + c.name}>
               <CandidateLine candidate={c}>
                 <div style="margin-top:8px; display:flex; flex-wrap:wrap; gap:5px">
                   {topics.length > 0 ? (
