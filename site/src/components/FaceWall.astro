@@ -1,0 +1,27 @@
+---
+import { candidates, seededShuffle, BUILD_SEED, OFFICES, MUNICIPALITIES_SHORT } from "~/lib/data";
+
+// Every candidate, mixed so the wall is not grouped by race or alphabet — the
+// point is the scale of the ballot, not any ordering of it.
+const wall = seededShuffle(candidates, BUILD_SEED + 7);
+---
+
+<div class="facewall" aria-label={`All ${candidates.length} candidates`}>
+  {wall.map((c, i) => (
+    <a
+      class="face"
+      href={`/candidates/${c.id}/`}
+      style={`--i:${i}`}
+      title={`${c.name} — ${MUNICIPALITIES_SHORT[c.municipality]} ${OFFICES[c.office]}`}
+    >
+      {c.photo_url ? (
+        <img src={c.photo_url} alt="" loading="eager" decoding="async" width="72" height="72" />
+      ) : (
+        <span class="face-initials" aria-hidden="true">
+          {c.name.split(/\s+/).map((p) => p[0]).join("").slice(0, 2)}
+        </span>
+      )}
+      <span class="face-name">{c.name}</span>
+    </a>
+  ))}
+</div>

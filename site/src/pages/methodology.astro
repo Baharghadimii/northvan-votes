@@ -14,11 +14,14 @@ const retrieved = withStatement[0]?.sources[0]?.retrieved;
   title="How this was built"
   description="Sources, tagging method, limitations and corrections policy for North Van Votes."
 >
-  <h1>How this was built</h1>
+  <h1>How I built this</h1>
   <p class="lede">
-    This page exists so you can check the site rather than trust it. It covers
-    where every quote came from, how topics were assigned, what the method
-    misses, and how to get something fixed.
+    Don't take my word for any of it. Everything below is here so you can go check: where the quotes came from, how I sorted them, what I know this
+    misses, and how to tell me I got something wrong.
+  </p>
+  <p style="color:var(--text-muted)">
+    I'm Bahareh Ghadimi. I live in North Vancouver, I'm not running for
+    anything, and nobody asked me to make this.
   </p>
 
   <div class="stat-row">
@@ -30,9 +33,8 @@ const retrieved = withStatement[0]?.sources[0]?.retrieved;
 
   <h2>Where the words come from</h2>
   <p>
-    Every quote is taken from a candidate's own official statement, filed with
-    their municipality by the nomination deadline and published unedited by that
-    municipality:
+    Every quote is lifted straight from a candidate's own statement. That's the one they filed with their municipality by the nomination deadline, published
+    exactly as they wrote it:
   </p>
   <ul>
     <li>
@@ -47,86 +49,89 @@ const retrieved = withStatement[0]?.sources[0]?.retrieved;
     </li>
   </ul>
   <p>
-    Statements were retrieved on {retrieved && formatDate(retrieved)}. Neither
-    municipality verifies the accuracy of what candidates write, and neither does
-    this site. Contact details, photos, nomination documents and campaign links
-    come from the same two pages.
+    I pulled them on {retrieved && formatDate(retrieved)}. Worth knowing: neither
+    municipality fact-checks what candidates write, and neither do I. If a
+    candidate claims something in their statement, that's their claim. Photos,
+    contact details, nomination papers and campaign links come from the same two
+    pages.
   </p>
 
-  <h2>How quotes are guaranteed to be verbatim</h2>
-  <p>This is the part that matters most, so it is worth being precise about.</p>
+  <h2>Why you can trust the quotes are real</h2>
   <p>
-    Topic tagging is done by a language model, but the model is never allowed to
-    produce text. Each statement is split into numbered sentences, the model is
-    shown those numbered sentences, and it replies with <em>sentence
-    numbers</em> only. The site's own code then cuts those exact characters out
-    of the stored source document.
+    This is the part I care most about getting right, so here's the whole
+    mechanism.
   </p>
   <p>
-    That means a paraphrase or an invented quote is not something the process
-    tries to detect — it is something the process cannot produce. Every passage
-    is additionally re-checked against its source before publishing, and any
-    passage that does not match character-for-character is dropped rather than
-    shown. The worst error the method can make is quoting a real sentence under a
-    topic you would not have filed it under.
+    I use AI to sort quotes into topics, but it never writes a single word you
+    read. I split each statement into numbered sentences, show the model those
+    numbers, and it hands back a list of numbers. My code then cuts those exact
+    characters out of the saved document.
+  </p>
+  <p>
+    So a made-up quote isn't something I'm hoping to catch. It's something the
+    setup can't produce, because there's no point where the AI is allowed to type. On
+    top of that, every passage gets checked against its source before it goes
+    live, and anything that doesn't match character for character gets thrown
+    out. The worst mistake this can make is filing a real sentence under a topic
+    you'd have filed differently.
   </p>
 
-  <h2>What the site does not do</h2>
+  <h2>What I don't do</h2>
   <ul>
     <li>
-      <strong>No ratings, scores, grades or endorsements.</strong> Every candidate
-      gets identical fields and identical space.
+      <strong>Rate anyone.</strong> No scores, no grades, no endorsements.
+      Everyone gets the same space and the same treatment.
     </li>
     <li>
-      <strong>No conclusions from silence.</strong> Where a candidate has not
-      addressed a topic, the site says the sources checked did not cover it. That
-      is a fact about our reading, not a judgement about them.
+      <strong>Read anything into silence.</strong> If a candidate hasn't
+      addressed a topic, all that means is I didn't find it in what I checked.
+      It's a fact about my reading, not a verdict on them.
     </li>
     <li>
-      <strong>No alphabetical advantage.</strong> Candidates within a race are
-      listed in a randomised order that changes per browsing session. You can
-      switch to A–Z with the button on any list.
+      <strong>Reward being early in the alphabet.</strong> Candidates are
+      shuffled, and the order changes each time you visit. There's an A–Z button
+      if you'd rather.
     </li>
     <li>
-      <strong>No tracking.</strong> No analytics, no cookies, no accounts. Your
-      shortlist, if you make one, stays in your own browser.
+      <strong>Track you.</strong> No analytics, no cookies, no accounts. If you
+      star candidates, that list never leaves your browser. I can't see it.
     </li>
   </ul>
 
-  <h2>Known limitations</h2>
+  <h2>Where this falls short</h2>
   <ul>
     <li>
-      Candidate statements are short — a few hundred words. A candidate with
-      detailed policy on their own website may look thinner here than they are.
-      Their campaign link is always shown; follow it.
+      These statements are short, a few hundred words each. Someone with a
+      detailed platform on their own site will look thinner here than they
+      really are. I always link their campaign site, so go read it.
     </li>
     <li>
-      {statementOnly.length} candidates published a statement that sets out no
-      position on any tracked topic — usually because it is biography rather than
-      policy. They are listed as such, not as silent.
+      {statementOnly.length} candidates filed a statement that doesn't take a
+      position on anything I track. Usually it's a biography rather than a
+      platform. I say that plainly on their page instead of leaving them blank.
     </li>
     <li>
-      The {categories.length} topics are a starting set drawn from what
-      candidates themselves wrote about most. They are not an official list and
-      they are not exhaustive.
+      The {categories.length} topics came from reading what candidates wrote
+      about most often. There's nothing official about that list and it's
+      definitely not complete.
     </li>
     <li>
-      One sentence can legitimately belong to two topics, so the same quote
-      sometimes appears in two places.
+      A sentence can genuinely belong to two topics, so you'll see the same
+      quote turn up twice.
     </li>
     <li>
-      Nothing here is scraped from news coverage, all-candidates meetings, social
-      media or interviews. Those are real sources of candidates' views; they are
-      simply outside what this site claims to cover.
+      I haven't touched news coverage, all-candidates meetings, social media or
+      interviews. Candidates say plenty in those places. It's just not what this
+      covers.
     </li>
   </ul>
 
   <h2 id="corrections">Corrections</h2>
   <p>
-    If a quote misrepresents you, a topic is wrong, a link is broken, or
-    something on the voting page is out of date, say so and it will be fixed
-    within 48 hours — or the item will be removed while it is checked.
-    Candidates, campaigns and readers are all equally welcome to ask.
+    If a quote misrepresents you, a topic's wrong, a link's broken, or something
+    on the voting page has gone stale, tell me. I'll fix it within 48 hours, or
+    pull the item down while I check. Candidates, campaigns and readers all get
+    the same treatment here.
   </p>
   <p>
     <a href="mailto:corrections@northvanvotes.ca">corrections@northvanvotes.ca</a>
@@ -134,16 +139,17 @@ const retrieved = withStatement[0]?.sources[0]?.retrieved;
     anything else. Both reach the same person.
   </p>
   <p class="candidate-meta">
-    Corrections that are a matter of record — a wrong link, a mis-transcribed
-    date — are simply fixed. A request to remove or reword an accurate quotation
-    from a published statement will be declined, with the reason given; the
-    statement is a public document and the quote will keep pointing at it.
+    Anything factual, like a broken link or a date I typed wrong, I'll just fix. But
+    if you ask me to soften or remove a quote that accurately reproduces your
+    own published statement, I'll say no and tell you why. You filed it publicly,
+    and the link next to it goes straight to the original.
   </p>
 
   <h2>Independence</h2>
   <p>
-    North Van Votes is not affiliated with any candidate, campaign, elector
-    organization, political party, municipality or school district.
+    I'm not affiliated with any candidate, campaign, elector organization,
+    political party, municipality or school district. Nobody pays me to run
+    this and nobody gets a say in what's on it.
   </p>
 
   <Support variant="block" />
@@ -160,7 +166,7 @@ const retrieved = withStatement[0]?.sources[0]?.retrieved;
       {" "}<a href="https://elections.bc.ca/docs/lecfa/4500003-Local-election-advertising-quick-reference-sheet.pdf" rel="noopener">
       advertising quick reference sheet</a> lists "websites or blogs" and "any
       free communication on the internet" under <em>not</em> election
-      advertising. The line it draws is placement cost — a newspaper ad, a
+      advertising. The line it draws is placement cost: a newspaper ad, a
       billboard, a paid social post, a robocall. This site has no placement cost,
       carries no advertising, is never paid to be promoted, and neither promotes
       nor opposes any candidate.
@@ -171,11 +177,11 @@ const retrieved = withStatement[0]?.sources[0]?.retrieved;
     </p>
   </div>
 
-  <h2>Built on the open record</h2>
+  <h2>The code is open</h2>
   <p>
-    The whole thing is a small pipeline that downloads public documents, caches
-    them, extracts quotes, and renders static pages. The cached source documents
-    are kept alongside the code so the dataset can be rebuilt and checked by
-    anyone.
+    It's a small pipeline: download the public documents, save them, pull the
+    quotes out, build the pages. I keep every document I downloaded next to the
+    code, so anyone can rebuild this from scratch and check my work against the
+    same files I used.
   </p>
 </Base>

@@ -1,6 +1,7 @@
 ---
 import Base from "~/layouts/Base.astro";
 import Countdown from "~/components/Countdown.astro";
+import FaceWall from "~/components/FaceWall.astro";
 import { categoriesByCoverage, candidates, races } from "~/lib/data";
 
 const cats = categoriesByCoverage();
@@ -11,30 +12,35 @@ const allRaces = races();
 
 <Base
   title="North Van Votes"
-  description="What every candidate in the October 17, 2026 North Vancouver election has said, organised by issue. Independent and non-partisan."
+  description="What all 59 candidates in the October 17 North Vancouver election have actually said, sorted by issue. Their words, with links to the source."
   ownCountdown
 >
-  <h1>Start with an issue, not a name.</h1>
+  <h1>59 people want your vote on October 17.</h1>
   <p class="lede">
-    Fifty-nine people are running for mayor, council and school trustee across
-    the City and District of North Vancouver. Pick a topic you care about and
-    read what each of them has actually said about it — in their own words, with
-    a link to the source.
+    I couldn't find a straight answer on where any of them stood, so I built
+    this. Pick something you care about. Traffic, housing, schools. Then read
+    what each candidate actually said about it. Their words, not mine, with a
+    link to where they said it.
+  </p>
+
+  <FaceWall />
+  <p class="facewall-caption">
+    All 59 of them. Hover a face, or{" "}<a href="/candidates/">see the whole list</a>.
   </p>
 
   <Countdown variant="hero" />
 
   <div class="stat-row">
-    <div class="stat"><b>{candidates.length}</b><span>candidates, both municipalities</span></div>
-    <div class="stat"><b>{withStatement}</b><span>published a statement</span></div>
-    <div class="stat"><b>{tagged}</b><span>said something on at least one issue</span></div>
+    <div class="stat"><b>{candidates.length}</b><span>running across two municipalities</span></div>
+    <div class="stat"><b>{withStatement}</b><span>filed a written statement</span></div>
+    <div class="stat"><b>{tagged}</b><span>said something I could quote</span></div>
   </div>
 
-  <h2 id="issues" style="margin-top:32px">Browse by issue</h2>
-  <p style="color:var(--text-muted); font-size:0.92rem; max-width:46rem">
-    Counts show how many of the 59 candidates have addressed each topic in a
-    source we could find. A low count means few candidates wrote about it, not
-    that it is unimportant.
+  <h2 id="issues" style="margin-top:32px">What are they actually talking about?</h2>
+  <p style="color:var(--text-muted); font-size:0.94rem; max-width:44rem">
+    The number under each topic is how many of the 59 I found saying something
+    about it. A low number means most of them didn't write about it. It doesn't
+    mean it isn't worth caring about.
   </p>
 
   <div class="grid grid-2 grid-3" style="margin-top:18px">
@@ -52,9 +58,9 @@ const allRaces = races();
   </div>
 
   <h2 style="margin-top:44px">Or start with your ballot</h2>
-  <p style="color:var(--text-muted); font-size:0.92rem">
-    You vote in one municipality only. Not sure which?
-    <a href="/how-to-vote/">Find out here.</a>
+  <p style="color:var(--text-muted); font-size:0.94rem">
+    You only vote in one of the two, and plenty of people here aren't sure
+    which. <a href="/how-to-vote/">The voting page sorts that out.</a>
   </p>
   <ul class="linklist" style="margin-top:12px">
     {allRaces.map((r) => (
@@ -68,11 +74,11 @@ const allRaces = races();
 
   <div class="notice" style="margin-top:36px">
     <p>
-      <strong>This site quotes, it does not rate.</strong> There are no scores,
-      grades or endorsements here. Every candidate gets the same fields and the
-      same space, quotes are reproduced word for word, and where someone has not
-      addressed a topic the site says exactly that rather than drawing a
-      conclusion. <a href="/methodology/">How this was built.</a>
+      <strong>I don't rate anyone.</strong> No scores, no grades, no
+      endorsements, no opinion of mine about who deserves your vote. Everyone
+      gets the same space, every quote is copied word for word, and when someone
+      hasn't talked about a topic I say so rather than guess what they think.
+      <a href="/methodology/">Here's exactly how I built it.</a>
     </p>
   </div>
 </Base>
