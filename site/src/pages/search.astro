@@ -1,0 +1,41 @@
+---
+import Base from "~/layouts/Base.astro";
+import SearchBox from "~/components/SearchBox";
+import {
+  candidates, categoryById, backgroundKindById,
+  MUNICIPALITIES_SHORT, OFFICES,
+} from "~/lib/data";
+
+// Slim index: only the passages, never the full source documents.
+const passages = candidates.flatMap((c) => {
+  const race = `${MUNICIPALITIES_SHORT[c.municipality]} ${OFFICES[c.office]}`;
+  const make = (p: typeof c.positions[number], k: "position" | "background") => ({
+    id: c.id,
+    n: c.name,
+    r: race,
+    inc: c.incumbent,
+    c: (k === "position" ? categoryById(p.category)?.label : backgroundKindById(p.category)?.label) ?? p.category,
+    k,
+    q: p.quote,
+    u: p.source_url,
+    o: p.source_type === "official_statement",
+  });
+  return [
+    ...c.positions.map((p) => make(p, "position")),
+    ...c.background.map((p) => make(p, "background")),
+  ];
+});
+---
+
+<Base
+  title="Search"
+  description="Search every word all 59 North Vancouver candidates have said, by issue or by keyword."
+>
+  <h1>Search what they've said</h1>
+  <p class="lede">
+    Every passage from all 59 candidates, searchable. Useful when you care
+    about one specific thing and want to know who's mentioned it.
+  </p>
+
+  <SearchBox client:load passages={passages} />
+</Base>

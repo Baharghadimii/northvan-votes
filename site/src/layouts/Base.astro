@@ -29,6 +29,7 @@ const nav = [
   { href: "/", label: "Issues" },
   { href: "/candidates/", label: "Candidates" },
   { href: "/compare/", label: "Compare" },
+  { href: "/search/", label: "Search" },
   { href: "/meetings/", label: "Meetings" },
   { href: "/how-to-vote/", label: "How to vote" },
   { href: "/methodology/", label: "Methodology" },
@@ -97,6 +98,53 @@ const nav = [
         <span><strong id="shortlist-count">0 candidates</strong> on your ballot list</span>
         <a href="/shortlist/">View and print</a>
       </div>
+    )}
+
+
+    {shuffle && (
+      <script is:inline>
+        // Filter the candidate list to people who have addressed one issue.
+        // Hides cards rather than rebuilding the list, so it composes with the
+        // shuffle and the A-Z toggle already operating on the same nodes.
+        (function () {
+          var box = document.querySelector("[data-issue-filter]");
+          if (!box) return;
+          var buttons = box.querySelectorAll("[data-issue]");
+          var count = box.querySelector("[data-filter-count]");
+
+          function apply(issue) {
+            var shown = 0, hidden = 0;
+            document.querySelectorAll("[data-topics]").forEach(function (card) {
+              var topics = (card.dataset.topics || "").split(" ");
+              var match = !issue || topics.indexOf(issue) !== -1;
+              card.hidden = !match;
+              match ? shown++ : hidden++;
+            });
+            // A race with nothing left should not leave a dangling heading.
+            document.querySelectorAll("section[id]").forEach(function (sec) {
+              var cards = sec.querySelectorAll("[data-topics]");
+              var any = Array.prototype.some.call(cards, function (c) { return !c.hidden; });
+              sec.hidden = cards.length > 0 && !any;
+            });
+            buttons.forEach(function (b) {
+              var on = b.dataset.issue === issue;
+              b.classList.toggle("chip-on", on);
+              b.setAttribute("aria-pressed", on ? "true" : "false");
+            });
+            if (count) {
+              count.hidden = !issue;
+              count.textContent = issue
+                ? shown + " of 59 candidates. The other " + hidden +
+                  " may still have views on it \u2014 it just is not in what I checked."
+                : "";
+            }
+          }
+
+          buttons.forEach(function (b) {
+            b.addEventListener("click", function () { apply(b.dataset.issue); });
+          });
+        })();
+      </script>
     )}
 
     {shuffle && (

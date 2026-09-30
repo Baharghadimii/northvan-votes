@@ -36,11 +36,14 @@ const raceMeta = Object.fromEntries(
 
   <p id="actions" hidden style="margin-top:20px; display:flex; gap:12px; flex-wrap:wrap">
     <button type="button" class="chip" onclick="window.print()">Print this list</button>
+    <button type="button" class="chip" id="share">Copy a link to this list</button>
     <button type="button" class="chip" id="clear">Clear the list</button>
   </p>
 
   <div class="notice" style="margin-top:28px">
     <p>
+      <span id="shared-note" hidden><strong>You're looking at someone else's
+      list.</strong> Star anyone yourself and this becomes your own.<br /></span>
       This list lives only in this browser. It's never sent anywhere, so it won't
       follow you to another device and nobody, me included, can see it. Starring
       someone isn't a vote, and nothing here gets submitted.
@@ -53,8 +56,18 @@ const raceMeta = Object.fromEntries(
       var order = Object.keys(raceMeta);
 
       function read() {
+        // A ?list= in the address wins, so a shared link shows the sender's
+        // picks rather than whatever the reader starred earlier.
+        var shared = new URLSearchParams(location.search).get("list");
+        if (shared) {
+          return shared.split(",").filter(function (id) { return lookup[id]; });
+        }
         try { return JSON.parse(localStorage.getItem(KEY) || "[]"); }
         catch (e) { return []; }
+      }
+
+      function shareUrl(ids) {
+        return location.origin + location.pathname + "?list=" + ids.join(",");
       }
 
       function render() {
@@ -63,6 +76,10 @@ const raceMeta = Object.fromEntries(
         var empty = document.getElementById("empty");
         var actions = document.getElementById("actions");
         box.innerHTML = "";
+
+        var isShared = !!new URLSearchParams(location.search).get("list");
+        var note = document.getElementById("shared-note");
+        if (note) note.hidden = !isShared;
 
         if (picked.length === 0) {
           empty.hidden = false;
@@ -120,6 +137,19 @@ const raceMeta = Object.fromEntries(
           box.appendChild(sec);
         });
       }
+
+      document.getElementById("share").addEventListener("click", function (e) {
+        var url = shareUrl(read());
+        var btn = e.currentTarget;
+        function done(msg) { btn.textContent = msg; setTimeout(function () {
+          btn.textContent = "Copy a link to this list"; }, 2200); }
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(url).then(function () { done("Link copied"); },
+            function () { prompt("Copy this link:", url); });
+        } else {
+          prompt("Copy this link:", url);
+        }
+      });
 
       document.getElementById("clear").addEventListener("click", function () {
         try { localStorage.removeItem(KEY); } catch (e) {}

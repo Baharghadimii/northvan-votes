@@ -2,7 +2,7 @@
 import Base from "~/layouts/Base.astro";
 import Countdown from "~/components/Countdown.astro";
 import FaceWall from "~/components/FaceWall.astro";
-import { categoriesByCoverage, candidates, races } from "~/lib/data";
+import { categoriesByCoverage, candidates, races, flashpoints } from "~/lib/data";
 
 const cats = categoriesByCoverage();
 const withStatement = candidates.filter((c) => c.sources.length > 0).length;
@@ -56,6 +56,26 @@ const allRaces = races();
       </a>
     ))}
   </div>
+
+  <h2 style="margin-top:44px">The specific fights</h2>
+  <p style="color:var(--text-muted); font-size:0.94rem; max-width:44rem">
+    Named things people here actually argue about, rather than broad topics.
+    These pick up candidates who used the words.
+  </p>
+  <ul class="linklist" style="margin-top:14px">
+    {flashpoints.map((f) => {
+      const n = candidates.filter((c) =>
+        [...c.positions, ...c.background].some((p) => p.flashpoints.includes(f.id)),
+      ).length;
+      return n > 0 ? (
+        <li>
+          <a class="tag" href={`/flashpoints/${f.id}/`} style="text-decoration:none">
+            {f.label} — {n}
+          </a>
+        </li>
+      ) : null;
+    })}
+  </ul>
 
   <h2 style="margin-top:44px">Or start with your ballot</h2>
   <p style="color:var(--text-muted); font-size:0.94rem">

@@ -672,3 +672,65 @@ a.bmc-big { font-size: 1.02rem; padding: 12px 24px; }
   letter-spacing: 0.02em;
 }
 .srctag-official { background: var(--accent-soft); color: var(--accent-text); border-color: transparent; }
+
+/* ---------- search ---------- */
+
+.search-row { margin: 20px 0 12px; }
+.search-input {
+  font: inherit; font-size: 1.08rem;
+  width: 100%; padding: 13px 16px;
+  border: 1px solid var(--border-strong); border-radius: var(--radius);
+  background: var(--surface); color: var(--text);
+}
+.search-input::placeholder { color: var(--text-faint); }
+.search-input:focus-visible { border-color: var(--accent); outline-offset: 1px; }
+
+.search-filters { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 14px; }
+.chip-suggest { font-size: 0.8rem; opacity: 0.85; }
+.chip-suggest::before { content: "↗ "; color: var(--text-faint); }
+
+mark {
+  background: #ffe9a8; color: inherit;
+  padding: 0 2px; border-radius: 2px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) mark { background: #5c4a17; color: #fff3cf; }
+}
+
+/* ---------- issue filter ---------- */
+
+.issue-filter { margin: 20px 0 8px; }
+.issue-filter-label {
+  display: block; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px;
+}
+.issue-filter .chip em { font-style: normal; color: var(--text-faint); font-size: 0.78rem; }
+.issue-filter .chip-on em { color: var(--accent-text); opacity: 0.75; }
+.issue-filter-count { font-size: 0.85rem; color: var(--text-faint); margin: 10px 0 0; }
+
+/* ---------- compare on a phone ---------- */
+
+/* A wide table on a 375px screen is a horizontal-scroll puzzle, and phones are
+   where most people read this. Below 720px each candidate becomes a stacked
+   block: issue as a label, their words underneath. */
+@media (max-width: 720px) {
+  table.compare { min-width: 0; display: block; }
+  table.compare thead { display: none; }
+  table.compare tbody, table.compare tr, table.compare th, table.compare td { display: block; width: auto; }
+  table.compare tbody tr {
+    border: 1px solid var(--border); border-radius: var(--radius);
+    margin-bottom: 14px; overflow: hidden;
+  }
+  table.compare tbody th {
+    width: auto; border: 0; border-bottom: 1px solid var(--border);
+    font-size: 0.82rem; letter-spacing: 0.03em; text-transform: uppercase;
+  }
+  table.compare td { border: 0; border-bottom: 1px solid var(--border); min-width: 0; }
+  table.compare td:last-child { border-bottom: 0; }
+  /* Without the header row, each cell has to say whose words these are. */
+  table.compare td::before {
+    content: attr(data-who);
+    display: block; font-weight: 650; font-size: 0.88rem;
+    margin-bottom: 6px; color: var(--accent-text);
+  }
+  .compare-scroll { overflow-x: visible; }
+}

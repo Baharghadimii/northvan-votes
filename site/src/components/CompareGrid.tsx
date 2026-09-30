@@ -174,7 +174,7 @@ export default function CompareGrid({ candidates, racesList, categories }: Props
                   {chosen.map((c) => {
                     const quotes = c.byCategory[cat.id] ?? [];
                     return (
-                      <td key={c.id}>
+                      <td key={c.id} data-who={c.name}>
                         {quotes.length === 0 ? (
                           <span className="nothing">Not addressed</span>
                         ) : (
