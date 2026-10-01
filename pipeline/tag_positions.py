@@ -31,6 +31,9 @@ CATEGORIES_FILE = ROOT / "config" / "categories.yaml"
 CANDIDATES_FILE = ROOT / "data" / "candidates.json"
 OUT = ROOT / "data" / "positions.json"
 OUT_BG = ROOT / "data" / "background.json"
+# Fingerprints of what each source looked like when it was last tagged, so a
+# re-run only pays for what actually changed.
+CACHE = ROOT / "data" / "tagging-cache.json"
 
 MODEL = "claude-opus-5"
 MIN_WORDS = 15  # a span shorter than this is a fragment, not a position
@@ -287,6 +290,14 @@ def tag_background_by_keywords(source: dict) -> list[Position]:
 
 # --------------------------------------------------------------------------- #
 
+def source_key(source: dict) -> str:
+    """Identity of a source for caching: its url and the exact text tagged."""
+    import hashlib
+
+    digest = hashlib.sha256(source["text"].encode("utf-8")).hexdigest()[:16]
+    return f"{source['url']}::{digest}"
+
+
 def main() -> int:
     use_keywords = "--keywords" in sys.argv
     candidates = json.loads(CANDIDATES_FILE.read_text(encoding="utf-8"))
@@ -302,18 +313,41 @@ def main() -> int:
             print("run with --keywords for the deterministic fallback", file=sys.stderr)
             return 1
 
+    force = "--force" in sys.argv
+    cache: dict[str, dict] = {}
+    if CACHE.exists() and not force:
+        cache = json.loads(CACHE.read_text(encoding="utf-8"))
+
     result: dict[str, list[dict]] = {}
     background: dict[str, list[dict]] = {}
+    reused = 0
+    called = 0
     for i, cand in enumerate(candidates, 1):
         positions: list[Position] = []
         bg: list[Position] = []
         for source in cand["sources"]:
+            key = source_key(source)
+            hit = cache.get(key)
+            if hit is not None and not use_keywords:
+                # Same url, byte-identical text: the answer cannot have changed.
+                positions.extend(Position(**p) for p in hit["positions"])
+                bg.extend(Position(**p) for p in hit["background"])
+                reused += 1
+                continue
+
             if use_keywords:
-                positions.extend(tag_by_keywords(source))
-                bg.extend(tag_background_by_keywords(source))
+                p_new = tag_by_keywords(source)
+                b_new = tag_background_by_keywords(source)
             else:
-                positions.extend(tag_with_claude(source, client))
-                bg.extend(tag_background_with_claude(source, client))
+                p_new = tag_with_claude(source, client)
+                b_new = tag_background_with_claude(source, client)
+                called += 1
+                cache[key] = {
+                    "positions": [json.loads(x.model_dump_json()) for x in p_new],
+                    "background": [json.loads(x.model_dump_json()) for x in b_new],
+                }
+            positions.extend(p_new)
+            bg.extend(b_new)
         if positions:
             result[cand["id"]] = [json.loads(p.model_dump_json()) for p in positions]
         if bg:
@@ -329,6 +363,13 @@ def main() -> int:
             json.dumps(payload, indent=2, ensure_ascii=False, sort_keys=True) + "\n",
             encoding="utf-8",
         )
+    if not use_keywords:
+        CACHE.write_text(
+            json.dumps(cache, indent=2, ensure_ascii=False, sort_keys=True) + "\n",
+            encoding="utf-8",
+        )
+        print(f"\n  {called} sources sent to the model, {reused} reused from cache")
+
     mode = "keyword fallback" if use_keywords else MODEL
     print(
         f"\n{sum(len(v) for v in result.values())} positions across "
