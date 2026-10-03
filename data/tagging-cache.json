@@ -3926,6 +3926,39 @@
       }
     ]
   },
+  "https://peggyhung.ca::4d78c08665223773": {
+    "background": [
+      {
+        "category": "education",
+        "char_end": 234,
+        "char_start": 0,
+        "flashpoints": [],
+        "quote": "I came to Canada as an immigrant and attended high school in BC. The education I received gave me the foundation to pursue my studies at Capilano University, earn a Bachelor of Commerce and later an MBA, and build a successful career.",
+        "source_type": "campaign_site",
+        "source_url": "https://peggyhung.ca"
+      }
+    ],
+    "positions": [
+      {
+        "category": "schools-education",
+        "char_end": 396,
+        "char_start": 236,
+        "flashpoints": [],
+        "quote": "I know firsthand that education can change the trajectory of a person's life. I want every student to have the opportunity to build that same strong foundation.",
+        "source_type": "campaign_site",
+        "source_url": "https://peggyhung.ca"
+      },
+      {
+        "category": "schools-education",
+        "char_end": 601,
+        "char_start": 468,
+        "flashpoints": [],
+        "quote": "I benefited from a strong education. I want to help ensure the next generation has the same opportunity to build a successful future.",
+        "source_type": "campaign_site",
+        "source_url": "https://peggyhung.ca"
+      }
+    ]
+  },
   "https://rguy4northvan.ca/about.html::a153ef29991abeea": {
     "background": [
       {

@@ -4024,6 +4024,15 @@
         "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
       },
       {
+        "category": "education",
+        "char_end": 234,
+        "char_start": 0,
+        "flashpoints": [],
+        "quote": "I came to Canada as an immigrant and attended high school in BC. The education I received gave me the foundation to pursue my studies at Capilano University, earn a Bachelor of Commerce and later an MBA, and build a successful career.",
+        "source_type": "campaign_site",
+        "source_url": "https://peggyhung.ca"
+      },
+      {
         "category": "career",
         "char_end": 671,
         "char_start": 493,
@@ -4073,10 +4082,17 @@
         "title": "City of North Vancouver candidate statement - HUNG, Peggy",
         "type": "official_statement",
         "url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "retrieved": "2026-10-02",
+        "text": "I came to Canada as an immigrant and attended high school in BC. The education I received gave me the foundation to pursue my studies at Capilano University, earn a Bachelor of Commerce and later an MBA, and build a successful career.\n\nI know firsthand that education can change the trajectory of a person's life. I want every student to have the opportunity to build that same strong foundation.\n\nPeggy Hung | School Trustee Candidate | City of North Vancouver 2026\n\nI benefited from a strong education. I want to help ensure the next generation has the same opportunity to build a successful future.",
+        "title": "Peggy Hung | School Trustee Candidate | City of North Vancouver",
+        "type": "campaign_site",
+        "url": "https://peggyhung.ca"
       }
     ],
     "surname": "HUNG",
-    "website": null
+    "website": "https://peggyhung.ca"
   },
   {
     "background": [

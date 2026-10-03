@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import collections
 import json
+import re
 import os
 import subprocess
 import sys
@@ -22,7 +23,15 @@ KEY = os.environ.get("NVV_SSH_KEY", os.path.expanduser("~/.ssh/vultr_etsy"))
 
 # Anything that is obviously not a reader.
 BOTS = ("bot", "crawl", "spider", "slurp", "curl/", "wget", "python-requests",
-        "headless", "monitoring", "uptime", "scanner", "bingpreview", "facebookexternalhit")
+        "headless", "monitoring", "uptime", "scanner", "bingpreview", "facebookexternalhit",
+        "go-http-client", "dalvik/")
+
+# Scanners that claim to be a browser without naming one. A real browser always
+# carries a product token (Chrome/, Safari/, Firefox/); "Mozilla/5.0 (compatible)"
+# on its own is a scraper. One such crawler walked the candidate list from a
+# datacentre and re-requested its own malformed "<url>,<count>" concatenations,
+# which looked at first glance like a bug in our markup. It was not.
+SPOOFED = re.compile(r"^mozilla/[\d.]+ \(compatible\)\s*$")
 
 
 def truncate(ip: str) -> str:
@@ -45,6 +54,7 @@ def main() -> int:
     referrers = collections.Counter()
     networks = set()
     statuses = collections.Counter()
+    missing = collections.Counter()
     bots = 0
     total = 0
 
@@ -61,11 +71,15 @@ def main() -> int:
 
         req = e.get("request", {})
         ua = " ".join(req.get("headers", {}).get("User-Agent", [""])).lower()
-        if any(b in ua for b in BOTS):
+        if any(b in ua for b in BOTS) or SPOOFED.match(ua):
             bots += 1
             continue
 
         uri = req.get("uri", "")
+        # Count errors before the asset filter: a missing icon is a real miss
+        # even though an icon is never a page view.
+        if e.get("status", 0) >= 400:
+            missing[f'{e["status"]} {uri.split("?")[0]}'] += 1
         if any(uri.endswith(x) for x in (".css", ".js", ".woff2", ".jpg", ".png", ".svg", ".ico", ".xml", ".txt")):
             continue
 
@@ -98,9 +112,10 @@ def main() -> int:
     else:
         print("\n  where they came from: nothing yet — no external referrers seen")
 
-    bad = {s: n for s, n in statuses.items() if s >= 400}
-    if bad:
-        print(f"\n  errors: {bad}")
+    if missing:
+        print("\n  errors (bots excluded):")
+        for what, n in missing.most_common(12):
+            print(f"    {n:5}  {what}")
     return 0
 
 
