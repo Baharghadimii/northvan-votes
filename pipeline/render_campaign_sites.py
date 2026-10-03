@@ -28,7 +28,7 @@ from bs4 import BeautifulSoup
 from pipeline.fetching import USER_AGENT, allowed
 from pipeline.models import Source
 from pipeline.scrape_campaign_sites import (
-    MAX_PAGES, MIN_PAGE_CHARS, SKIP, clean_text, score,
+    MAX_PAGES, MIN_PAGE_CHARS, SKIP, clean_text, same_host, score,
 )
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -37,6 +37,16 @@ OUT = ROOT / "data" / "campaign_pages.json"
 CACHE = ROOT / "data" / "raw" / "rendered"
 
 SETTLE_MS = 2500
+
+# A plain fetch "succeeding" is not the same as it working. Three candidates
+# came back with a few hundred characters of hero banner from sites that are
+# thousands of characters long, because the platform renders its content with
+# JavaScript. The first version of this script only rescued candidates with
+# *nothing*, so a useless scrap counted as done and they stayed thin — which is
+# exactly the "a thin page should not be mistaken for a quiet candidate" problem
+# this script exists to prevent. Anything under this gets a browser too.
+# For scale: the median campaign site here yields 6,264 characters.
+MIN_SITE_CHARS = 1500
 
 
 def cache_for(url: str) -> Path:
@@ -76,7 +86,7 @@ def crawl(page, website: str, name: str) -> list[Source]:
     seen = {urldefrag(website).url.rstrip("/")}
     for a in soup.find_all("a", href=True):
         href = urldefrag(urljoin(website, a["href"])).url
-        if urlparse(href).netloc != host or SKIP.search(href):
+        if not same_host(urlparse(href).netloc, host) or SKIP.search(href):
             continue
         key = href.rstrip("/")
         if key in seen:
@@ -128,9 +138,12 @@ def main() -> int:
             if e.get("crawl") is False:
                 no_crawl.add(e["name"])
 
+    def yielded(cid: str) -> int:
+        return sum(len(p.get("text", "")) for p in existing.get(cid) or [])
+
     targets = [
         c for c in candidates
-        if c.get("website") and not existing.get(c["id"])
+        if c.get("website") and yielded(c["id"]) < MIN_SITE_CHARS
         and c["name"] not in no_crawl
         and "facebook.com" not in c["website"]
     ]
@@ -146,9 +159,16 @@ def main() -> int:
         for i, c in enumerate(targets, 1):
             print(f"  [{i}/{len(targets)}] {c['name']:20} {urlparse(c['website']).netloc}", flush=True)
             sources = crawl(page, c["website"], c["name"])
-            if sources:
+            gained = sum(len(s.text) for s in sources) if sources else 0
+            had = yielded(c["id"])
+            # Never trade down: a render that goes wrong must not throw away
+            # text a plain fetch already got.
+            if sources and gained > had:
                 existing[c["id"]] = [json.loads(s.model_dump_json()) for s in sources]
-                print(f"      {len(sources)} pages, {sum(len(s.text) for s in sources):,} chars")
+                note = f" (was {had:,})" if had else ""
+                print(f"      {len(sources)} pages, {gained:,} chars{note}")
+            elif had:
+                print(f"      kept the {had:,} chars already captured")
             else:
                 print("      still nothing usable")
 

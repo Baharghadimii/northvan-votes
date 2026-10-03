@@ -38,6 +38,11 @@ MIN_PAGE_CHARS = 200
 PRIORITY = [
     (100, re.compile(r"platform|priorit|policy|policies|issues|my-plan|the-plan|vision", re.I)),
     (80, re.compile(r"where-i-stand|what-i|commitments|pledge|agenda", re.I)),
+    # Incumbents often file their substance under their record rather than a
+    # platform page. Jessica McIlroy's is at /at-city-hall, which matched nothing
+    # above, so the crawler took her home page and stopped.
+    (70, re.compile(r"at-city-hall|city-hall|my-record|track-record|accomplish"
+                    r"|achievement|on-council|in-office|delivered", re.I)),
     (60, re.compile(r"about|bio|background|experience|who-i-am|meet", re.I)),
     (40, re.compile(r"housing|transport|transit|traffic|climate|tax|safety|school", re.I)),
 ]
@@ -104,6 +109,19 @@ def clean_text(soup: BeautifulSoup) -> str:
     return "\n\n".join(parts)
 
 
+def same_host(a: str, b: str) -> bool:
+    """Whether two hosts are the same site, ignoring a leading "www.".
+
+    Candidates register www.example.ca and then link internally to example.ca,
+    or the reverse. Comparing netloc literally treated every one of those links
+    as leaving the site, so the crawler read the home page and stopped. Linda
+    Munro's platform lives on five subpages that were all discarded this way,
+    leaving her with a hero banner and one position while her site was full of
+    policy. She had to email me to find out.
+    """
+    return a.lower().removeprefix("www.") == b.lower().removeprefix("www.")
+
+
 def crawl(website: str, name: str) -> list[Source]:
     root = urlparse(website)
     if not root.netloc:
@@ -125,7 +143,7 @@ def crawl(website: str, name: str) -> list[Source]:
 
     for a in soup.find_all("a", href=True):
         href = urldefrag(urljoin(website, a["href"])).url
-        if urlparse(href).netloc != host or SKIP.search(href):
+        if not same_host(urlparse(href).netloc, host) or SKIP.search(href):
             continue
         key = href.rstrip("/")
         if key in seen_urls:

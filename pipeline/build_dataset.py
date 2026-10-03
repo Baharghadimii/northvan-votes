@@ -161,6 +161,26 @@ def _trim(p: Position, source_text: str) -> Position:
     return p
 
 
+def _drop_trailing_heading(p: Position, source_text: str) -> Position:
+    """Drop a bare heading left hanging off the end of a passage.
+
+    A span can run to the start of the next heading, so Linda Munro's quote
+    ended "...achieve solutions / My Priorities:" with nothing after it. Still
+    verbatim, but it reads as though the page was cut off mid-thought.
+    """
+    m = re.search(r"\n+[^\n]{0,60}:\s*$", p.quote)
+    if not m:
+        return p
+    trimmed = p.quote[: m.start()].rstrip()
+    if len(trimmed.split()) < 6:
+        return p
+    p.quote = trimmed
+    p.char_end = p.char_start + len(p.quote)
+    if not p.verify_against(source_text):
+        raise BuildError(f"trimming a trailing heading broke the span for {p.source_url}")
+    return p
+
+
 def _words(text: str) -> set[str]:
     return set(re.findall(r"[a-z']+", text.lower()))
 
@@ -186,23 +206,49 @@ def _rank(p: Position) -> tuple:
     return (0 if p.source_type == "official_statement" else 1, -len(p.quote))
 
 
+def _spread(items: list[Position]) -> dict[str, int]:
+    """How many topics each passage was filed under.
+
+    Some candidates' filed statements run every priority together in one
+    paragraph, because the municipality's form flattened their bullet list.
+    The tagger then quite reasonably files that one block under six topics. But
+    a block that covers six topics is not a position on any of them, and it was
+    winning on rank over the candidate's own one-line commitment and then
+    suppressing it as a duplicate — so Linda Munro's page showed a sprawling
+    housing paragraph and none of her transport, climate, childcare or economy
+    lines. Specific beats sprawling.
+    """
+    topics: dict[str, set[str]] = {}
+    for p in items:
+        topics.setdefault(" ".join(p.quote.split()).lower(), set()).add(p.category)
+    return {q: len(t) for q, t in topics.items()}
+
+
 def _prune(items: list[Position], cap: int) -> list[Position]:
-    seen_exact: set[str] = set()
-    seen_open: set[str] = set()
+    # Deduplication is per topic, not across the whole page. A sentence can
+    # genuinely belong to two topics, which /methodology tells readers to
+    # expect; suppressing it globally meant a passage kept under one heading
+    # silently deleted a different heading from the candidate's page, and two
+    # candidates lost a topic that way.
+    seen_exact: dict[str, set[str]] = {}
+    seen_open: dict[str, set[str]] = {}
     per_category: dict[str, int] = {}
     kept: list[Position] = []
+    spread = _spread(items)
 
-    for p in sorted(items, key=_rank):
+    for p in sorted(items, key=lambda p: (spread[" ".join(p.quote.split()).lower()], _rank(p))):
         norm = " ".join(p.quote.split()).lower()
         opening = norm[:60]
-        if norm in seen_exact or opening in seen_open:
+        exact = seen_exact.setdefault(p.category, set())
+        opens = seen_open.setdefault(p.category, set())
+        if norm in exact or opening in opens:
             continue
         if per_category.get(p.category, 0) >= cap:
             continue
-        if any(_overlaps(p, k) for k in kept):
+        if any(_overlaps(p, k) for k in kept if k.category == p.category):
             continue
-        seen_exact.add(norm)
-        seen_open.add(opening)
+        exact.add(norm)
+        opens.add(opening)
         per_category[p.category] = per_category.get(p.category, 0) + 1
         kept.append(p)
 
@@ -219,6 +265,7 @@ def prune_duplicates(candidates: list[Candidate]) -> tuple[int, int]:
             source = c.source_for(p.source_url)
             if source:
                 _trim(p, source.text)
+                _drop_trailing_heading(p, source.text)
         c.positions = _prune(c.positions, MAX_PER_CATEGORY)
         c.background = _prune(c.background, MAX_PER_BACKGROUND_KIND)
     after = sum(len(c.positions) + len(c.background) for c in candidates)
@@ -233,9 +280,21 @@ def attach_photos(candidates: list[Candidate]) -> None:
     site that tells readers it tracks nobody — and the pictures would disappear
     whenever either municipality tidies its media library after the election.
     """
-    if not PHOTOS.exists():
-        return
-    local = json.loads(PHOTOS.read_text(encoding="utf-8"))
+    local = json.loads(PHOTOS.read_text(encoding="utf-8")) if PHOTOS.exists() else {}
+
+    # Candidates the municipality published no photo for may send their own.
+    # Kept in config/ rather than photos.json because that file is regenerated
+    # by the fetch step, which would quietly drop them.
+    extra = ROOT / "config" / "extra-photos.yaml"
+    if extra.exists():
+        import yaml
+
+        for entry in yaml.safe_load(extra.read_text(encoding="utf-8")) or []:
+            path = ROOT / "site" / "public" / "photos" / entry["file"]
+            if not path.exists():
+                raise SystemExit(f"[ERROR] extra-photos.yaml lists a missing file: {path}")
+            local.setdefault(entry["id"], f"/photos/{entry['file']}")
+
     for c in candidates:
         if c.id in local:
             c.photo_url = local[c.id]

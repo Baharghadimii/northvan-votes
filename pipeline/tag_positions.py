@@ -38,6 +38,22 @@ CACHE = ROOT / "data" / "tagging-cache.json"
 MODEL = "claude-opus-5"
 MIN_WORDS = 15  # a span shorter than this is a fragment, not a position
 
+# ...unless the span is a whole line of its own in the source. Candidates who
+# write their platform as terse bullets were being erased by the flat floor:
+# "CLIMATE: Add wildfire mitigation measures to DNV climate emergency action
+# items" is a complete commitment in eleven words, and Linda Munro lost four of
+# her six priorities to this before she emailed to ask why her page was empty.
+# A standalone line is something the candidate chose to set apart, so it is a
+# statement rather than a clause torn out of a paragraph.
+MIN_WORDS_STANDALONE = 8
+
+
+def standalone_line(text: str, start: int, end: int) -> bool:
+    """Whether this span is a complete line in the source, not part of one."""
+    before = text[:start].rstrip(" \t")
+    after = text[end:].lstrip(" \t")
+    return (not before or before.endswith("\n")) and (not after or after.startswith("\n"))
+
 
 # --------------------------------------------------------------------------- #
 # taxonomy
@@ -92,7 +108,8 @@ def _positions_from_ids(
         end = max(s.end for s in chosen)
         quote = source_text[start:end]
 
-        if word_count(quote) < MIN_WORDS:
+        floor = MIN_WORDS_STANDALONE if standalone_line(source_text, start, end) else MIN_WORDS
+        if word_count(quote) < floor:
             continue
 
         position = Position(

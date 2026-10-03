@@ -1,0 +1,19 @@
+# Photos for candidates the municipalities publish no picture for.
+#
+# The District publishes a photo for only some of its candidates, so eleven of
+# its thirty-one appeared here as a grey placeholder next to opponents with a
+# headshot. That is the same unfairness as the missing website links: a gap in
+# what the municipality published, showing up as a candidate who looks less
+# prepared than they are.
+#
+# So where a candidate sends me their own photo, I use it. That offer is open to
+# every candidate with no photo, not only the ones who thought to ask, and
+# /methodology says so in public. Files are cropped to the same 400x400 square
+# as the official ones and served from our own origin like the rest.
+#
+# Nothing here is edited beyond the crop, and the source is recorded per entry.
+
+- name: Trey Bell
+  id: dnv-council-bell-trey
+  file: dnv-council-bell-trey.jpg
+  source: supplied by the candidate, 2026-10-02

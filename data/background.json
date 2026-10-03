@@ -3,9 +3,9 @@
     {
       "category": "community",
       "char_end": 1194,
-      "char_start": 1040,
+      "char_start": 923,
       "flashpoints": [],
-      "quote": "He has been involved in democratic and grassroots work since 2006, from door knocking and phone calling to campaign organizing and community mobilization.",
+      "quote": "Sean’s path to public service began with a belief that leadership starts with listening and rolling up your sleeves. He has been involved in democratic and grassroots work since 2006, from door knocking and phone calling to campaign organizing and community mobilization.",
       "source_type": "campaign_site",
       "source_url": "https://www.seanfornorthvan.ca/"
     },
@@ -195,10 +195,10 @@
     },
     {
       "category": "public-office",
-      "char_end": 138,
+      "char_end": 362,
       "char_start": 64,
       "flashpoints": [],
-      "quote": "It has been a privilege to serve my community as a member of City Council.",
+      "quote": "It has been a privilege to serve my community as a member of City Council.\n\nI approach each issue before Council by listening carefully to the public, applying independent thinking, common sense, and using my experience in local government and business to seek the best decisions for our community.",
       "source_type": "campaign_site",
       "source_url": "https://www.donbell.ca"
     },
@@ -217,6 +217,15 @@
       "char_start": 2567,
       "flashpoints": [],
       "quote": "He has extensive business, community and local political experience. Prior to his political career, Don owned and operated a small retail business in North Vancouver and for 13 years was in corporate management at Canada Safeway.",
+      "source_type": "campaign_site",
+      "source_url": "https://www.donbell.ca"
+    },
+    {
+      "category": "community",
+      "char_end": 2928,
+      "char_start": 2861,
+      "flashpoints": [],
+      "quote": "Serves on the North Shore Advisory Committee on Disabilities Issues",
       "source_type": "campaign_site",
       "source_url": "https://www.donbell.ca"
     },
@@ -286,6 +295,15 @@
       "source_url": "https://tammybentz.ca/about/"
     },
     {
+      "category": "community",
+      "char_end": 1425,
+      "char_start": 1336,
+      "flashpoints": [],
+      "quote": "Past member on various Boards of Directors, for Arts organizations & non-profit societies",
+      "source_type": "campaign_site",
+      "source_url": "https://tammybentz.ca/about/"
+    },
+    {
       "category": "local-roots",
       "char_end": 1163,
       "char_start": 1031,
@@ -334,10 +352,10 @@
     },
     {
       "category": "public-office",
-      "char_end": 662,
+      "char_end": 803,
       "char_start": 486,
       "flashpoints": [],
-      "quote": "For the past eight years, I've had the privilege of serving our community through City advisory committees, local organizations, volunteer initiatives, and grassroots projects.",
+      "quote": "For the past eight years, I've had the privilege of serving our community through City advisory committees, local organizations, volunteer initiatives, and grassroots projects. Those experiences have given me a deep understanding of both how local government works and how its decisions shape people's everyday lives.",
       "source_type": "campaign_site",
       "source_url": "https://boltenko4northvancouver.ca"
     },
@@ -481,7 +499,7 @@
       "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
     },
     {
-      "category": "career",
+      "category": "community",
       "char_end": 1592,
       "char_start": 1421,
       "flashpoints": [],
@@ -504,12 +522,28 @@
     },
     {
       "category": "public-office",
-      "char_end": 1268,
+      "char_end": 339,
       "char_start": 242,
-      "flashpoints": [
-        "harry-jerome"
-      ],
-      "quote": "Since 2018, it has been my privilege serving you as a Councillor for the City of North Vancouver.\n\nBring forward the City's certification as a living wage employer\n\nExpand childcare on City-owned land and in new housing developments\n\nRestore City funding for elementary school playground upgrades\n\nStrengthen the supports developers must provide to tenants displaced by redevelopment\n\nInitiated plans for an annual Multicultural Community Festival to build community and break down racism\n\nDeliver the new Harry Jerome Community Recreation Centre and the Silver Harbour Seniors Centre\n\nSupport the creation of the Central Lonsdale Business Improvement Area\n\nAdvocate for a cooling strategy setting a maximum indoor temperature of 26°C in multi-unit buildings\n\nOver my two terms, the City of North Vancouver has ranked first in BC for building rental housing (Make Housing Central, 2022), started more new housing than anywhere else on the North Shore, and won HUB Cycling’s Biggest Leap award for active transportation (2026).",
+      "flashpoints": [],
+      "quote": "Since 2018, it has been my privilege serving you as a Councillor for the City of North Vancouver.",
+      "source_type": "campaign_site",
+      "source_url": "https://angelagirard.ca"
+    },
+    {
+      "category": "public-office",
+      "char_end": 730,
+      "char_start": 627,
+      "flashpoints": [],
+      "quote": "Initiated plans for an annual Multicultural Community Festival to build community and break down racism",
+      "source_type": "campaign_site",
+      "source_url": "https://angelagirard.ca"
+    },
+    {
+      "category": "public-office",
+      "char_end": 1268,
+      "char_start": 1002,
+      "flashpoints": [],
+      "quote": "Over my two terms, the City of North Vancouver has ranked first in BC for building rental housing (Make Housing Central, 2022), started more new housing than anywhere else on the North Shore, and won HUB Cycling’s Biggest Leap award for active transportation (2026).",
       "source_type": "campaign_site",
       "source_url": "https://angelagirard.ca"
     },
@@ -519,6 +553,15 @@
       "char_start": 1700,
       "flashpoints": [],
       "quote": "That’s why I brought forward a motion to strengthen the supports and amounts developers must pay to tenants being displaced due to rental redevelopments.\n\nThere is no single fix. On Council I’ve supported the housing agreements, zoning changes and provincial alignment work that get the housing we need built. These efforts have had an impact over the past eight years. Our City now offers:",
+      "source_type": "campaign_site",
+      "source_url": "https://angelagirard.ca/priorities/affordable-housing/"
+    },
+    {
+      "category": "public-office",
+      "char_end": 3049,
+      "char_start": 2966,
+      "flashpoints": [],
+      "quote": "Angela went to bat for me with one of the leasing agents for the developer company.",
       "source_type": "campaign_site",
       "source_url": "https://angelagirard.ca/priorities/affordable-housing/"
     },
@@ -1093,24 +1136,6 @@
       "source_url": "https://www.krishnanorthvan.ca/priorities"
     },
     {
-      "category": "public-office",
-      "char_end": 1717,
-      "char_start": 1318,
-      "flashpoints": [],
-      "quote": "As Chair of the City’s Advisory Planning Commission , I spend a lot of time thinking about the choices that shape North Vancouver. Housing, land use, transportation, neighbourhoods, public spaces, and how growth fits into the community around it.\n\nIt has taught me to listen carefully, ask difficult questions, and recognize that good decisions rarely come from looking at only one side of an issue.",
-      "source_type": "campaign_site",
-      "source_url": "https://www.krishnanorthvan.ca/why-im-running"
-    },
-    {
-      "category": "career",
-      "char_end": 1973,
-      "char_start": 1719,
-      "flashpoints": [],
-      "quote": "Professionally, I’ve spent nearly two decades working in strategy, finance, and planning. I’ve worked with large budgets, forecasts, performance, risk, and complex decisions where the numbers matter, but so does understanding the people affected by them.",
-      "source_type": "campaign_site",
-      "source_url": "https://www.krishnanorthvan.ca/why-im-running"
-    },
-    {
       "category": "local-roots",
       "char_end": 305,
       "char_start": 0,
@@ -1125,6 +1150,24 @@
       "char_start": 511,
       "flashpoints": [],
       "quote": "My family’s North Vancouver story began more than 30 years ago, when my parents ran a small convenience store near Lonsdale and 15th. I learned from them what it means to work hard, care for your neighbours, and give back to the community that gives you a home.\n\nMy mom spent more than 40 years working as a care aide. My wife is a registered nurse. Through them, I’ve seen the dedication behind the public services we depend on, and how difficult it can be for the people who care for our community to afford a life here themselves.",
+      "source_type": "campaign_site",
+      "source_url": "https://www.krishnanorthvan.ca/why-im-running"
+    },
+    {
+      "category": "public-office",
+      "char_end": 1717,
+      "char_start": 1318,
+      "flashpoints": [],
+      "quote": "As Chair of the City’s Advisory Planning Commission , I spend a lot of time thinking about the choices that shape North Vancouver. Housing, land use, transportation, neighbourhoods, public spaces, and how growth fits into the community around it.\n\nIt has taught me to listen carefully, ask difficult questions, and recognize that good decisions rarely come from looking at only one side of an issue.",
+      "source_type": "campaign_site",
+      "source_url": "https://www.krishnanorthvan.ca/why-im-running"
+    },
+    {
+      "category": "career",
+      "char_end": 1973,
+      "char_start": 1719,
+      "flashpoints": [],
+      "quote": "Professionally, I’ve spent nearly two decades working in strategy, finance, and planning. I’ve worked with large budgets, forecasts, performance, risk, and complex decisions where the numbers matter, but so does understanding the people affected by them.",
       "source_type": "campaign_site",
       "source_url": "https://www.krishnanorthvan.ca/why-im-running"
     }
@@ -1256,9 +1299,9 @@
     {
       "category": "public-office",
       "char_end": 2139,
-      "char_start": 1491,
+      "char_start": 2031,
       "flashpoints": [],
-      "quote": "He mentored local teenagers through Family Services of the North Shore, served on the North Vancouver Museum and Archives Commission, including two years as Chair, and authored the frequently cited local history book North Vancouver’s Lonsdale Neighbourhood. He later chaired the North Vancouver City Library Board for five years, and co-organized a Lions Gate Hospital Foundation fundraiser that helped increase cultural safety for Indigenous elders and families while bringing Indigenous art to a North Vancouver long-term care facility. In 2022, Shervin was elected to his first term on City of North Vancouver Council.\n\n“I love North Vancouver.",
+      "quote": "In 2022, Shervin was elected to his first term on City of North Vancouver Council.\n\n“I love North Vancouver.",
       "source_type": "campaign_site",
       "source_url": "https://voteshervin.ca"
     },
@@ -1268,6 +1311,24 @@
       "char_start": 5660,
       "flashpoints": [],
       "quote": "Council Representative, CNV Advisory Design Panel (2022 – Present)\n\nCouncil Representative, CNV Heritage Advisory Committee (2022 – Present)\n\nCo-Chair, Community Safety Advisory Committee (2025 – Present)\n\nCNV Council Representative, North Shore Accessibility Advisory Committee (NSAAC) (2023 – Present)",
+      "source_type": "campaign_site",
+      "source_url": "https://voteshervin.ca"
+    },
+    {
+      "category": "public-office",
+      "char_end": 6151,
+      "char_start": 6073,
+      "flashpoints": [],
+      "quote": "Chair & Commissioner, North Vancouver Museum & Archives Commission (2002-2009)",
+      "source_type": "campaign_site",
+      "source_url": "https://voteshervin.ca"
+    },
+    {
+      "category": "career",
+      "char_end": 610,
+      "char_start": 414,
+      "flashpoints": [],
+      "quote": "That chance encounter and Albert’s kindness led to a life-changing college admission, his first job, and it set Shervin on a career path that would ultimately prepare him to serve on City Council.",
       "source_type": "campaign_site",
       "source_url": "https://voteshervin.ca"
     },
@@ -1331,6 +1392,15 @@
       "char_start": 5965,
       "flashpoints": [],
       "quote": "Co-fundraiser, Lions Gate Hospital Foundation, to bring indigenous art to a long-term care facility (2022)",
+      "source_type": "campaign_site",
+      "source_url": "https://voteshervin.ca"
+    },
+    {
+      "category": "community",
+      "char_end": 6219,
+      "char_start": 6153,
+      "flashpoints": [],
+      "quote": "Contest Judge, Kilby Memorial Youth & Teen Art Contest (2013-2016)",
       "source_type": "campaign_site",
       "source_url": "https://voteshervin.ca"
     },
@@ -1771,10 +1841,10 @@
     },
     {
       "category": "career",
-      "char_end": 1085,
+      "char_end": 892,
       "char_start": 707,
       "flashpoints": [],
-      "quote": "Dave Kurvers has spent more than three decades working in British Columbia’s film and television industry, where planning, coordination and solving complex problems are part of the job.\n\nHis background also includes public-policy leadership, service on Elections BC’s Election Advisory Committee, and university study in human and economic geography and business administration.",
+      "quote": "Dave Kurvers has spent more than three decades working in British Columbia’s film and television industry, where planning, coordination and solving complex problems are part of the job.",
       "source_type": "campaign_site",
       "source_url": "https://vote.kurvers.net/"
     },
@@ -1831,6 +1901,15 @@
       "char_start": 564,
       "flashpoints": [],
       "quote": "I bring that same instinct to serving as strata council president today, in a mixed-use building.",
+      "source_type": "official_statement",
+      "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+    },
+    {
+      "category": "local-roots",
+      "char_end": 53,
+      "char_start": 0,
+      "flashpoints": [],
+      "quote": "I've called North Vancouver home for most of my life.",
       "source_type": "official_statement",
       "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
     },
@@ -1908,6 +1987,15 @@
     },
     {
       "category": "community",
+      "char_end": 4006,
+      "char_start": 3859,
+      "flashpoints": [],
+      "quote": "I have felt extremely fortunate that Mike was chair of our board and I have great confidence he would bring those same skills to the role of Mayor.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/"
+    },
+    {
+      "category": "community",
       "char_end": 6685,
       "char_start": 6571,
       "flashpoints": [],
@@ -1966,6 +2054,15 @@
       "char_start": 217,
       "flashpoints": [],
       "quote": "I built a software company here that created more than 20 highly skilled, well-paying local jobs. After a long career in business, I'm stepping away from the private sector to return to public service - because this community has given me a lot, and I'm not done giving back.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/about"
+    },
+    {
+      "category": "community",
+      "char_end": 851,
+      "char_start": 791,
+      "flashpoints": [],
+      "quote": "Managing a complex's finances and governance as a volunteer.",
       "source_type": "campaign_site",
       "source_url": "https://mcgraw4mayor.ca/about"
     },
@@ -2080,6 +2177,51 @@
       "source_url": "https://voteazizi.ca/experience.html"
     },
     {
+      "category": "career",
+      "char_end": 821,
+      "char_start": 750,
+      "flashpoints": [],
+      "quote": "Assessor and Oral Examiner, AIBC Broadly Experienced Architects Program",
+      "source_type": "campaign_site",
+      "source_url": "https://voteazizi.ca/experience.html"
+    },
+    {
+      "category": "public-office",
+      "char_end": 748,
+      "char_start": 688,
+      "flashpoints": [],
+      "quote": "Member, Heritage Advisory Committee, City of North Vancouver",
+      "source_type": "campaign_site",
+      "source_url": "https://voteazizi.ca/experience.html"
+    },
+    {
+      "category": "community",
+      "char_end": 91,
+      "char_start": 0,
+      "flashpoints": [],
+      "quote": "More than 30 years of professional practice, governance, volunteer service, and mentorship.",
+      "source_type": "campaign_site",
+      "source_url": "https://voteazizi.ca/experience.html"
+    },
+    {
+      "category": "community",
+      "char_end": 586,
+      "char_start": 501,
+      "flashpoints": [],
+      "quote": "Chair, Royal Architectural Institute of Canada (RAIC) Metro Vancouver Chapter Network",
+      "source_type": "campaign_site",
+      "source_url": "https://voteazizi.ca/experience.html"
+    },
+    {
+      "category": "community",
+      "char_end": 902,
+      "char_start": 823,
+      "flashpoints": [],
+      "quote": "Mentor through Impact North Shore, supporting internationally trained newcomers",
+      "source_type": "campaign_site",
+      "source_url": "https://voteazizi.ca/experience.html"
+    },
+    {
       "category": "local-roots",
       "char_end": 239,
       "char_start": 0,
@@ -2188,6 +2330,87 @@
       "quote": "I came to Canada as an immigrant and attended high school in BC. The education I received gave me the foundation to pursue my studies at Capilano University, earn a Bachelor of Commerce and later an MBA, and build a successful career.",
       "source_type": "campaign_site",
       "source_url": "https://peggyhung.ca"
+    },
+    {
+      "category": "career",
+      "char_end": 234,
+      "char_start": 65,
+      "flashpoints": [],
+      "quote": "The education I received gave me the foundation to pursue my studies at Capilano University, earn a Bachelor of Commerce and later an MBA, and build a successful career.",
+      "source_type": "campaign_site",
+      "source_url": "https://peggyhung.ca"
+    },
+    {
+      "category": "education",
+      "char_end": 372,
+      "char_start": 138,
+      "flashpoints": [],
+      "quote": "One of the most important chapters of that journey was attending high school in British Columbia.\n\nMy high school education gave me gave me a strong foundation, opened doors, and gave me the confidence to believe in what was possible.",
+      "source_type": "campaign_site",
+      "source_url": "https://www.peggyhung.ca/meet-peggy"
+    },
+    {
+      "category": "education",
+      "char_end": 608,
+      "char_start": 448,
+      "flashpoints": [],
+      "quote": "That foundation carried me forward to Capilano University, where I began my post-secondary education. I went on to earn a Bachelor of Commerce and later an MBA.",
+      "source_type": "campaign_site",
+      "source_url": "https://www.peggyhung.ca/meet-peggy"
+    },
+    {
+      "category": "career",
+      "char_end": 1234,
+      "char_start": 771,
+      "flashpoints": [],
+      "quote": "For more than 20 years, I have worked in the corporate world, taking on roles that required me to lead, make decisions, solve problems and deliver results.\n\nMy career has taught me that leadership isn't about having all the answers. It's about listening, asking the right questions, making thoughtful decisions and taking responsibility for what happens next.\n\nI have learned to be accountable, not just for the decisions I make, but for the outcomes that follow.",
+      "source_type": "campaign_site",
+      "source_url": "https://www.peggyhung.ca/meet-peggy"
+    },
+    {
+      "category": "career",
+      "char_end": 2778,
+      "char_start": 2711,
+      "flashpoints": [],
+      "quote": "Work Experience in Marketing for the World’s Most Recognized Brands",
+      "source_type": "campaign_site",
+      "source_url": "https://www.peggyhung.ca/meet-peggy"
+    },
+    {
+      "category": "local-roots",
+      "char_end": 235,
+      "char_start": 0,
+      "flashpoints": [],
+      "quote": "I came to Canada as an immigrant, and like many newcomers, I was building a new life and learning how to find my place in a new country.\n\nOne of the most important chapters of that journey was attending high school in British Columbia.",
+      "source_type": "campaign_site",
+      "source_url": "https://www.peggyhung.ca/meet-peggy"
+    },
+    {
+      "category": "education",
+      "char_end": 358,
+      "char_start": 186,
+      "flashpoints": [],
+      "quote": "I know firsthand what a strong education can make possible. My own experience in BC schools gave me the foundation to pursue higher education and build a successful career.",
+      "source_type": "campaign_site",
+      "source_url": "https://www.peggyhung.ca/about-6"
+    },
+    {
+      "category": "career",
+      "char_end": 358,
+      "char_start": 246,
+      "flashpoints": [],
+      "quote": "My own experience in BC schools gave me the foundation to pursue higher education and build a successful career.",
+      "source_type": "campaign_site",
+      "source_url": "https://www.peggyhung.ca/about-6"
+    },
+    {
+      "category": "career",
+      "char_end": 682,
+      "char_start": 505,
+      "flashpoints": [],
+      "quote": "After more than 20 years in the corporate world, I have learned that leadership means making thoughtful decisions, being accountable for those decisions, and delivering results.",
+      "source_type": "campaign_site",
+      "source_url": "https://www.peggyhung.ca/about-6"
     }
   ],
   "cnv-trustee-navales-senora": [
@@ -2668,10 +2891,28 @@
     },
     {
       "category": "public-office",
+      "char_end": 2381,
+      "char_start": 2313,
+      "flashpoints": [],
+      "quote": "Advocated for local businesses, arts, culture, and community events.",
+      "source_type": "campaign_site",
+      "source_url": "https://www.jordanback.net/my-priorities.html"
+    },
+    {
+      "category": "public-office",
       "char_end": 2630,
       "char_start": 2457,
       "flashpoints": [],
       "quote": "Brought forward a motion to establish a Youth and Younger Adults Advisory Committee. ​\n\nConsistently considered the needs of families, seniors, and people with disabilities.",
+      "source_type": "campaign_site",
+      "source_url": "https://www.jordanback.net/my-priorities.html"
+    },
+    {
+      "category": "public-office",
+      "char_end": 2928,
+      "char_start": 2863,
+      "flashpoints": [],
+      "quote": "Brought forward a motion supporting residential water metering. ​",
       "source_type": "campaign_site",
       "source_url": "https://www.jordanback.net/my-priorities.html"
     },
@@ -2742,15 +2983,6 @@
   "dnv-council-bell-trey": [
     {
       "category": "public-office",
-      "char_end": 1536,
-      "char_start": 1273,
-      "flashpoints": [],
-      "quote": "I learned a lot during my run for District of North Vancouver council in 2022, and I am so grateful for all the support I received during that election. I came in 7th place and the top 6th get elected to council, so I was just 300 or so votes short last election.",
-      "source_type": "campaign_site",
-      "source_url": "https://www.treybell.ca"
-    },
-    {
-      "category": "public-office",
       "char_end": 2410,
       "char_start": 1782,
       "flashpoints": [],
@@ -2818,6 +3050,15 @@
       "char_start": 2588,
       "flashpoints": [],
       "quote": "I have previously worked as the Director of School Age Care Programs for a large childcare provider called Bee Haven, and have served on the Parkgate Society board of director's in a voluntary role for 5 years, including years as Vice President and President.",
+      "source_type": "campaign_site",
+      "source_url": "https://www.treybell.ca"
+    },
+    {
+      "category": "community",
+      "char_end": 11948,
+      "char_start": 11699,
+      "flashpoints": [],
+      "quote": "Through my experience over 2 decades as President of the Parkgate Society Board of Directors, Program Director at a multimillion dollar non profit organization, and my experience in the private business world, I have overseen numerous large budgets.",
       "source_type": "campaign_site",
       "source_url": "https://www.treybell.ca"
     },
@@ -3109,6 +3350,15 @@
       "source_url": "https://bettyforbes.ca/about"
     },
     {
+      "category": "public-office",
+      "char_end": 1639,
+      "char_start": 1579,
+      "flashpoints": [],
+      "quote": "First elected to District of North Vancouver Council in 2018",
+      "source_type": "campaign_site",
+      "source_url": "https://bettyforbes.ca/about"
+    },
+    {
       "category": "career",
       "char_end": 907,
       "char_start": 451,
@@ -3228,15 +3478,6 @@
       "source_url": "https://www.jimhansondnv.ca/about"
     },
     {
-      "category": "local-roots",
-      "char_end": 341,
-      "char_start": 230,
-      "flashpoints": [],
-      "quote": "Jim is a North Vancouver lawyer with law degrees from the University of British Columbia and Oxford University.",
-      "source_type": "campaign_site",
-      "source_url": "https://www.jimhansondnv.ca/about"
-    },
-    {
       "category": "public-office",
       "char_end": 510,
       "char_start": 234,
@@ -3314,10 +3555,37 @@
     },
     {
       "category": "career",
-      "char_end": 1130,
+      "char_end": 1259,
       "char_start": 799,
       "flashpoints": [],
-      "quote": "This has provided me with a solid business foundation and enhanced my communications skills.\n\nI worked at BC Housing for six years in Real Estate Services, which provided me with experience to address housing issues in our community.\n\nI managed the BCIT Downtown Campus and the Institute’s real property leases for over nine years.",
+      "quote": "This has provided me with a solid business foundation and enhanced my communications skills.\n\nI worked at BC Housing for six years in Real Estate Services, which provided me with experience to address housing issues in our community.\n\nI managed the BCIT Downtown Campus and the Institute’s real property leases for over nine years. This experience has reinforced my appreciation of “life-long learning” and its role in building a vibrant and diverse community.",
+      "source_type": "campaign_site",
+      "source_url": "https://www.hermanmah.ca/about"
+    },
+    {
+      "category": "education",
+      "char_end": 891,
+      "char_start": 731,
+      "flashpoints": [],
+      "quote": "I graduated from UBC with a Commerce degree, majoring in Marketing. This has provided me with a solid business foundation and enhanced my communications skills.",
+      "source_type": "campaign_site",
+      "source_url": "https://www.hermanmah.ca/about"
+    },
+    {
+      "category": "community",
+      "char_end": 385,
+      "char_start": 0,
+      "flashpoints": [],
+      "quote": "During the past 4 years, it has really been an honour and privilege to serve the District as one of your Councillors. ​ Having lived on the North Shore for almost 25 years and served in volunteer and Board roles with many organizations across the lower mainland, I have the experience with governance, business acumen and collaborative approach to continue representing you on Council.",
+      "source_type": "campaign_site",
+      "source_url": "https://www.hermanmah.ca/about"
+    },
+    {
+      "category": "community",
+      "char_end": 527,
+      "char_start": 455,
+      "flashpoints": [],
+      "quote": "Canadian Mental Health Association (North & West Vancouver Branch) Board",
       "source_type": "campaign_site",
       "source_url": "https://www.hermanmah.ca/about"
     },
@@ -3423,6 +3691,168 @@
       "quote": "I acknowledge that I live near Xa7elcha! on the traditional territory of the Sḵwx̱wú7mesh Úxwumixw (Squamish) , səl̓ilwətaɬ (Tsleil-Waututh), and xʷməθkʷəy̓əm (Musqueam) Nations.",
       "source_type": "campaign_site",
       "source_url": "https://www.lindamunro.ca"
+    },
+    {
+      "category": "public-office",
+      "char_end": 794,
+      "char_start": 302,
+      "flashpoints": [],
+      "quote": "First elected as a School Trustee in 2021—and topping the polls in both of her campaigns—Linda has worked tirelessly to improve access to quality public education. As a trustee, she acts as liaison to facilitate communication between community members and the school district. As Board Chair from 2023 to 2025, she helped guide district policy, supported families and educators, delivered leadership for trustees, and championed initiatives that put students at the centre of decision-making.",
+      "source_type": "campaign_site",
+      "source_url": "https://lindamunro.ca/about-me-2026/"
+    },
+    {
+      "category": "public-office",
+      "char_end": 2276,
+      "char_start": 2040,
+      "flashpoints": [],
+      "quote": "School Trustee, Board of Education, North Vancouver School District (2021-2026) Board Chair 2023-2025\n\nTrustee, Board of Trustees, North Vancouver District Public Library (2015-2018) Vice-chair of the Board Chair of Governance Committee",
+      "source_type": "campaign_site",
+      "source_url": "https://lindamunro.ca/about-me-2026/"
+    },
+    {
+      "category": "career",
+      "char_end": 300,
+      "char_start": 82,
+      "flashpoints": [],
+      "quote": "With more than two decades of experience in communications, public affairs, and community engagement, she has built her career on strengthening relationships, solving complex challenges, and ensuring people feel heard.",
+      "source_type": "campaign_site",
+      "source_url": "https://lindamunro.ca/about-me-2026/"
+    },
+    {
+      "category": "career",
+      "char_end": 1160,
+      "char_start": 796,
+      "flashpoints": [],
+      "quote": "Linda’s professional background includes senior public affairs roles at Capilano University, where she led external communications, government relations, and issues management. She has also represented major organizations locally and internationally, including Doctors of BC, World Vision in the Asia Pacific region, and global PR agencies in Vancouver and London.",
+      "source_type": "campaign_site",
+      "source_url": "https://lindamunro.ca/about-me-2026/"
+    },
+    {
+      "category": "education",
+      "char_end": 1740,
+      "char_start": 1510,
+      "flashpoints": [],
+      "quote": "She holds a Master of Arts degree in Journalism from Western University, Bachelor of Arts degrees in Political Studies and Geography from Queen’s University, and a Certificate in Non-Profit Management from Simon Fraser University.",
+      "source_type": "campaign_site",
+      "source_url": "https://lindamunro.ca/about-me-2026/"
+    },
+    {
+      "category": "community",
+      "char_end": 1434,
+      "char_start": 1162,
+      "flashpoints": [],
+      "quote": "A long-time volunteer and community builder, Linda has served in leadership roles with local schools, libraries, youth organizations, and community service groups. She currently volunteers with Family Services of the North Shore and the Strachan Hartley Legacy Foundation.",
+      "source_type": "campaign_site",
+      "source_url": "https://lindamunro.ca/about-me-2026/"
+    },
+    {
+      "category": "community",
+      "char_end": 2038,
+      "char_start": 1960,
+      "flashpoints": [],
+      "quote": "Community Award: 2018 Winner of the Good Neighbour Award from Lynn Valley Life",
+      "source_type": "campaign_site",
+      "source_url": "https://lindamunro.ca/about-me-2026/"
+    },
+    {
+      "category": "community",
+      "char_end": 2388,
+      "char_start": 2278,
+      "flashpoints": [],
+      "quote": "Board member, Capilano Community Services Society (2004-2006) Chair, Community Relations Committee (2004-2006)",
+      "source_type": "campaign_site",
+      "source_url": "https://lindamunro.ca/about-me-2026/"
+    },
+    {
+      "category": "local-roots",
+      "char_end": 1508,
+      "char_start": 1436,
+      "flashpoints": [],
+      "quote": "Linda, her husband Scott, and their two teenagers call Lynn Valley home.",
+      "source_type": "campaign_site",
+      "source_url": "https://lindamunro.ca/about-me-2026/"
+    },
+    {
+      "category": "public-office",
+      "char_end": 794,
+      "char_start": 302,
+      "flashpoints": [],
+      "quote": "First elected as a School Trustee in 2021—and topping the polls in both of her campaigns—Linda has worked tirelessly to improve access to quality public education. As a trustee, she acts as liaison to facilitate communication between community members and the school district. As Board Chair from 2023 to 2025, she helped guide district policy, supported families and educators, delivered leadership for trustees, and championed initiatives that put students at the centre of decision-making.",
+      "source_type": "campaign_site",
+      "source_url": "https://lindamunro.ca/about/"
+    },
+    {
+      "category": "public-office",
+      "char_end": 2276,
+      "char_start": 2040,
+      "flashpoints": [],
+      "quote": "School Trustee, Board of Education, North Vancouver School District (2021-2026) Board Chair 2023-2025\n\nTrustee, Board of Trustees, North Vancouver District Public Library (2015-2018) Vice-chair of the Board Chair of Governance Committee",
+      "source_type": "campaign_site",
+      "source_url": "https://lindamunro.ca/about/"
+    },
+    {
+      "category": "career",
+      "char_end": 300,
+      "char_start": 82,
+      "flashpoints": [],
+      "quote": "With more than two decades of experience in communications, public affairs, and community engagement, she has built her career on strengthening relationships, solving complex challenges, and ensuring people feel heard.",
+      "source_type": "campaign_site",
+      "source_url": "https://lindamunro.ca/about/"
+    },
+    {
+      "category": "career",
+      "char_end": 1160,
+      "char_start": 796,
+      "flashpoints": [],
+      "quote": "Linda’s professional background includes senior public affairs roles at Capilano University, where she led external communications, government relations, and issues management. She has also represented major organizations locally and internationally, including Doctors of BC, World Vision in the Asia Pacific region, and global PR agencies in Vancouver and London.",
+      "source_type": "campaign_site",
+      "source_url": "https://lindamunro.ca/about/"
+    },
+    {
+      "category": "education",
+      "char_end": 1740,
+      "char_start": 1510,
+      "flashpoints": [],
+      "quote": "She holds a Master of Arts degree in Journalism from Western University, Bachelor of Arts degrees in Political Studies and Geography from Queen’s University, and a Certificate in Non-Profit Management from Simon Fraser University.",
+      "source_type": "campaign_site",
+      "source_url": "https://lindamunro.ca/about/"
+    },
+    {
+      "category": "community",
+      "char_end": 1434,
+      "char_start": 1162,
+      "flashpoints": [],
+      "quote": "A long-time volunteer and community builder, Linda has served in leadership roles with local schools, libraries, youth organizations, and community service groups. She currently volunteers with Family Services of the North Shore and the Strachan Hartley Legacy Foundation.",
+      "source_type": "campaign_site",
+      "source_url": "https://lindamunro.ca/about/"
+    },
+    {
+      "category": "community",
+      "char_end": 2038,
+      "char_start": 1960,
+      "flashpoints": [],
+      "quote": "Community Award: 2018 Winner of the Good Neighbour Award from Lynn Valley Life",
+      "source_type": "campaign_site",
+      "source_url": "https://lindamunro.ca/about/"
+    },
+    {
+      "category": "community",
+      "char_end": 2388,
+      "char_start": 2278,
+      "flashpoints": [],
+      "quote": "Board member, Capilano Community Services Society (2004-2006) Chair, Community Relations Committee (2004-2006)",
+      "source_type": "campaign_site",
+      "source_url": "https://lindamunro.ca/about/"
+    },
+    {
+      "category": "local-roots",
+      "char_end": 1508,
+      "char_start": 1436,
+      "flashpoints": [],
+      "quote": "Linda, her husband Scott, and their two teenagers call Lynn Valley home.",
+      "source_type": "campaign_site",
+      "source_url": "https://lindamunro.ca/about/"
     }
   ],
   "dnv-council-muri-lisa": [
@@ -3501,6 +3931,24 @@
       "source_url": "https://www.victorianwabuisi.ca"
     },
     {
+      "category": "local-roots",
+      "char_end": 484,
+      "char_start": 22,
+      "flashpoints": [],
+      "quote": "You rent while putting money away, hoping that one day—not too far from now—you’ll have enough for a down payment and won’t have to look far to find a home you can afford. You’ll be able to stay right here in the District of North Vancouver.\n\nI think about this often as I watch friends and family move to places they can afford, even when their first choice would be to stay here—to build their lives here, raise their families here, and eventually retire here.",
+      "source_type": "campaign_site",
+      "source_url": "https://www.victorianwabuisi.ca/platform"
+    },
+    {
+      "category": "local-roots",
+      "char_end": 937,
+      "char_start": 803,
+      "flashpoints": [],
+      "quote": "Our family relies on public transit to get around, and we’re also members of our local Modo car co-op—which we love. For us, it works.",
+      "source_type": "campaign_site",
+      "source_url": "https://www.victorianwabuisi.ca/platform"
+    },
+    {
       "category": "career",
       "char_end": 711,
       "char_start": 516,
@@ -3524,6 +3972,15 @@
       "char_start": 63,
       "flashpoints": [],
       "quote": "My family and I moved to North Vancouver from Winnipeg, and we quickly knew we had found somewhere special. Today, we’re grateful to call Lynn Creek home and to be building our family and future here.",
+      "source_type": "campaign_site",
+      "source_url": "https://www.victorianwabuisi.ca/about"
+    },
+    {
+      "category": "local-roots",
+      "char_end": 912,
+      "char_start": 713,
+      "flashpoints": [],
+      "quote": "When I’m not working or volunteering, you’ll find me reading the North Shore News , running with my group from North Shore Sports Medicine, or discovering a new trail or park with family and friends.",
       "source_type": "campaign_site",
       "source_url": "https://www.victorianwabuisi.ca/about"
     }
@@ -3564,6 +4021,15 @@
       "char_start": 4144,
       "flashpoints": [],
       "quote": "After two decades of award-winning investigative journalism at Global TV, I moved into communications — first with the BC Nurses' Union, then launching my own media relations consultancy in 2016.",
+      "source_type": "campaign_site",
+      "source_url": "https://catherinepopenorthvan.com"
+    },
+    {
+      "category": "community",
+      "char_end": 1363,
+      "char_start": 1112,
+      "flashpoints": [],
+      "quote": "Connecting with young people and staff at Hollyburn Society's Youth Safe House — I'm proud to support this vital resource for youth at risk and all of Hollyburn's work to help our community.\n\nHonoured to participate in the Sḵwx̱wú7mesh Nation Pow Wow.",
       "source_type": "campaign_site",
       "source_url": "https://catherinepopenorthvan.com"
     },
@@ -3651,20 +4117,20 @@
       "source_url": "https://heystephwilson.ca"
     },
     {
-      "category": "community",
-      "char_end": 4087,
-      "char_start": 3542,
-      "flashpoints": [],
-      "quote": "I’ve been an activist around the Lower Mainland for many years. I continue to research and discuss right-wing extremism in BC, but I’ve centred my activism in my own community. In 2023, a Thursday afternoon Freedom Convoy rally on Mountain Highway overpass began to attack 2SLGBTQIA+ rights. I stood on that overpass almost every Thursday for a year and half. I fought for action from the District of North Vancouver and the Province. I co-authored the North Shore Anti-Hate Pledge, which was endorsed by the District of North Vancouver in 2025.",
-      "source_type": "campaign_site",
-      "source_url": "https://heystephwilson.ca"
-    },
-    {
       "category": "local-roots",
       "char_end": 3177,
       "char_start": 3088,
       "flashpoints": [],
       "quote": "I was born and raised in Prince George, BC and spent several summers living in Wells, BC.",
+      "source_type": "campaign_site",
+      "source_url": "https://heystephwilson.ca"
+    },
+    {
+      "category": "community",
+      "char_end": 4087,
+      "char_start": 3542,
+      "flashpoints": [],
+      "quote": "I’ve been an activist around the Lower Mainland for many years. I continue to research and discuss right-wing extremism in BC, but I’ve centred my activism in my own community. In 2023, a Thursday afternoon Freedom Convoy rally on Mountain Highway overpass began to attack 2SLGBTQIA+ rights. I stood on that overpass almost every Thursday for a year and half. I fought for action from the District of North Vancouver and the Province. I co-authored the North Shore Anti-Hate Pledge, which was endorsed by the District of North Vancouver in 2025.",
       "source_type": "campaign_site",
       "source_url": "https://heystephwilson.ca"
     }
@@ -3687,6 +4153,15 @@
       "quote": "As a UBC Electrical Engineering graduate, successful real estate developer at GGIQ Developments, and tech entrepreneur who founded StayRunners, Graham Alexander brings world-class systems-thinking to municipal leadership.",
       "source_type": "official_statement",
       "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+    },
+    {
+      "category": "career",
+      "char_end": 4472,
+      "char_start": 4314,
+      "flashpoints": [],
+      "quote": "The video also features Graham's business partner, Kyle Washington, Executive Chairman of Seaspan , sharing his perspective on the Mayor and District Council.",
+      "source_type": "campaign_site",
+      "source_url": "https://www.grahamgalexander.ca"
     },
     {
       "category": "career",
@@ -3909,6 +4384,15 @@
       "source_url": "https://maxformayor.ca/meet-max.html"
     },
     {
+      "category": "public-office",
+      "char_end": 2882,
+      "char_start": 2688,
+      "flashpoints": [],
+      "quote": "Professionally I have worked in software engineering, owned and run businesses, managed operations, worked within government and regulatory environments, and consulted for other business owners.",
+      "source_type": "campaign_site",
+      "source_url": "https://maxformayor.ca/meet-max.html"
+    },
+    {
       "category": "career",
       "char_end": 164,
       "char_start": 39,
@@ -4066,33 +4550,6 @@
       "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
     },
     {
-      "category": "community",
-      "char_end": 809,
-      "char_start": 20,
-      "flashpoints": [],
-      "quote": "I am Jennifer Branston , a community advocate, volunteer, operations and governance professional, and former Chair of the North Vancouver District Parent Advisory Council (DPAC). For the past eight years, I have worked alongside students, families, educators, school leaders, and community partners to strengthen inclusive education in the North Vancouver School District. Through this work, I have helped remove barriers and expand access to meaningful educational opportunities for all learners. I have also supported families and Parent Advisory Councils (PACs) in navigating the policies, processes, and procedures of the North Vancouver School District (SD44), helping ensure they are informed, engaged, and empowered to contribute meaningfully at both the school and district levels.",
-      "source_type": "campaign_site",
-      "source_url": "https://www.jenniferbranston.ca"
-    },
-    {
-      "category": "community",
-      "char_end": 2850,
-      "char_start": 2059,
-      "flashpoints": [],
-      "quote": "I am Jennifer Branston , a community advocate, volunteer, operations and governance professional, and former Chair of the North Vancouver District Parent Advisory Council (DPAC).\n\nFor the past eight years, I have worked alongside students, families, educators, school leaders, and community partners to strengthen inclusive education in the North Vancouver School District. Through this work, I have helped remove barriers and expand access to meaningful educational opportunities for all learners.\n\nI have also supported families and Parent Advisory Councils (PACs) in navigating the policies, processes, and procedures of the North Vancouver School District (SD44), helping ensure they are informed, engaged, and empowered to contribute meaningfully at both the school and district levels.",
-      "source_type": "campaign_site",
-      "source_url": "https://www.jenniferbranston.ca"
-    },
-    {
-      "category": "community",
-      "char_end": 5545,
-      "char_start": 5353,
-      "flashpoints": [],
-      "quote": "Both professionally and as a volunteer, I have focused on creating supportive, empowering environments that help individuals and organizations grow, flourish, and realize their full potential.",
-      "source_type": "campaign_site",
-      "source_url": "https://www.jenniferbranston.ca"
-    },
-    {
       "category": "career",
       "char_end": 198,
       "char_start": 20,
@@ -4104,9 +4561,63 @@
     {
       "category": "career",
       "char_end": 2237,
-      "char_start": 2059,
+      "char_start": 1929,
       "flashpoints": [],
-      "quote": "I am Jennifer Branston , a community advocate, volunteer, operations and governance professional, and former Chair of the North Vancouver District Parent Advisory Council (DPAC).",
+      "quote": "Jennifer Branston Community Advocate | Volunteer Leader | Operations and Governance Professional | Supporter of Public Education\n\nI am Jennifer Branston , a community advocate, volunteer, operations and governance professional, and former Chair of the North Vancouver District Parent Advisory Council (DPAC).",
+      "source_type": "campaign_site",
+      "source_url": "https://www.jenniferbranston.ca"
+    },
+    {
+      "category": "career",
+      "char_end": 4104,
+      "char_start": 3976,
+      "flashpoints": [],
+      "quote": "Jennifer Branston Community Advocate | Volunteer Leader | Operations and Governance Professional | Supporter of Public Education",
+      "source_type": "campaign_site",
+      "source_url": "https://www.jenniferbranston.ca"
+    },
+    {
+      "category": "career",
+      "char_end": 5545,
+      "char_start": 5353,
+      "flashpoints": [],
+      "quote": "Both professionally and as a volunteer, I have focused on creating supportive, empowering environments that help individuals and organizations grow, flourish, and realize their full potential.",
+      "source_type": "campaign_site",
+      "source_url": "https://www.jenniferbranston.ca"
+    },
+    {
+      "category": "community",
+      "char_end": 809,
+      "char_start": 20,
+      "flashpoints": [],
+      "quote": "I am Jennifer Branston , a community advocate, volunteer, operations and governance professional, and former Chair of the North Vancouver District Parent Advisory Council (DPAC). For the past eight years, I have worked alongside students, families, educators, school leaders, and community partners to strengthen inclusive education in the North Vancouver School District. Through this work, I have helped remove barriers and expand access to meaningful educational opportunities for all learners. I have also supported families and Parent Advisory Councils (PACs) in navigating the policies, processes, and procedures of the North Vancouver School District (SD44), helping ensure they are informed, engaged, and empowered to contribute meaningfully at both the school and district levels.",
+      "source_type": "campaign_site",
+      "source_url": "https://www.jenniferbranston.ca"
+    },
+    {
+      "category": "community",
+      "char_end": 2850,
+      "char_start": 1929,
+      "flashpoints": [],
+      "quote": "Jennifer Branston Community Advocate | Volunteer Leader | Operations and Governance Professional | Supporter of Public Education\n\nI am Jennifer Branston , a community advocate, volunteer, operations and governance professional, and former Chair of the North Vancouver District Parent Advisory Council (DPAC).\n\nFor the past eight years, I have worked alongside students, families, educators, school leaders, and community partners to strengthen inclusive education in the North Vancouver School District. Through this work, I have helped remove barriers and expand access to meaningful educational opportunities for all learners.\n\nI have also supported families and Parent Advisory Councils (PACs) in navigating the policies, processes, and procedures of the North Vancouver School District (SD44), helping ensure they are informed, engaged, and empowered to contribute meaningfully at both the school and district levels.",
+      "source_type": "campaign_site",
+      "source_url": "https://www.jenniferbranston.ca"
+    },
+    {
+      "category": "community",
+      "char_end": 4104,
+      "char_start": 3976,
+      "flashpoints": [],
+      "quote": "Jennifer Branston Community Advocate | Volunteer Leader | Operations and Governance Professional | Supporter of Public Education",
+      "source_type": "campaign_site",
+      "source_url": "https://www.jenniferbranston.ca"
+    },
+    {
+      "category": "community",
+      "char_end": 5545,
+      "char_start": 5353,
+      "flashpoints": [],
+      "quote": "Both professionally and as a volunteer, I have focused on creating supportive, empowering environments that help individuals and organizations grow, flourish, and realize their full potential.",
       "source_type": "campaign_site",
       "source_url": "https://www.jenniferbranston.ca"
     }
@@ -4179,10 +4690,19 @@
     },
     {
       "category": "public-office",
-      "char_end": 1334,
+      "char_end": 991,
       "char_start": 573,
       "flashpoints": [],
-      "quote": "First elected as a School Trustee in the District of North Vancouver in 2011, Cyndi has proudly served four consecutive terms. During her time on the Board of Education, she has:\n\ncontributed to budget oversight, strategic planning, long-term facilities planning, policy development, and governance.\n\nworked collaboratively with trustees, staff, educators, families, and community partners to address enrolment growth,\n\nsupported thoughtful long-term decisions that benefit students today and into the future\n\nCyndi has championed greater transparency in the School District's budget process, helping make financial decisions more accessible and understandable for families and the broader community while supporting responsible stewardship of public resources.",
+      "quote": "First elected as a School Trustee in the District of North Vancouver in 2011, Cyndi has proudly served four consecutive terms. During her time on the Board of Education, she has:\n\ncontributed to budget oversight, strategic planning, long-term facilities planning, policy development, and governance.\n\nworked collaboratively with trustees, staff, educators, families, and community partners to address enrolment growth,",
+      "source_type": "campaign_site",
+      "source_url": "https://www.cyndigerlach.ca/about-me"
+    },
+    {
+      "category": "public-office",
+      "char_end": 1334,
+      "char_start": 1083,
+      "flashpoints": [],
+      "quote": "Cyndi has championed greater transparency in the School District's budget process, helping make financial decisions more accessible and understandable for families and the broader community while supporting responsible stewardship of public resources.",
       "source_type": "campaign_site",
       "source_url": "https://www.cyndigerlach.ca/about-me"
     },
@@ -4196,20 +4716,38 @@
       "source_url": "https://www.cyndigerlach.ca/about-me"
     },
     {
+      "category": "public-office",
+      "char_end": 2994,
+      "char_start": 2635,
+      "flashpoints": [],
+      "quote": "Cyndi continues to contribute to education and governance at the provincial and national levels. She currently serves as Co-Chair of the Autism Alliance of Canada and has served on numerous boards, committees, and advisory groups focused on strengthening governance, advancing inclusive public policy, and improving outcomes for children, youth, and families.",
+      "source_type": "campaign_site",
+      "source_url": "https://www.cyndigerlach.ca/about-me"
+    },
+    {
       "category": "community",
-      "char_end": 334,
+      "char_end": 571,
       "char_start": 68,
       "flashpoints": [],
-      "quote": "For more than 20 years, Cyndi Gerlach has been a dedicated leader in North Vancouver's public education community, serving students, families, and schools through volunteer leadership, PAC involvement, North Vancouver School District committees, and elected service.",
+      "quote": "For more than 20 years, Cyndi Gerlach has been a dedicated leader in North Vancouver's public education community, serving students, families, and schools through volunteer leadership, PAC involvement, North Vancouver School District committees, and elected service. Her commitment to public education began long before she was elected, rooted in the belief that strong schools are built through collaboration, listening, and a shared commitment to ensuring every learner has the opportunity to succeed.",
       "source_type": "campaign_site",
       "source_url": "https://www.cyndigerlach.ca/about-me"
     },
     {
       "category": "community",
       "char_end": 2994,
-      "char_start": 2635,
+      "char_start": 2732,
       "flashpoints": [],
-      "quote": "Cyndi continues to contribute to education and governance at the provincial and national levels. She currently serves as Co-Chair of the Autism Alliance of Canada and has served on numerous boards, committees, and advisory groups focused on strengthening governance, advancing inclusive public policy, and improving outcomes for children, youth, and families.",
+      "quote": "She currently serves as Co-Chair of the Autism Alliance of Canada and has served on numerous boards, committees, and advisory groups focused on strengthening governance, advancing inclusive public policy, and improving outcomes for children, youth, and families.",
+      "source_type": "campaign_site",
+      "source_url": "https://www.cyndigerlach.ca/about-me"
+    },
+    {
+      "category": "local-roots",
+      "char_end": 334,
+      "char_start": 68,
+      "flashpoints": [],
+      "quote": "For more than 20 years, Cyndi Gerlach has been a dedicated leader in North Vancouver's public education community, serving students, families, and schools through volunteer leadership, PAC involvement, North Vancouver School District committees, and elected service.",
       "source_type": "campaign_site",
       "source_url": "https://www.cyndigerlach.ca/about-me"
     }
