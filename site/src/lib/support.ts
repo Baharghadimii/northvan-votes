@@ -12,8 +12,8 @@
 export const BMC_USERNAME = "baharehgh";
 
 export const SUPPORT_BLURB =
-  "Free to use, no ads, no tracking. If it helped you work out your ballot, " +
-  "you can buy me a coffee.";
+  "Free to use, no ads, nothing tracking you around the web. If it helped " +
+  "you work out your ballot, you can buy me a coffee.";
 
 export function supportUrl(): string | null {
   return BMC_USERNAME ? `https://www.buymeacoffee.com/${BMC_USERNAME}` : null;

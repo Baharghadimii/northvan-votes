@@ -37,6 +37,18 @@ northvanvotes.ca {
 	}
 	header @pages Cache-Control "public, max-age=0, must-revalidate"
 
+	# Access log, so there is some idea of what gets read and where readers came
+	# from. Written to stderr, which systemd captures into the journal: no log
+	# file to own, and journald handles rotation. Deliberately minimal — IPs are
+	# truncated by the analysis script, there are no cookies and no client-side
+	# script, and nothing leaves this machine. /methodology says exactly this.
+	log {
+		output stderr
+		format json {
+			time_format iso8601
+		}
+	}
+
 	handle_errors {
 		@notfound expression {err.status_code} == 404
 		rewrite @notfound /404.html
