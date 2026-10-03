@@ -1,0 +1,36 @@
+# Campaign websites that the municipalities' own candidate pages do not list.
+#
+# The District in particular publishes a website link for only some candidates,
+# so people with a real campaign site — including the sitting mayor and three
+# sitting councillors — appeared here with none. That made them look quieter
+# than they are, which is the opposite of what this site is for.
+#
+# Sources are recorded per entry because these did not come from the official
+# page, and /methodology says so.
+#
+#   crawl: false  -> show the link to readers, but do not read it
+#                    (a Facebook page behind a login, or a site in maintenance)
+
+- name: Stephan Nieweler
+  url: https://nieweler.ca
+  source: localelections.ca
+- name: Trey Bell
+  url: https://www.treybell.ca
+  source: localelections.ca
+- name: Betty Forbes
+  url: https://bettyforbes.ca
+  source: localelections.ca
+- name: Herman Mah
+  url: https://www.hermanmah.ca
+  source: localelections.ca
+- name: Catherine Pope
+  url: https://catherinepopenorthvan.com
+  source: localelections.ca
+- name: Tammy Bentz
+  url: https://tammybentz.ca
+  source: reader report, verified 2026-10-02
+
+- name: Mike Little
+  url: https://www.facebook.com/Mike4DNVMayor
+  source: localelections.ca (mikelittle.ca redirects here)
+  crawl: false

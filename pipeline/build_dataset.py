@@ -21,6 +21,7 @@ OUT = ROOT / "data" / "candidates.json"
 POSITIONS = ROOT / "data" / "positions.json"
 BACKGROUND = ROOT / "data" / "background.json"
 CAMPAIGN = ROOT / "data" / "campaign_pages.json"
+EXTRA_SITES = ROOT / "config" / "extra-websites.yaml"
 # The site imports this copy at build time; data/candidates.json stays the
 # canonical, reviewable artefact.
 SITE_DATA = ROOT / "site" / "src" / "data" / "candidates.json"
@@ -86,6 +87,27 @@ def review_flags(candidates: list[Candidate]) -> list[str]:
         for c in candidates
         if c.has_statement and not c.positions and not c.background
     ]
+
+
+def attach_extra_websites(candidates: list[Candidate]) -> None:
+    """Fill in campaign sites the municipalities did not publish.
+
+    Readers were telling me candidates had websites that the site showed as
+    having none, and they were right: the District lists a link for only some
+    candidates.
+    """
+    if not EXTRA_SITES.exists():
+        return
+    import yaml
+
+    entries = yaml.safe_load(EXTRA_SITES.read_text(encoding="utf-8")) or []
+    by_name = {c.name: c for c in candidates}
+    for e in entries:
+        c = by_name.get(e["name"])
+        if c is None:
+            raise BuildError(f"config/extra-websites.yaml names an unknown candidate: {e['name']}")
+        if not c.website:
+            c.website = e["url"]
 
 
 def attach_campaign_pages(candidates: list[Candidate]) -> None:
@@ -249,6 +271,7 @@ def attach_positions(candidates: list[Candidate]) -> None:
 
 def build(refresh: bool = False) -> list[Candidate]:
     candidates = scrape_cnv(refresh=refresh) + scrape_dnv(refresh=refresh)
+    attach_extra_websites(candidates)
     attach_campaign_pages(candidates)
     attach_positions(candidates)
     prune_duplicates(candidates)

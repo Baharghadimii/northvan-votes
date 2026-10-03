@@ -167,7 +167,23 @@ def crawl(website: str, name: str) -> list[Source]:
 
 def main() -> int:
     candidates = json.loads(CANDIDATES.read_text(encoding="utf-8"))
-    with_sites = [c for c in candidates if c.get("website")]
+
+    # Some sites are listed for readers but deliberately not read: a Facebook
+    # page behind a login, or a site in maintenance.
+    import yaml
+
+    cfg = ROOT / "config" / "extra-websites.yaml"
+    no_crawl = set()
+    if cfg.exists():
+        for e in yaml.safe_load(cfg.read_text(encoding="utf-8")) or []:
+            if e.get("crawl") is False:
+                no_crawl.add(e["name"])
+
+    with_sites = [
+        c for c in candidates
+        if c.get("website") and c["name"] not in no_crawl
+        and "facebook.com" not in c["website"]
+    ]
     print(f"{len(with_sites)} candidates listed a campaign site\n")
 
     result: dict[str, list[dict]] = {}

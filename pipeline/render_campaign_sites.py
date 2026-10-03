@@ -119,9 +119,20 @@ def main() -> int:
     existing = json.loads(OUT.read_text(encoding="utf-8")) if OUT.exists() else {}
 
     # Only the ones a plain fetch could not read.
+    import yaml
+
+    cfg = ROOT / "config" / "extra-websites.yaml"
+    no_crawl = set()
+    if cfg.exists():
+        for e in yaml.safe_load(cfg.read_text(encoding="utf-8")) or []:
+            if e.get("crawl") is False:
+                no_crawl.add(e["name"])
+
     targets = [
         c for c in candidates
         if c.get("website") and not existing.get(c["id"])
+        and c["name"] not in no_crawl
+        and "facebook.com" not in c["website"]
     ]
     print(f"{len(targets)} campaign sites need a browser\n")
 

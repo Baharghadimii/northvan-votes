@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Catherine Pope — District of North Vancouver</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --rose:    #d7567f;
+    --gold:    #fdb714;
+    --purple:  #2b143d;
+    --rose-lt: #f2bad0;
+    --gold-lt: #fff0c2;
+    --off-white: #fdf8f4;
+    --white:   #ffffff;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Open Sans', sans-serif; color: var(--purple); background: var(--off-white); overflow-x: hidden; }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 5%;
+    height: 80px;
+    background: var(--purple);
+  }
+  .nav-menu { display: flex; align-items: center; gap: 2rem; }
+  .nav-menu a {
+    color: var(--white); text-decoration: none;
+    font-size: .85rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+    transition: color .2s;
+    position: relative;
+  }
+  .nav-menu a::after {
+    content: ''; position: absolute; bottom: -4px; left: 0; right: 0;
+    height: 2px; background: var(--gold);
+    transform: scaleX(0); transition: transform .2s;
+  }
+  .nav-menu a:hover { color: var(--gold); }
+  .nav-menu a:hover::after { transform: scaleX(1); }
+  .nav-right { display: flex; align-items: center; gap: 1rem; }
+  .nav-social { display: flex; align-items: center; gap: .6rem; }
+  .nav-social a {
+    width: 32px; height: 32px; border-radius: 50%;
+    background: rgba(255,255,255,.15);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--white); text-decoration: none;
+    font-size: .7rem; font-weight: 700;
+    transition: background .2s;
+  }
+  .nav-social a:hover { background: var(--rose); }
+  .nav-social a svg { width: 15px; height: 15px; display: block; }
+  .nav-donate {
+    background: var(--gold); color: var(--purple);
+    font-family: 'Open Sans', sans-serif;
+    font-size: .8rem; font-weight: 700; letter-spacing: .1em;
+    text-transform: uppercase; padding: .5rem 1.4rem;
+    text-decoration: none; transition: background .2s, transform .15s;
+    white-space: nowrap;
+  }
+  .nav-donate:hover { background: #f0a900; transform: translateY(-1px); }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    min-height: 85vh;
+    padding-top: 80px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 80px;
+    display: block;
+    z-index: 0;
+  }
+  .hero-left {
+    position: relative;
+    z-index: 2;
+    width: 40%;
+    padding: 5% 4% 5% 4%;
+    background: linear-gradient(to right, rgba(215,86,127,0.95) 85%, rgba(215,86,127,0));
+  }
+  .hero-right { display: none; }
+  .hero-inline-photo { display: none; }
+
+    /* ── SECTION COMMON ── */
+  section { padding: 4rem 10%; scroll-margin-top: 90px; }
+  .section-label { font-size: .7rem; font-weight: 700; letter-spacing: .25em; text-transform: uppercase; color: var(--rose); margin-bottom: 1rem; }
+  .section-title { font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 800; color: var(--purple); line-height: 1.15; margin-bottom: 2rem; }
+  .section-title em { color: var(--rose); font-style: normal; }
+  .divider { width: 60px; height: 4px; background: var(--gold); margin-bottom: 2.5rem; }
+
+  /* ── ABOUT ── */
+  .about { background: var(--white); overflow: hidden; }
+  .about-float-img {
+    float: right;
+    width: 260px;
+    height: auto;
+    object-fit: cover;
+    object-position: center top;
+    margin: 0 0 1.5rem 2.5rem;
+    display: block;
+  }
+  @media (max-width: 600px) { .about-float-img { float: none; width: 100%; margin: 0 0 1.5rem 0; } }
+  .about-accent-box { position: absolute; bottom: -24px; right: -24px; width: 120px; height: 120px; background: var(--rose); z-index: -1; }
+  .about-text p { font-size: 1rem; line-height: 1.85; color: var(--purple); margin-bottom: 1.2rem; opacity: .85; }
+  .about::after { content: ""; display: table; clear: both; }
+
+  /* ── PLATFORM ── */
+  .platform { background: var(--off-white); }
+  .platform-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 1rem; }
+  .platform-card { background: var(--white); padding: 2.5rem 2rem; position: relative; overflow: hidden; transition: transform .25s, box-shadow .25s; border-bottom: 4px solid transparent; }
+  .platform-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(43,20,61,.1); border-bottom-color: var(--rose); }
+  .platform-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--rose); }
+  .platform-card.accent::before { background: var(--gold); }
+  .platform-card.dark { background: var(--white); }
+  .platform-card.dark .card-title, .platform-card.dark .card-body, .platform-card.dark .card-num { color: var(--purple); }
+  .platform-card.dark::before { background: var(--gold); }
+  .card-num { display: none; }
+  .platform-card.dark .card-num { color: var(--rose-lt); }
+  .card-title { font-size: 1.1rem; font-weight: 700; color: var(--purple); margin-bottom: .75rem; line-height: 1.3; }
+  .card-body { font-size: .9rem; line-height: 1.75; color: var(--purple); opacity: .75; }
+
+  /* ── COMMITMENTS ── */
+  .commitments { background: var(--off-white); color: var(--purple); }
+  .commitments .section-label { color: var(--rose); }
+  .commitments .section-title { color: var(--purple); }
+  .commitments .section-title em { color: var(--rose); }
+  .commitments .divider { background: var(--gold); }
+  .timeline { margin-top: 1rem; display: flex; flex-direction: column; gap: 0; }
+  .timeline-item { display: grid; grid-template-columns: 48px 1fr; gap: 2rem; padding: 2rem 0; border-bottom: 1px solid rgba(43,20,61,.1); align-items: start; }
+  .tl-marker { width: 48px; height: 48px; border-radius: 50%; background: var(--rose); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: .85rem; color: var(--white); flex-shrink: 0; }
+  .timeline-item:nth-child(even) .tl-marker { background: var(--gold); color: var(--purple); }
+  .tl-title { font-size: 1.05rem; font-weight: 700; color: var(--purple); margin-bottom: .4rem; }
+  .tl-body { font-size: .9rem; line-height: 1.75; color: var(--purple); opacity: .7; }
+
+  /* ── CONTACT ── */
+  .contact-section { background: var(--rose); text-align: center; padding: 4rem 10%; }
+  .contact-section .section-label { color: var(--gold); }
+  .contact-section .section-title { color: var(--white); }
+  .contact-section .section-title em { color: var(--gold); }
+  .contact-lead { color: rgba(255,255,255,.85); font-size: 1.05rem; max-width: 520px; margin: 0 auto 2.5rem; line-height: 1.8; }
+  .btn-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  .btn { padding: .9rem 2.2rem; font-family: 'Open Sans', sans-serif; font-size: .85rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; border: none; cursor: pointer; text-decoration: none; transition: transform .15s, background .2s; display: inline-block; }
+  .btn:hover { transform: translateY(-2px); }
+  .btn-primary { background: var(--gold); color: var(--purple); }
+  .btn-primary:hover { background: #f0a900; }
+  .btn-outline { background: transparent; color: var(--white); border: 2px solid var(--white); }
+  .btn-outline:hover { background: rgba(255,255,255,.15); }
+
+  /* ── FOOTER ── */
+  footer { background: var(--purple); padding: 2rem 10%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+  .footer-acknowledgement {
+    width: 100%;
+    font-size: .8rem; line-height: 1.7;
+    color: rgba(255,255,255,.55);
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+    margin-bottom: .5rem;
+    font-style: italic;
+  }
+  .footer-name { color: var(--white); font-weight: 700; font-size: .9rem; }
+  .footer-name span { color: var(--rose); }
+  .footer-legal { color: rgba(255,255,255,.4); font-size: .75rem; }
+  .footer-social { display: flex; gap: 1rem; }
+  .footer-social a { width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,.1); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,.7); text-decoration: none; font-size: .75rem; font-weight: 700; transition: background .2s; }
+  .footer-social a:hover { background: var(--rose); color: var(--white); }
+  .footer-social a svg { width: 17px; height: 17px; display: block; }
+
+  /* ── SCROLL ANIMATIONS ── */
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
+  .reveal-delay-1 { transition-delay: .1s; }
+  .reveal-delay-2 { transition-delay: .2s; }
+  .reveal-delay-3 { transition-delay: .3s; }
+  .reveal-delay-4 { transition-delay: .4s; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left::after { display: none; }
+    .hero-right { min-height: 45vw; }
+    .about-visual { float: none; width: 100%; margin: 0 0 1.5rem 0; }
+    .platform-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 600px) {
+    .platform-grid { grid-template-columns: 1fr; }
+    section { padding: 4rem 6%; }
+    .hero-left { padding: 6rem 6% 4rem; }
+  }
+
+  /* ── ADVOCACY ── */
+  .advocacy {
+    background: var(--purple);
+    color: var(--white);
+  }
+  .advocacy .section-label { color: var(--rose); }
+  .advocacy .section-title { color: var(--purple); }
+  .advocacy .section-title em { color: var(--rose); }
+  .advocacy .divider { background: var(--gold); }
+  .advocacy-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  .advocacy-image-block {
+    position: relative;
+  }
+  .advocacy-img-placeholder {
+    width: 100%;
+    aspect-ratio: 16/10;
+    background: linear-gradient(135deg, #3d1f56 0%, #1a0b2e 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .75rem;
+    color: rgba(255,255,255,.4);
+    font-size: .85rem;
+    font-style: italic;
+    text-align: center;
+    padding: 2rem;
+  }
+  .advocacy-img-placeholder svg {
+    opacity: .3;
+  }
+  .advocacy-source-tag {
+    position: absolute;
+    bottom: -1px; left: 0;
+    background: var(--gold);
+    color: var(--purple);
+    font-size: .7rem; font-weight: 700;
+    letter-spacing: .1em; text-transform: uppercase;
+    padding: .4rem 1rem;
+  }
+  .advocacy-stat-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .advocacy-stat {
+    text-align: center;
+    background: rgba(255,255,255,.06);
+    padding: 1.2rem .75rem;
+  }
+  .advocacy-stat .num {
+    font-size: 1.6rem; font-weight: 800;
+    color: var(--gold);
+    display: block; line-height: 1;
+    margin-bottom: .3rem;
+  }
+  .advocacy-stat .lbl {
+    font-size: .7rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: .08em;
+    color: rgba(255,255,255,.6);
+    line-height: 1.3;
+  }
+  .advocacy-body {
+    font-size: .95rem; line-height: 1.85;
+    color: rgba(255,255,255,.75);
+    margin-bottom: 1.5rem;
+  }
+  .advocacy-pull {
+    border-left: 4px solid var(--rose);
+    padding-left: 1.2rem;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    font-style: italic;
+    color: rgba(255,255,255,.9);
+    line-height: 1.7;
+  }
+  .advocacy-pull cite {
+    display: block;
+    margin-top: .5rem;
+    font-size: .75rem;
+    font-style: normal;
+    font-weight: 700;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: .08em;
+  }
+  .btn-ghost {
+    background: transparent;
+    color: var(--purple);
+    border: 2px solid var(--purple);
+    padding: .75rem 1.8rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: .8rem; font-weight: 700; letter-spacing: .1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    transition: background .2s, color .2s, transform .15s;
+  }
+  .btn-ghost:hover { background: var(--purple); color: var(--white); transform: translateY(-2px); }
+  @media (max-width: 900px) { .advocacy-inner { grid-template-columns: 1fr; } }
+
+  /* ── ADVOCACY ── */
+  .advocacy { background: var(--white); color: var(--purple); }
+  .advocacy .section-label { color: var(--rose); }
+  .advocacy .section-title { color: var(--purple); }
+  .advocacy .section-title em { color: var(--rose); }
+  .advocacy .divider { background: var(--gold); }
+  .advocacy-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+  .advocacy-image-block { position: relative; }
+  .advocacy-img-placeholder {
+    width: 100%; aspect-ratio: 16/10;
+    background: linear-gradient(135deg, #3d1f56 0%, #1a0b2e 100%);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: .75rem; color: rgba(255,255,255,.4); font-size: .85rem; font-style: italic; text-align: center; padding: 2rem;
+  }
+  .advocacy-source-tag {
+    position: absolute; bottom: -1px; left: 0;
+    background: var(--rose); color: var(--white);
+    font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: .4rem 1rem;
+  }
+  .advocacy-stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2rem; }
+  .advocacy-stat { text-align: center; background: var(--off-white); padding: 1.2rem .75rem; border: 1px solid rgba(43,20,61,.08); }
+  .advocacy-stat .num { font-size: 1.6rem; font-weight: 800; color: var(--rose); display: block; line-height: 1; margin-bottom: .3rem; }
+  .advocacy-stat .lbl { font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--purple); opacity: .6; line-height: 1.3; }
+  .advocacy-body { font-size: .95rem; line-height: 1.85; color: var(--purple); opacity: .8; margin-bottom: 1.5rem; }
+  .advocacy-pull { border-left: 4px solid var(--rose); padding-left: 1.2rem; margin-bottom: 1.5rem; font-size: 1rem; font-style: italic; color: var(--purple); line-height: 1.7; }
+  .advocacy-pull cite { display: block; margin-top: .5rem; font-size: .75rem; font-style: normal; font-weight: 700; color: var(--rose); text-transform: uppercase; letter-spacing: .08em; }
+  .btn-ghost {
+    background: transparent; color: var(--gold); border: 2px solid var(--gold);
+    padding: .75rem 1.8rem; font-family: 'Open Sans', sans-serif;
+    font-size: .8rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+    text-decoration: none; display: inline-block; transition: background .2s, color .2s, transform .15s;
+  }
+  .btn-ghost:hover { background: var(--purple); color: var(--white); transform: translateY(-2px); }
+
+  /* ── ENDORSEMENTS ── */
+  .endorsements { background: var(--white); }
+  .endorsements .section-title em { color: var(--rose); }
+  .endorsements-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 1rem; }
+  .endorsement-card {
+    background: var(--off-white); padding: 2rem;
+    display: flex; flex-direction: column; align-items: center; text-align: center;
+    position: relative; transition: transform .25s, box-shadow .25s;
+  }
+  .endorsement-card:hover { transform: translateY(-5px); box-shadow: 0 12px 32px rgba(43,20,61,.1); }
+  .endorsement-card::before {
+    content: '\201C'; font-size: 5rem; line-height: 1; color: var(--rose); opacity: .2;
+    position: absolute; top: .5rem; left: 1.2rem; font-family: Georgia, serif;
+  }
+  .endorsee-photo-placeholder {
+    width: 90px; height: 90px; border-radius: 50%;
+    border: 4px solid var(--rose); margin-bottom: 1.2rem;
+    background: linear-gradient(135deg, var(--rose-lt), var(--gold-lt));
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    color: var(--rose); font-size: .65rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: .05em; text-align: center; line-height: 1.3;
+  }
+  .endorsement-quote { font-size: .9rem; line-height: 1.75; color: var(--purple); opacity: .8; font-style: italic; margin-bottom: 1.2rem; flex: 1; }
+  .endorsee-name { font-size: .9rem; font-weight: 700; color: var(--purple); margin-bottom: .2rem; }
+  .endorsee-title { font-size: .75rem; color: var(--rose); font-weight: 600; text-transform: uppercase; letter-spacing: .08em; }
+  @media (max-width: 900px) { .advocacy-inner { grid-template-columns: 1fr; } .endorsements-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { .endorsements-grid { grid-template-columns: 1fr; } }
+
+  /* ── IN THE COMMUNITY ── */
+  .community { background: var(--off-white); }
+  .community .section-title em { color: var(--rose); }
+  .community-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 1.5rem;
+    margin-top: 1rem;
+  }
+  .community-item {
+    background: var(--white);
+    overflow: hidden;
+    transition: transform .25s, box-shadow .25s;
+  }
+  .community-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(43,20,61,.12);
+  }
+  .community-item img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+  .community-caption {
+    padding: 1rem 1.2rem 1.2rem;
+    border-top: 3px solid var(--rose);
+  }
+  .community-caption h4 {
+    font-size: .85rem; font-weight: 700;
+    color: var(--purple); margin-bottom: .35rem;
+  }
+  .community-caption p {
+    font-size: .8rem; line-height: 1.6;
+    color: var(--purple); opacity: .7;
+  }
+  @media (max-width: 900px) { .community-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) {
+    .community-grid { grid-template-columns: 1fr 1fr; gap: 0 .8rem; }
+    .community-caption { padding: .7rem .8rem .9rem; }
+    .community-caption h4 { font-size: .78rem; }
+    .community-caption p { font-size: .72rem; line-height: 1.5; }
+  }
+
+  .advocacy-media-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .advocacy-media-item {
+    background: var(--off-white);
+    overflow: hidden;
+    border: 1px solid rgba(43,20,61,.08);
+  }
+  .advocacy-media-item img {
+    width: 100%; display: block;
+    object-fit: cover;
+  }
+  .advocacy-media-label {
+    font-size: .7rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: .1em;
+    color: var(--rose); padding: .6rem .8rem;
+    background: var(--off-white);
+  }
+  @media (max-width: 600px) { .advocacy-media-grid { grid-template-columns: 1fr; } }
+
+  .hero-subtitle {
+    font-size: 1rem; font-weight: 700;
+    letter-spacing: .15em; text-transform: uppercase;
+    color: var(--white); opacity: .9;
+    margin-top: .4rem; margin-bottom: 1.2rem;
+  }
+
+  /* ── TAGLINE BAR ── */
+  .tagline-bar {
+    background: var(--gold);
+    padding: 1.4rem 10%;
+    text-align: center;
+  }
+  .tagline-bar p {
+    font-size: 1.15rem;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--purple);
+    margin: 0;
+    letter-spacing: .02em;
+  }
+
+  .advocacy-photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .advocacy-photo-item img {
+    width: 100%; display: block;
+    object-fit: cover;
+    aspect-ratio: 4/3;
+  }
+  .advocacy-text-block { max-width: 860px; }
+  @media (max-width: 700px) { .advocacy-photo-grid { grid-template-columns: 1fr; } }
+
+  .advocacy-photo-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .advocacy-photo-grid-2 .advocacy-photo-item img {
+    width: 100%; display: block;
+    object-fit: cover;
+    aspect-ratio: 4/3;
+  }
+  .advocacy-bullets {
+    list-style: none;
+    padding: 0; margin: 0 0 1.5rem;
+  }
+  .advocacy-bullets li {
+    font-size: .95rem; line-height: 1.8;
+    color: var(--purple); opacity: .85;
+    padding: .5rem 0 .5rem 1.5rem;
+    position: relative;
+    border-bottom: 1px solid rgba(43,20,61,.08);
+  }
+  .advocacy-bullets li::before {
+    content: '';
+    position: absolute; left: 0; top: 1.1rem;
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--rose);
+  }
+  @media (max-width: 700px) { .advocacy-photo-grid-2 { grid-template-columns: 1fr; } }
+
+  .platform-card img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    display: block;
+    margin: -2.5rem -2rem 1.5rem -2rem;
+    width: calc(100% + 4rem);
+  }
+
+  /* ── DONATE ── */
+  .donate-section {
+    background: var(--purple);
+    text-align: center;
+    padding: 4rem 10%;
+  }
+  .donate-section .section-label { color: var(--gold); }
+  .donate-section .section-title { color: var(--white); }
+  .donate-section .section-title em { color: var(--rose); }
+  .donate-lead {
+    color: rgba(255,255,255,.8);
+    font-size: 1.05rem; line-height: 1.8;
+    max-width: 560px; margin: 0 auto 2.5rem;
+  }
+  .donate-amount-row {
+    display: flex; justify-content: center; gap: 1rem;
+    flex-wrap: wrap; margin-bottom: 2rem;
+  }
+  .donate-amount {
+    background: rgba(255,255,255,.1);
+    color: var(--white);
+    border: 2px solid rgba(255,255,255,.3);
+    font-family: 'Open Sans', sans-serif;
+    font-size: .9rem; font-weight: 700;
+    padding: .6rem 1.4rem;
+    cursor: pointer; text-decoration: none;
+    transition: background .2s, border-color .2s;
+  }
+  .donate-amount:hover {
+    background: var(--rose);
+    border-color: var(--rose);
+  }
+  .etransfer-box {
+    background: var(--gold);
+    border: 2px solid var(--gold);
+    padding: 2rem 3rem;
+    display: inline-block;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .etransfer-label {
+    font-size: .8rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: .12em;
+    color: var(--purple); margin-bottom: .5rem;
+  }
+  .etransfer-email {
+    font-size: 1.5rem; font-weight: 800;
+    color: var(--purple); margin-bottom: .75rem;
+    letter-spacing: .02em;
+  }
+  .etransfer-note {
+    font-size: .8rem; color: rgba(43,20,61,.75);
+    line-height: 1.6;
+    text-align: center;
+    width: 100%;
+    display: block;
+  }
+
+  .community-photo-placeholder {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background: linear-gradient(135deg, var(--rose-lt), var(--gold-lt));
+    display: flex; align-items: center; justify-content: center;
+    color: var(--rose); font-size: .85rem; font-weight: 600;
+    font-style: italic; letter-spacing: .05em;
+  }
+
+  .endorsee-photo-real {
+    width: 90px; height: 90px;
+    border-radius: 50%;
+    border: 4px solid var(--rose);
+    margin-bottom: 1.2rem;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    flex-shrink: 0;
+  }
+
+  /* ── MOTIONS ── */
+  .motions-section { background: var(--off-white); }
+  .motions-section .section-title em { color: var(--rose); }
+  .motions-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 1rem;
+    max-width: 700px;
+  }
+  .motion-item {
+    padding: .75rem 0;
+    border-bottom: 1px solid rgba(43,20,61,.08);
+    font-size: .9rem; font-weight: 700;
+    line-height: 1.6;
+    color: var(--purple);
+    display: flex; align-items: flex-start; gap: .75rem;
+  }
+  .motion-item::before {
+    content: '';
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--rose); flex-shrink: 0; margin-top: .45rem;
+  }
+  @media (max-width: 700px) { .motions-grid { grid-template-columns: 1fr; } }
+
+  .motion-parent {
+    padding: .75rem 0 .25rem;
+    border-bottom: none;
+    font-size: .9rem; font-weight: 700;
+    color: var(--purple);
+    display: flex; align-items: flex-start; gap: .75rem;
+  }
+  .motion-parent::before {
+    content: '';
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--rose); flex-shrink: 0; margin-top: .45rem;
+  }
+  .motion-sub {
+    padding: .3rem 0 .3rem 1.5rem;
+    border-bottom: none;
+    font-size: .85rem; line-height: 1.5;
+    color: var(--purple); opacity: .75;
+    display: flex; align-items: flex-start; gap: .6rem;
+  }
+  .motion-sub::before {
+    content: '';
+    width: 5px; height: 5px; border-radius: 50%;
+    background: var(--gold); flex-shrink: 0; margin-top: .45rem;
+  }
+  .motion-sub-group {
+    border-bottom: 1px solid rgba(43,20,61,.08);
+    padding-bottom: .5rem; margin-bottom: .25rem;
+  }
+
+  /* ── MOBILE PORTRAIT: NAV + DONATE FIXES ── */
+  @media (max-width: 600px) {
+    nav { flex-wrap: wrap; height: auto; padding: .5rem 4%; row-gap: .5rem; gap: .5rem; }
+    .nav-menu { order: 1; gap: .8rem; min-width: 0; }
+    .nav-menu a { font-size: .62rem; letter-spacing: .03em; white-space: nowrap; }
+    .nav-right { display: contents; }
+    .nav-donate { order: 2; font-size: .62rem; padding: .45rem .8rem; letter-spacing: .04em; }
+    .nav-social { order: 3; flex-basis: 100%; width: 100%; justify-content: center; gap: 1rem; }
+    .nav-social a { width: 30px; height: 30px; }
+    .hero { padding-top: 108px; }
+
+    .donate-section { padding: 3rem 6%; }
+    .etransfer-box {
+      padding: 1.5rem 1.2rem;
+      max-width: 100%;
+      box-sizing: border-box;
+      display: block;
+    }
+    .etransfer-email {
+      font-size: 1.05rem;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+  }
+</style>
+<!-- NAV -->
+<nav>
+  <div class="nav-menu">
+    <a href="#about">About</a>
+    <a href="#priorities">Priorities</a>
+    <a href="#motions">Track Record</a>
+  </div>
+  <div class="nav-right">
+    <div class="nav-social">
+      <a href="https://www.instagram.com/pope.catherine" target="_blank" title="Instagram" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.9.4-1.3.8-.4.4-.6.8-.8 1.3-.2.4-.3 1-.4 2.1-.1 1.2-.1 1.6-.1 3.5s0 2.3.1 3.5c.1 1.1.2 1.7.4 2.1.2.5.4.9.8 1.3.4.4.8.6 1.3.8.4.2 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.9-.4 1.3-.8.4-.4.6-.8.8-1.3.2-.4.3-1 .4-2.1.1-1.2.1-1.6.1-3.5s0-2.3-.1-3.5c-.1-1.1-.2-1.7-.4-2.1-.2-.5-.4-.9-.8-1.3-.4-.4-.8-.6-1.3-.8-.4-.2-1-.3-2.1-.4-1.2-.1-1.6-.1-4.7-.1zm0 3.1a4.9 4.9 0 110 9.8 4.9 4.9 0 010-9.8zm0 8.1a3.2 3.2 0 100-6.4 3.2 3.2 0 000 6.4zm6.2-8.3a1.1 1.1 0 11-2.3 0 1.1 1.1 0 012.3 0z"/></svg></a>
+      <a href="https://www.facebook.com/catherine.pope.9081" target="_blank" title="Facebook" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.3-1.5 1.6-1.5h1.6V3.6c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.4H7.3V13H10v8h3.5z"/></svg></a>
+      <a href="https://x.com/globalpope" target="_blank" title="X" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 3h3.1l-6.7 7.6L21.8 21h-6.2l-4.8-6.3L5.3 21H2.2l7.1-8.2L2 3h6.3l4.4 5.8L17.5 3zm-1.1 16.1h1.7L7.6 4.8H5.8l10.6 14.3z"/></svg></a>
+      <a href="https://www.linkedin.com/in/cpcomms/" target="_blank" title="LinkedIn" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.9 8.4H3.6V21h3.3V8.4zM5.3 3a1.9 1.9 0 100 3.9 1.9 1.9 0 000-3.9zM20.4 21v-6.9c0-3.3-1.8-4.9-4.1-4.9-1.9 0-2.8 1.1-3.2 1.8V8.4H9.8V21h3.3v-6.6c0-.4 0-.7.1-1 .3-.7.9-1.4 1.9-1.4 1.4 0 1.9 1 1.9 2.6V21h3.4z"/></svg></a>
+    </div>
+    <a href="#donate" class="nav-donate">Donate</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <img src="images/hero-catherine.jpg" alt="Catherine Pope" class="hero-bg" />
+  <div class="hero-left">
+<h1 class="hero-name">
+      Catherine
+      <span class="highlight">Pope</span>
+    </h1>
+    <p class="hero-subtitle">District of North Vancouver Councillor</p>
+
+  </div>
+</section>
+
+
+<!-- TAGLINE BAR -->
+<div class="tagline-bar">
+  <p>Working hard. Delivering results. From protecting taxpayers and building affordable housing to championing infrastructure, climate action, parks and recreation, I'm committed to practical solutions that make North Van a better place.</p>
+</div>
+
+<!-- COMMUNITY -->
+<section class="community" id="community">
+  <p class="section-label reveal">Working for You</p>
+  <h2 class="section-title reveal reveal-delay-1">In the <em>Community</em></h2>
+  <div class="divider reveal reveal-delay-2"></div>
+  <div class="community-grid">
+    <div class="community-item reveal reveal reveal-delay-1">
+      <img src="images/speaking-up-for-taxpayers.jpg" alt="Speaking up for taxpayers" loading="lazy" />
+      <div class="community-caption">
+        <h4>Speaking up for taxpayers</h4>
+        <p>Leading the call for accountability, and a Public Inquiry into the massive cost overruns at the North Shore Wastewater Treatment Plant.</p>
+      </div>
+    </div>
+    <div class="community-item reveal reveal reveal-delay-2">
+      <img src="images/affordable-housing.jpg" alt="Affordable housing" loading="lazy" />
+      <div class="community-caption">
+        <h4>Affordable housing</h4>
+        <p>Advocating for more affordable housing for seniors, families, essential workers, and people experiencing homelessness.</p>
+      <a href="https://www.northshoredailypost.com/coun-catherine-pope-wants-affordable-housing-above-firehall-in-lynn-valley/" target="_blank" style="font-size:.75rem;font-weight:700;color:var(--rose);text-transform:uppercase;letter-spacing:.08em;text-decoration:none;">Read more →</a>
+      </div>
+    </div>
+    <div class="community-item reveal reveal-delay-3">
+      <img src="images/recreation-for-everyone.jpg" alt="Recreation for everyone" loading="lazy" />
+      <div class="community-caption">
+        <h4>Recreation for everyone</h4>
+        <p>New pickleball courts, sports fields, playgrounds and other community amenities that improve the quality of life for residents of all ages.</p>
+      </div>
+    </div>
+    <div class="community-item reveal reveal-delay-1">
+      <img src="images/out-in-the-community.png" alt="Out in the community" loading="lazy" />
+      <div class="community-caption">
+        <h4>A family-friendly North Van</h4>
+        <p>From safe, connected mobility routes to parks and recreation, I'm working to make North Van a place where young families can thrive.</p>
+      </div>
+    </div>
+    <div class="community-item reveal reveal reveal-delay-3">
+      <img src="images/kirkstone-park-toddler-play-structure.jpg" alt="Kirkstone Park Toddler Play Structure" loading="lazy" />
+      <div class="community-caption">
+        <h4>Kirkstone Park Toddler Play Structure</h4>
+        <p>Lynn Valley Parents came to me with a problem – there was nowhere for toddlers to play at Kirkstone Park. This spring, we celebrated a new play structure.</p>
+      </div>
+    </div>
+    <div class="community-item reveal reveal reveal-delay-1">
+      <img src="images/capilano-university.jpg" alt="Capilano University" loading="lazy" />
+      <div class="community-caption">
+        <h4>Capilano University</h4>
+        <p>Volunteering at CapU's annual student welcome breakfast. We need more student housing to support the University's future, while helping free up affordable rental housing in the community.</p>
+      </div>
+    </div>
+    <div class="community-item reveal reveal reveal-delay-2">
+      <img src="images/hollyburn-society.jpg" alt="Hollyburn Society" loading="lazy" />
+      <div class="community-caption">
+        <h4>Hollyburn Society</h4>
+        <p>Connecting with young people and staff at Hollyburn Society's Youth Safe House — I'm proud to support this vital resource for youth at risk and all of Hollyburn's work to help our community.</p>
+      </div>
+    </div>
+    <div class="community-item reveal reveal reveal-delay-2">
+      <img src="images/reconciliation.jpg" alt="Reconciliation" loading="lazy" />
+      <div class="community-caption">
+        <h4>Reconciliation</h4>
+        <p>Honoured to participate in the Sḵwx̱wú7mesh Nation Pow Wow. I'm committed to reconciliation and strengthening relationships with First Nations.</p>
+      </div>
+    </div>
+    <div class="community-item reveal reveal reveal-delay-3">
+      <img src="images/anti-hate-pledge.jpg" alt="Anti-Hate Pledge" loading="lazy" />
+      <div class="community-caption">
+        <h4>Anti-Hate Pledge</h4>
+        <p>Celebrating the Anti-Hate Pledge that I collaborated on with the 2SLGBTQ+ community. It received unanimous support from Council.</p>
+      </div>
+    </div>
+    <div class="community-item reveal reveal reveal-delay-1">
+      <img src="images/blueridge-good-neighbour-day.jpg" alt="Blueridge Good Neighbour Day" loading="lazy" />
+      <div class="community-caption">
+        <h4>Blueridge Good Neighbour Day</h4>
+        <p>Strong neighbourhoods are the foundation of a strong community — I love celebrating the connections that make DNV such a special place to live.</p>
+      </div>
+    </div>
+    <div class="community-item reveal reveal reveal-delay-3">
+      <img src="images/active-transportation.jpg" alt="Active Transportation" loading="lazy" />
+      <div class="community-caption">
+        <h4>Active Transportation</h4>
+        <p>I took up e-biking at 65. It's fun, healthy, and can be faster than a car to get around locally. Plus I don't have to pay for parking! While not everyone can ride, scooter or walk, safe multi-use paths provide more transportation choices.</p>
+      </div>
+    </div>
+    <div class="community-item reveal reveal reveal-delay-3">
+      <img src="images/standing-up-for-pride.jpg" alt="Standing Up for Pride" loading="lazy" />
+      <div class="community-caption">
+        <h4>Standing Up for Pride</h4>
+        <p>I joined residents on the Mountain Highway overpass to stand up for Pride and inclusion in our community.</p>
+      </div>
+    </div>
+
+    <div class="community-item reveal reveal reveal-delay-3">
+      <img src="images/protecting-our-urban-tree-canopy.jpg" alt="Protecting Our Urban Tree Canopy" loading="lazy" />
+      <div class="community-caption">
+        <h4>Protecting Our Urban Tree Canopy</h4>
+        <p>I'm a strong advocate for protecting DNV's mature trees — they clean our air, cool our streets, and define the character of our neighbourhoods.</p>
+      </div>
+    </div>
+
+    <div class="community-item reveal reveal reveal-delay-3">
+      <img src="images/elevate-senior-service-sector-forum.jpg" alt="Elevate: Senior Service Sector Forum" loading="lazy" />
+      <div class="community-caption">
+        <h4>Seniors</h4>
+        <p>At a CapU Seniors Forum with former Seniors Advocate Isobel Mackenzie. Seniors urgently need more care homes and affordable housing so they can age in place, in the communities they love.</p>
+      </div>
+    </div>
+    <div class="community-item reveal reveal reveal-delay-1">
+      <img src="images/north-shore-young-civic-forum-2025.jpg" alt="North Shore Young Civic Forum 2025" loading="lazy" />
+      <div class="community-caption">
+        <h4>North Shore Young Civic Forum 2025</h4>
+        <p>Hosting the North Shore Young Civic Forum at DNV Council Chambers — inspiring the next generation of community leaders.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADVOCACY -->
+<section class="advocacy" id="priorities">
+  <p class="section-label reveal">Wastewater Treatment Plant</p>
+  <h2 class="section-title reveal reveal-delay-1">Speaking out for <em>taxpayers</em></h2>
+  <div class="divider reveal reveal-delay-2"></div>
+
+  <div class="advocacy-photo-grid reveal reveal-delay-1">
+    <div class="advocacy-photo-item">
+      <img src="images/motion-for-auditor-general-at-metro-van-passed.jpg" alt="Motion for Auditor General at Metro Van passed" />
+    </div>
+    <div class="advocacy-photo-item">
+      <img src="images/speaking-at-ubcm.jpg" alt="Speaking at UBCM" />
+    </div>
+    <div class="advocacy-photo-item">
+      <img src="images/pope-wastewater-inquiry.png" alt="Councillor Pope renews call for provincial inquiry into North Shore Wastewater Treatment Plant" />
+    </div>
+  </div>
+
+  <div class="advocacy-text-block reveal reveal-delay-2">
+    <p class="advocacy-body">In March 2024, I sounded the alarm about the massive cost overruns on the North Shore Wastewater Treatment Plant. I led the charge for a Public Inquiry, deferred utility bills for NS taxpayers, an independent auditor, and greater transparency and accountability at Metro Vancouver through countless media interviews.</p>
+    <blockquote class="advocacy-pull">
+      'The $235 million settlement must be used to reduce the financial burden on North Shore taxpayers impacted by these massive cost overruns.'
+      <cite>– Councillor Catherine Pope</cite>
+    </blockquote>
+    <a href="https://www.nsnews.com/in-the-community/north-vancouver-district-asks-province-for-public-inquiry-on-sewage-plant-debacle-9777554" target="_blank" class="btn btn-primary reveal reveal-delay-3">Read the North Shore News Coverage →</a>
+  </div>
+</section>
+
+<!-- TRANSPORTATION -->
+<section class="advocacy">
+  <p class="section-label reveal">Transportation</p>
+  <h2 class="section-title reveal reveal-delay-1">Getting <em>North Van</em> Moving!</h2>
+  <div class="divider reveal reveal-delay-2"></div>
+
+  <div class="advocacy-photo-grid-2 reveal reveal-delay-1">
+    <div class="advocacy-photo-item">
+      <img src="images/cyclist-and-transit-on-the-north-shore.jpg" alt="Cyclist and transit on the North Shore" />
+    </div>
+    <div class="advocacy-photo-item">
+      <img src="images/highway-1-traffic-congestion-on-the-north-shore.jpg" alt="Highway 1 traffic congestion on the North Shore" />
+    </div>
+
+    <div class="advocacy-photo-item">
+      <img src="images/r2-rapidbus-on-marine-drive.jpg" alt="R2 RapidBus on Marine Drive" />
+    </div>
+    </div>
+
+  <div class="advocacy-text-block reveal reveal-delay-2">
+    <p class="advocacy-body">Congestion from Highway 1 and the Ironworkers Bridge isn't just frustrating—it clogs local streets, hurts businesses, and reduces our quality of life. We need a new bridge with SkyTrain, immediate improvements to east-west connections and significant investment in infrastructure. Our advocacy has already delivered more transit service, and safer, connected routes for people walking, riding, and taking scooters – but much more needs to be done.</p>
+  </div>
+</section>
+
+<!-- HOUSING -->
+<section class="advocacy">
+  <p class="section-label reveal">Housing</p>
+  <h2 class="section-title reveal reveal-delay-1">Building a more <em>affordable North Van</em></h2>
+  <div class="divider reveal reveal-delay-2"></div>
+
+  <div class="advocacy-photo-grid reveal reveal-delay-1">
+    <div class="advocacy-photo-item">
+      <img src="images/hollybrook-affordable-housing-development.jpg" alt="Hollybrook affordable housing development" />
+    </div>
+    <div class="advocacy-photo-item">
+      <img src="images/global-news-interview-on-housing-and-homelessness.jpg" alt="Global News interview on housing and homelessness" />
+    </div>
+    <div class="advocacy-photo-item">
+      <img src="images/ns-news-lynnmour-affordable-housing-vote.jpg" alt="NS News: Lynnmour affordable housing vote" />
+    </div>
+  </div>
+
+  <div class="advocacy-text-block reveal reveal-delay-2">
+    <p class="advocacy-body">Advocating to the Province has helped bring new affordable housing for seniors, low income residents, women fleeing violence and people experiencing homelessness in our community. I support rental and non-market projects for students, first responders, care givers, teachers and other workers. We're also modernizing outdated bylaws so families can build homes for multi-generational living.</p>
+    <blockquote class="advocacy-pull">
+      "More affordable housing for the District of North Vancouver."
+      <cite>— Councillor Catherine Pope</cite>
+    </blockquote>
+    <a href="https://www.nsnews.com/local-news/district-of-north-van-council-votes-6-1-for-lynnmour-affordable-housing-7794853" target="_blank" class="btn btn-primary reveal reveal-delay-3">Read the North Shore News Coverage →</a>
+  </div>
+</section>
+
+<!-- MOTIONS -->
+<section class="motions-section" id="motions">
+  <p class="section-label reveal">Track Record - Motions</p>
+  <h2 class="section-title reveal reveal-delay-1">Initiatives I've <em>led</em></h2>
+  <div class="divider reveal reveal-delay-2"></div>
+  <div class="motions-grid reveal reveal-delay-2">
+        <div class="motion-sub-group">
+          <div class="motion-parent">North Shore Wastewater Treatment Plant</div>
+          <div class="motion-sub">Public Inquiry (2024)</div>
+          <div class="motion-sub">Deferred utility bills for North Shore residents</div>
+          <div class="motion-sub">Independent Auditor</div>
+        </div>
+        <div class="motion-item">Affordable housing on church lands</div>
+        <div class="motion-item">Affordable housing within new public infrastructure — fire halls</div>
+        <div class="motion-item">Allocating Community Amenity Contributions (CACs) from developers to the Affordable Housing Fund</div>
+        <div class="motion-item">Safer streets around Delbrook Community Recreation Centre</div>
+        <div class="motion-item">Lynn Valley Youth Centre funding</div>
+        <div class="motion-item">Anti-Hate Pledge</div>
+        <div class="motion-item"><a href="https://www.dnv.org/page/council-voting-decisions" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">Council's voting record website</a></div>
+        <div class="motion-item">Advocating to the Province for improved transportation and affordability</div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <p class="section-label reveal">About</p>
+  <h2 class="section-title reveal reveal-delay-1">About <em>Me</em></h2>
+  <div class="divider reveal reveal-delay-2"></div>
+  <div class="about-text reveal reveal-delay-2">
+    <img src="images/catherine-about.jpeg" alt="Catherine Pope on the North Shore waterfront with her daughter" class="about-float-img" loading="lazy" />
+    <p>I grew up on the North Shore and raised my daughter here in this community I love. A former soccer mom and avid pickleball player, I'm passionate about the outdoors and protecting our environment. After two decades of award-winning investigative journalism at Global TV, I moved into communications — first with the BC Nurses' Union, then launching my own media relations consultancy in 2016.</p>
+    <p>I've long volunteered for vulnerable children and youth, serving on the boards of the Disability Foundation and the Victoria Foundation Adoption Committee, the Braemar PAC, and supporting the North Van homeless count.</p>
+    <p>I feel blessed to raise my family here on the unceded territories of the Sḵwx̱wú7mesh (Squamish) and səlilwətaɬ (Tsleil-Waututh) Nations, surrounded by nature, caring people, and a strong sense of community.</p>
+  </div>
+</section>
+
+<!-- DONATE -->
+<section class="donate-section" id="donate">
+  <p class="section-label reveal">Donate</p>
+  <h2 class="section-title reveal reveal-delay-1">Help build a better <em>North Van</em></h2>
+  <p class="donate-lead reveal reveal-delay-2">Every contribution, no matter the amount, is sincerely appreciated.</p>
+  <div class="etransfer-box reveal reveal-delay-3">
+    <p class="etransfer-label">Donations may be made by direct-deposit e-transfer to:</p>
+    <p class="etransfer-email">popecampaign@gmail.com</p>
+    <p class="etransfer-note">Thank you for your support!</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="transparency">
+  <p class="section-label reveal">Get Involved</p>
+  <h2 class="section-title reveal reveal-delay-1">Let's Connect</h2>
+  <p class="contact-lead reveal reveal-delay-2">Whether you want to volunteer, put up a lawn sign, or just stay in touch — I'd love to hear from you.</p>
+  <div class="btn-row reveal reveal-delay-3">
+    <a href="mailto:popecampaign@gmail.com" class="btn btn-primary">Contact Catherine</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-acknowledgement">
+    We respectfully acknowledge the original peoples of these lands and waters, specifically the səlilwətaɬ (Tsleil-Waututh), Sḵwx̱wú7mesh Úxwumixw (Squamish), and xʷməθkʷəy̓əm (Musqueam), on whose unceded ancestral lands the District of North Vancouver is located. We value the opportunity to learn, share, and serve our community on these unceded lands.
+  </div>
+  <div class="footer-name">Catherine <span>Pope</span> · DNV Council 2026</div>
+  <div class="footer-legal">Authorized by Catherine Pope, Financial Agent.</div>
+  <div class="footer-social">
+    <a href="https://www.instagram.com/pope.catherine" target="_blank" title="Instagram" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.9.4-1.3.8-.4.4-.6.8-.8 1.3-.2.4-.3 1-.4 2.1-.1 1.2-.1 1.6-.1 3.5s0 2.3.1 3.5c.1 1.1.2 1.7.4 2.1.2.5.4.9.8 1.3.4.4.8.6 1.3.8.4.2 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.9-.4 1.3-.8.4-.4.6-.8.8-1.3.2-.4.3-1 .4-2.1.1-1.2.1-1.6.1-3.5s0-2.3-.1-3.5c-.1-1.1-.2-1.7-.4-2.1-.2-.5-.4-.9-.8-1.3-.4-.4-.8-.6-1.3-.8-.4-.2-1-.3-2.1-.4-1.2-.1-1.6-.1-4.7-.1zm0 3.1a4.9 4.9 0 110 9.8 4.9 4.9 0 010-9.8zm0 8.1a3.2 3.2 0 100-6.4 3.2 3.2 0 000 6.4zm6.2-8.3a1.1 1.1 0 11-2.3 0 1.1 1.1 0 012.3 0z"/></svg></a>
+    <a href="https://www.facebook.com/catherine.pope.9081" target="_blank" title="Facebook" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.3-1.5 1.6-1.5h1.6V3.6c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.4H7.3V13H10v8h3.5z"/></svg></a>
+    <a href="https://x.com/globalpope" target="_blank" title="X" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 3h3.1l-6.7 7.6L21.8 21h-6.2l-4.8-6.3L5.3 21H2.2l7.1-8.2L2 3h6.3l4.4 5.8L17.5 3zm-1.1 16.1h1.7L7.6 4.8H5.8l10.6 14.3z"/></svg></a>
+    <a href="https://www.linkedin.com/in/cpcomms/" target="_blank" title="LinkedIn" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.9 8.4H3.6V21h3.3V8.4zM5.3 3a1.9 1.9 0 100 3.9 1.9 1.9 0 000-3.9zM20.4 21v-6.9c0-3.3-1.8-4.9-4.1-4.9-1.9 0-2.8 1.1-3.2 1.8V8.4H9.8V21h3.3v-6.6c0-.4 0-.7.1-1 .3-.7.9-1.4 1.9-1.4 1.4 0 1.9 1 1.9 2.6V21h3.4z"/></svg></a>
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

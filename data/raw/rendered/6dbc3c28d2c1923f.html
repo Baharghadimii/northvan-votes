@@ -1,0 +1,85 @@
+<!DOCTYPE html><html lang="en"><head>
+  <script>
+   (function () {
+  var proto = XMLHttpRequest.prototype;
+  var open = proto.open, setRequestHeader = proto.setRequestHeader, send = proto.send;
+  var TOKEN_KEY = 'base44_access_token';
+  var storedTokenHeader = function () {
+    try { return 'Bearer ' + localStorage.getItem(TOKEN_KEY); } catch (e) { return null; }
+  };
+  var forgetStoredToken = function () {
+    try { localStorage.removeItem(TOKEN_KEY); localStorage.removeItem('token'); } catch (e) {}
+  };
+
+  proto.open = function (method, url) {
+    this.__b44IsAuthCheck = /\/entities\/User\/me(\?|$)/.test(url);
+    return open.apply(this, arguments);
+  };
+
+  proto.setRequestHeader = function (name, value) {
+    if (this.__b44IsAuthCheck && name.toLowerCase() === 'authorization' && value === storedTokenHeader()) {
+      this.__b44SentToken = value;
+    }
+    return setRequestHeader.call(this, name, value);
+  };
+
+  proto.send = function () {
+    this.addEventListener('loadend', function () {
+      var rejectedTokenStillStored = this.status === 401 && this.__b44SentToken === storedTokenHeader();
+      if (rejectedTokenStillStored) forgetStoredToken();
+    });
+    return send.apply(this, arguments);
+  };
+})();
+  </script>
+  <meta charset="utf-8">
+  <link href="https://media.base44.com/images/public/6aa954c7012a4b72381f0038/ca3df3079_ProfilePhoto.jpg" rel="icon" type="image/jpeg">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link href="/manifest.json" rel="manifest">
+  <title>
+   Re-elect Betty Forbes
+  </title>
+  <script crossorigin="" src="/assets/index-I_FCesaB.js" type="module">
+  </script>
+  <link crossorigin="" href="/assets/index-CdO83zM0.css" rel="stylesheet">
+  <script type="module">
+   if (window.self === window.top) {
+  let lastPath = "";
+  function getPageNameFromPath(path) {
+    const segments = path.split("/").filter(Boolean);
+    return segments[0] || null;
+  }
+  function trackPageView() {
+    const path = window.location.pathname;
+    if (path === lastPath) return;
+    lastPath = path;
+    const pageName = getPageNameFromPath(path) || "home";
+    const appId = "6aa954c7012a4b72381f0038";
+    if (!appId) return;
+    fetch(`/api/app-logs/${appId}/log-user-in-app/${pageName}`, {
+      method: "POST",
+    }).catch(() => {});
+  }
+  const originalPushState = history.pushState.bind(history);
+  history.pushState = function (...args) {
+    originalPushState(...args);
+    trackPageView();
+  };
+  const originalReplaceState = history.replaceState.bind(history);
+  history.replaceState = function (...args) {
+    originalReplaceState(...args);
+    trackPageView();
+  };
+  window.addEventListener("popstate", trackPageView);
+  trackPageView();
+}
+  </script>
+  <meta content="yes" name="mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="CivicVote Campaign" name="apple-mobile-web-app-title">
+ </head>
+ <body>
+  <div id="root"><div class="min-h-screen flex flex-col bg-white"><header class="sticky top-0 z-50 bg-[#422057] text-white shadow-lg"><div class="bg-[#2D5A27] text-white text-xs sm:text-sm py-1.5 overflow-hidden whitespace-nowrap"><div class="inline-block animate-[marquee_28s_linear_infinite]"><span class="px-8 font-medium tracking-wide">Election Day October 17th, 2026 — Advance Polling Dates October 7th, 10th &amp; 12th 2026 — Vote Betty Forbes — your common sense candidate!</span><span class="px-8 font-medium tracking-wide">Election Day October 17th, 2026 — Advance Polling Dates October 7th, 10th &amp; 12th 2026 — Vote Betty Forbes — your common sense candidate!</span></div></div><nav class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16"><a class="flex items-center gap-2 group" href="/"><div class="flex flex-col leading-tight"><span class="font-heading text-lg sm:text-xl font-bold tracking-tight">Betty Forbes</span><span class="text-[10px] sm:text-xs text-[#D4F1BE] uppercase tracking-[0.15em]">Re-Elect · DNV Council</span></div></a><div class="hidden md:flex items-center gap-1"><a class="px-3 py-2 rounded-md text-sm font-medium transition-colors text-[#D4F1BE]" href="/">Home</a><a class="px-3 py-2 rounded-md text-sm font-medium transition-colors text-white/80 hover:text-white hover:bg-white/10" href="/about">About</a><a class="px-3 py-2 rounded-md text-sm font-medium transition-colors text-white/80 hover:text-white hover:bg-white/10" href="/platform">Platform</a><a class="px-3 py-2 rounded-md text-sm font-medium transition-colors text-white/80 hover:text-white hover:bg-white/10" href="/endorsements">Endorsements</a><a class="px-3 py-2 rounded-md text-sm font-medium transition-colors text-white/80 hover:text-white hover:bg-white/10" href="/blog">Blog</a><a class="px-3 py-2 rounded-md text-sm font-medium transition-colors text-white/80 hover:text-white hover:bg-white/10" href="/volunteer">Volunteer</a><a class="ml-2 px-5 py-2 rounded-full bg-[#2D5A27] text-white text-sm font-semibold hover:bg-[#3a6b33] transition-colors shadow" href="/donate">Donate</a></div><button class="md:hidden p-2 rounded-md hover:bg-white/10" aria-label="Toggle menu"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button></nav></header><main class="flex-1"><div><section class="relative bg-[#422057] text-white overflow-hidden"><div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center"><div><span class="inline-block px-4 py-1.5 rounded-full bg-[#2D5A27] text-[#D4F1BE] text-xs font-semibold uppercase tracking-wider mb-5">Re-Elect · October 17, 2026</span><h1 class="font-heading text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">Betty Forbes</h1><p class="font-heading text-xl sm:text-2xl text-[#D4F1BE] mt-2 italic">Your Voice for Common Sense</p><p class="text-white/80 text-lg mt-6 leading-relaxed max-w-md">For me — politics is personal. I care about you, personally. Over 8 years on Council, every vote has had citizens like you on my mind.</p><div class="flex flex-wrap gap-3 mt-8"><a class="px-6 py-3 rounded-full bg-[#2D5A27] text-white font-semibold hover:bg-[#3a6b33] transition-colors shadow-lg" href="/volunteer">Get Involved</a><a class="px-6 py-3 rounded-full bg-[#D4F1BE] text-[#422057] font-semibold hover:bg-[#c0e8a0] transition-colors shadow-lg" href="/donate">Donate</a></div></div><div class="relative"><div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl ring-4 ring-[#D4F1BE]/30"><img src="https://static.wixstatic.com/media/12d367_4f26ccd17f8f4e3a8958306ea08c2332~mv2.png" alt="Betty Forbes" class="w-full h-full object-cover" data-error-image="true"></div></div></div></section><section class="py-16 md:py-20 bg-[#f8f6fa]"><div class="max-w-4xl mx-auto px-4 sm:px-6 text-center"><h2 class="font-heading text-3xl sm:text-4xl font-bold text-[#422057]">A Fourth-Generation North Vancouverite</h2><p class="text-gray-700 text-lg mt-6 leading-relaxed">Betty Forbes is proud of her heritage and has deep roots in the community she serves. She raised her two sons in Lynn Valley, served on their school PACs and board committees, and has been a lifelong volunteer. As an accountant with over 30 years of experience, Betty brings financial discipline and a collaborative approach to Council — listening to community voices and delivering common-sense solutions.</p><a class="inline-flex items-center gap-2 mt-8 text-[#2D5A27] font-semibold hover:gap-3 transition-all" href="/about">Read Betty's Full Story <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></div></section><section class="py-16 md:py-20"><div class="max-w-6xl mx-auto px-4 sm:px-6 grid md:grid-cols-3 gap-6"><a class="group p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:border-[#2D5A27]/30 transition-all" href="/platform"><div class="w-12 h-12 rounded-xl bg-[#422057]/5 flex items-center justify-center mb-4 group-hover:bg-[#2D5A27]/10 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-vote text-[#2D5A27]"><path d="m9 12 2 2 4-4"></path><path d="M5 7c0-1.1.9-2 2-2h10a2 2 0 0 1 2 2v12H5V7Z"></path><path d="M22 19H2"></path></svg></div><h3 class="font-heading text-xl font-bold text-[#422057]">Platform &amp; Issues</h3><p class="text-gray-600 mt-2 text-sm leading-relaxed">Attainable housing, transportation, infrastructure, fiscal responsibility and more.</p><span class="inline-flex items-center gap-1 mt-4 text-[#2D5A27] font-semibold text-sm group-hover:gap-2 transition-all">Learn more <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span></a><a class="group p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:border-[#2D5A27]/30 transition-all" href="/volunteer"><div class="w-12 h-12 rounded-xl bg-[#422057]/5 flex items-center justify-center mb-4 group-hover:bg-[#2D5A27]/10 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users text-[#2D5A27]"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div><h3 class="font-heading text-xl font-bold text-[#422057]">Volunteer</h3><p class="text-gray-600 mt-2 text-sm leading-relaxed">Join the campaign, request a lawn sign, and help get Betty re-elected.</p><span class="inline-flex items-center gap-1 mt-4 text-[#2D5A27] font-semibold text-sm group-hover:gap-2 transition-all">Learn more <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span></a><a class="group p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:border-[#2D5A27]/30 transition-all" href="/donate"><div class="w-12 h-12 rounded-xl bg-[#422057]/5 flex items-center justify-center mb-4 group-hover:bg-[#2D5A27]/10 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart text-[#2D5A27]"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg></div><h3 class="font-heading text-xl font-bold text-[#422057]">Donate</h3><p class="text-gray-600 mt-2 text-sm leading-relaxed">Local campaigns don't happen without your support. Every contribution counts.</p><span class="inline-flex items-center gap-1 mt-4 text-[#2D5A27] font-semibold text-sm group-hover:gap-2 transition-all">Learn more <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span></a></div></section><section class="relative py-20 md:py-28"><img src="https://static.wixstatic.com/media/12d367_4f26ccd17f8f4e3a8958306ea08c2332~mv2.png" alt="Betty Forbes with community members" class="absolute inset-0 w-full h-full object-cover" data-error-image="true"><div class="absolute inset-0 bg-[#422057]/80"></div><div class="relative max-w-3xl mx-auto px-4 sm:px-6 text-center text-white"><p class="font-heading text-2xl sm:text-3xl md:text-4xl font-medium italic leading-relaxed">"I want to take the community's voices to the decision table and ensure that they are heard, discussed, and that Council's decisions are transparent."</p><p class="text-[#D4F1BE] mt-6 font-semibold uppercase tracking-wider text-sm">— Betty Forbes</p></div></section></div></main><footer class="bg-[#422057] text-white"><div class="max-w-6xl mx-auto px-4 sm:px-6 py-12 grid gap-8 md:grid-cols-3"><div><h3 class="font-heading text-xl font-bold">Betty Forbes</h3><p class="text-[#D4F1BE] text-sm uppercase tracking-wider mt-1">Re-Elect for DNV Council</p><p class="text-white/70 text-sm mt-3 leading-relaxed">Your Voice for Common Sense. Politics is Personal.</p></div><div><h4 class="font-semibold text-sm uppercase tracking-wider mb-3">Explore</h4><ul class="space-y-2 text-sm text-white/80"><li><a class="hover:text-[#D4F1BE]" href="/about">About Betty</a></li><li><a class="hover:text-[#D4F1BE]" href="/platform">Platform &amp; Issues</a></li><li><a class="hover:text-[#D4F1BE]" href="/endorsements">Endorsements</a></li><li><a class="hover:text-[#D4F1BE]" href="/blog">Blog</a></li><li><a class="hover:text-[#D4F1BE]" href="/volunteer">Volunteer</a></li><li><a class="hover:text-[#D4F1BE]" href="/donate">Donate</a></li></ul></div><div><h4 class="font-semibold text-sm uppercase tracking-wider mb-3">Contact</h4><ul class="space-y-2 text-sm text-white/80"><li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail text-[#D4F1BE]"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg><a href="mailto:betty@bettyforbes.ca" class="hover:text-[#D4F1BE]">betty@bettyforbes.ca</a></li><li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone text-[#D4F1BE]"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><a href="tel:6048803381" class="hover:text-[#D4F1BE]">604.880.3381</a></li><li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin text-[#D4F1BE]"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg><span>District of North Vancouver</span></li></ul></div></div><div class="border-t border-white/10"><div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-white/60"><p>Authorized by Heather Walker, Financial Agent 778-340-1141</p><p>© 2026 Betty Forbes Campaign</p></div></div></footer></div><div role="region" aria-label="Notifications (F8)" tabindex="-1" style="pointer-events: none;"><ol tabindex="-1" class="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]"></ol></div></div>
+ 
+
+</body></html>
