@@ -191,3 +191,47 @@ Same answer as last time, it went down well:
 > though. The model only picks which sentences belong to which topic and the
 > code cuts those exact characters out of the saved page, so it can't write a
 > quote even if it wanted to.
+
+---
+
+## F. Nextdoor (Oct 4)
+
+**Rules that matter.** Local elections count as local content, so this belongs
+in the main neighbourhood feed; it is national partisan politics that Nextdoor
+confines to Groups. But self-promotion was tightened: promoting a business or
+service must now come from a Business Page. This is not a business, so that
+does not apply, though the spam filter and the local volunteer moderators who
+vote on removals do not know that from a post that opens with a link.
+
+So the post leads with the differing advance voting days, which is useful even
+to someone who never clicks. Verified against cnv.org and dnv.org on Oct 4.
+
+```
+Advance voting opens this Wednesday, October 7.
+
+Something worth knowing: the City and the District have different advance
+voting days.
+  City of North Vancouver — Oct 7, 10, 13, 14 and 15, at City Hall
+  District of North Vancouver — Oct 7, 10 and 12, at District Hall and Parkgate
+Both vote on Saturday October 17, 8am to 8pm.
+
+There are 59 names on the ballot between the two councils and the school
+board, and in either municipality you're electing six councillors, a mayor
+and school trustees.
+
+I live here and couldn't work out who to vote for without opening a pile of
+tabs, so I put together northvanvotes.ca. It's organised by issue instead of
+by name: tap housing, traffic or taxes and you get what each candidate
+actually said about it, word for word, with a link to where they said it.
+
+Free, no ads, no tracking, no ratings and no endorsements, and I'm not
+connected to any campaign.
+```
+
+- Personal account, not a Business Page. Say plainly that you made it.
+- Widest reach Nextdoor offers, not just your own neighbourhood.
+- Post once. Repeated election posts are specifically against their rules.
+- Monday or Tuesday morning, ahead of Wednesday.
+
+Nextdoor is address-verified and skews older, which is the municipal
+electorate. Lower volume than Facebook, likely higher conversion.
