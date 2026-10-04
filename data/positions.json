@@ -7563,6 +7563,68 @@
   "dnv-council-pope-catherine": [
     {
       "category": "transportation",
+      "char_end": 1146,
+      "char_start": 1028,
+      "flashpoints": [
+        "third-crossing"
+      ],
+      "quote": "To tackle traffic congestion, she's pushing for a new bridge, SkyTrain, more transit and active transportation routes.",
+      "source_type": "official_statement",
+      "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+    },
+    {
+      "category": "housing",
+      "char_end": 1255,
+      "char_start": 783,
+      "flashpoints": [
+        "third-crossing"
+      ],
+      "quote": "Since her election in 2022, Catherine has helped deliver more affordable housing, a new toddler playground, new pickleball courts and expanded recreation, safer streets, youth-centre funding and greater transparency in Council decision-making.\n\nTo tackle traffic congestion, she's pushing for a new bridge, SkyTrain, more transit and active transportation routes. Above all, she's working to keep the North Shore affordable for seniors, families, young people and workers.",
+      "source_type": "official_statement",
+      "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+    },
+    {
+      "category": "taxes-and-spending",
+      "char_end": 781,
+      "char_start": 448,
+      "flashpoints": [
+        "wastewater-treatment-plant"
+      ],
+      "quote": "Catherine led the call for a public inquiry into the massive cost overruns at the North Shore Wastewater Treatment Plant. Council unanimously endorsed her motion, making the District the first municipality in Metro Vancouver to back an inquiry. She continues to fight for lower utility costs for NS taxpayers and change at Metro Van.",
+      "source_type": "official_statement",
+      "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+    },
+    {
+      "category": "governance-and-transparency",
+      "char_end": 1026,
+      "char_start": 448,
+      "flashpoints": [
+        "wastewater-treatment-plant"
+      ],
+      "quote": "Catherine led the call for a public inquiry into the massive cost overruns at the North Shore Wastewater Treatment Plant. Council unanimously endorsed her motion, making the District the first municipality in Metro Vancouver to back an inquiry. She continues to fight for lower utility costs for NS taxpayers and change at Metro Van.\n\nSince her election in 2022, Catherine has helped deliver more affordable housing, a new toddler playground, new pickleball courts and expanded recreation, safer streets, youth-centre funding and greater transparency in Council decision-making.",
+      "source_type": "official_statement",
+      "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+    },
+    {
+      "category": "childcare-seniors-services",
+      "char_end": 1026,
+      "char_start": 783,
+      "flashpoints": [],
+      "quote": "Since her election in 2022, Catherine has helped deliver more affordable housing, a new toddler playground, new pickleball courts and expanded recreation, safer streets, youth-centre funding and greater transparency in Council decision-making.",
+      "source_type": "official_statement",
+      "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+    },
+    {
+      "category": "childcare-seniors-services",
+      "char_end": 1499,
+      "char_start": 1397,
+      "flashpoints": [],
+      "quote": "She champions youth mental health services and volunteered with school PACs and the NS homeless count.",
+      "source_type": "official_statement",
+      "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+    },
+    {
+      "category": "transportation",
       "char_end": 765,
       "char_start": 633,
       "flashpoints": [],
@@ -8231,6 +8293,44 @@
     }
   ],
   "dnv-mayor-nieweler-stephan": [
+    {
+      "category": "transportation",
+      "char_end": 1055,
+      "char_start": 724,
+      "flashpoints": [
+        "third-crossing"
+      ],
+      "quote": "I have a plan to unlock traffic gridlock: (1) a new bridge next to Ironworkers with rail transit, dedicated HOV & cycling lanes; (2) new highway lanes for HOV from the bridge to Taylor Way, facilitating a new Horseshoe Bay to Phibbs express bus; (3) rail transit from Ambleside to Metrotown (SkyTrain) & along Hastings to downtown.",
+      "source_type": "official_statement",
+      "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+    },
+    {
+      "category": "housing",
+      "char_end": 1342,
+      "char_start": 1192,
+      "flashpoints": [],
+      "quote": "Our walkable transit-oriented centres must reflect North Van through design & public art, offering the shops, services & (affordable) housing we need.",
+      "source_type": "official_statement",
+      "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+    },
+    {
+      "category": "development-and-growth",
+      "char_end": 1342,
+      "char_start": 1057,
+      "flashpoints": [],
+      "quote": "I’m committed to responsible development in designated growth areas, without sacrificing the character of mountainside neighbourhoods. Our walkable transit-oriented centres must reflect North Van through design & public art, offering the shops, services & (affordable) housing we need.",
+      "source_type": "official_statement",
+      "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+    },
+    {
+      "category": "childcare-seniors-services",
+      "char_end": 1604,
+      "char_start": 1344,
+      "flashpoints": [],
+      "quote": "I want a healthy, active & connected North Van. I owned & operated a jazz club & am passionate that all residents have a chance to participate in sports, recreation & the arts. To succeed, we must build partnerships & invest in trails, parks, programs & space.",
+      "source_type": "official_statement",
+      "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+    },
     {
       "category": "transportation",
       "char_end": 1338,

@@ -4096,6 +4096,71 @@
   "dnv-council-pope-catherine": [
     {
       "category": "public-office",
+      "char_end": 167,
+      "char_start": 0,
+      "flashpoints": [],
+      "quote": "Catherine Pope is a District of North Vancouver Councillor and former investigative journalist who has spent her career asking tough questions on behalf of the public.",
+      "source_type": "official_statement",
+      "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+    },
+    {
+      "category": "public-office",
+      "char_end": 692,
+      "char_start": 448,
+      "flashpoints": [
+        "wastewater-treatment-plant"
+      ],
+      "quote": "Catherine led the call for a public inquiry into the massive cost overruns at the North Shore Wastewater Treatment Plant. Council unanimously endorsed her motion, making the District the first municipality in Metro Vancouver to back an inquiry.",
+      "source_type": "official_statement",
+      "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+    },
+    {
+      "category": "public-office",
+      "char_end": 1026,
+      "char_start": 783,
+      "flashpoints": [],
+      "quote": "Since her election in 2022, Catherine has helped deliver more affordable housing, a new toddler playground, new pickleball courts and expanded recreation, safer streets, youth-centre funding and greater transparency in Council decision-making.",
+      "source_type": "official_statement",
+      "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+    },
+    {
+      "category": "career",
+      "char_end": 405,
+      "char_start": 0,
+      "flashpoints": [],
+      "quote": "Catherine Pope is a District of North Vancouver Councillor and former investigative journalist who has spent her career asking tough questions on behalf of the public. Born and raised on the North Shore, Catherine came home after a career that took her across Canada and the UK.\n\nTwo decades as an investigative journalist with Global TV taught her to follow the facts and hold decision-makers to account.",
+      "source_type": "official_statement",
+      "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+    },
+    {
+      "category": "community",
+      "char_end": 1499,
+      "char_start": 1257,
+      "flashpoints": [],
+      "quote": "Catherine served 20 years on the Victoria Foundation's Adoption and Permanency Committee and was on the board of the Disability Foundation. She champions youth mental health services and volunteered with school PACs and the NS homeless count.",
+      "source_type": "official_statement",
+      "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+    },
+    {
+      "category": "local-roots",
+      "char_end": 278,
+      "char_start": 168,
+      "flashpoints": [],
+      "quote": "Born and raised on the North Shore, Catherine came home after a career that took her across Canada and the UK.",
+      "source_type": "official_statement",
+      "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+    },
+    {
+      "category": "local-roots",
+      "char_end": 1576,
+      "char_start": 1501,
+      "flashpoints": [],
+      "quote": "Away from Council, she's a mom, pickleball player, e-bike rider, pet lover.",
+      "source_type": "official_statement",
+      "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+    },
+    {
+      "category": "public-office",
       "char_end": 921,
       "char_start": 767,
       "flashpoints": [],
@@ -4363,6 +4428,42 @@
     }
   ],
   "dnv-mayor-nieweler-stephan": [
+    {
+      "category": "career",
+      "char_end": 722,
+      "char_start": 259,
+      "flashpoints": [],
+      "quote": "My professional career has focused on delivering sustainable transport solutions. I worked on the Canada Line (on-budget, 110 days early!), the London Olympic transport plan & Mumbai's rail transit plan. I liaised with leading engineers & planners, gaining expertise implementing major infrastructure projects (lived in ON, Europe, Asia for a decade).\n\nI returned to work at TransLink, teach (SFU) & conduct research (2018-20) justifying North Shore rail transit.",
+      "source_type": "official_statement",
+      "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+    },
+    {
+      "category": "career",
+      "char_end": 1520,
+      "char_start": 1392,
+      "flashpoints": [],
+      "quote": "I owned & operated a jazz club & am passionate that all residents have a chance to participate in sports, recreation & the arts.",
+      "source_type": "official_statement",
+      "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+    },
+    {
+      "category": "education",
+      "char_end": 257,
+      "char_start": 71,
+      "flashpoints": [],
+      "quote": "Born & raised in Upper Delbrook, I attended Handsworth & Capilano University, where I played on the men's basketball team. I completed a Master of Planning (Toronto) & related PhD (SFU).",
+      "source_type": "official_statement",
+      "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+    },
+    {
+      "category": "local-roots",
+      "char_end": 193,
+      "char_start": 71,
+      "flashpoints": [],
+      "quote": "Born & raised in Upper Delbrook, I attended Handsworth & Capilano University, where I played on the men's basketball team.",
+      "source_type": "official_statement",
+      "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+    },
     {
       "category": "career",
       "char_end": 262,
