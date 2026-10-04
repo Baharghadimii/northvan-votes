@@ -50,6 +50,7 @@ PRIORITY = [
 SKIP = re.compile(
     r"\.(pdf|jpe?g|png|gif|svg|webp|mp4|mov|zip|docx?|xlsx?)$"
     r"|/(donate|contribute|volunteer|signup|sign-up|contact|privacy|terms|cart|checkout)"
+    r"|/(coming-soon|maintenance-mode|under-construction)"
     r"|mailto:|tel:|javascript:",
     re.I,
 )
@@ -120,6 +121,64 @@ def same_host(a: str, b: str) -> bool:
     policy. She had to email me to find out.
     """
     return a.lower().removeprefix("www.") == b.lower().removeprefix("www.")
+
+
+def sitemap_urls(website: str, get) -> list[str]:
+    """Pages listed in the site's own sitemap, for sites whose menu is script.
+
+    Kulvir Mann's nav renders as script with no hrefs, so link discovery found
+    five targets and none of them were his platform. A WordPress sitemap lists
+    every page, which is a more reliable table of contents than a rendered menu.
+
+    Ordering prefers a scored page, then a shallower path: a campaign's current
+    pages sit at the top level while old material gets filed underneath, and his
+    site still carries his 2022 trustee run under /trustee/. Quoting that as if
+    it were this election would be worse than quoting nothing.
+    """
+    host = urlparse(website).netloc
+    found: list[str] = []
+    for name_ in ("wp-sitemap.xml", "sitemap.xml", "sitemap_index.xml"):
+        try:
+            body = get(urljoin(website, "/" + name_))
+        except Exception:  # noqa: BLE001
+            continue
+        if not body:
+            continue
+        locs = re.findall(r"<loc>\s*([^<\s]+)\s*</loc>", body)
+        # A sitemap index points at further sitemaps; follow one level.
+        for loc in list(locs):
+            if loc.endswith(".xml"):
+                locs.remove(loc)
+                try:
+                    inner = get(loc)
+                except Exception:  # noqa: BLE001
+                    continue
+                if inner:
+                    locs += re.findall(r"<loc>\s*([^<\s]+)\s*</loc>", inner)
+        for loc in locs:
+            if not same_host(urlparse(loc).netloc, host) or SKIP.search(loc):
+                continue
+            if urlparse(loc).path.strip("/") == urlparse(website).path.strip("/"):
+                continue  # the home page is already the crawl's starting point
+            found.append(loc)
+        if found:
+            break
+    order = {u: i for i, u in enumerate(dict.fromkeys(found))}
+
+    def rank(u: str) -> tuple:
+        # Depth first, so archived sections sink below the live campaign; then
+        # the site's own sitemap order, which tracks how pages were built.
+        return (urlparse(u).path.strip("/").count("/"), -score(u, ""), order[u])
+
+    seen: set[str] = set()
+    out: list[str] = []
+    for u in sorted(dict.fromkeys(found), key=rank):
+        k = u.rstrip("/")
+        if k in seen:
+            continue
+        seen.add(k)
+        out.append(u)
+    return out
 
 
 def crawl(website: str, name: str) -> list[Source]:

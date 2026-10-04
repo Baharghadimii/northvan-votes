@@ -28,7 +28,7 @@ from bs4 import BeautifulSoup
 from pipeline.fetching import USER_AGENT, allowed
 from pipeline.models import Source
 from pipeline.scrape_campaign_sites import (
-    MAX_PAGES, MIN_PAGE_CHARS, SKIP, clean_text, same_host, score,
+    MAX_PAGES, MIN_PAGE_CHARS, SKIP, clean_text, same_host, score, sitemap_urls,
 )
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -97,6 +97,23 @@ def crawl(page, website: str, name: str) -> list[Source]:
         seen.add(key)
         pages.append((s, href))
     pages.sort(key=lambda t: -t[0])
+
+    # A menu built in script leaves no links to follow. The site's own sitemap
+    # is a better table of contents than a rendered menu, so fall back to it
+    # rather than publishing a candidate's home page and calling it their
+    # platform.
+    if len(pages) == 1:
+        def fetch(u: str) -> str | None:
+            # Plain HTTP: a sitemap is XML, and a browser wraps it in a viewer.
+            import requests
+
+            r = requests.get(u, headers={"User-Agent": USER_AGENT}, timeout=20)
+            return r.text if r.status_code == 200 else None
+
+        extra = sitemap_urls(website, fetch)
+        if extra:
+            print(f"      no links in the markup; sitemap lists {len(extra)} pages")
+            pages += [(0, u) for u in extra]
 
     out: list[Source] = []
     for _, url in pages[:MAX_PAGES]:
