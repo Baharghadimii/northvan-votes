@@ -6,7 +6,7 @@
  *  update `verified`.
  */
 
-export const VERIFIED = "2026-09-29";
+export const VERIFIED = "2026-10-04";
 
 export interface VotingPlace { name: string; address: string; note?: string }
 export interface AdvanceDay { date: string; hours: string; places: VotingPlace[] }
@@ -50,6 +50,8 @@ export const VOTING: Record<"cnv" | "dnv", MunicipalityVoting> = {
         { name: "Pipe Shop", address: "115 Victory Ship Way" },
       ],
     },
+    special:
+      "Special voting opportunities for patients: Lions Gate Hospital and the HOpe Centre on Saturday, October 10, 9:00 a.m. – 4:00 p.m., and Evergreen House and North Shore Hospice on Tuesday, October 13, 9:30 a.m. – 2:30 p.m.",
     extras: [
       "Curbside voting during advance voting is on 13th Street in front of City Hall.",
       "Mail ballots had to be applied for by October 1, so that option has closed.",

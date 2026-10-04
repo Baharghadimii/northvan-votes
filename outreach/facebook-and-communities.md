@@ -142,3 +142,52 @@ Mine, so obviously biased. No ads, not connected to any campaign.
 ```
 
 Keep the group version short. Long posts read as promotion.
+
+---
+
+## E. Second group post — North Vancouver Local Life (Oct 4)
+
+Different wording from the North Vancouver News post on purpose: people are in
+both groups, and an identical post reads as spam. Dates re-checked against
+cnv.org and dnv.org on Oct 4.
+
+```
+Advance voting opens this Wednesday, October 7.
+
+There are 59 names on the ballot between the District, the City and the school
+board, and in either municipality you're picking six councillors plus a mayor
+and school trustees. I couldn't work out who to vote for without opening about
+forty tabs, so I ended up building northvanvotes.ca.
+
+It's sorted by issue instead of by name. Tap housing, traffic or taxes and you
+get what each candidate actually said about it, word for word, with a link to
+where they said it.
+
+Free, no ads, no tracking, no ratings and no endorsements, and I'm not
+connected to any campaign. A few readers caught gaps in it last week and those
+are fixed.
+
+northvanvotes.ca
+```
+
+**Shorter version** if the group is strict about self-promotion:
+
+```
+Advance voting opens Wednesday and there are 59 names on the ballot.
+
+I built northvanvotes.ca to work out who to vote for. It's sorted by issue
+rather than by name, so you can tap housing or traffic and read what each
+candidate said about it in their own words, with a link to the source.
+
+Free, no ads, not connected to any campaign.
+```
+
+### If someone asks whether it's AI
+
+Same answer as last time, it went down well:
+
+> Yeah, I used AI a lot, especially for the copy, since I didn't have much
+> time. I'm a software engineer so I used that too. The quotes aren't AI
+> though. The model only picks which sentences belong to which topic and the
+> code cuts those exact characters out of the saved page, so it can't write a
+> quote even if it wanted to.
