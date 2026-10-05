@@ -17,3 +17,33 @@
   id: dnv-council-bell-trey
   file: dnv-council-bell-trey.jpg
   source: supplied by the candidate, 2026-10-02
+
+# Not supplied by the candidate: the District publishes no photo for him on the
+# election page, but does on his page as sitting mayor. Same images.dnv.org
+# library as every other District photo here, so it is the same source rather
+# than a new kind of one. His page was otherwise a grey placeholder in a
+# five-way mayoral race.
+- name: Mike Little
+  id: dnv-mayor-little-mike
+  file: dnv-mayor-little-mike.jpg
+  source: >-
+    District of North Vancouver, https://www.dnv.org/government-administration/mayor-mike-little
+    (official mayor portrait), retrieved 2026-10-05
+
+# Same situation as the mayor: sitting councillors the election page publishes
+# no photo for, but whose official portrait the District publishes on their
+# council page. Take the URL the page actually uses -- guessing a filename from
+# the slug found a real image for Betty Forbes that was NOT the one her page
+# shows, which is how you end up publishing the wrong face.
+- name: Betty Forbes
+  id: dnv-council-forbes-betty
+  file: dnv-council-forbes-betty.jpg
+  source: >-
+    District of North Vancouver, https://www.dnv.org/government-administration/councillor-betty-forbes
+    (official councillor portrait), retrieved 2026-10-05
+- name: Herman Mah
+  id: dnv-council-mah-herman
+  file: dnv-council-mah-herman.jpg
+  source: >-
+    District of North Vancouver, https://www.dnv.org/government-administration/councillor-herman-mah
+    (official councillor portrait), retrieved 2026-10-05
