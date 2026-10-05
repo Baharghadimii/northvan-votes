@@ -9,7 +9,7 @@
 export const VERIFIED = "2026-10-04";
 
 export interface VotingPlace { name: string; address: string; note?: string }
-export interface AdvanceDay { date: string; hours: string; places: VotingPlace[] }
+export interface AdvanceDay { date: string; iso: string; hours: string; places: VotingPlace[] }
 
 export interface MunicipalityVoting {
   name: string;
@@ -30,11 +30,11 @@ export const VOTING: Record<"cnv" | "dnv", MunicipalityVoting> = {
       "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election",
     contact: { phone: "604-220-1361", email: "elections@cnv.org" },
     advance: [
-      { date: "Wednesday, October 7", hours: "8:00 a.m. – 8:00 p.m.", places: [{ name: "City Hall", address: "141 West 14th Street" }] },
-      { date: "Saturday, October 10", hours: "10:00 a.m. – 4:00 p.m.", places: [{ name: "City Hall", address: "141 West 14th Street" }] },
-      { date: "Tuesday, October 13", hours: "10:00 a.m. – 7:00 p.m.", places: [{ name: "City Hall", address: "141 West 14th Street" }] },
-      { date: "Wednesday, October 14", hours: "8:00 a.m. – 8:00 p.m.", places: [{ name: "City Hall", address: "141 West 14th Street" }] },
-      { date: "Thursday, October 15", hours: "10:00 a.m. – 6:00 p.m.", places: [{ name: "City Hall", address: "141 West 14th Street" }] },
+      { date: "Wednesday, October 7", iso: "2026-10-07", hours: "8:00 a.m. – 8:00 p.m.", places: [{ name: "City Hall", address: "141 West 14th Street" }] },
+      { date: "Saturday, October 10", iso: "2026-10-10", hours: "10:00 a.m. – 4:00 p.m.", places: [{ name: "City Hall", address: "141 West 14th Street" }] },
+      { date: "Tuesday, October 13", iso: "2026-10-13", hours: "10:00 a.m. – 7:00 p.m.", places: [{ name: "City Hall", address: "141 West 14th Street" }] },
+      { date: "Wednesday, October 14", iso: "2026-10-14", hours: "8:00 a.m. – 8:00 p.m.", places: [{ name: "City Hall", address: "141 West 14th Street" }] },
+      { date: "Thursday, October 15", iso: "2026-10-15", hours: "10:00 a.m. – 6:00 p.m.", places: [{ name: "City Hall", address: "141 West 14th Street" }] },
     ],
     generalDay: {
       hours: "8:00 a.m. – 8:00 p.m.",
@@ -64,9 +64,10 @@ export const VOTING: Record<"cnv" | "dnv", MunicipalityVoting> = {
     source: "https://www.dnv.org/government-administration/voting-dates-and-locations",
     contact: { phone: "604-990-2311", email: "elections@dnv.org" },
     advance: [
-      { date: "Wednesday, October 7", hours: "8:00 a.m. – 8:00 p.m.", places: [{ name: "District Hall", address: "355 West Queens Road" }] },
+      { date: "Wednesday, October 7", iso: "2026-10-07", hours: "8:00 a.m. – 8:00 p.m.", places: [{ name: "District Hall", address: "355 West Queens Road" }] },
       {
         date: "Saturday, October 10",
+        iso: "2026-10-10",
         hours: "8:00 a.m. – 8:00 p.m.",
         places: [
           { name: "Parkgate Community Centre", address: "3625 Banff Court" },
@@ -75,6 +76,7 @@ export const VOTING: Record<"cnv" | "dnv", MunicipalityVoting> = {
       },
       {
         date: "Monday, October 12",
+        iso: "2026-10-12",
         hours: "8:00 a.m. – 8:00 p.m.",
         places: [
           { name: "Parkgate Community Centre", address: "3625 Banff Court" },
