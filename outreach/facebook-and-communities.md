@@ -265,14 +265,8 @@ it, word for word, with a link to where they said it. Same for childcare,
 housing, traffic and taxes. It covers all 59 candidates on the North Van
 ballots, City and District, not just the trustees.
 
-Advance voting opens Wednesday. The City and District have different advance
-days, which catches people out:
-  City — Oct 7, 10, 13, 14, 15 at City Hall
-  District — Oct 7, 10 and 12 at District Hall and Parkgate
-Both vote Saturday October 17, 8am to 8pm.
-
-Free, no ads, no tracking, no ratings and no endorsements, and I'm not
-connected to any campaign.
+I'm open to ideas, and if you spot anything that needs correcting please tell
+me and I'll fix it.
 
 northvanvotes.ca
 ```
