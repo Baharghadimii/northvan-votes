@@ -334,3 +334,33 @@ northvanvotes.ca
 
 Dropped the meeting mention and the advance voting dates: this audience already
 knows when voting is, and the dates are on the site for anyone who doesn't.
+
+---
+
+## I. Lower & Central Lonsdale Neighbours (Oct 5)
+
+Lower Lonsdale Neighbours — public, 11.5K members
+Central Lonsdale Neighbours North Vancouver — public, 6.6K members
+
+Both are City of North Vancouver, where Lynn Valley is District, so the hook is
+the City's own numbers: 18 candidates for 6 council seats.
+
+```
+There are 18 people running for 6 council seats in the City this time, plus
+four for mayor. I couldn't work out who to vote for without opening a pile of
+tabs, so I built northvanvotes.ca.
+
+It's sorted by issue instead of by name: tap housing, traffic or taxes and you
+get what each candidate actually said about it, word for word, with a link to
+where they said it. All 59 candidates on the North Van ballots, City and
+District.
+
+I'm open to ideas, and if you spot anything that needs correcting please tell
+me and I'll fix it.
+
+northvanvotes.ca
+```
+
+Stagger these. Five groups inside 48 hours with near-identical text is the
+pattern Facebook's spam detection looks for, and a flagged account costs more
+than a slow rollout. A day apart is enough.
