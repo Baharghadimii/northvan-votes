@@ -9,7 +9,7 @@
  *  anything was ever held.
  */
 
-export const MEETINGS_VERIFIED = "2026-09-29";
+export const MEETINGS_VERIFIED = "2026-10-05";
 export const MEETINGS_SOURCE =
   "https://www.dnv.org/government-administration/see-who-is-running";
 
@@ -22,6 +22,11 @@ export interface Meeting {
   hostUrl?: string;
   /** Which races the organiser says the event covers, when stated. */
   covers?: string;
+  /** A recording, once the host posts one. Linked, never transcribed: this
+   *  site quotes documents it can slice character for character, and a
+   *  speech-to-text transcript would put words in a candidate's mouth that
+   *  nobody said. The video is the better source anyway. */
+  recordingUrl?: string;
 }
 
 export const MEETINGS: Meeting[] = [
@@ -37,7 +42,7 @@ export const MEETINGS: Meeting[] = [
     time: "7:00 p.m.",
     location: "Eagle Room, Karen Magnussen Community Recreation Centre",
     host: "Lynn Valley Community Association",
-    hostUrl: "https://www.lynnvalleyca.org/",
+    hostUrl: "https://lvca.ca/",
   },
   {
     date: "2026-10-06",

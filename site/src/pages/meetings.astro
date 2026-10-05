@@ -44,14 +44,18 @@ const past = sorted.filter((m) => m.date < today).reverse();
     <>
       <h2 style="margin-top:34px">Already held</h2>
       <p class="candidate-meta">
-        Kept here so you know what you missed. Some hosts post recordings, so
-        follow the link.
+        Kept here so you know what you missed. Where a host has posted a
+        recording I link it; otherwise the host's own page is the place to
+        check, since they post them when they get to it.
       </p>
       <ul style="font-size:0.93rem">
         {past.map((m) => (
           <li style="margin-bottom:6px">
             <strong>{formatDate(m.date)}</strong> — {m.location},
             {" "}{m.hostUrl ? <a href={m.hostUrl} rel="noopener nofollow">{m.host}</a> : m.host}
+            {m.recordingUrl && (
+              <>{" · "}<a href={m.recordingUrl} rel="noopener nofollow">watch the recording</a></>
+            )}
           </li>
         ))}
       </ul>
