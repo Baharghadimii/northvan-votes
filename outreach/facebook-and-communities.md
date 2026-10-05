@@ -311,3 +311,26 @@ I'll put it up.
 Bahareh
 northvanvotes.ca
 ```
+
+---
+
+## H. Lynn Valley Community Forum (Oct 5)
+
+Public group, 12.1K members: https://www.facebook.com/groups/2304771287
+Lynn Valley is District-only, so everyone there votes the same ballot.
+
+```
+I built northvanvotes.ca to work out who to vote for without opening a pile of
+tabs. It's sorted by issue instead of by name: tap housing, traffic or taxes
+and you get what each candidate actually said about it, word for word, with a
+link to where they said it. All 59 candidates on the North Van ballots, City
+and District.
+
+I'm open to ideas, and if you spot anything that needs correcting please tell
+me and I'll fix it.
+
+northvanvotes.ca
+```
+
+Dropped the meeting mention and the advance voting dates: this audience already
+knows when voting is, and the dates are on the site for anyone who doesn't.
