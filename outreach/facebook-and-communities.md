@@ -207,26 +207,23 @@ So the post leads with the differing advance voting days, which is useful even
 to someone who never clicks. Verified against cnv.org and dnv.org on Oct 4.
 
 ```
-Advance voting opens this Wednesday, October 7.
+There are 59 names on the ballot on October 17, between the City council, the
+District council and the school board. I live here and couldn't work out who to
+vote for without opening a pile of tabs, so I built northvanvotes.ca.
 
-Something worth knowing: the City and the District have different advance
-voting days.
-  City of North Vancouver — Oct 7, 10, 13, 14 and 15, at City Hall
-  District of North Vancouver — Oct 7, 10 and 12, at District Hall and Parkgate
-Both vote on Saturday October 17, 8am to 8pm.
+It's sorted by issue instead of by name: tap housing, traffic or taxes and you
+get what each candidate actually said about it, word for word, with a link to
+where they said it.
 
-There are 59 names on the ballot between the two councils and the school
-board, and in either municipality you're electing six councillors, a mayor
-and school trustees.
+I'm open to ideas, and if you spot anything that needs correcting please tell
+me and I'll fix it.
 
-I live here and couldn't work out who to vote for without opening a pile of
-tabs, so I put together northvanvotes.ca. It's organised by issue instead of
-by name: tap housing, traffic or taxes and you get what each candidate
-actually said about it, word for word, with a link to where they said it.
-
-Free, no ads, no tracking, no ratings and no endorsements, and I'm not
-connected to any campaign.
+northvanvotes.ca
 ```
+
+Trimmed to match the Facebook posts. The longer version that led with the two
+municipalities' differing advance voting days is in git history if a moderator
+ever wants the post to carry more civic substance than link.
 
 - Personal account, not a Business Page. Say plainly that you made it.
 - Widest reach Nextdoor offers, not just your own neighbourhood.
