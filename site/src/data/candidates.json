@@ -8756,7 +8756,9 @@
     "phone": null,
     "photo_url": "/photos/dnv-mayor-little-mike.jpg",
     "positions": [],
-    "socials": {},
+    "socials": {
+      "facebook": "https://www.facebook.com/mike.little.121"
+    },
     "sources": [],
     "surname": "LITTLE",
     "website": "https://www.facebook.com/Mike4DNVMayor"

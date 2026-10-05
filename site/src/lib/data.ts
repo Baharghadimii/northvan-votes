@@ -192,7 +192,7 @@ export const ELECTION_DAY = "2026-10-17";
  *  page says so instead of leaving a silence the reader would misread. */
 export const UNREADABLE_SITES: Record<string, string> = {
   "dnv-mayor-little-mike":
-    "The address the District lists for them is a Facebook page, which I don't scrape — and as of October 5 it does not load at all: Facebook reports the content as unavailable.",
+    "The website the District lists for them stopped loading — Facebook reports that page as unavailable. Their Facebook profile does load and is linked above, but I don't read Facebook for any candidate, so there is nothing here I can quote.",
   "dnv-council-muri-lisa":
     "The website on their nomination form redirects to a Facebook page that requires a login, which I won't scrape.",
 };

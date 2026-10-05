@@ -17,3 +17,17 @@
   key: facebook_campaign
   url: https://www.facebook.com/people/Elect-Kulvir-Mann-for-District-of-North-Vancouver-Councillor/61593685499934/
   source: supplied by the candidate, 2026-10-05
+
+# The District's election page lists facebook.com/Mike4DNVMayor as his website.
+# It does not load -- Facebook reports the content unavailable -- so the sitting
+# mayor's only official link was dead. This profile is his and does load. Still
+# not scraped, like every Facebook link here, but a reader clicking through now
+# reaches him instead of an error.
+- name: Mike Little
+  id: dnv-mayor-little-mike
+  key: facebook
+  url: https://www.facebook.com/mike.little.121
+  source: >-
+    located 2026-10-05 after the address the District publishes stopped
+    resolving; verified as his (1.8K followers, listed as Mayor at North
+    Vancouver District)
