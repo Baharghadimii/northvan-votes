@@ -36,9 +36,9 @@ const allRaces = races();
     someone has dropped out. Quietly giving up is not the same as withdrawing
     before the deadline. If you hear that a candidate is no longer running,
     check the
-    <a href="https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles" rel="noopener">City's own list</a>
+    <a href="https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles" target="_blank" rel="noopener">City's own list</a>
     or the
-    <a href="https://www.dnv.org/government-administration/see-who-is-running" rel="noopener">District's</a>
+    <a href="https://www.dnv.org/government-administration/see-who-is-running" target="_blank" rel="noopener">District's</a>
     rather than taking my word or anyone else's. Those two pages are the ballot.
   </p>
 
@@ -114,7 +114,7 @@ const allRaces = races();
         {m.extras.map((e) => <p class="candidate-meta">{e}</p>)}
 
         <p style="font-size:0.85rem; color:var(--text-faint)">
-          Source: <a href={m.source} rel="noopener">{m.name} election page</a> ·
+          Source: <a href={m.source} target="_blank" rel="noopener">{m.name} election page</a> ·
           {" "}Elections office {m.contact.phone},
           {" "}<a href={`mailto:${m.contact.email}`}>{m.contact.email}</a>
         </p>

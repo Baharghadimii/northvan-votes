@@ -70,17 +70,17 @@ const SOCIAL_LABELS: Record<string, string> = {
   </p>
 
   <ul class="linklist" style="margin:16px 0 24px">
-    {candidate.website && <li><a href={candidate.website} rel="noopener nofollow">Campaign website</a></li>}
+    {candidate.website && <li><a href={candidate.website} target="_blank" rel="noopener nofollow">Campaign website</a></li>}
     {candidate.email && <li><a href={`mailto:${candidate.email}`}>{candidate.email}</a></li>}
     {candidate.phone && <li>{candidate.phone}</li>}
     {socials.map(([k, url]) => (
-      <li><a href={url} rel="noopener nofollow">{SOCIAL_LABELS[k] ?? k}</a></li>
+      <li><a href={url} target="_blank" rel="noopener nofollow">{SOCIAL_LABELS[k] ?? k}</a></li>
     ))}
     {candidate.nomination_docs.map((d) => (
-      <li><a href={d} rel="noopener">Nomination documents</a></li>
+      <li><a href={d} target="_blank" rel="noopener">Nomination documents</a></li>
     ))}
     {candidate.financial_disclosure.map((d) => (
-      <li><a href={d} rel="noopener">Financial disclosure</a></li>
+      <li><a href={d} target="_blank" rel="noopener">Financial disclosure</a></li>
     ))}
   </ul>
 
@@ -154,7 +154,7 @@ const SOCIAL_LABELS: Record<string, string> = {
       <h2>Full statement, as published</h2>
       <p style="font-size:0.85rem; color:var(--text-faint)">
         Reproduced exactly as it appears on the
-        <a href={statement.url} rel="noopener"> {MUNICIPALITIES[candidate.municipality]} website</a>,
+        <a href={statement.url} target="_blank" rel="noopener"> {MUNICIPALITIES[candidate.municipality]} website</a>,
         retrieved {formatDate(statement.retrieved)}. Neither the municipality nor
         this site has verified its accuracy.
       </p>

@@ -138,7 +138,7 @@ export default function SearchBox({ passages }: Props) {
                     <span className={p.o ? "srctag srctag-official" : "srctag"}>
                       {p.o ? "Filed statement" : "Their campaign site"}
                     </span>
-                    <a href={p.u} rel="noopener">source</a>
+                    <a href={p.u} target="_blank" rel="noopener">source</a>
                   </figcaption>
                 </figure>
               </div>

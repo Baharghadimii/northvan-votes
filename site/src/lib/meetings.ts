@@ -27,6 +27,10 @@ export interface Meeting {
    *  speech-to-text transcript would put words in a candidate's mouth that
    *  nobody said. The video is the better source anyway. */
   recordingUrl?: string;
+  /** Where this host actually posts recordings, for when none exists yet.
+   *  Sending someone to a homepage and implying a video is there wastes their
+   *  time; this points at the page it would appear on. */
+  recordingsAt?: string;
 }
 
 export const MEETINGS: Meeting[] = [
@@ -36,6 +40,7 @@ export const MEETINGS: Meeting[] = [
     location: "Bodwell High School",
     host: "North Vancouver Chamber",
     hostUrl: "https://www.nvchamber.ca/",
+    recordingsAt: "https://www.nvchamber.ca/news/",
   },
   {
     date: "2026-10-01",
@@ -43,6 +48,7 @@ export const MEETINGS: Meeting[] = [
     location: "Eagle Room, Karen Magnussen Community Recreation Centre",
     host: "Lynn Valley Community Association",
     hostUrl: "https://lvca.ca/",
+    recordingsAt: "https://lvca.ca/tag/all-candidates-meeting/",
   },
   {
     date: "2026-10-06",

@@ -16,7 +16,7 @@ const { candidate, showRace = false } = Astro.props;
     <div class="candidate-meta">
       {showRace && <>{MUNICIPALITIES_SHORT[candidate.municipality]} — {OFFICES[candidate.office]} · </>}
       {candidate.website ? (
-        <a href={candidate.website} rel="noopener nofollow">Campaign site</a>
+        <a href={candidate.website} target="_blank" rel="noopener nofollow">Campaign site</a>
       ) : (
         <span>No campaign site listed</span>
       )}

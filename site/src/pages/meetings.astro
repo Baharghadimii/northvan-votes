@@ -30,7 +30,7 @@ const past = sorted.filter((m) => m.date < today).reverse();
             <div class="candidate-meta">{m.time}</div>
             <p style="margin:8px 0 4px">{m.location}</p>
             <div class="candidate-meta">
-              Hosted by {m.hostUrl ? <a href={m.hostUrl} rel="noopener nofollow">{m.host}</a> : m.host}
+              Hosted by {m.hostUrl ? <a href={m.hostUrl} target="_blank" rel="noopener nofollow">{m.host}</a> : m.host}
             </div>
           </div>
         ))}
@@ -44,18 +44,21 @@ const past = sorted.filter((m) => m.date < today).reverse();
     <>
       <h2 style="margin-top:34px">Already held</h2>
       <p class="candidate-meta">
-        Kept here so you know what you missed. Where a host has posted a
-        recording I link it; otherwise the host's own page is the place to
-        check, since they post them when they get to it.
+        Kept here so you know what you missed. Nobody has posted a recording
+        of either of these yet. Where there is one I link it directly; until
+        then the second link goes to the page the host would put it on, so you
+        are not hunting through a website for a video that may not exist.
       </p>
       <ul style="font-size:0.93rem">
         {past.map((m) => (
           <li style="margin-bottom:6px">
             <strong>{formatDate(m.date)}</strong> — {m.location},
-            {" "}{m.hostUrl ? <a href={m.hostUrl} rel="noopener nofollow">{m.host}</a> : m.host}
-            {m.recordingUrl && (
-              <>{" · "}<a href={m.recordingUrl} rel="noopener nofollow">watch the recording</a></>
-            )}
+            {" "}{m.hostUrl ? <a href={m.hostUrl} target="_blank" rel="noopener nofollow">{m.host}</a> : m.host}
+            {m.recordingUrl ? (
+              <>{" · "}<a href={m.recordingUrl} target="_blank" rel="noopener nofollow">watch the recording</a></>
+            ) : m.recordingsAt ? (
+              <>{" · "}<a href={m.recordingsAt} target="_blank" rel="noopener nofollow">where they post recordings</a></>
+            ) : null}
           </li>
         ))}
       </ul>
@@ -69,7 +72,7 @@ const past = sorted.filter((m) => m.date < today).reverse();
       so confirm with the host before you travel.
     </p>
     <p style="font-size:0.85rem; color:var(--text-faint); margin:0">
-      I took this from the <a href={MEETINGS_SOURCE} rel="noopener">District's
+      I took this from the <a href={MEETINGS_SOURCE} target="_blank" rel="noopener">District's
       list</a>, which may not include every event. Last checked{" "}
       {formatDate(MEETINGS_VERIFIED)}.
     </p>

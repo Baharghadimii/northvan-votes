@@ -20,7 +20,7 @@ const label = official ? "Filed statement" : "Their campaign site";
       <span class="tag" style="margin-right:6px">{flashpointById(f)?.label ?? f}</span>
     ))}
     <span class={official ? "srctag srctag-official" : "srctag"}>{label}</span>
-    <a href={position.source_url} rel="noopener">source</a>
+    <a href={position.source_url} target="_blank" rel="noopener">source</a>
     {source && <> · retrieved {formatDate(source.retrieved)}</>}
   </figcaption>
 </figure>
