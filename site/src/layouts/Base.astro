@@ -59,7 +59,14 @@ const nav = [
 
     <header class="site-header">
       <div class="wrap">
-        <a class="brand" href="/">North Van <span>Votes</span></a>
+        <a class="brand" href="/">
+          <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+            <rect width="32" height="32" rx="7" />
+            <path d="M8 19.5l5 5 11-13" fill="none" stroke-width="3.4"
+                  stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <span class="brand-text">North Van <span>Votes</span></span>
+        </a>
         <nav class="site-nav" aria-label="Main">
           {nav.map((item) => (
             <a href={item.href} aria-current={path === item.href ? "page" : undefined}>

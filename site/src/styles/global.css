@@ -134,8 +134,17 @@ p { margin: 0 0 1em; }
   font-family: var(--font-serif);
   font-weight: 700; font-size: 1.28rem; letter-spacing: -0.025em;
   color: var(--text); text-decoration: none;
+  display: inline-flex; align-items: center; gap: 9px;
 }
-.brand span { color: var(--accent-text); }
+/* The same mark as the favicon and the iOS home-screen icon, so the tab, the
+   phone home screen and the page all carry one identity. */
+.brand-mark {
+  width: 25px; height: 25px; flex: none; border-radius: 6px;
+  display: block;
+}
+.brand-mark rect { fill: var(--accent); }
+.brand-mark path { stroke: var(--surface); }
+.brand-text span { color: var(--accent-text); }
 .site-nav { display: flex; flex-wrap: wrap; gap: 4px 18px; margin-left: auto; font-size: 0.93rem; }
 .site-nav a { color: var(--text-muted); text-decoration: none; }
 .site-nav a { padding-block: 2px; border-bottom: 2px solid transparent; }
