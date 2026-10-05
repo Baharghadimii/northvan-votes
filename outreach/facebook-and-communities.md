@@ -248,8 +248,10 @@ the thing parents actually can't get anywhere else: the school trustee races.
 17 candidates for 7 seats across both boards, and they get almost no coverage
 next to mayor and council.
 
-The group covers West Van as well, and the site does not — different
-municipality, different school district. Say so rather than waste their time.
+The group covers West Van as well, and the site does not. Rather than a
+paragraph apologising for that, the coverage is just named in the sentence
+describing what the site holds: "all 59 candidates on the North Van ballots,
+City and District".
 
 ```
 If you've got kids in North Van schools: 17 people are running for 7 school
@@ -260,7 +262,8 @@ I live here and couldn't work out who to vote for without opening a pile of
 tabs, so I built northvanvotes.ca. It's sorted by issue instead of by name:
 tap schools and education and you get what each candidate actually said about
 it, word for word, with a link to where they said it. Same for childcare,
-housing, traffic and taxes. It covers all 59 candidates, not just trustees.
+housing, traffic and taxes. It covers all 59 candidates on the North Van
+ballots, City and District, not just the trustees.
 
 Advance voting opens Wednesday. The City and District have different advance
 days, which catches people out:
@@ -271,10 +274,13 @@ Both vote Saturday October 17, 8am to 8pm.
 Free, no ads, no tracking, no ratings and no endorsements, and I'm not
 connected to any campaign.
 
-One note for the West Van members: this only covers the North Vancouver
-ballots, City and District. West Van is a different municipality and a
-different school district, so there's nothing here for you.
+northvanvotes.ca
 ```
+
+The link goes on its own line as well as in the sentence. Facebook's autolinker
+swallows whatever sits next to a bare domain -- that is where the /I 404s came
+from, a comment reading "northvanvotes.ca I think" -- and a line of its own
+gives it nothing to grab.
 
 ### Reply to Anita
 
@@ -285,9 +291,9 @@ Thank you, I'd love to. I'll post it today.
 
 So you know what's going in: it's a free guide to all 59 candidates in the
 North Van election, sorted by issue instead of by name. No ads, no tracking,
-no ratings or endorsements, and I'm not connected to any campaign. I'll flag
-in the post that it only covers the North Van ballots, since you have West Van
-members too.
+no ratings or endorsements, and I'm not connected to any campaign. The post
+says it covers the North Van ballots, City and District, so nobody goes
+looking for something that isn't there.
 
 Thanks for thinking of it.
 Bahareh
