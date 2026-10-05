@@ -235,3 +235,79 @@ connected to any campaign.
 
 Nextdoor is address-verified and skews older, which is the municipal
 electorate. Lower volume than Facebook, likely higher conversion.
+
+---
+
+## G. North/West Vancouver Moms & Dads — invited (Oct 5)
+
+Anita Groundwater asked us to share it. Public group, 10.6K members:
+https://www.facebook.com/groups/729547455343874/
+
+Being invited removes the self-promotion problem, so this post can lead with
+the thing parents actually can't get anywhere else: the school trustee races.
+17 candidates for 7 seats across both boards, and they get almost no coverage
+next to mayor and council.
+
+The group covers West Van as well, and the site does not — different
+municipality, different school district. Say so rather than waste their time.
+
+```
+If you've got kids in North Van schools: 17 people are running for 7 school
+board seats on October 17, and the trustee races get almost no coverage
+compared to mayor and council.
+
+I live here and couldn't work out who to vote for without opening a pile of
+tabs, so I built northvanvotes.ca. It's sorted by issue instead of by name:
+tap schools and education and you get what each candidate actually said about
+it, word for word, with a link to where they said it. Same for childcare,
+housing, traffic and taxes. It covers all 59 candidates, not just trustees.
+
+Advance voting opens Wednesday. The City and District have different advance
+days, which catches people out:
+  City — Oct 7, 10, 13, 14, 15 at City Hall
+  District — Oct 7, 10 and 12 at District Hall and Parkgate
+Both vote Saturday October 17, 8am to 8pm.
+
+Free, no ads, no tracking, no ratings and no endorsements, and I'm not
+connected to any campaign.
+
+One note for the West Van members: this only covers the North Vancouver
+ballots, City and District. West Van is a different municipality and a
+different school district, so there's nothing here for you.
+```
+
+### Reply to Anita
+
+```
+Hi Anita,
+
+Thank you, I'd love to. I'll post it today.
+
+So you know what's going in: it's a free guide to all 59 candidates in the
+North Van election, sorted by issue instead of by name. No ads, no tracking,
+no ratings or endorsements, and I'm not connected to any campaign. I'll flag
+in the post that it only covers the North Van ballots, since you have West Van
+members too.
+
+Thanks for thinking of it.
+Bahareh
+```
+
+### Reply to Ashley Mendieta — "how do candidates get information on your site?"
+
+```
+Hi Ashley,
+
+There's nothing for candidates to do. I take what's already public: the
+statement each candidate filed with the City or District, and their campaign
+website if they listed one. Nothing is rewritten. It's quoted word for word
+with a link to where it came from.
+
+If you're a candidate and something's missing or wrong, email
+corrections@northvanvotes.ca and I'll fix it. Several already have. If your
+page has no photo because the municipality didn't publish one, send me one and
+I'll put it up.
+
+Bahareh
+northvanvotes.ca
+```
