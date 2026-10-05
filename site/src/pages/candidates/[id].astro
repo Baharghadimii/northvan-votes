@@ -106,8 +106,8 @@ const SOCIAL_LABELS: Record<string, string> = {
     <div class="notice">
       <p>
         <strong>There's less here than for some other candidates, and that's on
-        me.</strong> {UNREADABLE_SITES[candidate.id]} What's below comes from
-        their filed statement alone. Their own site is linked above.
+        me.</strong> {UNREADABLE_SITES[candidate.id]}
+        {statement && " What's below comes from their filed statement alone. Their own site is linked above."}
       </p>
     </div>
   )}
@@ -118,7 +118,9 @@ const SOCIAL_LABELS: Record<string, string> = {
       <p>
         {statement
           ? "They filed a statement, but it doesn't take a position on any issue I track. It's below in full, and their background is above if they gave one."
-          : "They haven't filed a statement with either municipality, and I couldn't find a campaign website."}
+          : candidate.website
+            ? "They haven't filed a statement with either municipality. There is a campaign link above, but nothing on it I could read and quote."
+            : "They haven't filed a statement with either municipality, and I couldn't find a campaign website."}
       </p>
       <p style="margin-bottom:0">
         That isn't the same as having said nothing. It means I found nothing in
