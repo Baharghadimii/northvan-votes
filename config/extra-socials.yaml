@@ -1,0 +1,19 @@
+# Campaign channels the municipalities' candidate pages do not list.
+#
+# The District publishes some of a candidate's links and not others. Kulvir
+# Mann's personal Facebook profile is listed there, but the page he actually
+# campaigns from is not, so the official listing pointed readers at the less
+# useful of his two. Same situation as the missing website links.
+#
+# Offered to every candidate, not only the ones who think to ask, and recorded
+# here with where it came from. /methodology says so in public.
+#
+# Only channels for THIS election. Kulvir Mann also runs a school trustee page
+# from his 2022 run; he is a council candidate in 2026, and linking it would
+# imply a candidacy that does not exist, so it is deliberately absent.
+
+- name: Kulvir Mann
+  id: dnv-council-mann-kulvir
+  key: facebook_campaign
+  url: https://www.facebook.com/people/Elect-Kulvir-Mann-for-District-of-North-Vancouver-Councillor/61593685499934/
+  source: supplied by the candidate, 2026-10-05

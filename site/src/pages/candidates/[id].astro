@@ -35,11 +35,12 @@ const byBackground = backgroundKinds
 
 const seats = SEATS[`${candidate.municipality}-${candidate.office}`];
 const statement = candidate.sources.find((s) => s.type === "official_statement");
-const socialOrder = ["website", "facebook", "instagram", "twitter", "linkedin", "youtube", "bluesky", "threads", "tiktok"];
+const socialOrder = ["website", "facebook_campaign", "facebook", "instagram", "twitter", "linkedin", "youtube", "bluesky", "threads", "tiktok"];
 const socials = Object.entries(candidate.socials).sort(
   (a, b) => socialOrder.indexOf(a[0]) - socialOrder.indexOf(b[0]),
 );
 const SOCIAL_LABELS: Record<string, string> = {
+  facebook_campaign: "Campaign Facebook page",
   facebook: "Facebook", instagram: "Instagram", twitter: "X", linkedin: "LinkedIn",
   youtube: "YouTube", bluesky: "Bluesky", threads: "Threads", tiktok: "TikTok",
 };
@@ -101,7 +102,7 @@ const SOCIAL_LABELS: Record<string, string> = {
     </section>
   )}
 
-  {UNREADABLE_SITES[candidate.id] && (
+  {UNREADABLE_SITES[candidate.id] && !candidate.sources.some((s) => s.type === "campaign_site") && (
     <div class="notice">
       <p>
         <strong>There's less here than for some other candidates, and that's on

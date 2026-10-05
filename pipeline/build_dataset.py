@@ -300,6 +300,27 @@ def attach_photos(candidates: list[Candidate]) -> None:
             c.photo_url = local[c.id]
 
 
+def attach_extra_socials(candidates: list[Candidate]) -> None:
+    """Campaign channels the municipality's listing leaves out.
+
+    Tracking parameters are stripped: a share link carries an identifier that
+    follows the reader, and this site promises not to hand anyone off like that.
+    """
+    cfg = ROOT / "config" / "extra-socials.yaml"
+    if not cfg.exists():
+        return
+    import yaml
+    from urllib.parse import urlsplit, urlunsplit
+
+    by_id = {c.id: c for c in candidates}
+    for entry in yaml.safe_load(cfg.read_text(encoding="utf-8")) or []:
+        c = by_id.get(entry["id"])
+        if c is None:
+            raise BuildError(f"extra-socials.yaml names an unknown candidate: {entry['id']}")
+        parts = urlsplit(entry["url"])
+        c.socials.setdefault(entry["key"], urlunsplit((*parts[:3], "", "")))
+
+
 def attach_positions(candidates: list[Candidate]) -> None:
     """Merge tagger output, if it has been run. Unknown ids are a hard error:
     a stale positions file must not silently attach a quote to nobody."""
@@ -335,6 +356,7 @@ def build(refresh: bool = False) -> list[Candidate]:
     attach_positions(candidates)
     prune_duplicates(candidates)
     attach_photos(candidates)
+    attach_extra_socials(candidates)
     candidates.sort(key=lambda c: (c.municipality, c.office, c.surname, c.name))
     check_counts(candidates)
     check_ids_unique(candidates)

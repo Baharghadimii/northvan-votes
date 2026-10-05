@@ -191,8 +191,6 @@ export const ELECTION_DAY = "2026-10-17";
  *  thinner than others' for reasons that have nothing to do with them, so the
  *  page says so instead of leaving a silence the reader would misread. */
 export const UNREADABLE_SITES: Record<string, string> = {
-  "dnv-council-mann-kulvir":
-    "Their campaign website was in maintenance mode every time I checked, so there was nothing on it to read.",
   "dnv-council-muri-lisa":
     "The website on their nomination form redirects to a Facebook page that requires a login, which I won't scrape.",
 };
