@@ -17,8 +17,23 @@ const allRaces = races();
   <h1>All {candidates.length} candidates</h1>
   <p class="lede">
     You vote in one municipality only, the City or the District, never both.
-    <a href="/how-to-vote/">Not sure which?</a>
+    {" "}<a href="/how-to-vote/">Not sure which?</a>
   </p>
+
+  <div class="name-search">
+    <label for="name-search">Looking for someone in particular?</label>
+    <div class="name-search-row">
+      <input
+        id="name-search"
+        type="search"
+        data-name-search
+        placeholder="Type a name"
+        autocomplete="off"
+        spellcheck="false"
+      />
+      <button type="button" data-name-clear hidden>Clear</button>
+    </div>
+  </div>
 
   <div class="issue-filter" data-issue-filter>
     <span class="issue-filter-label">Show only candidates who've addressed:</span>

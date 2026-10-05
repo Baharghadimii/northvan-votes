@@ -120,12 +120,21 @@ const nav = [
           if (!box) return;
           var buttons = box.querySelectorAll("[data-issue]");
           var count = box.querySelector("[data-filter-count]");
+          var search = document.querySelector("[data-name-search]");
+          var clear = document.querySelector("[data-name-clear]");
 
-          function apply(issue) {
+          // Both filters hide the same cards, so one function decides what is
+          // visible. Two scripts each setting .hidden would fight each other.
+          var issue = "";
+          var query = "";
+
+          function apply() {
             var shown = 0, hidden = 0;
             document.querySelectorAll("[data-topics]").forEach(function (card) {
               var topics = (card.dataset.topics || "").split(" ");
-              var match = !issue || topics.indexOf(issue) !== -1;
+              var name = (card.dataset.sortkey || "").toLowerCase();
+              var match = (!issue || topics.indexOf(issue) !== -1)
+                       && (!query || name.indexOf(query) !== -1);
               card.hidden = !match;
               match ? shown++ : hidden++;
             });
@@ -140,18 +149,44 @@ const nav = [
               b.classList.toggle("chip-on", on);
               b.setAttribute("aria-pressed", on ? "true" : "false");
             });
+            if (clear) clear.hidden = !query;
             if (count) {
-              count.hidden = !issue;
-              count.textContent = issue
-                ? shown + " of 59 candidates. The other " + hidden +
-                  " may still have views on it \u2014 it just is not in what I checked."
-                : "";
+              if (query) {
+                count.hidden = false;
+                count.textContent = shown === 0
+                  ? "No candidate by that name. Try a surname, or part of one."
+                  : shown + (shown === 1 ? " candidate" : " candidates") + " matching that name.";
+              } else if (issue) {
+                count.hidden = false;
+                count.textContent = shown + " of 59 candidates. The other " + hidden +
+                  " may still have views on it \u2014 it just is not in what I checked.";
+              } else {
+                count.hidden = true;
+                count.textContent = "";
+              }
             }
           }
 
           buttons.forEach(function (b) {
-            b.addEventListener("click", function () { apply(b.dataset.issue); });
+            b.addEventListener("click", function () { issue = b.dataset.issue; apply(); });
           });
+
+          if (search) {
+            search.addEventListener("input", function () {
+              query = search.value.trim().toLowerCase();
+              apply();
+            });
+            // Enter must not submit anything; there is no form to submit to.
+            search.addEventListener("keydown", function (e) {
+              if (e.key === "Enter") e.preventDefault();
+            });
+          }
+          if (clear) {
+            clear.addEventListener("click", function () {
+              query = ""; if (search) { search.value = ""; search.focus(); }
+              apply();
+            });
+          }
         })();
       </script>
     )}

@@ -708,6 +708,32 @@ mark {
 
 /* ---------- issue filter ---------- */
 
+.name-search { margin: 18px 0 14px; }
+.name-search label {
+  display: block; font-size: 0.86rem; color: var(--text-muted); margin-bottom: 6px;
+}
+.name-search-row { display: flex; gap: 8px; max-width: 26rem; }
+.name-search input {
+  flex: 1 1 auto; min-width: 0;
+  font: inherit; font-size: 0.95rem;
+  padding: 9px 12px;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+}
+.name-search input::placeholder { color: var(--text-faint); }
+.name-search input:focus-visible {
+  outline: 2px solid var(--focus); outline-offset: 1px; border-color: var(--accent);
+}
+.name-search button {
+  flex: none; font: inherit; font-size: 0.88rem; padding: 9px 14px;
+  color: var(--accent-text); background: var(--surface);
+  border: 1px solid var(--border-strong); border-radius: var(--radius);
+  cursor: pointer;
+}
+.name-search button:hover { border-color: var(--accent); }
+
 .issue-filter { margin: 20px 0 8px; }
 .issue-filter-label {
   display: block; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px;
