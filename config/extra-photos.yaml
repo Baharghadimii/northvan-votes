@@ -47,3 +47,16 @@
   source: >-
     District of North Vancouver, https://www.dnv.org/government-administration/councillor-herman-mah
     (official councillor portrait), retrieved 2026-10-05
+
+# Supplied by the candidate on request, but embedded in her campaign poster
+# rather than sent as a headshot, so the portrait is cropped out of it. The
+# crop is the photo and nothing else -- no poster text, no slogan -- because a
+# campaign graphic on a candidate page is advertising and a headshot is not.
+# Source resolution is modest (392x425) for the same reason. If she ever sends
+# the original photo, replace this with it.
+- name: Senora Navales
+  id: cnv-trustee-navales-senora
+  file: cnv-trustee-navales-senora.jpg
+  source: >-
+    supplied by the candidate by email 2026-10-06, cropped from the campaign
+    poster she attached
