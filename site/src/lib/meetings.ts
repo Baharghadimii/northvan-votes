@@ -9,7 +9,7 @@
  *  anything was ever held.
  */
 
-export const MEETINGS_VERIFIED = "2026-10-05";
+export const MEETINGS_VERIFIED = "2026-10-08";
 export const MEETINGS_SOURCE =
   "https://www.dnv.org/government-administration/see-who-is-running";
 
@@ -56,6 +56,7 @@ export const MEETINGS: Meeting[] = [
     location: "Lynn Valley Library Community Room",
     host: "Better North Shore",
     hostUrl: "https://www.betternorthshore.ca/election2026",
+    recordingsAt: "https://www.betternorthshore.ca/election2026",
   },
   {
     date: "2026-10-08",

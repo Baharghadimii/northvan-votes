@@ -44,10 +44,13 @@ const past = sorted.filter((m) => m.date < today).reverse();
     <>
       <h2 style="margin-top:34px">Already held</h2>
       <p class="candidate-meta">
-        Kept here so you know what you missed. Nobody has posted a recording
-        of either of these yet. Where there is one I link it directly; until
-        then the second link goes to the page the host would put it on, so you
-        are not hunting through a website for a video that may not exist.
+        Kept here so you know what you missed.
+        {past.some((m) => m.recordingUrl)
+          ? " Where a host has posted a recording I link it directly, and otherwise"
+          : " Nobody has posted a recording of any of them yet, so"}
+        {" "}the second link goes to the page the host would put one on, rather
+        than leaving you to hunt through a website for a video that may not
+        exist.
       </p>
       <ul style="font-size:0.93rem">
         {past.map((m) => (
