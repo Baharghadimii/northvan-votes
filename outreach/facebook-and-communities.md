@@ -361,3 +361,36 @@ northvanvotes.ca
 Stagger these. Five groups inside 48 hours with near-identical text is the
 pattern Facebook's spam detection looks for, and a flagged account costs more
 than a slow rollout. A day apart is enough.
+
+---
+
+## J. Lower Lonsdale, turnout opener (Oct 8)
+
+Central Lonsdale went out with the "18 for 6 seats" opener, so this one leads
+with turnout instead — a fact neither municipality's voters have been shown and
+the strongest answer to "why does this exist".
+
+Verified figures, from each municipality's own publication:
+
+  City of North Vancouver   22.64% of 41,325 registered voters (2022)
+    cnv.org official results release, Oct 19 2022
+  District of North Vancouver   22.6%, 15,032 ballots (2022), down from 36.24%
+    in 2018 — dnv.org "Historic voter turnout"
+
+Note 2011 (20.96%) and 2008 (16.58%) were lower in the District, so "worst ever"
+is wrong; the true claim is a collapse from 2018 and barely one in five.
+
+```
+Fewer than one in four people voted in the City last time — 22.6% of registered
+voters in 2022. With 59 names on the ballot, I suspect that's less about apathy
+than about how much work it takes to decide.
+
+So I built northvanvotes.ca. It's sorted by issue instead of by name: tap
+housing, traffic or taxes and you get what each candidate actually said about
+it, word for word, with a link to where they said it.
+
+I'm open to ideas, and if you spot anything that needs correcting please tell
+me and I'll fix it.
+
+northvanvotes.ca
+```
