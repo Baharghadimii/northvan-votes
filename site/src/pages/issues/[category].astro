@@ -2,6 +2,7 @@
 import Base from "~/layouts/Base.astro";
 import CandidateLine from "~/components/CandidateLine.astro";
 import Quote from "~/components/Quote.astro";
+import RaceJump from "~/components/RaceJump.astro";
 import {
   categories, candidates, races, positionsFor,
   seededShuffle, BUILD_SEED, type Category,
@@ -55,6 +56,8 @@ const grouped = races(speakers);
     </div>
   ) : (
     <>
+      <RaceJump races={grouped} />
+
       <div class="order-note">
         <span>
           Candidates are listed in <span data-order-label>randomised</span> order
@@ -64,7 +67,7 @@ const grouped = races(speakers);
       </div>
 
       {grouped.map((race) => (
-        <section>
+        <section id={race.key} class="race-section">
           <div class="race-heading">
             <h2>{race.label}</h2>
             <span class="seats">

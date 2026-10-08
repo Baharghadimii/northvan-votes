@@ -1,0 +1,28 @@
+---
+/* A sticky row of race links. These pages run long -- an issue page carries
+   every quote on the topic -- and the District always sits below the City, so
+   without this, reaching District Council means scrolling past people you
+   cannot vote for. */
+import { MUNICIPALITIES_SHORT, OFFICES, type Race } from "~/lib/data";
+
+interface Props { races: Race[] }
+const { races } = Astro.props;
+
+// Only the municipalities actually present: an issue page may have speakers in
+// one and none in the other.
+const munis = (["cnv", "dnv"] as const).filter((m) =>
+  races.some((r) => r.municipality === m),
+);
+---
+{races.length > 1 && (
+  <nav class="race-jump" aria-label="Jump to a race">
+    {munis.map((m) => (
+      <span class="race-jump-group">
+        <b>{MUNICIPALITIES_SHORT[m]}</b>
+        {races.filter((r) => r.municipality === m).map((r) => (
+          <a href={`#${r.key}`}>{r.office === "trustee" ? "Schools" : OFFICES[r.office]}</a>
+        ))}
+      </span>
+    ))}
+  </nav>
+)}

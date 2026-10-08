@@ -1,7 +1,8 @@
 ---
 import Base from "~/layouts/Base.astro";
 import CandidateLine from "~/components/CandidateLine.astro";
-import { races, candidates, seededShuffle, BUILD_SEED, categoryById, categoriesByCoverage, MUNICIPALITIES_SHORT, OFFICES } from "~/lib/data";
+import RaceJump from "~/components/RaceJump.astro";
+import { races, candidates, seededShuffle, BUILD_SEED, categoryById, categoriesByCoverage } from "~/lib/data";
 
 const filterable = categoriesByCoverage().filter((c) => c.count > 0);
 
@@ -48,19 +49,7 @@ const allRaces = races();
     <p class="issue-filter-count" data-filter-count hidden></p>
   </div>
 
-  {/* 59 candidates is a long page, and the District sits below all 28 City
-      ones. This sticks to the top so either municipality is one tap away
-      instead of a long scroll. */}
-  <nav class="race-jump" aria-label="Jump to a race">
-    {(["cnv", "dnv"] as const).map((m) => (
-      <span class="race-jump-group">
-        <b>{MUNICIPALITIES_SHORT[m]}</b>
-        {allRaces.filter((r) => r.municipality === m).map((r) => (
-          <a href={`#${r.key}`}>{r.office === "trustee" ? "Schools" : OFFICES[r.office]}</a>
-        ))}
-      </span>
-    ))}
-  </nav>
+  <RaceJump races={allRaces} />
 
   <div class="order-note">
     <span>Listed in <span data-order-label>randomised</span> order within each race.</span>
