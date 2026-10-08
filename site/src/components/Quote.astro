@@ -11,16 +11,19 @@ const paragraphs = position.quote.split(/\n{2,}/).filter(Boolean);
 const official = position.source_type === "official_statement";
 const label = official ? "Filed statement" : "Their campaign site";
 ---
-<figure class="quote" style="margin-inline:0">
+<figure class="quote">
   <blockquote style="margin:0">
     {paragraphs.map((p) => <p>{p}</p>)}
   </blockquote>
   <figcaption class="source-line">
     {position.flashpoints.map((f) => (
-      <span class="tag" style="margin-right:6px">{flashpointById(f)?.label ?? f}</span>
+      <span class="tag">{flashpointById(f)?.label ?? f}</span>
     ))}
     <span class={official ? "srctag srctag-official" : "srctag"}>{label}</span>
-    <a href={position.source_url} target="_blank" rel="noopener">source</a>
-    {source && <> · retrieved {formatDate(source.retrieved)}</>}
+    {/* One flex item, so the separator never starts a line on its own. */}
+    <span class="src-ref">
+      <a href={position.source_url} target="_blank" rel="noopener">source</a>
+      {source && <> · retrieved {formatDate(source.retrieved)}</>}
+    </span>
   </figcaption>
 </figure>

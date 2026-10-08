@@ -262,14 +262,22 @@ a.tag:active { transform: translateY(0); }
 .quote {
   border-left: 3px solid var(--quote-bar);
   padding: 2px 0 2px 16px;
+  /* figure carries a 40px inline margin by default; kill it here rather than
+     inline on the element, so a media query can still move it. */
   margin: 12px 0 8px;
+  margin-inline: 0;
   font-family: var(--font-serif);
   font-size: 1.05rem;
   line-height: 1.55;
 }
 .quote p { margin: 0 0 0.6em; }
 .quote p:last-child { margin-bottom: 0; }
-.source-line { font-size: 0.8rem; color: var(--text-faint); }
+.source-line {
+  font-size: 0.8rem; color: var(--text-faint);
+  display: flex; flex-wrap: wrap; align-items: center;
+  gap: 7px 9px;
+  margin-top: 9px;
+}
 .source-line a { color: var(--text-muted); }
 
 .candidate-row { display: flex; gap: 14px; align-items: flex-start; }
@@ -586,6 +594,9 @@ a.bmc-big { font-size: 1.02rem; padding: 12px 24px; }
 @media (max-width: 560px) {
   .facewall { grid-template-columns: repeat(auto-fill, minmax(46px, 1fr)); gap: 5px; }
   .face-name { display: none; }
+
+  /* Avatar (56px) plus the row's 14px gap. */
+  .candidate-row > div > .quote { margin-left: -70px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -675,7 +686,7 @@ a.bmc-big { font-size: 1.02rem; padding: 12px 24px; }
    without having to read the URL. */
 .srctag {
   display: inline-block; font-size: 0.68rem; line-height: 1.5;
-  padding: 1px 7px; border-radius: 999px; margin-right: 6px;
+  padding: 2px 8px; border-radius: 999px;
   background: var(--surface-2); color: var(--text-muted);
   border: 1px solid var(--border);
   letter-spacing: 0.02em;
