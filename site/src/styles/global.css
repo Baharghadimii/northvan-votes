@@ -312,6 +312,24 @@ details.silent li { margin-bottom: 3px; break-inside: avoid; }
 
 /* ---------- order controls ---------- */
 
+.race-jump {
+  position: sticky; top: 0; z-index: 15;
+  display: flex; flex-wrap: wrap; gap: 4px 18px;
+  padding: 9px 0; margin: 14px 0 0;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  font-size: 0.87rem;
+}
+.race-jump-group { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
+.race-jump-group b { color: var(--text-muted); font-weight: 600; }
+.race-jump a { color: var(--accent-text); text-decoration: none; padding-block: 2px; }
+.race-jump a:hover { text-decoration: underline; }
+
+/* Anchored sections must clear the sticky bar, which is 46px on desktop and
+   76px on a phone where it wraps to two rows. */
+.race-section { scroll-margin-top: 58px; }
+@media (max-width: 560px) { .race-section { scroll-margin-top: 90px; } }
+
 .order-note {
   display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px;
   font-size: 0.82rem; color: var(--text-faint); margin: 14px 0 4px;
