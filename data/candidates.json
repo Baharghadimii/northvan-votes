@@ -3911,15 +3911,6 @@
         "source_url": "https://lindabuchanan.ca/about/"
       },
       {
-        "category": "career",
-        "char_end": 9367,
-        "char_start": 9260,
-        "flashpoints": [],
-        "quote": "As a former public health nurse she understood the importance of community-wide action during the pandemic.",
-        "source_type": "campaign_site",
-        "source_url": "https://lindabuchanan.ca"
-      },
-      {
         "category": "education",
         "char_end": 1403,
         "char_start": 1307,
@@ -3929,13 +3920,13 @@
         "source_url": "https://lindabuchanan.ca/about/"
       },
       {
-        "category": "education",
-        "char_end": 5029,
-        "char_start": 4933,
+        "category": "community",
+        "char_end": 2209,
+        "char_start": 1926,
         "flashpoints": [],
-        "quote": "“I met Linda over 30 years ago in nursing school, and even then her leadership was unmistakable.",
+        "quote": "Linda’s first involvement in civic politics came through her role in helping to secure funding for the heritage preservation and renovation of Ridgeway Elementary School, one of the City’s most important heritage properties. She is a founding member of the Ridgeway Heritage Society.",
         "source_type": "campaign_site",
-        "source_url": "https://lindabuchanan.ca"
+        "source_url": "https://lindabuchanan.ca/about/"
       },
       {
         "category": "local-roots",
@@ -3954,15 +3945,6 @@
           "spirit-trail"
         ],
         "quote": "Linda lives in the Ridgeway/Grand Boulevard neighbourhood with her husband, Kevin, where they raised their four children. They enjoy riding their bikes along the Spirit Trail, listening to jazz music, and supporting the local arts and culture scene.",
-        "source_type": "campaign_site",
-        "source_url": "https://lindabuchanan.ca/about/"
-      },
-      {
-        "category": "community",
-        "char_end": 2209,
-        "char_start": 1926,
-        "flashpoints": [],
-        "quote": "Linda’s first involvement in civic politics came through her role in helping to secure funding for the heritage preservation and renovation of Ridgeway Elementary School, one of the City’s most important heritage properties. She is a founding member of the Ridgeway Heritage Society.",
         "source_type": "campaign_site",
         "source_url": "https://lindabuchanan.ca/about/"
       }
@@ -4000,15 +3982,6 @@
       },
       {
         "category": "transportation",
-        "char_end": 14337,
-        "char_start": 13885,
-        "flashpoints": [],
-        "quote": "“Everyone on the North Shore knows that we have many transportation challenges. Since being elected Mayor, Linda has worked tirelessly to advance solutions such as Burrard Inlet Rapid Transit so that people can move efficiently across the North Shore. Her advocacy and action means that industries such as film and animation can continue to grow and thrive. I am supporting Linda’s re-election so that people, and our economy, can keep moving forward.”",
-        "source_type": "campaign_site",
-        "source_url": "https://lindabuchanan.ca"
-      },
-      {
-        "category": "transportation",
         "char_end": 352,
         "char_start": 0,
         "flashpoints": [],
@@ -4017,24 +3990,31 @@
         "source_url": "https://lindabuchanan.ca/mobility/"
       },
       {
-        "category": "childcare-seniors-services",
-        "char_end": 4931,
-        "char_start": 4507,
+        "category": "transportation",
+        "char_end": 650,
+        "char_start": 504,
         "flashpoints": [],
-        "quote": "“Linda continues to be a strong advocate for families across the City. Under her leadership, Council has created a record number of new child care spaces. As a mother myself I can attest to how critical access to affordable, quality child care is for the productive working lives of parents. I am supporting Linda to ensure that the CIty of North Vancouver remains a destination of choice for families to come to lay roots.”",
+        "quote": "As a member of the TransLink Mayors’ Council and Chair of North Shore Connects, she has led the charge to secure rapid transit to the North Shore.",
         "source_type": "campaign_site",
-        "source_url": "https://lindabuchanan.ca"
+        "source_url": "https://lindabuchanan.ca/about/"
       },
       {
         "category": "childcare-seniors-services",
-        "char_end": 10301,
-        "char_start": 10127,
-        "flashpoints": [
-          "harry-jerome"
-        ],
-        "quote": "“Linda’s leadership has helped deliver transformative projects like the revitalization of the Shipyards and the new Harry Jerome Community Recreation Centre and so much more.",
+        "char_end": 693,
+        "char_start": 525,
+        "flashpoints": [],
+        "quote": "It means working collaboratively with other levels of government to improve transportation, and to make childcare and essential services more affordable and accessible.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "childcare-seniors-services",
+        "char_end": 773,
+        "char_start": 660,
+        "flashpoints": [],
+        "quote": "Delivered a new family respite centre – financed and operated by CareBC providing support to seniors and families",
         "source_type": "campaign_site",
-        "source_url": "https://lindabuchanan.ca"
+        "source_url": "https://lindabuchanan.ca/housing/"
       },
       {
         "category": "parks-environment-climate",
@@ -4056,32 +4036,21 @@
       },
       {
         "category": "local-economy",
-        "char_end": 6190,
-        "char_start": 5771,
+        "char_end": 971,
+        "char_start": 694,
         "flashpoints": [],
-        "quote": "“As a small business owner in the City of North Vancouver, I’ve seen firsthand how important it is to have a city that supports local businesses. Mayor Linda Buchanan has continued to prioritize small businesses, vibrant communities, and a strong local economy. The support small businesses receive here has helped restaurants like ours grow and succeed, and that’s why I’m proud to support her again for a third term.”",
-        "source_type": "campaign_site",
-        "source_url": "https://lindabuchanan.ca"
+        "quote": "It means protecting our natural environment for future generations, creating parks, streets, and public spaces that bring people together and builds community, and supporting local businesses while creating opportunities for the next generation of entrepreneurs to invest here.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
       },
       {
         "category": "local-economy",
-        "char_end": 4470,
-        "char_start": 4083,
+        "char_end": 2154,
+        "char_start": 2023,
         "flashpoints": [],
-        "quote": "“As Mayor, Linda is always accessible and engaged with local business owners, taking the time to understand challenges and advocate for solutions in an everchanging business environment. Her leadership has helped shape North Vancouver in to Canada’s most Livable City by championing local businesses, investing in community, and fostering a clear vision for a vibrant, prosperous future.",
+        "quote": "Implemented a new Curb Access and Parking Plan to better manage parking, support businesses and improve access in high-demand areas",
         "source_type": "campaign_site",
-        "source_url": "https://lindabuchanan.ca"
-      },
-      {
-        "category": "taxes-and-spending",
-        "char_end": 17796,
-        "char_start": 17550,
-        "flashpoints": [
-          "wastewater-treatment-plant"
-        ],
-        "quote": "Linda leads with integrity and determination – supporting children and families, advancing transportation solutions, and championing fiscal accountability, including her strong advocacy for taxpayers on the North Shore Wastewater Treatment Plant.",
-        "source_type": "campaign_site",
-        "source_url": "https://lindabuchanan.ca"
+        "source_url": "https://lindabuchanan.ca/mobility/"
       },
       {
         "category": "development-and-growth",
@@ -4093,42 +4062,13 @@
         "source_url": "https://lindabuchanan.ca/housing/"
       },
       {
-        "category": "development-and-growth",
-        "char_end": 11203,
-        "char_start": 10947,
-        "flashpoints": [
-          "harry-jerome"
-        ],
-        "quote": "With our imminent move to Central Lonsdale seeing projects like the new Harry Jerome Community Recreation Centre come to life, along with the continued growth and revitalization of the Central Lonsdale neighbourhood we are excited for our move up the hill.",
-        "source_type": "campaign_site",
-        "source_url": "https://lindabuchanan.ca"
-      },
-      {
         "category": "governance-and-transparency",
-        "char_end": 15566,
-        "char_start": 15220,
+        "char_end": 1994,
+        "char_start": 1784,
         "flashpoints": [],
-        "quote": "“It’s critical that people in leadership positions be able to truly listen to the needs of people in their community. That’s why Mayor Linda Buchanan has been an outstanding champion for the City. Even before the COVID-19 pandemic she demonstrated that she wants to hear the concerns of all people and find a path forward that works for everyone.",
+        "quote": "Convened North Shore Homelessness Action Initiative, an assembly of North Shore officials with a mutual commitment to enhance the coordination and action to prevent and alleviate homelessness in our communities",
         "source_type": "campaign_site",
-        "source_url": "https://lindabuchanan.ca"
-      },
-      {
-        "category": "governance-and-transparency",
-        "char_end": 16135,
-        "char_start": 15845,
-        "flashpoints": [],
-        "quote": "She listens carefully, values collaboration with community and her colleagues on council, and treats people with respect, while remaining steadfast in her commitment to making informed decisions, after exhaustive research on all matters, that serve the long-term interests of the community.",
-        "source_type": "campaign_site",
-        "source_url": "https://lindabuchanan.ca"
-      },
-      {
-        "category": "schools-education",
-        "char_end": 7683,
-        "char_start": 7566,
-        "flashpoints": [],
-        "quote": "“Working with Mayor Linda Buchanan on strengthening the bond between the City and the School District has been a joy.",
-        "source_type": "campaign_site",
-        "source_url": "https://lindabuchanan.ca"
+        "source_url": "https://lindabuchanan.ca/housing/"
       },
       {
         "category": "public-safety-emergency",
@@ -4490,10 +4430,10 @@
       },
       {
         "category": "public-office",
-        "char_end": 820,
-        "char_start": 610,
+        "char_end": 4352,
+        "char_start": 4195,
         "flashpoints": [],
-        "quote": "Since then, I’ve watched him thrive as a successful entrepreneur, have a wonderful family life with … lots of fun vacations and successful adult children, and serve with dedication as an elected school trustee.",
+        "quote": "He served on … the CNV school board, and now that he’s retired from his business, he’s back and focused on fixing this city’s issues, economic and otherwise.",
         "source_type": "campaign_site",
         "source_url": "https://mcgraw4mayor.ca/"
       },
@@ -4526,10 +4466,10 @@
       },
       {
         "category": "community",
-        "char_end": 7394,
-        "char_start": 7217,
+        "char_end": 2621,
+        "char_start": 2471,
         "flashpoints": [],
-        "quote": "I’ve worked with Mike McGraw on our strata council for over two years. As president, he has been accessible to residents, fair with suppliers and effective in addressing issues.",
+        "quote": "I’ve had the pleasure of witnessing Mike in action as President of our condo’s Strata Council, and I’ve been consistently impressed by his leadership.",
         "source_type": "campaign_site",
         "source_url": "https://mcgraw4mayor.ca/"
       },
@@ -4544,12 +4484,12 @@
       },
       {
         "category": "local-roots",
-        "char_end": 820,
-        "char_start": 513,
+        "char_end": 216,
+        "char_start": 0,
         "flashpoints": [],
-        "quote": "I’ve known Mike McGraw for over 20 years, since our kids played football together at Handsworth. Since then, I’ve watched him thrive as a successful entrepreneur, have a wonderful family life with … lots of fun vacations and successful adult children, and serve with dedication as an elected school trustee.",
+        "quote": "North Vancouver has been part of my life for as long as I can remember, and my roots here go back decades. I live in the City of North Vancouver today, the city I'm running to lead. We raised our three children here.",
         "source_type": "campaign_site",
-        "source_url": "https://mcgraw4mayor.ca/"
+        "source_url": "https://mcgraw4mayor.ca/about"
       }
     ],
     "email": "mike@mcgraw4mayor.ca",

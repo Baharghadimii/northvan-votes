@@ -258,6 +258,112 @@ def _prune(items: list[Position], cap: int) -> list[Position]:
     return kept
 
 
+# A campaign site carries other people's voices too: endorsements, testimonials,
+# quotes lifted from a profile written about the candidate. This site tells
+# readers every line is the candidate's own words, so those must not be filed as
+# their positions or their background. Mike McGraw asked for a consistent rule
+# on 2026-10-08 and he was right to -- Linda Buchanan's page was carrying seven
+# endorsement blocks as though she had written them.
+#
+# Two narrow rules, deliberately. A loose one deletes the candidate's own words,
+# which is exactly as bad as publishing somebody else's: an earlier draft caught
+# Senora Navales introducing herself and Catherine Pope describing her own
+# record.
+_ENDORSEMENT_OPEN = re.compile(r'^\s*["\u201c\u00ab]')
+_RELATIONAL = re.compile(
+    r"\bI(?:'ve|\u2019ve| have)?\s+(?:known|met|worked\s+with|watched|served\s+with|"
+    r"first\s+met|come\s+to\s+know)\b",
+    re.I,
+)
+
+
+def _names_of(candidate: Candidate) -> list[str]:
+    first, *rest = candidate.name.split()
+    out = [candidate.name]
+    if len(first) > 2:
+        # "Linda has", "Linda's leadership" -- the given name as a subject.
+        out.append(
+            rf"\b{re.escape(first)}(?:'s|\u2019s)?\s+"
+            rf"(?:has|have|is|was|continues|leads?|led|brings?|believes?|will|serves?|served|leadership|record|vision)\b"
+        )
+    return out
+
+
+def _about_not_by(quote: str, candidate: Candidate) -> bool:
+    """Refers to the candidate in the third person, and isn't them introducing
+    themselves."""
+    if re.search(rf"(?:my name is|I am|I'm|I\u2019m)\s+{re.escape(candidate.name.split()[0])}", quote, re.I):
+        return False
+    return any(re.search(p, quote) for p in _names_of(candidate))
+
+
+def _reviewed_exclusions() -> dict[str, list[str]]:
+    """Passages identified by reading, where no rule was precise enough."""
+    cfg = ROOT / "config" / "other-voices.yaml"
+    if not cfg.exists():
+        return {}
+    import yaml
+
+    out: dict[str, list[str]] = {}
+    for entry in yaml.safe_load(cfg.read_text(encoding="utf-8")) or []:
+        out.setdefault(entry["id"], []).extend(entry.get("starts_with") or [])
+    return out
+
+
+def _skipped_sources() -> dict[str, set[str]]:
+    """Whole pages that are somebody else's voice."""
+    cfg = ROOT / "config" / "other-voices.yaml"
+    if not cfg.exists():
+        return {}
+    import yaml
+
+    out: dict[str, set[str]] = {}
+    for entry in yaml.safe_load(cfg.read_text(encoding="utf-8")) or []:
+        for url in entry.get("skip_source") or []:
+            out.setdefault(entry["id"], set()).add(url.rstrip("/"))
+    return out
+
+
+def drop_other_voices(candidates: list[Candidate]) -> list[tuple[str, str, str]]:
+    """Remove passages somebody other than the candidate is speaking."""
+    removed: list[tuple[str, str, str]] = []
+    reviewed = _reviewed_exclusions()
+    skipped = _skipped_sources()
+    seen_prefixes: set[str] = set()
+    for c in candidates:
+        prefixes = reviewed.get(c.id, [])
+        skip_urls = skipped.get(c.id, set())
+        def keep(p: Position, kind: str) -> bool:
+            q = " ".join(p.quote.split())
+            # A pull-quote praising them, or a narrator who knows them.
+            endorsement = _ENDORSEMENT_OPEN.match(q) and _about_not_by(q, c)
+            relational = _RELATIONAL.search(q) and _about_not_by(q, c)
+            if p.source_url.rstrip("/") in skip_urls:
+                removed.append((c.name, kind, q[:150]))
+                return False
+            by_hand = next((x for x in prefixes if q.startswith(x)), None)
+            if by_hand:
+                seen_prefixes.add(by_hand)
+            if endorsement or relational or by_hand:
+                removed.append((c.name, kind, q[:150]))
+                return False
+            return True
+
+        c.positions = [p for p in c.positions if keep(p, "position")]
+        c.background = [p for p in c.background if keep(p, "background")]
+
+    # A prefix that matches nothing is a silent no-op, and the quote it was
+    # meant to remove is still on the page.
+    listed = {x for xs in reviewed.values() for x in xs}
+    stale = sorted(listed - seen_prefixes)
+    if stale:
+        raise BuildError(
+            "config/other-voices.yaml lists passages that no longer match: "
+            + "; ".join(repr(x[:60]) for x in stale)
+        )
+    return removed
+
+
 def prune_duplicates(candidates: list[Candidate]) -> tuple[int, int]:
     before = sum(len(c.positions) + len(c.background) for c in candidates)
     for c in candidates:
@@ -354,6 +460,12 @@ def build(refresh: bool = False) -> list[Candidate]:
     attach_extra_websites(candidates)
     attach_campaign_pages(candidates)
     attach_positions(candidates)
+    # Before pruning, so a testimonial never wins a slot a real quote could use.
+    dropped = drop_other_voices(candidates)
+    if dropped:
+        print(f"  dropped {len(dropped)} passages in someone else's voice:")
+        for name, kind, q in dropped:
+            print(f"    {name} ({kind}): {q[:90]}")
     prune_duplicates(candidates)
     attach_photos(candidates)
     attach_extra_socials(candidates)

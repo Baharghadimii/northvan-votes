@@ -1,0 +1,32 @@
+# Sources and passages that are somebody other than the candidate speaking.
+#
+# build_dataset's automatic filter catches endorsement pull-quotes and narrators
+# who introduce themselves ("I've known Mike McGraw for 20 years"). It cannot
+# catch a testimonial that neither opens with a quotation mark nor names the
+# candidate, and no lexical rule separated those from a candidate writing about
+# their own parents or colleagues without also deleting real words. Deleting
+# someone's own words is as bad as publishing somebody else's, so the rest is
+# handled here, by reading.
+#
+# skip_source  drops a whole page. Use it when a page is mostly other voices and
+#              picking through it quote by quote would be guesswork.
+# starts_with  drops individual passages, matched on their opening.
+
+- id: cnv-mayor-buchanan-linda
+  reason: >-
+    Her home page is an endorsements wall: 41 quotation marks in 17,900
+    characters, against 0 or 1 in each of her four platform pages. Removing the
+    testimonials one at a time just promoted the next one into the freed slot.
+    Her platform pages and her filed statement are unaffected, and those are
+    where her own words are.
+  skip_source:
+    - "https://lindabuchanan.ca"
+
+- id: cnv-mayor-mcgraw-mike
+  reason: >-
+    Testimonials on his home page, which also carries his real platform, so the
+    page itself is kept and these two passages are removed by hand. He raised
+    this himself on 2026-10-08.
+  starts_with:
+    - "Since then, I’ve watched him thrive as a successful entrepreneur"
+    - "As our Strata President, Mike is always approachable"
