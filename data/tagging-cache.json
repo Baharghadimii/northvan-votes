@@ -13606,17 +13606,7 @@
     ]
   },
   "https://www.kizatt.ca/platform::4dfca9a7795b4305": {
-    "background": [
-      {
-        "category": "community",
-        "char_end": 2536,
-        "char_start": 2362,
-        "flashpoints": [],
-        "quote": "Having connected with over 400 residents regarding the new paid parking initiative, I have gained valuable insight into what is working and where we need to make adjustments.",
-        "source_type": "campaign_site",
-        "source_url": "https://www.kizatt.ca/platform"
-      }
-    ],
+    "background": [],
     "positions": [
       {
         "category": "taxes-and-spending",
@@ -13684,33 +13674,6 @@
         "source_url": "https://www.kizatt.ca/platform"
       },
       {
-        "category": "housing",
-        "char_end": 6520,
-        "char_start": 6147,
-        "flashpoints": [],
-        "quote": "Smart, Liveable Urban Design: Let's maximize our community spaces by encouraging new multi-family developments to build beautiful, functional on-site green areas and community gardens rather than concrete plazas. By integrating these spaces directly into new housing, we enhance urban liveability and provide residents with private, usable outdoor sanctuaries right at home",
-        "source_type": "campaign_site",
-        "source_url": "https://www.kizatt.ca/platform"
-      },
-      {
-        "category": "development-and-growth",
-        "char_end": 5607,
-        "char_start": 5276,
-        "flashpoints": [],
-        "quote": "The Goal: Give landlords a real financial incentive to modernize and preserve our neighborhood character, rather than demolishing affordable homes for luxury redevelopments.\n\nThe city-owned vacant lot on the 100 Block of East 1st Street functions as a de facto neighborhood park, it is currently slated for mixed-use redevelopment.",
-        "source_type": "campaign_site",
-        "source_url": "https://www.kizatt.ca/platform"
-      },
-      {
-        "category": "development-and-growth",
-        "char_end": 6520,
-        "char_start": 6147,
-        "flashpoints": [],
-        "quote": "Smart, Liveable Urban Design: Let's maximize our community spaces by encouraging new multi-family developments to build beautiful, functional on-site green areas and community gardens rather than concrete plazas. By integrating these spaces directly into new housing, we enhance urban liveability and provide residents with private, usable outdoor sanctuaries right at home",
-        "source_type": "campaign_site",
-        "source_url": "https://www.kizatt.ca/platform"
-      },
-      {
         "category": "parks-environment-climate",
         "char_end": 6520,
         "char_start": 5451,
@@ -13720,11 +13683,20 @@
         "source_url": "https://www.kizatt.ca/platform"
       },
       {
-        "category": "childcare-seniors-services",
-        "char_end": 3155,
-        "char_start": 3051,
+        "category": "development-and-growth",
+        "char_end": 5449,
+        "char_start": 5276,
         "flashpoints": [],
-        "quote": "We also need to expand the number of accessible parking spaces for seniors and those with mobility needs",
+        "quote": "The Goal: Give landlords a real financial incentive to modernize and preserve our neighborhood character, rather than demolishing affordable homes for luxury redevelopments.",
+        "source_type": "campaign_site",
+        "source_url": "https://www.kizatt.ca/platform"
+      },
+      {
+        "category": "development-and-growth",
+        "char_end": 6520,
+        "char_start": 6147,
+        "flashpoints": [],
+        "quote": "Smart, Liveable Urban Design: Let's maximize our community spaces by encouraging new multi-family developments to build beautiful, functional on-site green areas and community gardens rather than concrete plazas. By integrating these spaces directly into new housing, we enhance urban liveability and provide residents with private, usable outdoor sanctuaries right at home",
         "source_type": "campaign_site",
         "source_url": "https://www.kizatt.ca/platform"
       },
@@ -13754,19 +13726,10 @@
         "quote": "Specifically, I will advocate for paid parking to end at 6:00 PM to support our local restaurants, bars, and residents hosting evening guests.",
         "source_type": "campaign_site",
         "source_url": "https://www.kizatt.ca/platform"
-      },
-      {
-        "category": "local-economy",
-        "char_end": 4248,
-        "char_start": 4090,
-        "flashpoints": [],
-        "quote": "We must ensure that both people and commercial goods can move efficiently across our city, prioritizing practical flow over restrictive road-space reductions.",
-        "source_type": "campaign_site",
-        "source_url": "https://www.kizatt.ca/platform"
       }
     ]
   },
-  "https://www.kizatt.ca::e0d8b70f8b36c3f0": {
+  "https://www.kizatt.ca::8cc34453ccf94611": {
     "background": [
       {
         "category": "local-roots",
@@ -13783,6 +13746,42 @@
         "char_start": 108,
         "flashpoints": [],
         "quote": "My roots are firmly planted in North Vancouver and I have recently retired from a rewarding business career.",
+        "source_type": "campaign_site",
+        "source_url": "https://www.kizatt.ca"
+      },
+      {
+        "category": "public-office",
+        "char_end": 964,
+        "char_start": 648,
+        "flashpoints": [],
+        "quote": "My Experience and Credentials - 12 Years of Volunteer Community Service Serving for six years on the City of North Vancouver's Social Planning Advisory Committee (SPAC) gave me invaluable insight into how our municipal government operates For six years, I served on the Friends Society Board of Directors for MONOVA.",
+        "source_type": "campaign_site",
+        "source_url": "https://www.kizatt.ca"
+      },
+      {
+        "category": "community",
+        "char_end": 1282,
+        "char_start": 648,
+        "flashpoints": [],
+        "quote": "My Experience and Credentials - 12 Years of Volunteer Community Service Serving for six years on the City of North Vancouver's Social Planning Advisory Committee (SPAC) gave me invaluable insight into how our municipal government operates For six years, I served on the Friends Society Board of Directors for MONOVA. I was initially appointed to the role of Treasurer and later moved onto revising the membership program. I had the privilege of collaborating with an incredible team focused on a singular goal: opening the Museum's doors. Seeing that vision come to life was the result of years of collective hard work and dedication.",
+        "source_type": "campaign_site",
+        "source_url": "https://www.kizatt.ca"
+      },
+      {
+        "category": "community",
+        "char_end": 3250,
+        "char_start": 3179,
+        "flashpoints": [],
+        "quote": "My Experience and Credentials - 12 Years of Volunteer Community Service",
+        "source_type": "campaign_site",
+        "source_url": "https://www.kizatt.ca"
+      },
+      {
+        "category": "education",
+        "char_end": 1438,
+        "char_start": 1283,
+        "flashpoints": [],
+        "quote": "A business education from the University of British Columbia (UBC) Faculty of Commerce. Graduated in 2002 with a Diploma in Marketing and Sales Management.",
         "source_type": "campaign_site",
         "source_url": "https://www.kizatt.ca"
       }
@@ -13808,8 +13807,8 @@
       },
       {
         "category": "taxes-and-spending",
-        "char_end": 927,
-        "char_start": 837,
+        "char_end": 1719,
+        "char_start": 1629,
         "flashpoints": [],
         "quote": "I am committed to bringing practical fiscal management and common sense back to City Hall.",
         "source_type": "campaign_site",
@@ -13818,25 +13817,34 @@
       {
         "category": "governance-and-transparency",
         "char_end": 646,
-        "char_start": 218,
+        "char_start": 386,
         "flashpoints": [],
-        "quote": "I am concerned with the direction the current council is taking us. I would like to be part of a new council for positive change, starting with fiscal responsibility.\n\nMy straightforward promise is to put the people who live and work in the City of North Vancouver first in decision making.\n\nI commit to bringing practical fiscal management, transparency, accountability, community engagement and common sense back to City Hall.",
+        "quote": "My straightforward promise is to put the people who live and work in the City of North Vancouver first in decision making.\n\nI commit to bringing practical fiscal management, transparency, accountability, community engagement and common sense back to City Hall.",
         "source_type": "campaign_site",
         "source_url": "https://www.kizatt.ca"
       },
       {
         "category": "governance-and-transparency",
-        "char_end": 1075,
-        "char_start": 728,
+        "char_end": 1628,
+        "char_start": 1520,
         "flashpoints": [],
-        "quote": "Built on a foundation of trust, absolute transparency and accountability, my vision for our future is clear. I am committed to bringing practical fiscal management and common sense back to City Hall.\n\nMy straightforward promise is to always put the residents and businesses who live and work in the City of North Vancouver first in every decision.",
+        "quote": "Built on a foundation of trust, absolute transparency and accountability, my vision for our future is clear.",
         "source_type": "campaign_site",
         "source_url": "https://www.kizatt.ca"
       },
       {
         "category": "governance-and-transparency",
-        "char_end": 1933,
-        "char_start": 1822,
+        "char_end": 1867,
+        "char_start": 1721,
+        "flashpoints": [],
+        "quote": "My straightforward promise is to always put the residents and businesses who live and work in the City of North Vancouver first in every decision.",
+        "source_type": "campaign_site",
+        "source_url": "https://www.kizatt.ca"
+      },
+      {
+        "category": "governance-and-transparency",
+        "char_end": 2725,
+        "char_start": 2614,
         "flashpoints": [],
         "quote": "Ethically I cannot accept donations from those in executive positions with special interest or lobbyist groups.",
         "source_type": "campaign_site",

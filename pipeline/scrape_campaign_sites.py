@@ -94,20 +94,24 @@ def clean_text(soup: BeautifulSoup) -> str:
             parts.append(text)
         return parts
 
-    parts = collect(body.find_all(["p", "li", "h2", "h3", "blockquote"]))
+    # Headings carry real content on builder sites, not just labels: Ken Izatt's
+    # "12 Years of Volunteer Community Service" section is an h5.
+    tagged = body.find_all(["p", "li", "h2", "h3", "h4", "h5", "h6", "blockquote"])
 
     # Some site builders emit prose in divs and spans with no paragraph tags at
-    # all. One candidate's priorities page held 7,000 characters that the tag
-    # list above simply could not see. Fall back to the innermost blocks that
-    # hold text directly, which avoids swallowing a wrapper and its children.
-    if sum(len(x) for x in parts) < MIN_PAGE_CHARS:
-        leaves = [
-            el for el in body.find_all(["div", "section", "article", "span", "td"])
-            if not el.find(["div", "section", "article", "p", "li", "table"])
-        ]
-        parts = collect(leaves)
+    # all. The innermost blocks that hold text directly catch those, without
+    # swallowing a wrapper and its children.
+    leaves = [
+        el for el in body.find_all(["div", "section", "article", "span", "td"])
+        if not el.find(["div", "section", "article", "p", "li", "table"])
+    ]
 
-    return "\n\n".join(parts)
+    # Both passes, always. This used to fall back to leaves only when the tag
+    # list found almost nothing, which meant a page mixing <p> prose with
+    # span-based sections kept the prose and silently lost the sections. Ken
+    # Izatt's landing page yielded 2,385 characters that way and dropped the
+    # other half, including the volunteering he was asking about.
+    return "\n\n".join(collect(tagged + leaves))
 
 
 def same_host(a: str, b: str) -> bool:
