@@ -1053,9 +1053,18 @@
       "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
     },
     {
-      "category": "career",
-      "char_end": 358,
+      "category": "public-office",
+      "char_end": 787,
       "char_start": 0,
+      "flashpoints": [],
+      "quote": "I have been proud to serve as a City of North Vancouver Councillor since 2018, and as a board member of board of the North Vancouver City Library, North Van Arts Council, and Lonsdale Energy, chair of the climate and environment task force, member of the Metro Vancouver climate action and Indigenous relations committees, and as the council representative on the City’s integrated transportation committee. I believe strongly in collaboration and partnerships, and currently sit as 3rd Vice-President on the Executive of the Lower Mainland Local Government Association, on the Board of Directors of Climate Caucus, and a member of the BC Municipal Climate Leadership Council, where I'm proud to work with other local and provincial elected officials to find solutions to our challenges.",
+      "source_type": "campaign_site",
+      "source_url": "https://www.jessicamcilroy.com/about"
+    },
+    {
+      "category": "career",
+      "char_end": 1147,
+      "char_start": 789,
       "flashpoints": [],
       "quote": "For over twenty years I've worked in leadership positions advocating for change on sustainability issues, working to move the public and private sectors as well as individuals on clean energy and climate. This has included positions as Executive Director and Board Director of clean energy and community non-profits and volunteering with local organizations.",
       "source_type": "campaign_site",
@@ -1063,8 +1072,8 @@
     },
     {
       "category": "community",
-      "char_end": 358,
-      "char_start": 205,
+      "char_end": 1147,
+      "char_start": 994,
       "flashpoints": [],
       "quote": "This has included positions as Executive Director and Board Director of clean energy and community non-profits and volunteering with local organizations.",
       "source_type": "campaign_site",
@@ -1072,8 +1081,8 @@
     },
     {
       "category": "local-roots",
-      "char_end": 544,
-      "char_start": 360,
+      "char_end": 1333,
+      "char_start": 1149,
       "flashpoints": [],
       "quote": "I have lived in the City of North Vancouver since 2006, raising my girls, contributing to a thriving community, and spending as much time on the trails and ski runs of the North Shore.",
       "source_type": "campaign_site",
@@ -1942,8 +1951,8 @@
     },
     {
       "category": "public-office",
-      "char_end": 820,
-      "char_start": 610,
+      "char_end": 1541,
+      "char_start": 1331,
       "flashpoints": [],
       "quote": "Since then, I’ve watched him thrive as a successful entrepreneur, have a wonderful family life with … lots of fun vacations and successful adult children, and serve with dedication as an elected school trustee.",
       "source_type": "campaign_site",
@@ -1951,17 +1960,35 @@
     },
     {
       "category": "public-office",
-      "char_end": 4352,
-      "char_start": 4195,
+      "char_end": 5073,
+      "char_start": 4916,
       "flashpoints": [],
       "quote": "He served on … the CNV school board, and now that he’s retired from his business, he’s back and focused on fixing this city’s issues, economic and otherwise.",
       "source_type": "campaign_site",
       "source_url": "https://mcgraw4mayor.ca/"
     },
     {
+      "category": "public-office",
+      "char_end": 10276,
+      "char_start": 10168,
+      "flashpoints": [],
+      "quote": "lots of fun vacations and successful adult children, and serve with dedication as an elected school trustee.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/"
+    },
+    {
+      "category": "public-office",
+      "char_end": 12608,
+      "char_start": 12466,
+      "flashpoints": [],
+      "quote": "the CNV school board, and now that he’s retired from his business, he’s back and focused on fixing this city’s issues, economic and otherwise.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/"
+    },
+    {
       "category": "career",
-      "char_end": 820,
-      "char_start": 610,
+      "char_end": 1541,
+      "char_start": 1331,
       "flashpoints": [],
       "quote": "Since then, I’ve watched him thrive as a successful entrepreneur, have a wonderful family life with … lots of fun vacations and successful adult children, and serve with dedication as an elected school trustee.",
       "source_type": "campaign_site",
@@ -1969,8 +1996,8 @@
     },
     {
       "category": "career",
-      "char_end": 4352,
-      "char_start": 4195,
+      "char_end": 5073,
+      "char_start": 4916,
       "flashpoints": [],
       "quote": "He served on … the CNV school board, and now that he’s retired from his business, he’s back and focused on fixing this city’s issues, economic and otherwise.",
       "source_type": "campaign_site",
@@ -1978,26 +2005,44 @@
     },
     {
       "category": "career",
-      "char_end": 6283,
-      "char_start": 5644,
+      "char_end": 7004,
+      "char_start": 6477,
       "flashpoints": [],
-      "quote": "His tool kit includes many years of being a servant leader, a manager committed to the well being of his staff. Mike learned that running a business required he become a prudent and fiscally responsible manager of the company’s resources, which is exactly what the City needs right now. And he will bring fairness and balance back to decision making. … Not many people would sell their business and retire, then volunteer to run for public office, Mike did. … Electing Mike McGraw as Mayor along with new, fresh voices on Council will transform how the City of North Vancouver operates and delivers services to all of us who call CNV home.",
+      "quote": "Mike learned that running a business required he become a prudent and fiscally responsible manager of the company’s resources, which is exactly what the City needs right now. And he will bring fairness and balance back to decision making. … Not many people would sell their business and retire, then volunteer to run for public office, Mike did. … Electing Mike McGraw as Mayor along with new, fresh voices on Council will transform how the City of North Vancouver operates and delivers services to all of us who call CNV home.",
       "source_type": "campaign_site",
       "source_url": "https://mcgraw4mayor.ca/"
     },
     {
       "category": "career",
-      "char_end": 7937,
-      "char_start": 7700,
+      "char_end": 8658,
+      "char_start": 8421,
       "flashpoints": [],
       "quote": "North Vancouver has been my home for decades, and I built a software company here that created more than 20 highly skilled, well-paying local jobs. After a long career in business, I’m stepping away from it to serve this community again.",
       "source_type": "campaign_site",
       "source_url": "https://mcgraw4mayor.ca/"
     },
     {
+      "category": "career",
+      "char_end": 12608,
+      "char_start": 12466,
+      "flashpoints": [],
+      "quote": "the CNV school board, and now that he’s retired from his business, he’s back and focused on fixing this city’s issues, economic and otherwise.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/"
+    },
+    {
+      "category": "career",
+      "char_end": 14136,
+      "char_start": 13609,
+      "flashpoints": [],
+      "quote": "Mike learned that running a business required he become a prudent and fiscally responsible manager of the company’s resources, which is exactly what the City needs right now. And he will bring fairness and balance back to decision making. … Not many people would sell their business and retire, then volunteer to run for public office, Mike did. … Electing Mike McGraw as Mayor along with new, fresh voices on Council will transform how the City of North Vancouver operates and delivers services to all of us who call CNV home.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/"
+    },
+    {
       "category": "community",
-      "char_end": 1925,
-      "char_start": 1839,
+      "char_end": 2646,
+      "char_start": 2560,
       "flashpoints": [],
       "quote": "I met Mike over 10 years ago when we were volunteering on a North Van community board.",
       "source_type": "campaign_site",
@@ -2005,8 +2050,8 @@
     },
     {
       "category": "community",
-      "char_end": 2621,
-      "char_start": 2471,
+      "char_end": 3342,
+      "char_start": 3192,
       "flashpoints": [],
       "quote": "I’ve had the pleasure of witnessing Mike in action as President of our condo’s Strata Council, and I’ve been consistently impressed by his leadership.",
       "source_type": "campaign_site",
@@ -2014,17 +2059,8 @@
     },
     {
       "category": "community",
-      "char_end": 4006,
-      "char_start": 3859,
-      "flashpoints": [],
-      "quote": "I have felt extremely fortunate that Mike was chair of our board and I have great confidence he would bring those same skills to the role of Mayor.",
-      "source_type": "campaign_site",
-      "source_url": "https://mcgraw4mayor.ca/"
-    },
-    {
-      "category": "community",
-      "char_end": 6685,
-      "char_start": 6571,
+      "char_end": 7406,
+      "char_start": 7292,
       "flashpoints": [],
       "quote": "Having Mike as our strata president has given me a front-row seat to what genuine community leadership looks like.",
       "source_type": "campaign_site",
@@ -2032,17 +2068,8 @@
     },
     {
       "category": "community",
-      "char_end": 7394,
-      "char_start": 7217,
-      "flashpoints": [],
-      "quote": "I’ve worked with Mike McGraw on our strata council for over two years. As president, he has been accessible to residents, fair with suppliers and effective in addressing issues.",
-      "source_type": "campaign_site",
-      "source_url": "https://mcgraw4mayor.ca/"
-    },
-    {
-      "category": "community",
-      "char_end": 7699,
-      "char_start": 7542,
+      "char_end": 8420,
+      "char_start": 8263,
       "flashpoints": [],
       "quote": "As our Strata President, Mike is always approachable, great communicator, attention to detail, gets the job done and keeps costs in check.\n\nI love this city.",
       "source_type": "campaign_site",
@@ -2050,8 +2077,8 @@
     },
     {
       "category": "local-roots",
-      "char_end": 820,
-      "char_start": 513,
+      "char_end": 1541,
+      "char_start": 1234,
       "flashpoints": [],
       "quote": "I’ve known Mike McGraw for over 20 years, since our kids played football together at Handsworth. Since then, I’ve watched him thrive as a successful entrepreneur, have a wonderful family life with … lots of fun vacations and successful adult children, and serve with dedication as an elected school trustee.",
       "source_type": "campaign_site",
@@ -2059,8 +2086,8 @@
     },
     {
       "category": "local-roots",
-      "char_end": 7847,
-      "char_start": 7700,
+      "char_end": 8568,
+      "char_start": 8421,
       "flashpoints": [],
       "quote": "North Vancouver has been my home for decades, and I built a software company here that created more than 20 highly skilled, well-paying local jobs.",
       "source_type": "campaign_site",
@@ -2068,8 +2095,17 @@
     },
     {
       "category": "local-roots",
-      "char_end": 216,
-      "char_start": 0,
+      "char_end": 10276,
+      "char_start": 10168,
+      "flashpoints": [],
+      "quote": "lots of fun vacations and successful adult children, and serve with dedication as an elected school trustee.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/"
+    },
+    {
+      "category": "local-roots",
+      "char_end": 324,
+      "char_start": 108,
       "flashpoints": [],
       "quote": "North Vancouver has been part of my life for as long as I can remember, and my roots here go back decades. I live in the City of North Vancouver today, the city I'm running to lead. We raised our three children here.",
       "source_type": "campaign_site",
@@ -2077,8 +2113,8 @@
     },
     {
       "category": "career",
-      "char_end": 492,
-      "char_start": 217,
+      "char_end": 600,
+      "char_start": 325,
       "flashpoints": [],
       "quote": "I built a software company here that created more than 20 highly skilled, well-paying local jobs. After a long career in business, I'm stepping away from the private sector to return to public service - because this community has given me a lot, and I'm not done giving back.",
       "source_type": "campaign_site",
@@ -2086,8 +2122,17 @@
     },
     {
       "category": "community",
-      "char_end": 851,
-      "char_start": 791,
+      "char_end": 968,
+      "char_start": 602,
+      "flashpoints": [],
+      "quote": "I'm one of six directors of the not-for-profit that brought Canada Day to Civic Plaza this year. It was led by volunteers, staffed by volunteers and supported by City staff, and it was a community initiative from start to finish. I put my own time into it because building community and bringing neighbours together is one of the best things we can do for this city.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/about"
+    },
+    {
+      "category": "community",
+      "char_end": 1327,
+      "char_start": 1267,
       "flashpoints": [],
       "quote": "Managing a complex's finances and governance as a volunteer.",
       "source_type": "campaign_site",
@@ -2095,12 +2140,93 @@
     },
     {
       "category": "community",
-      "char_end": 1169,
-      "char_start": 1024,
+      "char_end": 1645,
+      "char_start": 1500,
       "flashpoints": [],
       "quote": "That's the job I do today as a volunteer: budgets, maintenance, legal risk, and the different needs of 57 homes and 10 businesses under one roof.",
       "source_type": "campaign_site",
       "source_url": "https://mcgraw4mayor.ca/about"
+    },
+    {
+      "category": "public-office",
+      "char_end": 2509,
+      "char_start": 2329,
+      "flashpoints": [],
+      "quote": "Around that time, I also got involved with the Outdoor School, where I sat on an advisory committee doing a lot of great work around children's programming and Indigenous programs.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/conversations.html"
+    },
+    {
+      "category": "public-office",
+      "char_end": 7156,
+      "char_start": 7057,
+      "flashpoints": [],
+      "quote": "The last thing I'll say, David, is that when I was on the school board, it was really no different.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/conversations.html"
+    },
+    {
+      "category": "career",
+      "char_end": 3202,
+      "char_start": 2752,
+      "flashpoints": [],
+      "quote": "Mike: From there, I went on to found a business. I grew it, and I retired and left it last fall. I was always referred to as a strong leader with a servant leadership style. I think what people meant by that is that I always put my employees first. I essentially felt that I worked for them. I was there to support them to be successful, and if I was good at that and they were successful, then my business would be successful. And that was the case.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/conversations.html"
+    },
+    {
+      "category": "career",
+      "char_end": 21424,
+      "char_start": 20540,
+      "flashpoints": [],
+      "quote": "I'll give you one example from my own business. I built a game studio, and at one point there was a sister studio of ours - we shared the same publishing company - located in Hong Kong. Because of political reasons there, they felt the need to shut down and move somewhere else in the world. I was asked what I thought about Canada, and I said, “If they're willing, let's bring them to North Vancouver. I have space next door to my studio.” So that's what we did.\n\nI brought them over, helped them get their permanent residency and supported them in the transition. Then I merged them with us so that we became a single studio. Frankly, there wasn't a lot of trust on their side, so I had to work very, very hard, having long conversations with them to help them understand that this was in their best interests. In the end, it was a fabulous success, and I felt really good about it.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/conversations.html"
+    },
+    {
+      "category": "community",
+      "char_end": 2258,
+      "char_start": 2069,
+      "flashpoints": [],
+      "quote": "Maybe I'll join a school PAC.” So I started attending some school PAC meetings, and I found myself leading and transforming our district PAC, which is where parents' voices meet the system.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/conversations.html"
+    },
+    {
+      "category": "community",
+      "char_end": 2509,
+      "char_start": 2329,
+      "flashpoints": [],
+      "quote": "Around that time, I also got involved with the Outdoor School, where I sat on an advisory committee doing a lot of great work around children's programming and Indigenous programs.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/conversations.html"
+    },
+    {
+      "category": "community",
+      "char_end": 15995,
+      "char_start": 15695,
+      "flashpoints": [],
+      "quote": "I'm a director of a society that put on a Canada Day event in Civic Plaza on July 1. We're just a group of seven volunteers who wanted to bring the parade back. Because of FIFA, we weren't able to do that this year, but the city worked with us and gave us the use of Civic Plaza, which was fantastic.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/conversations.html"
+    },
+    {
+      "category": "community",
+      "char_end": 22151,
+      "char_start": 22055,
+      "flashpoints": [],
+      "quote": "I've been the strata president of our residential building, a mixed-use building, for six years.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/conversations.html"
+    },
+    {
+      "category": "local-roots",
+      "char_end": 2025,
+      "char_start": 1680,
+      "flashpoints": [],
+      "quote": "Mike: I grew up in North Vancouver as a young boy. We moved away for a period of time, and we returned with our family in 2008. This has always been home; it's where my roots are. My wife asked me what I was going to do to get back into the community, because I was very excited to be back in North Vancouver permanently.\n\nI said, “I don't know.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/conversations.html"
     }
   ],
   "cnv-trustee-azizi-manoochehr": [

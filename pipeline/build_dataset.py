@@ -174,10 +174,15 @@ def _drop_trailing_heading(p: Position, source_text: str) -> Position:
     trimmed = p.quote[: m.start()].rstrip()
     if len(trimmed.split()) < 6:
         return p
+    before_quote, before_end = p.quote, p.char_end
     p.quote = trimmed
     p.char_end = p.char_start + len(p.quote)
     if not p.verify_against(source_text):
-        raise BuildError(f"trimming a trailing heading broke the span for {p.source_url}")
+        # Dropping a dangling heading is a cosmetic nicety. If the shortened
+        # span will not round-trip, keep the original rather than failing the
+        # build -- the quote stays verbatim either way, which is the part that
+        # matters.
+        p.quote, p.char_end = before_quote, before_end
     return p
 
 
@@ -357,10 +362,14 @@ def drop_other_voices(candidates: list[Candidate]) -> list[tuple[str, str, str]]
     listed = {x for xs in reviewed.values() for x in xs}
     stale = sorted(listed - seen_prefixes)
     if stale:
-        raise BuildError(
-            "config/other-voices.yaml lists passages that no longer match: "
-            + "; ".join(repr(x[:60]) for x in stale)
-        )
+        # A warning, not an error: between a re-crawl and a re-tag the passages
+        # legitimately are not there yet, and failing the build at that point
+        # blocks the very re-tag that would restore them. Worth seeing, though,
+        # because a prefix matching nothing means a quote someone asked to have
+        # removed may still be on their page.
+        print("  note: config/other-voices.yaml lists passages that did not match:")
+        for x in stale:
+            print(f"    {x[:70]}")
     return removed
 
 
@@ -427,6 +436,34 @@ def attach_extra_socials(candidates: list[Candidate]) -> None:
         c.socials.setdefault(entry["key"], urlunsplit((*parts[:3], "", "")))
 
 
+def _drop_unverified(candidates: list[Candidate], kind: str) -> None:
+    """Discard any passage that no longer matches the source it came from.
+
+    A re-crawled page shifts every offset after the edit, so a positions file
+    written against the old text describes spans that are no longer there. The
+    site's whole promise is that a quote is a literal slice of a saved document,
+    so an unverifiable passage must never reach a page. It used to abort the
+    build instead, which was worse than it sounds: the build writes
+    data/candidates.json, so a crash left the *old* sources on disk, the tagger
+    then re-tagged the old text, and the re-crawl silently achieved nothing.
+    """
+    for c in candidates:
+        items = c.positions if kind == "position" else c.background
+        kept, dropped = [], 0
+        for p in items:
+            source = c.source_for(p.source_url)
+            if source is None or not p.verify_against(source.text):
+                dropped += 1
+                continue
+            kept.append(p)
+        if dropped:
+            print(f"  {c.name}: dropped {dropped} stale {kind}(s) — re-run tag_positions")
+        if kind == "position":
+            c.positions = kept
+        else:
+            c.background = kept
+
+
 def attach_positions(candidates: list[Candidate]) -> None:
     """Merge tagger output, if it has been run. Unknown ids are a hard error:
     a stale positions file must not silently attach a quote to nobody."""
@@ -443,6 +480,8 @@ def attach_positions(candidates: list[Candidate]) -> None:
     for cid, raw in tagged.items():
         by_id[cid].positions = [Position(**p) for p in raw]
 
+    _drop_unverified(candidates, "position")
+
     if not BACKGROUND.exists():
         return
     bg = json.loads(BACKGROUND.read_text(encoding="utf-8"))
@@ -453,6 +492,8 @@ def attach_positions(candidates: list[Candidate]) -> None:
         )
     for cid, raw in bg.items():
         by_id[cid].background = [Position(**p) for p in raw]
+
+    _drop_unverified(candidates, "background")
 
 
 def build(refresh: bool = False) -> list[Candidate]:

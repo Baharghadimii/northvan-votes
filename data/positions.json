@@ -2424,7 +2424,7 @@
       "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
     },
     {
-      "category": "housing",
+      "category": "transportation",
       "char_end": 166,
       "char_start": 83,
       "flashpoints": [],
@@ -2434,10 +2434,28 @@
     },
     {
       "category": "transportation",
+      "char_end": 337,
+      "char_start": 256,
+      "flashpoints": [],
+      "quote": "A diversity of mobility and housing options that meet the needs of all residents.",
+      "source_type": "campaign_site",
+      "source_url": "https://www.jessicamcilroy.com"
+    },
+    {
+      "category": "housing",
       "char_end": 166,
       "char_start": 83,
       "flashpoints": [],
       "quote": "A diversity of mobility and housing options that meet the needs of all residents. ​",
+      "source_type": "campaign_site",
+      "source_url": "https://www.jessicamcilroy.com"
+    },
+    {
+      "category": "housing",
+      "char_end": 337,
+      "char_start": 256,
+      "flashpoints": [],
+      "quote": "A diversity of mobility and housing options that meet the needs of all residents.",
       "source_type": "campaign_site",
       "source_url": "https://www.jessicamcilroy.com"
     },
@@ -4700,17 +4718,17 @@
     },
     {
       "category": "governance-and-transparency",
-      "char_end": 216,
+      "char_end": 217,
       "char_start": 0,
       "flashpoints": [],
-      "quote": "Regular Meet the Mayor events, open and unscripted. My door is open, and I won't be hard to find.\n\nReal debate and public input before decisions are made, not after. Only 22.4% of us voted last time; that's a signal.",
+      "quote": "Regular Meet the Mayor events, open and unscripted. My door is open, and I won't be hard to find.\n\nReal debate and public input before decisions are made, not after. Only 22.64% of us voted last time; that's a signal.",
       "source_type": "campaign_site",
       "source_url": "https://mcgraw4mayor.ca/"
     },
     {
       "category": "governance-and-transparency",
-      "char_end": 511,
-      "char_start": 328,
+      "char_end": 520,
+      "char_start": 337,
       "flashpoints": [],
       "quote": "Real growth, on the terms residents were promised, with the public voice back in the room.\n\nReal feedback from residents, business owners, and community voices across North Vancouver.",
       "source_type": "campaign_site",
@@ -4718,71 +4736,440 @@
     },
     {
       "category": "governance-and-transparency",
-      "char_end": 8280,
-      "char_start": 7938,
+      "char_end": 916,
+      "char_start": 630,
       "flashpoints": [],
-      "quote": "A lot of people have told me their voice doesn’t matter at City Hall, and I think they have a point. I want a council that debates the hard questions instead of rubber-stamping them, with real public input before decisions are made, not after. Rebuilding that starts with showing up and listening, so here’s my promise: Show up. Listen. Lead.",
+      "quote": "And yes, I’m a little surprised myself. … In his candidate statement on the City’s election … website, McGraw says he does not accept developer donations. He also promises regular opportunities to meet the mayor throughout his term and meaningful public input before decisions are made.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/"
+    },
+    {
+      "category": "governance-and-transparency",
+      "char_end": 9101,
+      "char_start": 8659,
+      "flashpoints": [],
+      "quote": "A lot of people have told me their voice doesn’t matter at City Hall, and I think they have a point. I want a council that debates the hard questions instead of rubber-stamping them, with real public input before decisions are made, not after. Rebuilding that starts with showing up and listening, so here’s my promise: Show up. Listen. Lead.\n\n“A lot of people have told me their voice doesn’t matter at City Hall. I think they have a point.”",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/"
+    },
+    {
+      "category": "governance-and-transparency",
+      "char_end": 9850,
+      "char_start": 9658,
+      "flashpoints": [],
+      "quote": "website, McGraw says he does not accept developer donations. He also promises regular opportunities to meet the mayor throughout his term and meaningful public input before decisions are made.",
       "source_type": "campaign_site",
       "source_url": "https://mcgraw4mayor.ca/"
     },
     {
       "category": "taxes-and-spending",
-      "char_end": 326,
-      "char_start": 218,
+      "char_end": 335,
+      "char_start": 219,
       "flashpoints": [
         "wastewater-treatment-plant"
       ],
-      "quote": "The North Shore covers 37% of the wastewater plant's cost on 8% of the region's population. That's not fair.",
+      "quote": "The North Shore covers 37% of the wastewater plant's cost overrun on 8% of the region's population. That's not fair.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/"
+    },
+    {
+      "category": "taxes-and-spending",
+      "char_end": 14969,
+      "char_start": 14793,
+      "flashpoints": [
+        "wastewater-treatment-plant"
+      ],
+      "quote": "Total cost of the North Shore Wastewater Treatment Plant, announced March 2024\n\nNorth Shore share of the plant’s cost overrun, against its share of Metro Vancouver’s population",
       "source_type": "campaign_site",
       "source_url": "https://mcgraw4mayor.ca/"
     },
     {
       "category": "development-and-growth",
-      "char_end": 418,
-      "char_start": 328,
+      "char_end": 427,
+      "char_start": 337,
       "flashpoints": [],
       "quote": "Real growth, on the terms residents were promised, with the public voice back in the room.",
       "source_type": "campaign_site",
       "source_url": "https://mcgraw4mayor.ca/"
     },
     {
-      "category": "governance-and-transparency",
-      "char_end": 860,
-      "char_start": 17,
+      "category": "local-economy",
+      "char_end": 8568,
+      "char_start": 8421,
       "flashpoints": [],
-      "quote": "Rebuilding trust starts with showing up and listening. That's why I'll hold regular Meet the Mayor events: open, unscripted, where residents can ask hard questions and get straight answers. You shouldn't need an appointment or a connection to talk to your mayor. Residents won't wait a year to hear from me directly: I'll deliver a free, public State of the City address within my first six to eight months.\n\nThat number isn't apathy. It's a lot of people who've concluded their voice doesn't matter at City Hall, and I think they have a point. Too often, \"public engagement\" means being brought in only after the plan is already decided - a survey to check a box, not a real chance to change anything. Not every decision needs a public vote, but residents deserve real debate while a decision can still move, not a rubber stamp once it can't.",
+      "quote": "North Vancouver has been my home for decades, and I built a software company here that created more than 20 highly skilled, well-paying local jobs.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/"
+    },
+    {
+      "category": "governance-and-transparency",
+      "char_end": 1814,
+      "char_start": 65,
+      "flashpoints": [
+        "wastewater-treatment-plant",
+        "harry-jerome"
+      ],
+      "quote": "My door’s open, and residents and business owners should be heard before decisions are settled.\n\nRegular Meet the Mayor events, open and unscripted, for my full term.\n\nA free, public State of the City address within my first six to eight months.\n\nYou shouldn’t need an appointment or a connection to talk to your mayor. I’ll make it simple to raise a question directly and get an answer.\n\nReasonable opportunities to speak directly to Council, and answers to legitimate questions.\n\nConsultation before major decisions are made, then a report on what input changed.\n\nAt the start of a major consultation, the City should say clearly what’s already decided and what’s still open. Afterward, it should report what residents and business owners said, what changed and why, and unresolved issues should have a way to come back.\n\nPrinciple: Listen early, answer questions and show people what their participation changed.\n\nThat isn’t apathy. It’s a lot of people who’ve concluded their voice doesn’t matter at City Hall. Rebuilding that starts with making costs, decisions and results easy to follow.\n\nAn online Major-Project Accountability Dashboard, one page per significant project.\n\nBorrowing, interest, operating and lifecycle costs shown alongside the capital cost.\n\nEach page would show the approved budget, current cost, financing, schedule and every major change in budget, scope or schedule from approval through completion, followed by a public review once the project’s done. Lessons from Harry Jerome, the wastewater plant and other major projects should shape the next decision.\n\nPrinciple: Show what was promised, what it costs, what changed and what was delivered.\n\nFaster permits and better response times, measured and reported publicly.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/issues"
+    },
+    {
+      "category": "governance-and-transparency",
+      "char_end": 4545,
+      "char_start": 4282,
+      "flashpoints": [],
+      "quote": "A density transfer that put a 21-storey tower on a block capped at 6 to 8, with residents limited to written comments, wasn’t required. The standard I’d push for is infrastructure planned before density arrives, and a real public hearing rather than a workaround.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/issues"
+    },
+    {
+      "category": "governance-and-transparency",
+      "char_end": 6128,
+      "char_start": 5870,
+      "flashpoints": [],
+      "quote": "Before selling significant public land, the City should compare keeping it, leasing it and other options. Moving density off public land so the land itself stays public is worth investigating, as long as the receiving site goes through a full public process.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/issues"
+    },
+    {
+      "category": "governance-and-transparency",
+      "char_end": 6453,
+      "char_start": 6244,
+      "flashpoints": [],
+      "quote": "That’s different from using a transfer to put a tower far above the OCP while limiting residents to written comments.\n\nPrinciple: Before giving up important public land, look at every practical way to keep it.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/issues"
+    },
+    {
+      "category": "governance-and-transparency",
+      "char_end": 8044,
+      "char_start": 7811,
+      "flashpoints": [],
+      "quote": "As mayor, I’ll push for meaningful public input before decisions are final, not after.\n\nAs mayor, I’ll join the other North Shore mayors in fighting Metro Vancouver for a cost-sharing formula that treats North Shore taxpayers fairly.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/issues"
+    },
+    {
+      "category": "governance-and-transparency",
+      "char_end": 8288,
+      "char_start": 8136,
+      "flashpoints": [],
+      "quote": "As mayor, I’ll push to end CNV’s self-imposed ban on verbal public input, a restriction its own solicitor admitted was “cautious,” not legally required.",
       "source_type": "campaign_site",
       "source_url": "https://mcgraw4mayor.ca/issues"
     },
     {
       "category": "taxes-and-spending",
-      "char_end": 1800,
-      "char_start": 862,
+      "char_end": 1739,
+      "char_start": 1246,
       "flashpoints": [
         "wastewater-treatment-plant",
         "harry-jerome"
       ],
-      "quote": "We're being forced to shoulder more than our fair share of the cost overruns at the wastewater plant, under a regional cost-sharing formula that loads a heavier tax burden onto North Shore residents than the rest of the region. Costs keep climbing, and even after two rounds of letters and votes demanding independent oversight, the cost-sharing formula still hasn't changed.\n\nIt's not just the wastewater plant. Five years ago, City Hall had essentially no debt; today it's authorized roughly $165 million in borrowing for Harry Jerome and the North Shore Neighbourhood House alone, on top of our share of a wastewater plant where the North Shore covers 37% of the cost despite being 8% of the region's population. Worthwhile projects can still come with real financial risk, and residents deserve a mayor who's straight with them about what's already committed, and what still needs to be worked out, before signing off on the next one.",
+      "quote": "Borrowing, interest, operating and lifecycle costs shown alongside the capital cost.\n\nEach page would show the approved budget, current cost, financing, schedule and every major change in budget, scope or schedule from approval through completion, followed by a public review once the project’s done. Lessons from Harry Jerome, the wastewater plant and other major projects should shape the next decision.\n\nPrinciple: Show what was promised, what it costs, what changed and what was delivered.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/issues"
+    },
+    {
+      "category": "taxes-and-spending",
+      "char_end": 3271,
+      "char_start": 1816,
+      "flashpoints": [
+        "harry-jerome"
+      ],
+      "quote": "Show where staffing, payroll and management costs have grown.\n\nSet measurable results for significant new positions and initiatives.\n\nAdditional spending should link to results people can see, like projects delivered on schedule. That includes reporting what dedicated development-services resources deliver, and giving residents the same practical help navigating City Hall. Simple performance reporting and Value-for-Money Reviews would compare what was promised with actual costs and outcomes.\n\nPrinciple: Every additional taxpayer dollar should have a clear purpose and a measurable public benefit.\n\nThe North Shore is paying 37% of the plant’s cost overrun despite being 8% of the region’s population. Add roughly $165 million in authorized borrowing, mostly for Harry Jerome and the North Shore Neighbourhood House, from a City that had essentially no debt five years ago, and residents deserve to know what’s committed and who should pay.\n\nOne Long-Term Capital & Debt Plan, including the full cost of borrowing and interest.\n\nMajor capital needs 10, 20 and 30 years out, and clear reporting on Lonsdale Energy.\n\nThe plan would bring together existing debt, approved borrowing, Harry Jerome financing, Lonsdale Energy’s financial position, wastewater obligations and future infrastructure, and show how much borrowing capacity remains for essential and unexpected needs.\n\nPrinciple: Make today’s investments without compromising tomorrow’s choices.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/issues"
+    },
+    {
+      "category": "taxes-and-spending",
+      "char_end": 4214,
+      "char_start": 3777,
+      "flashpoints": [],
+      "quote": "Push Metro Vancouver toward a single sewerage area to rebalance wastewater costs.\n\nPress Ottawa to fund its original percentage share of the escalated cost.\n\nResidents should also see the interest on 30 years of financing, not just the construction price, and major regional commitments should be counted before the City takes on new borrowing.\n\nPrinciple: Residents should be able to see both the cost and how their share is calculated.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/issues"
+    },
+    {
+      "category": "taxes-and-spending",
+      "char_end": 8044,
+      "char_start": 7899,
+      "flashpoints": [],
+      "quote": "As mayor, I’ll join the other North Shore mayors in fighting Metro Vancouver for a cost-sharing formula that treats North Shore taxpayers fairly.",
       "source_type": "campaign_site",
       "source_url": "https://mcgraw4mayor.ca/issues"
     },
     {
       "category": "development-and-growth",
-      "char_end": 2303,
-      "char_start": 1802,
+      "char_end": 63,
+      "char_start": 0,
       "flashpoints": [],
-      "quote": "The province requires some density near transit, and that's fair. What wasn't required: a density transfer that pushed a 21-storey tower onto an East 14th Street block the OCP itself capped at 6 to 8, or restricting residents to written comments only, a step beyond what the province's own rules require. It's one example among several of decisions getting made without residents at the table. As Capilano Mall, the ICBC lands, and Lonsdale Great Street move forward, that's the standard I'll hold to.",
+      "quote": "Infrastructure, parks and services planned alongside new homes.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/issues"
+    },
+    {
+      "category": "development-and-growth",
+      "char_end": 1814,
+      "char_start": 1741,
+      "flashpoints": [],
+      "quote": "Faster permits and better response times, measured and reported publicly.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/issues"
+    },
+    {
+      "category": "development-and-growth",
+      "char_end": 3775,
+      "char_start": 3273,
+      "flashpoints": [],
+      "quote": "Identify infrastructure needs before approving major additional density.\n\nShow what a development receives and what the community receives.\n\nFor substantial growth, the City should show the expected population and the roads, utilities, parks, schools, recreation and emergency services it’ll need, with DCCs, CACs, government funding, City costs and what could fall to taxpayers all on the same timeline.\n\nPrinciple: Don’t approve growth today and leave residents with the infrastructure bill tomorrow.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/issues"
+    },
+    {
+      "category": "development-and-growth",
+      "char_end": 5594,
+      "char_start": 4216,
+      "flashpoints": [],
+      "quote": "The province requires some density near transit, and that’s fair. A density transfer that put a 21-storey tower on a block capped at 6 to 8, with residents limited to written comments, wasn’t required. The standard I’d push for is infrastructure planned before density arrives, and a real public hearing rather than a workaround. I call this OCP Integrity.\n\nOne corridor plan, done before individual rezonings decide the area’s future.\n\nSchools, parks, transportation and employment land planned up front.\n\nThe plan would set realistic population and housing numbers, look at utilities, childcare, jobs and community services together, show what infrastructure’s needed, what it’ll cost and who’ll pay, and involve residents and business owners early.\n\nPrinciple: Plan the community first, then determine how much development fits.\n\nPlan for people and the services they need, not just housing-unit targets.\n\nPush for the former ICBC site to bring jobs and daytime activity back to Lower Lonsdale alongside new housing.\n\nGrowth, transportation, schools, parks, healthcare, emergency services and City finances belong in one 20 to 30 year picture. As Capilano Mall, the ICBC lands and Lonsdale Great Street move forward, growth forecasts should be shared with health and other service providers.\n\nPrinciple: Put the whole picture on the table before approving substantial growth.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/issues"
+    },
+    {
+      "category": "development-and-growth",
+      "char_end": 8134,
+      "char_start": 8046,
+      "flashpoints": [],
+      "quote": "the tower approved for East 14th Street, where the Official Community Plan allows 6 to 8",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/issues"
+    },
+    {
+      "category": "parks-environment-climate",
+      "char_end": 6453,
+      "char_start": 5596,
+      "flashpoints": [],
+      "quote": "Look at whether a community playing field and running track can be restored within the remaining lands.\n\nPrioritize protecting the 100 block of East 1st Street as green parkland.\n\nA city-wide green-space strategy would show where parks are falling behind population growth. Before selling significant public land, the City should compare keeping it, leasing it and other options. Moving density off public land so the land itself stays public is worth investigating, as long as the receiving site goes through a full public process. For the 100 block of East 1st, that’s subject to confirming ownership, zoning and the transfer-of-density details. That’s different from using a transfer to put a tower far above the OCP while limiting residents to written comments.\n\nPrinciple: Before giving up important public land, look at every practical way to keep it.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/issues"
+    },
+    {
+      "category": "housing",
+      "char_end": 7155,
+      "char_start": 6455,
+      "flashpoints": [],
+      "quote": "Strengthen and enforce tenant protections, including a meaningful right to return.\n\nA Renter Concierge: one City Hall contact for tenants facing displacement.\n\nToday the relocation coordinator is hired and paid by the developer. A Renter Concierge would work for tenants, from City Hall. Keeping displaced tenants in their community should be an explicit priority, with replacement rental and extra support for vulnerable tenants wherever municipal authority allows. Major proposals should report family-sized, rental, affordable, accessible and seniors housing, not just the total number of units.\n\nPrinciple: Build new housing while protecting the people whose homes are at risk from redevelopment.",
       "source_type": "campaign_site",
       "source_url": "https://mcgraw4mayor.ca/issues"
     },
     {
       "category": "transportation",
-      "char_end": 2541,
-      "char_start": 2305,
+      "char_end": 7609,
+      "char_start": 7157,
       "flashpoints": [],
-      "quote": "Growth done right should also mean growth the city can actually move around. I want real capacity for walking, cycling, and transit alongside the roads we still rely on, built in from the start, not bolted on after the gridlock arrives.",
+      "quote": "Real capacity for walking, cycling and transit alongside the roads we still rely on.\n\nMeasure major projects after they’re built, keep what works and adjust what doesn’t.\n\nGrowth, road changes, construction and transit should be modelled together, not one project at a time, with seniors, accessibility, businesses, deliveries, parking and emergency access in the plan from the start.\n\nPrinciple: Plan the whole network, measure the results and adjust.",
       "source_type": "campaign_site",
       "source_url": "https://mcgraw4mayor.ca/issues"
+    },
+    {
+      "category": "local-economy",
+      "char_end": 5235,
+      "char_start": 5125,
+      "flashpoints": [],
+      "quote": "Push for the former ICBC site to bring jobs and daytime activity back to Lower Lonsdale alongside new housing.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/issues"
+    },
+    {
+      "category": "governance-and-transparency",
+      "char_end": 4843,
+      "char_start": 4385,
+      "flashpoints": [],
+      "quote": "Mike: In my view, we need to return to a place where residents and businesses are back at the centre of City Hall's focus. What I mean by that is, I think we've strayed away from listening. I think we've got some work to do on our city culture.\n\nI want to be remembered as a leader who made people feel heard - who showed them that they have a voice and the opportunity to shape council's decisions on what this community looks like over the next four years.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/conversations.html"
+    },
+    {
+      "category": "governance-and-transparency",
+      "char_end": 7055,
+      "char_start": 5746,
+      "flashpoints": [],
+      "quote": "Mike: Well, it starts with a leader who's reachable and approachable. One thing I've said from the beginning is that I will hold Meet the Mayor events twice a month. It's done in other municipalities; there are other mayors who have committed to this for years, and it makes a difference. Give residents the opportunity to come and sit down with the mayor, ask the tough questions, and be in the room to connect and have a dialogue.\n\nIt also means listening at the council table. North Vancouver City Council has one of the most restrictive public input approaches of any municipality. You get two minutes, and if you go two minutes and five seconds, you are cut off mid-sentence. Unless council unanimously agrees otherwise, only a certain number of speakers are allowed, and you're not allowed to speak on the same issue more than once in a three-month period.\n\nSo there are many people who don't even bother. Or when they do show up and get their 1.9 minutes in, it just results in “thank you for your message,” and council moves on. They don't really debate it, and they don't really take it into account. I've done this myself, so I can say this firsthand. People walk away feeling like it didn't make a difference, that council already knew what it was going to do. I think that is very, very important.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/conversations.html"
+    },
+    {
+      "category": "governance-and-transparency",
+      "char_end": 9065,
+      "char_start": 8240,
+      "flashpoints": [],
+      "quote": "Mike: Well, that's really what public consultation is for. And once again, we have many people who are incredibly frustrated because they see what they call performative consultation. They see reports framed as “what we heard,” and what I've said is that we need to release what was said. It's very easy to take input from a survey or a booth in a park, compile it, and then release it framed in a way that supports the direction council wants to go. That needs to change.\n\nOne thing I've learned, and many business owners know this, is that good decisions come from good data. The city does not do a good job of that. It runs surveys online where you have people in Europe answering the same survey question 37 times, and they all count with equal weight to somebody who lives three blocks from City Hall. That can't happen.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/conversations.html"
+    },
+    {
+      "category": "governance-and-transparency",
+      "char_end": 11222,
+      "char_start": 10756,
+      "flashpoints": [],
+      "quote": "But we decided early on that this is a grassroots campaign. We do not take money from property developers or their families. I think that's a principled approach, and I don't do it to demonize the development community whatsoever. In fact, I've told many of those I've met with that it helps them. I think it's healthy for residents and business owners to understand that decisions aren't driven, guided or affected by donations or favours. I think that's important.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/conversations.html"
+    },
+    {
+      "category": "governance-and-transparency",
+      "char_end": 13718,
+      "char_start": 13136,
+      "flashpoints": [],
+      "quote": "Mike: There are really two primary roles that are key. One is to provide leadership at the council table. The mayor sets the agenda and makes sure council meetings are conducted fairly and substantively, so that council can have healthy debate and make good governance decisions.\n\nCouncil is responsible for governance, and city staff are responsible for executing on council's direction: policy decisions, bylaw decisions and so on. That starts with the CAO. The mayor works very closely with the CAO, and is the bridge between the governing body, which is council, and city staff.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/conversations.html"
+    },
+    {
+      "category": "governance-and-transparency",
+      "char_end": 14894,
+      "char_start": 14135,
+      "flashpoints": [],
+      "quote": "Mike: The CAO is directly responsible for the performance of staff in carrying through policy decisions. What we have right now is a bit of a challenge in North Vancouver. Council members often have questions on reports. At the end of the week they get a package, sometimes 300 pages long, and they need to absorb a lot of material so they can sit at the council table, receive a report and ask good questions.\n\nCity council members should have the opportunity to talk with senior staff if they've got a couple of questions. That's discouraged right now here in North Vancouver, and I think that's a challenge. Culture within City Hall is also a challenge. That needs to be addressed, and I think the mayor needs to take a leadership position on that as well.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/conversations.html"
+    },
+    {
+      "category": "governance-and-transparency",
+      "char_end": 15693,
+      "char_start": 15100,
+      "flashpoints": [],
+      "quote": "Mike: When you're running a campaign, many things emerge, and the one that's emerged more strongly than any other is when I speak with business owners. There's a lot of frustration, and frankly, a lot of fear in expressing that frustration, particularly during the election cycle, because they find it very challenging to work with City Hall. We also have many residents who reach out, write letters and send emails, and don't hear back.\n\nWe need to be working in partnership with residents, businesses and community associations. We need to have open dialogue, partnership and mutual respect.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/conversations.html"
+    },
+    {
+      "category": "governance-and-transparency",
+      "char_end": 17441,
+      "char_start": 17222,
+      "flashpoints": [],
+      "quote": "But in general, the average person who goes to work and raises a family, maybe works in a business or as a teacher, wants to feel listened to and heard. They want to feel that decisions are not made behind closed doors.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/conversations.html"
+    },
+    {
+      "category": "governance-and-transparency",
+      "char_end": 18388,
+      "char_start": 18020,
+      "flashpoints": [],
+      "quote": "The Harbour Swim Deck is polarizing not necessarily because of concerns that it can only be used two or three months a year, or that it may be in a polluted harbour, or all those things. It's more about: why are you making this decision behind closed doors, then doing consultation afterwards, and then pushing it through? It's an example of how people are frustrated.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/conversations.html"
+    },
+    {
+      "category": "governance-and-transparency",
+      "char_end": 22940,
+      "char_start": 22008,
+      "flashpoints": [],
+      "quote": "Mike: Well, again, it comes back to listening. I've been the strata president of our residential building, a mixed-use building, for six years. So I understand that not everybody agrees with the decisions a strata council makes, and it's no different at City Hall.\n\nIt matters that people feel they can come and talk to you, express their frustration and their anger, raise their questions, and maybe make their viewpoints known very strongly, as long as they understand that not everybody is going to be happy with the decision, and that collectively you sometimes have to make very challenging, difficult decisions. I think you always need to take a long-term view. You can't take a short-term view.\n\nIt just requires partnership, communication, listening and effective consultation. And everybody needs to keep in mind that sometimes not everybody's going to be happy, but you have to have the courage to make the right decision.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/conversations.html"
+    },
+    {
+      "category": "taxes-and-spending",
+      "char_end": 17220,
+      "char_start": 16683,
+      "flashpoints": [
+        "wastewater-treatment-plant"
+      ],
+      "quote": "Mike: The first thing everybody talks about is the wastewater treatment plant, which we know is a very challenging, complex issue. I believe there are solutions to the tax burden that's hitting North Shore residents, but in my view, they involve higher levels of government. It requires more support, with the province, and in particular the federal government, stepping up to the table. They put up 30% of the estimated cost up front, but they haven't put up 30% of what the ultimate cost is going to be. I believe that needs to happen.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/conversations.html"
+    },
+    {
+      "category": "taxes-and-spending",
+      "char_end": 17907,
+      "char_start": 17443,
+      "flashpoints": [],
+      "quote": "One project I'll bring up is the Harbour Swim Deck at the waterfront. None of us on my team expected this to be such a polarizing thing. I do get the appeal; having a deck at the waterfront for the summertime sounds like a really great thing. But what frustrates people is that the city is going to spend $5 million as a capital contribution toward putting it in place, and it just finished saving $4.6 million by only having a 50-metre pool in our new rec centre.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/conversations.html"
+    },
+    {
+      "category": "taxes-and-spending",
+      "char_end": 18720,
+      "char_start": 18390,
+      "flashpoints": [],
+      "quote": "Fiscal responsibility is another big one, and maybe I'll finish on this point. We need to be spending money wisely, because we have gone into considerable debt here in the city. Projects that are sometimes framed as vanity projects don't make a lot of sense to people who wonder what we're doing to handle our financial situation.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/conversations.html"
+    },
+    {
+      "category": "local-economy",
+      "char_end": 15693,
+      "char_start": 15100,
+      "flashpoints": [],
+      "quote": "Mike: When you're running a campaign, many things emerge, and the one that's emerged more strongly than any other is when I speak with business owners. There's a lot of frustration, and frankly, a lot of fear in expressing that frustration, particularly during the election cycle, because they find it very challenging to work with City Hall. We also have many residents who reach out, write letters and send emails, and don't hear back.\n\nWe need to be working in partnership with residents, businesses and community associations. We need to have open dialogue, partnership and mutual respect.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/conversations.html"
+    },
+    {
+      "category": "local-economy",
+      "char_end": 16345,
+      "char_start": 15996,
+      "flashpoints": [],
+      "quote": "Then we learned firsthand how challenging it is to work with City Hall to pull off an event. Frankly, the people were great, but the steps we had to go through, the hoops we had to jump through, were quite painful and quite onerous. We saw how difficult it can be to make things happen and to grow community spirit, and I think that needs to change.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/conversations.html"
+    },
+    {
+      "category": "governance-and-transparency",
+      "char_end": 629,
+      "char_start": 271,
+      "flashpoints": [],
+      "quote": "It’s a way to test whether decisions across City Hall make it easier for every generation to live here, participate, and plan ahead.\n\nMake it easier for people who don’t usually follow local government to take part before decisions are settled.\n\nExplain what’s changing, why it matters, and how residents can weigh in without needing to be political experts.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/next-north-van.html"
+    },
+    {
+      "category": "governance-and-transparency",
+      "char_end": 1172,
+      "char_start": 968,
+      "flashpoints": [],
+      "quote": "The purpose of Next North Van is to hear directly from the next generation.\n\nThe meetup is one way to participate, not the only way. This page will stay open so you can share your perspective at any time.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/next-north-van.html"
+    },
+    {
+      "category": "governance-and-transparency",
+      "char_end": 1384,
+      "char_start": 1272,
+      "flashpoints": [],
+      "quote": "Next North Van is part of Mike’s commitment to show up, listen, and involve residents before decisions are made.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/next-north-van.html"
+    },
+    {
+      "category": "taxes-and-spending",
+      "char_end": 731,
+      "char_start": 631,
+      "flashpoints": [],
+      "quote": "Consider how major costs and commitments affect residents now, and the people who will inherit them.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/next-north-van.html"
+    },
+    {
+      "category": "housing",
+      "char_end": 842,
+      "char_start": 733,
+      "flashpoints": [],
+      "quote": "Connect housing and growth to transportation, public services, and the everyday cost of building a life here.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/next-north-van.html"
+    },
+    {
+      "category": "development-and-growth",
+      "char_end": 842,
+      "char_start": 733,
+      "flashpoints": [],
+      "quote": "Connect housing and growth to transportation, public services, and the everyday cost of building a life here.",
+      "source_type": "campaign_site",
+      "source_url": "https://mcgraw4mayor.ca/next-north-van.html"
     }
   ],
   "cnv-trustee-azizi-manoochehr": [

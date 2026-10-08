@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html lang="en-CA">
-<head>
+<!DOCTYPE html><html lang="en-CA"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&amp;family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <title>Meet Mike | McGraw for Mayor</title>
 <meta name="description" content="Meet Mike McGraw: business owner, former School Board Trustee, and candidate for Mayor of the City of North Vancouver.">
 <link rel="canonical" href="https://mcgraw4mayor.ca/about.html">
@@ -27,7 +25,7 @@
      Photo treatment tints casual/phone photos into the site palette (brief §6). -->
 <link rel="stylesheet" href="about.css">
 <!-- Privacy-friendly analytics by Plausible -->
-<script async src="https://plausible.io/js/pa-gha2tCsJoSxSVJ9wrJj2r.js"></script>
+<script async="" src="https://plausible.io/js/pa-gha2tCsJoSxSVJ9wrJj2r.js"></script>
 <script>
   window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
   plausible.init()
@@ -37,14 +35,14 @@
 
 <header>
   <div class="header-inner">
-    <a class='wordmark' href='/'><span class="mark">&#9650;</span>McGraw <span>for Mayor</span></a>
+    <a class="wordmark" href="/"><span class="mark">▲</span>McGraw <span>for Mayor</span></a>
     <nav id="site-nav">
-      <a href='/'>Home</a><a class='active' href='/about'>Meet Mike</a><a href='/issues'>Priorities</a>
-      <a href='/next-north-van'>Next North Van</a><a href='/get-involved'>Get Involved</a><a href='/donate'>Donate</a><a href='/ask-mike'>Ask Mike</a>
+      <a href="/">Home</a><a class="active" href="/about">Meet Mike</a><a href="/conversations">Interviews</a><a href="/issues">Priorities</a>
+      <a href="/next-north-van">Next North Van</a><a href="/get-involved">Get Involved</a><a class="nav-menu-only" href="/donate">Donate</a><a href="/ask-mike">Ask Mike</a>
     </nav>
     <div class="header-cta">
-      <a class='hdr-btn ghost' href='/get-involved#volunteer-form'>Volunteer</a>
-      <a class='hdr-btn solid' href='/donate'>Donate</a>
+      <a class="hdr-btn ghost" href="/get-involved#volunteer-form">Volunteer</a>
+      <a class="hdr-btn solid" href="/donate">Donate</a>
       <button class="nav-toggle" aria-label="Menu" aria-expanded="false" onclick="toggleNav(this)">
         <span></span><span></span><span></span>
       </button>
@@ -70,7 +68,9 @@
        elsewhere. Same click-to-play card and loadWelcomeVideo() logic as
        before. -->
   <div class="top-row">
-    <p class="opening">
+    <div class="top-copy">
+      <p class="vision">My vision for this city starts with putting residents and business owners back at the centre of our focus.</p>
+      <p class="opening">
       North Vancouver has been part of my life for as long as I can remember, and my
       roots here go back decades. I live in the City of North Vancouver today, the
       city I'm running to lead. We raised our three children here. I built
@@ -79,19 +79,41 @@
       long career in business, I'm stepping away from the private sector to return to
       public service - because this community has given me a lot, and I'm not done
       giving back.
-    </p>
+      </p>
+    </div>
     <div class="video-welcome">
       <div class="video-card">
-        <div class="caption">A quick hello from Mike</div>
-        <button type="button" class="player-frame" onclick="loadWelcomeVideo(this)" aria-label="Play welcome video from Mike McGraw">
-          <img src="video-poster-placeholder.jpg" alt="Mike McGraw, video welcome message">
+        <div class="caption">Why I'm running</div>
+        <button type="button" class="player-frame" onclick="loadWelcomeVideo(this, 'Y-63bKrtN14', 'Why Mike McGraw is running for mayor')" aria-label="Play video: why I'm running for mayor">
+          <img src="why-running-poster.jpg" alt="Mike McGraw, video message on why he is running for mayor">
           <span class="play-button">
-            <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg>
           </span>
         </button>
       </div>
     </div>
   </div>
+
+  <!-- Canada Day video, added Oct 2026: sits directly below the top row. -->
+  <section class="canada-day" id="canada-day">
+    <div class="video-welcome">
+      <div class="video-card">
+        <div class="caption">Canada Day at Civic Plaza</div>
+        <button type="button" class="player-frame" onclick="loadWelcomeVideo(this, 'BoCrgom-S00', 'Canada Day at Civic Plaza')" aria-label="Play video: Canada Day at Civic Plaza">
+          <img src="canada-day-poster.jpg" alt="Neighbours gathered at Civic Plaza for Canada Day in North Vancouver">
+          <span class="play-button">
+            <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg>
+          </span>
+        </button>
+      </div>
+    </div>
+    <div class="canada-day-copy">
+      <div class="kicker">Community</div>
+      <h2>Canada Day at Civic Plaza</h2>
+      <p>I'm one of six directors of the not-for-profit that brought Canada Day to Civic Plaza this year. It was led by volunteers, staffed by volunteers and supported by City staff, and it was a community initiative from start to finish. I put my own time into it because building community and bringing neighbours together is one of the best things we can do for this city.</p>
+      <p class="video-credit">Video provided by Jeremy Cato.</p>
+    </div>
+  </section>
 
   <!-- Track record band — Sept 2026 preview. Full-bleed --ice-tinted band
        (matches mcgraw-site-redesign-2's .section-alt, whose --paper-2 color
@@ -157,9 +179,9 @@
         <img src="Canada_Day-web.jpg" alt="Mike McGraw at Canada Day celebrations in North Vancouver">
       </div>
       <figcaption>Celebrating the inaugural Canada Day Stationary Parade with my fellow
-        Society directors (2026): proof of what five committed volunteers can accomplish.
-        Our fifth director, instrumental in the planning, was travelling and much missed
-        in this photo.</figcaption>
+        Society directors (2026): proof of what six committed volunteers can accomplish.
+        Two of our directors, instrumental in the planning, are missing from this
+        photo.</figcaption>
     </figure>
   </div>
 
@@ -195,12 +217,12 @@
         you've met me somewhere around the city, tell me about it. With your
         permission, I'd love to share it here.</p>
     </div>
-    <a class='invite-btn' href='/ask-mike'>Share your story</a>
+    <a class="invite-btn" href="/ask-mike">Share your story</a>
   </section>
 
   <div class="closing">
-    Want to know where I stand? Start with <a href='/issues'>the issues</a>. Want to know
-    something this page didn't answer? <a href='/ask-mike'>Ask Mike</a> - I won't be hard
+    Want to know where I stand? Start with <a href="/issues">the issues</a>. Want to know
+    something this page didn't answer? <a href="/ask-mike">Ask Mike</a> - I won't be hard
     to find.
   </div>
 </main>
@@ -212,18 +234,19 @@
 <footer class="site-footer">
   <div class="foot-grid">
     <div class="foot-brand">
-      <a class='wordmark' href='/'><span class="mark">&#9650;</span>McGraw <span>for Mayor</span></a>
+      <a class="wordmark" href="/"><span class="mark">▲</span>McGraw <span>for Mayor</span></a>
       <p>Mike McGraw for Mayor, City of North Vancouver. Resident-funded, and proudly so. No property developer money.</p>
     </div>
     <div class="foot-col">
       <h4>Site</h4>
       <ul>
-        <li><a href='/about'>Meet Mike</a></li>
-        <li><a href='/issues'>Priorities</a></li>
-        <li><a href='/next-north-van'>Next North Van</a></li>
-        <li><a href='/get-involved'>Get Involved</a></li>
-        <li><a href='/donate'>Donate</a></li>
-        <li><a href='/ask-mike'>Ask Mike</a></li>
+        <li><a href="/about">Meet Mike</a></li>
+        <li><a href="/conversations">Interviews</a></li>
+        <li><a href="/issues">Priorities</a></li>
+        <li><a href="/next-north-van">Next North Van</a></li>
+        <li><a href="/get-involved">Get Involved</a></li>
+        <li><a href="/donate">Donate</a></li>
+        <li><a href="/ask-mike">Ask Mike</a></li>
       </ul>
     </div>
     <div class="foot-col">
@@ -232,18 +255,17 @@
         <li><a href="https://www.facebook.com/McGraw4Mayor" target="_blank" rel="noopener">Facebook</a></li>
         <li><a href="https://www.instagram.com/mcgraw4mayor/" target="_blank" rel="noopener">Instagram</a></li>
         <li><a href="mailto:campaign@mcgraw4mayor.ca">campaign@mcgraw4mayor.ca</a></li>
-        <!-- YouTube slot: hidden until the channel exists (see .yt-slot in
-             footer.css). Once live, remove that CSS rule and set the real
-             href here. -->
-        <li class="yt-slot"><a href="#" target="_blank" rel="noopener">YouTube</a></li>
+        <!-- YouTube channel link: switched on Oct 2, 2026 when the David
+             Gouthro interview went public on the channel. -->
+        <li class="yt-slot"><a href="https://www.youtube.com/@mcgraw4mayor" target="_blank" rel="noopener">YouTube</a></li>
       </ul>
     </div>
   </div>
   <div class="foot-bottom">
     <span class="foot-auth">Authorized by Mike McGraw, financial agent, campaign@mcgraw4mayor.ca</span>
-    <span class="foot-copyright">&copy; 2026 McGraw4Mayor.ca</span>
-    <span class="foot-privacy"><a href='/privacy'>Privacy</a></span>
-    <span>City of North Vancouver &middot; Election Day October 17, 2026</span>
+    <span class="foot-copyright">© 2026 McGraw4Mayor.ca</span>
+    <span class="foot-privacy"><a href="/privacy">Privacy</a></span>
+    <span>City of North Vancouver · Election Day October 17, 2026</span>
   </div>
 </footer>
 
@@ -265,19 +287,19 @@
   // the visitor clicks play, so this still costs nothing on page load) and
   // listen for the video ending, then swap the poster/play button back in
   // instead of letting YouTube show its own end screen.
-  function loadWelcomeVideo(frame) {
-    var videoId = 'sfdTIhnoe9Y';
+  function loadWelcomeVideo(frame, videoId, title) {
+    var playerId = 'player-' + videoId;
     var originalHTML = frame.outerHTML;
     var container = document.createElement('div');
     container.className = 'player-frame';
-    container.innerHTML = '<iframe id="welcome-video-player" ' +
+    container.innerHTML = '<iframe id="' + playerId + '" ' +
       'src="https://www.youtube-nocookie.com/embed/' + videoId +
       '?autoplay=1&rel=0&enablejsapi=1&playsinline=1&origin=' + encodeURIComponent(window.location.origin) + '" ' +
-      'title="A quick hello from Mike McGraw" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+      'title="' + title + '" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
     frame.replaceWith(container);
 
     function attachEndListener() {
-      new YT.Player('welcome-video-player', {
+      new YT.Player(playerId, {
         events: {
           onStateChange: function (e) {
             if (e.data === YT.PlayerState.ENDED) {
@@ -299,5 +321,6 @@
   }
 </script>
 
-</body>
-</html>
+
+
+</body></html>

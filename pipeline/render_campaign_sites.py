@@ -98,11 +98,13 @@ def crawl(page, website: str, name: str) -> list[Source]:
         pages.append((s, href))
     pages.sort(key=lambda t: -t[0])
 
-    # A menu built in script leaves no links to follow. The site's own sitemap
-    # is a better table of contents than a rendered menu, so fall back to it
-    # rather than publishing a candidate's home page and calling it their
-    # platform.
-    if len(pages) == 1:
+    # The sitemap is authoritative about which pages exist; scoring links is
+    # only a guess at which matter. Mike McGraw's platform lives at
+    # next-north-van.html, which matches none of the PRIORITY patterns and so
+    # scored zero and was skipped, while the fallback below never ran because
+    # link discovery had found *something*. Merge the sitemap in whenever there
+    # are slots left, rather than only when there are no links at all.
+    if len(pages) <= MAX_PAGES:
         def fetch(u: str) -> str | None:
             # Plain HTTP: a sitemap is XML, and a browser wraps it in a viewer.
             import requests
@@ -111,9 +113,26 @@ def crawl(page, website: str, name: str) -> list[Source]:
             return r.text if r.status_code == 200 else None
 
         extra = sitemap_urls(website, fetch)
+
+        # A site often serves the same page at /issues and /issues.html, and the
+        # sitemap and the markup disagree about which to use. Counting both ate
+        # two of the six slots and crowded out the page we were missing.
+        def alias(u: str) -> str:
+            u = u.rstrip("/")
+            return u[:-5] if u.endswith(".html") else u
+
+        known = {alias(u) for _, u in pages}
+        deduped: list[str] = []
+        for u in extra:
+            if alias(u) in known:
+                continue
+            known.add(alias(u))
+            deduped.append(u)
+        extra = deduped
         if extra:
-            print(f"      no links in the markup; sitemap lists {len(extra)} pages")
-            pages += [(0, u) for u in extra]
+            print(f"      sitemap adds {len(extra)} page(s) the links did not reach")
+            # After the scored links, so a known-good page still wins a slot.
+            pages += [(-1, u) for u in extra]
 
     out: list[Source] = []
     for _, url in pages[:MAX_PAGES]:
