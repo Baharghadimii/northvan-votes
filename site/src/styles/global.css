@@ -314,21 +314,34 @@ details.silent li { margin-bottom: 3px; break-inside: avoid; }
 
 .race-jump {
   position: sticky; top: 0; z-index: 15;
-  display: flex; flex-wrap: wrap; gap: 4px 18px;
-  padding: 9px 0; margin: 14px 0 0;
+  display: flex; flex-wrap: wrap; gap: 8px 22px;
+  padding: 11px 0 12px; margin: 16px 0 0;
   background: var(--bg);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--border-strong);
+  /* Reads as a strip of controls rather than a stray line of links, and the
+     shadow separates it from whatever scrolls underneath. */
+  box-shadow: 0 7px 12px -9px rgb(27 25 21 / 0.35);
   font-size: 0.87rem;
 }
-.race-jump-group { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
-.race-jump-group b { color: var(--text-muted); font-weight: 600; }
-.race-jump a { color: var(--accent-text); text-decoration: none; padding-block: 2px; }
-.race-jump a:hover { text-decoration: underline; }
+.race-jump-group { display: flex; flex-wrap: wrap; align-items: center; gap: 7px 8px; }
+.race-jump-group b {
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--text-faint);
+}
+.race-jump a {
+  display: inline-block; font-weight: 600; text-decoration: none;
+  padding: 5px 12px; border-radius: 999px;
+  background: var(--accent-soft); color: var(--accent-text);
+  border: 1px solid transparent;
+}
+.race-jump a:hover, .race-jump a:focus-visible { border-color: var(--accent); }
 
-/* Anchored sections must clear the sticky bar, which is 46px on desktop and
-   76px on a phone where it wraps to two rows. */
-.race-section { scroll-margin-top: 58px; }
-@media (max-width: 560px) { .race-section { scroll-margin-top: 90px; } }
+/* Anchored sections must clear the sticky bar. It measures 59px on desktop and
+   up to 101px on a phone, where the chips wrap; these are deliberately a little
+   generous, because overshooting costs a few pixels of whitespace and
+   undershooting hides the heading behind the bar. */
+.race-section { scroll-margin-top: 74px; }
+@media (max-width: 560px) { .race-section { scroll-margin-top: 116px; } }
 
 .order-note {
   display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px;

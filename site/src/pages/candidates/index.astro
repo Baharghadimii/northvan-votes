@@ -1,7 +1,6 @@
 ---
 import Base from "~/layouts/Base.astro";
 import CandidateLine from "~/components/CandidateLine.astro";
-import RaceJump from "~/components/RaceJump.astro";
 import { races, candidates, seededShuffle, BUILD_SEED, categoryById, categoriesByCoverage } from "~/lib/data";
 
 const filterable = categoriesByCoverage().filter((c) => c.count > 0);
@@ -48,8 +47,6 @@ const allRaces = races();
     </div>
     <p class="issue-filter-count" data-filter-count hidden></p>
   </div>
-
-  <RaceJump races={allRaces} />
 
   <div class="order-note">
     <span>Listed in <span data-order-label>randomised</span> order within each race.</span>
