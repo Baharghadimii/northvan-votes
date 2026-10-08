@@ -9797,6 +9797,92 @@
       }
     ]
   },
+  "https://www.dnv.org/government-administration/see-who-is-running::6f6ca22be24730fa": {
+    "background": [
+      {
+        "category": "public-office",
+        "char_end": 678,
+        "char_start": 507,
+        "flashpoints": [],
+        "quote": "He was Treasurer for the Pemberton Heights Community Association, volunteered on DNV’s Community Services Advisory Committee and coached for North Shore Girls Soccer Club.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "career",
+        "char_end": 437,
+        "char_start": 288,
+        "flashpoints": [],
+        "quote": "Professionally, he oversaw the BCIT downtown campus, administered real estate projects at BC Housing and managed affordable housing for a non-profit.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "community",
+        "char_end": 769,
+        "char_start": 439,
+        "flashpoints": [],
+        "quote": "Herman has volunteered for many community groups for over 40 years. He was Treasurer for the Pemberton Heights Community Association, volunteered on DNV’s Community Services Advisory Committee and coached for North Shore Girls Soccer Club. Herman recently joined the board of Canadian Mental Health Association on the North Shore.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "local-roots",
+        "char_end": 90,
+        "char_start": 0,
+        "flashpoints": [],
+        "quote": "Herman Mah and his family have called the District of North Vancouver “home” for 25 years.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      }
+    ],
+    "positions": [
+      {
+        "category": "transportation",
+        "char_end": 1471,
+        "char_start": 958,
+        "flashpoints": [
+          "third-crossing"
+        ],
+        "quote": "If re-elected, Herman’s priorities include (1) addressing traffic, congestion and infrastructure needs by advocating to senior levels of government for funding for transit, mobility lanes and a new crossing, (2) supporting local economy by streamlining application processes and (3) advancing affordable housing with a strong sense of community. This can be achieved by investing in co-op housing, easing guidelines for coach houses and focusing majority of growth in town centres that are connected with transit.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "housing",
+        "char_end": 1471,
+        "char_start": 958,
+        "flashpoints": [
+          "third-crossing"
+        ],
+        "quote": "If re-elected, Herman’s priorities include (1) addressing traffic, congestion and infrastructure needs by advocating to senior levels of government for funding for transit, mobility lanes and a new crossing, (2) supporting local economy by streamlining application processes and (3) advancing affordable housing with a strong sense of community. This can be achieved by investing in co-op housing, easing guidelines for coach houses and focusing majority of growth in town centres that are connected with transit.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "local-economy",
+        "char_end": 1303,
+        "char_start": 958,
+        "flashpoints": [
+          "third-crossing"
+        ],
+        "quote": "If re-elected, Herman’s priorities include (1) addressing traffic, congestion and infrastructure needs by advocating to senior levels of government for funding for transit, mobility lanes and a new crossing, (2) supporting local economy by streamlining application processes and (3) advancing affordable housing with a strong sense of community.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "development-and-growth",
+        "char_end": 1471,
+        "char_start": 958,
+        "flashpoints": [
+          "third-crossing"
+        ],
+        "quote": "If re-elected, Herman’s priorities include (1) addressing traffic, congestion and infrastructure needs by advocating to senior levels of government for funding for transit, mobility lanes and a new crossing, (2) supporting local economy by streamlining application processes and (3) advancing affordable housing with a strong sense of community. This can be achieved by investing in co-op housing, easing guidelines for coach houses and focusing majority of growth in town centres that are connected with transit.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      }
+    ]
+  },
   "https://www.dnv.org/government-administration/see-who-is-running::76161b2a5191ea8a": {
     "background": [
       {
@@ -10681,6 +10767,129 @@
         "char_start": 1442,
         "flashpoints": [],
         "quote": "We can't ignore the fact that the region is growing. We can shape that growth, or let it shape us.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      }
+    ]
+  },
+  "https://www.dnv.org/government-administration/see-who-is-running::e1379e918a0abbfb": {
+    "background": [
+      {
+        "category": "public-office",
+        "char_end": 213,
+        "char_start": 0,
+        "flashpoints": [],
+        "quote": "I learned a great deal during my campaign for District of North Vancouver Council in 2022. I finished seventh, just a few hundred votes short of a seat, and I remain incredibly grateful for the support I received.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "public-office",
+        "char_end": 541,
+        "char_start": 341,
+        "flashpoints": [],
+        "quote": "I was appointed to the District’s Community Services Advisory Committee, founded the Lower Lynn Community Association and serve as its President, and served as President of the Parkgate Society Board.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "career",
+        "char_end": 839,
+        "char_start": 543,
+        "flashpoints": [],
+        "quote": "Today, I work as a Program Director with an Indigenous non-profit serving children, youth and families. A lifelong North Vancouver resident, I grew up in the Edgemont area and have dedicated much of my career and volunteer work to supporting children, youth, families and community organizations.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "education",
+        "char_end": 958,
+        "char_start": 840,
+        "flashpoints": [],
+        "quote": "I hold a BA in Political Science from Acadia University and a Public Relations certificate with Distinction from BCIT.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "community",
+        "char_end": 541,
+        "char_start": 215,
+        "flashpoints": [],
+        "quote": "Since then, I have worked to deepen my community involvement and build the experience needed to serve effectively on Council. I was appointed to the District’s Community Services Advisory Committee, founded the Lower Lynn Community Association and serve as its President, and served as President of the Parkgate Society Board.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "community",
+        "char_end": 839,
+        "char_start": 647,
+        "flashpoints": [],
+        "quote": "A lifelong North Vancouver resident, I grew up in the Edgemont area and have dedicated much of my career and volunteer work to supporting children, youth, families and community organizations.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "local-roots",
+        "char_end": 839,
+        "char_start": 647,
+        "flashpoints": [],
+        "quote": "A lifelong North Vancouver resident, I grew up in the Edgemont area and have dedicated much of my career and volunteer work to supporting children, youth, families and community organizations.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      }
+    ],
+    "positions": [
+      {
+        "category": "transportation",
+        "char_end": 1167,
+        "char_start": 960,
+        "flashpoints": [],
+        "quote": "If elected, I will focus on protecting North Vancouver’s livability and natural environment, improving traffic and transportation, and ensuring taxpayers receive strong value for their municipal tax dollars.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "taxes-and-spending",
+        "char_end": 1167,
+        "char_start": 960,
+        "flashpoints": [],
+        "quote": "If elected, I will focus on protecting North Vancouver’s livability and natural environment, improving traffic and transportation, and ensuring taxpayers receive strong value for their municipal tax dollars.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "taxes-and-spending",
+        "char_end": 1591,
+        "char_start": 1469,
+        "flashpoints": [],
+        "quote": "I will bring an approach grounded in listening, collaboration, fiscal responsibility and common sense to District Council.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "development-and-growth",
+        "char_end": 1360,
+        "char_start": 1168,
+        "flashpoints": [],
+        "quote": "I believe growth must be supported by the infrastructure and amenities needed to sustain it, while protecting our remaining forests and respecting the unique needs of different neighbourhoods.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "parks-environment-climate",
+        "char_end": 1360,
+        "char_start": 960,
+        "flashpoints": [],
+        "quote": "If elected, I will focus on protecting North Vancouver’s livability and natural environment, improving traffic and transportation, and ensuring taxpayers receive strong value for their municipal tax dollars. I believe growth must be supported by the infrastructure and amenities needed to sustain it, while protecting our remaining forests and respecting the unique needs of different neighbourhoods.",
+        "source_type": "official_statement",
+        "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+      },
+      {
+        "category": "governance-and-transparency",
+        "char_end": 1591,
+        "char_start": 1362,
+        "flashpoints": [],
+        "quote": "Most importantly, I believe local government should be about practical solutions, not political divisions. I will bring an approach grounded in listening, collaboration, fiscal responsibility and common sense to District Council.",
         "source_type": "official_statement",
         "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
       }

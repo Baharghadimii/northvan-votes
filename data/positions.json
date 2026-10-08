@@ -5863,6 +5863,60 @@
   "dnv-council-bell-trey": [
     {
       "category": "transportation",
+      "char_end": 1167,
+      "char_start": 960,
+      "flashpoints": [],
+      "quote": "If elected, I will focus on protecting North Vancouver’s livability and natural environment, improving traffic and transportation, and ensuring taxpayers receive strong value for their municipal tax dollars.",
+      "source_type": "official_statement",
+      "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+    },
+    {
+      "category": "taxes-and-spending",
+      "char_end": 1167,
+      "char_start": 960,
+      "flashpoints": [],
+      "quote": "If elected, I will focus on protecting North Vancouver’s livability and natural environment, improving traffic and transportation, and ensuring taxpayers receive strong value for their municipal tax dollars.",
+      "source_type": "official_statement",
+      "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+    },
+    {
+      "category": "taxes-and-spending",
+      "char_end": 1591,
+      "char_start": 1469,
+      "flashpoints": [],
+      "quote": "I will bring an approach grounded in listening, collaboration, fiscal responsibility and common sense to District Council.",
+      "source_type": "official_statement",
+      "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+    },
+    {
+      "category": "development-and-growth",
+      "char_end": 1360,
+      "char_start": 1168,
+      "flashpoints": [],
+      "quote": "I believe growth must be supported by the infrastructure and amenities needed to sustain it, while protecting our remaining forests and respecting the unique needs of different neighbourhoods.",
+      "source_type": "official_statement",
+      "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+    },
+    {
+      "category": "parks-environment-climate",
+      "char_end": 1360,
+      "char_start": 960,
+      "flashpoints": [],
+      "quote": "If elected, I will focus on protecting North Vancouver’s livability and natural environment, improving traffic and transportation, and ensuring taxpayers receive strong value for their municipal tax dollars. I believe growth must be supported by the infrastructure and amenities needed to sustain it, while protecting our remaining forests and respecting the unique needs of different neighbourhoods.",
+      "source_type": "official_statement",
+      "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+    },
+    {
+      "category": "governance-and-transparency",
+      "char_end": 1591,
+      "char_start": 1362,
+      "flashpoints": [],
+      "quote": "Most importantly, I believe local government should be about practical solutions, not political divisions. I will bring an approach grounded in listening, collaboration, fiscal responsibility and common sense to District Council.",
+      "source_type": "official_statement",
+      "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+    },
+    {
+      "category": "transportation",
       "char_end": 5720,
       "char_start": 5558,
       "flashpoints": [],
@@ -7037,6 +7091,52 @@
       "quote": "02 Living spaces that make sense Homes for every stage of life, built where they belong.",
       "source_type": "campaign_site",
       "source_url": "https://www.aidankyle.ca/commitments"
+    }
+  ],
+  "dnv-council-mah-herman": [
+    {
+      "category": "transportation",
+      "char_end": 1471,
+      "char_start": 958,
+      "flashpoints": [
+        "third-crossing"
+      ],
+      "quote": "If re-elected, Herman’s priorities include (1) addressing traffic, congestion and infrastructure needs by advocating to senior levels of government for funding for transit, mobility lanes and a new crossing, (2) supporting local economy by streamlining application processes and (3) advancing affordable housing with a strong sense of community. This can be achieved by investing in co-op housing, easing guidelines for coach houses and focusing majority of growth in town centres that are connected with transit.",
+      "source_type": "official_statement",
+      "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+    },
+    {
+      "category": "housing",
+      "char_end": 1471,
+      "char_start": 958,
+      "flashpoints": [
+        "third-crossing"
+      ],
+      "quote": "If re-elected, Herman’s priorities include (1) addressing traffic, congestion and infrastructure needs by advocating to senior levels of government for funding for transit, mobility lanes and a new crossing, (2) supporting local economy by streamlining application processes and (3) advancing affordable housing with a strong sense of community. This can be achieved by investing in co-op housing, easing guidelines for coach houses and focusing majority of growth in town centres that are connected with transit.",
+      "source_type": "official_statement",
+      "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+    },
+    {
+      "category": "local-economy",
+      "char_end": 1303,
+      "char_start": 958,
+      "flashpoints": [
+        "third-crossing"
+      ],
+      "quote": "If re-elected, Herman’s priorities include (1) addressing traffic, congestion and infrastructure needs by advocating to senior levels of government for funding for transit, mobility lanes and a new crossing, (2) supporting local economy by streamlining application processes and (3) advancing affordable housing with a strong sense of community.",
+      "source_type": "official_statement",
+      "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+    },
+    {
+      "category": "development-and-growth",
+      "char_end": 1471,
+      "char_start": 958,
+      "flashpoints": [
+        "third-crossing"
+      ],
+      "quote": "If re-elected, Herman’s priorities include (1) addressing traffic, congestion and infrastructure needs by advocating to senior levels of government for funding for transit, mobility lanes and a new crossing, (2) supporting local economy by streamlining application processes and (3) advancing affordable housing with a strong sense of community. This can be achieved by investing in co-op housing, easing guidelines for coach houses and focusing majority of growth in town centres that are connected with transit.",
+      "source_type": "official_statement",
+      "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
     }
   ],
   "dnv-council-mann-kulvir": [

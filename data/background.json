@@ -2983,6 +2983,69 @@
   "dnv-council-bell-trey": [
     {
       "category": "public-office",
+      "char_end": 213,
+      "char_start": 0,
+      "flashpoints": [],
+      "quote": "I learned a great deal during my campaign for District of North Vancouver Council in 2022. I finished seventh, just a few hundred votes short of a seat, and I remain incredibly grateful for the support I received.",
+      "source_type": "official_statement",
+      "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+    },
+    {
+      "category": "public-office",
+      "char_end": 541,
+      "char_start": 341,
+      "flashpoints": [],
+      "quote": "I was appointed to the District’s Community Services Advisory Committee, founded the Lower Lynn Community Association and serve as its President, and served as President of the Parkgate Society Board.",
+      "source_type": "official_statement",
+      "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+    },
+    {
+      "category": "career",
+      "char_end": 839,
+      "char_start": 543,
+      "flashpoints": [],
+      "quote": "Today, I work as a Program Director with an Indigenous non-profit serving children, youth and families. A lifelong North Vancouver resident, I grew up in the Edgemont area and have dedicated much of my career and volunteer work to supporting children, youth, families and community organizations.",
+      "source_type": "official_statement",
+      "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+    },
+    {
+      "category": "education",
+      "char_end": 958,
+      "char_start": 840,
+      "flashpoints": [],
+      "quote": "I hold a BA in Political Science from Acadia University and a Public Relations certificate with Distinction from BCIT.",
+      "source_type": "official_statement",
+      "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+    },
+    {
+      "category": "community",
+      "char_end": 541,
+      "char_start": 215,
+      "flashpoints": [],
+      "quote": "Since then, I have worked to deepen my community involvement and build the experience needed to serve effectively on Council. I was appointed to the District’s Community Services Advisory Committee, founded the Lower Lynn Community Association and serve as its President, and served as President of the Parkgate Society Board.",
+      "source_type": "official_statement",
+      "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+    },
+    {
+      "category": "community",
+      "char_end": 839,
+      "char_start": 647,
+      "flashpoints": [],
+      "quote": "A lifelong North Vancouver resident, I grew up in the Edgemont area and have dedicated much of my career and volunteer work to supporting children, youth, families and community organizations.",
+      "source_type": "official_statement",
+      "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+    },
+    {
+      "category": "local-roots",
+      "char_end": 839,
+      "char_start": 647,
+      "flashpoints": [],
+      "quote": "A lifelong North Vancouver resident, I grew up in the Edgemont area and have dedicated much of my career and volunteer work to supporting children, youth, families and community organizations.",
+      "source_type": "official_statement",
+      "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+    },
+    {
+      "category": "public-office",
       "char_end": 2410,
       "char_start": 1782,
       "flashpoints": [],
@@ -3517,6 +3580,42 @@
     }
   ],
   "dnv-council-mah-herman": [
+    {
+      "category": "public-office",
+      "char_end": 678,
+      "char_start": 507,
+      "flashpoints": [],
+      "quote": "He was Treasurer for the Pemberton Heights Community Association, volunteered on DNV’s Community Services Advisory Committee and coached for North Shore Girls Soccer Club.",
+      "source_type": "official_statement",
+      "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+    },
+    {
+      "category": "career",
+      "char_end": 437,
+      "char_start": 288,
+      "flashpoints": [],
+      "quote": "Professionally, he oversaw the BCIT downtown campus, administered real estate projects at BC Housing and managed affordable housing for a non-profit.",
+      "source_type": "official_statement",
+      "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+    },
+    {
+      "category": "community",
+      "char_end": 769,
+      "char_start": 439,
+      "flashpoints": [],
+      "quote": "Herman has volunteered for many community groups for over 40 years. He was Treasurer for the Pemberton Heights Community Association, volunteered on DNV’s Community Services Advisory Committee and coached for North Shore Girls Soccer Club. Herman recently joined the board of Canadian Mental Health Association on the North Shore.",
+      "source_type": "official_statement",
+      "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+    },
+    {
+      "category": "local-roots",
+      "char_end": 90,
+      "char_start": 0,
+      "flashpoints": [],
+      "quote": "Herman Mah and his family have called the District of North Vancouver “home” for 25 years.",
+      "source_type": "official_statement",
+      "source_url": "https://www.dnv.org/government-administration/see-who-is-running"
+    },
     {
       "category": "local-roots",
       "char_end": 430,
