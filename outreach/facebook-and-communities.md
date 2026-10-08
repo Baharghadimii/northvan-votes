@@ -381,16 +381,23 @@ Note 2011 (20.96%) and 2008 (16.58%) were lower in the District, so "worst ever"
 is wrong; the true claim is a collapse from 2018 and barely one in five.
 
 ```
-Fewer than one in four people voted in the City last time — 22.6% of registered
-voters in 2022. With 59 names on the ballot, I suspect that's less about apathy
-than about how much work it takes to decide.
+Only 22% of us voted in the City last time. I don't think that's because people
+don't care. There are 59 names on the ballot and working out who's who is a slog.
 
-So I built northvanvotes.ca. It's sorted by issue instead of by name: tap
-housing, traffic or taxes and you get what each candidate actually said about
-it, word for word, with a link to where they said it.
+That's why I made northvanvotes.ca. It's organised by issue instead of by name.
+If you care about housing, click housing, and you'll see what each candidate
+said about it in their own words, with a link to where they said it.
 
-I'm open to ideas, and if you spot anything that needs correcting please tell
-me and I'll fix it.
+If you spot a mistake, tell me and I'll fix it.
 
 northvanvotes.ca
 ```
+
+An earlier draft of this read as written by a machine, and it is worth recording
+why rather than just fixing it. "I suspect that's less about apathy than about
+how much work it takes to decide" is a balanced essay construction nobody says
+aloud; "apathy" is a word nobody uses about their own neighbours; "housing,
+traffic or taxes" is a list of three where one example lands harder; and every
+sentence ran the same length. The repair was specificity and unevenness --
+"22% of us" rather than "22% of people", "a slog" rather than an abstraction,
+and a short sentence to finish on.
