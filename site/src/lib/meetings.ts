@@ -9,7 +9,7 @@
  *  anything was ever held.
  */
 
-export const MEETINGS_VERIFIED = "2026-10-08";
+export const MEETINGS_VERIFIED = "2026-10-12";
 export const MEETINGS_SOURCE =
   "https://www.dnv.org/government-administration/see-who-is-running";
 
@@ -57,6 +57,7 @@ export const MEETINGS: Meeting[] = [
     host: "Better North Shore",
     hostUrl: "https://www.betternorthshore.ca/election2026",
     recordingsAt: "https://www.betternorthshore.ca/election2026",
+    recordingUrl: "https://www.youtube.com/watch?v=YVkSHW2gM4M",
   },
   {
     date: "2026-10-08",
@@ -64,6 +65,7 @@ export const MEETINGS: Meeting[] = [
     location: "Mount Seymour United Church",
     host: "Seymour, Blueridge and Deep Cove Community Associations",
     hostUrl: "https://blueridgeca.org/",
+    recordingUrl: "https://www.youtube.com/watch?v=nvU-ZPNSF1U",
   },
   {
     date: "2026-10-13",
