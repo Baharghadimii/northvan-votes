@@ -6,7 +6,7 @@
  *  update `verified`.
  */
 
-export const VERIFIED = "2026-10-04";
+export const VERIFIED = "2026-10-13";
 
 export interface VotingPlace { name: string; address: string; note?: string }
 export interface AdvanceDay { date: string; iso: string; hours: string; places: VotingPlace[] }
@@ -55,6 +55,7 @@ export const VOTING: Record<"cnv" | "dnv", MunicipalityVoting> = {
     extras: [
       "Curbside voting during advance voting is on 13th Street in front of City Hall.",
       "Mail ballots had to be applied for by October 1, so that option has closed.",
+      "If you already have a mail ballot package, it has to reach the Chief Election Officer by 8:00 p.m. on October 17. This late, dropping it at City Hall beats trusting the post.",
     ],
   },
 
