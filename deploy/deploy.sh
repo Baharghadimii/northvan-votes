@@ -41,6 +41,25 @@ if [ "$PAGES" -lt 70 ] || [ "$CANDIDATES" -lt 59 ]; then
   exit 1
 fi
 
+# Astro eats the whitespace around an inline element that sits on its own line,
+# so "VoteMate</a>\n lets candidates" ships as "VoteMatelets candidates". It
+# has happened six times now and it is invisible in the source. Catch it here
+# rather than on the live site.
+.venv/bin/python - <<'PYGLUE' || exit 1
+import glob, io, re, sys
+bad = []
+for f in glob.glob("site/dist/**/*.html", recursive=True):
+    h = io.open(f, encoding="utf-8").read()
+    for m in re.finditer(r"\w</(?:a|strong|em|b|i)>\w", h):
+        bad.append(f"{f}: ...{h[max(0, m.start() - 45):m.end() + 25]}...")
+if bad:
+    print("!! Words glued together by collapsed whitespace. Nothing uploaded.", file=sys.stderr)
+    print("   Put {\" \"} after the closing tag.", file=sys.stderr)
+    for b in bad[:10]:
+        print("   " + b, file=sys.stderr)
+    sys.exit(1)
+PYGLUE
+
 echo "==> Uploading to ${VPS_USER}@${VPS}:${WEBROOT}"
 # --delete removes files that no longer exist, so a withdrawn candidate's page
 # actually disappears instead of lingering.

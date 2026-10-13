@@ -1,0 +1,149 @@
+---
+import Base from "~/layouts/Base.astro";
+import bears from "~/data/bears.json";
+import { candidates, MUNICIPALITIES, OFFICES } from "~/lib/data";
+
+const byId = new Map(candidates.map((c) => [c.id, c]));
+const munis = ["cnv", "dnv"] as const;
+
+const totalAnswered = munis.reduce((n, m) => n + bears.municipalities[m].answers.length, 0);
+const totalAsked = munis.reduce((n, m) => n + bears.municipalities[m].asked, 0);
+
+function grouped(m: (typeof munis)[number]) {
+  const answers = bears.municipalities[m].answers;
+  return (["mayor", "council"] as const)
+    .map((office) => ({
+      office,
+      label: OFFICES[office],
+      items: answers.filter((a) => byId.get(a.candidate_id)?.office === office),
+    }))
+    .filter((g) => g.items.length > 0);
+}
+---
+
+<Base
+  title="Candidates on bears"
+  description="What North Vancouver's mayor and council candidates said when North Shore Bear Advocates asked them one question about living alongside bears."
+>
+  <p style="font-size:0.88rem"><a href="/">← All issues</a></p>
+  <h1>Candidates on bears</h1>
+  <p class="lede">
+    {totalAnswered} of the {totalAsked} people running for mayor or council in
+    the City and the District answered one question about living alongside
+    bears. Their answers are below, in full.
+  </p>
+
+  <div class="notice notice-warm">
+    <p>
+      <strong>This page works differently from the rest of the site.</strong>{" "}
+      Everywhere else I quote what candidates published themselves — the
+      statement they filed, or their own campaign site. These are replies to a
+      question somebody else asked them.
+    </p>
+    <p>
+      <a href="https://www.facebook.com/groups/northshorebearadvocates" target="_blank" rel="noopener nofollow">North Shore Bear Advocates</a>{" "}
+      emailed every mayor and council candidate on the North Shore on September
+      29, sent a reminder, and published every reply in full. I'm quoting from
+      those documents, which are linked at the bottom. The question was theirs,
+      not mine, and the framing around it is theirs too.
+    </p>
+    <p style="margin-bottom:0">
+      <strong>It also names the people who didn't reply</strong>, which nothing
+      else on this site does. Everywhere else a blank means I found nothing;
+      here everyone was asked the same thing and told in advance that
+      non-replies would be noted, so it is a fact about them rather than about
+      my reading. It is still only that. Not answering one group's email during
+      an election says nothing about what someone thinks, and I would not read
+      it as though it did.
+    </p>
+  </div>
+
+  <h2>The question they were asked</h2>
+  <figure class="quote">
+    <blockquote style="margin:0">
+      <p>
+        Besides education, what specific mechanism would you implement in your
+        municipality to better co-exist with bears?
+      </p>
+    </blockquote>
+    <figcaption class="source-line">
+      <span class="srctag">Sent September 29, 2026</span>
+      <span class="src-ref">asked by North Shore Bear Advocates</span>
+    </figcaption>
+  </figure>
+
+  {munis.map((m) => (
+    <section id={m} class="race-section">
+      <div class="race-heading">
+        <h2>{MUNICIPALITIES[m]}</h2>
+        <span class="seats">
+          {bears.municipalities[m].answers.length} of {bears.municipalities[m].asked} answered
+        </span>
+      </div>
+
+      {grouped(m).map((g) => (
+        <>
+          <h3 style="margin-top:22px">{g.label}</h3>
+          {g.items.map((a) => (
+            <div class="card" style="margin-bottom:14px">
+              <div class="candidate-name">
+                <a href={`/candidates/${a.candidate_id}/`}>{a.name}</a>
+                {byId.get(a.candidate_id)?.incumbent && (
+                  <span class="tag tag-incumbent" style="margin-left:6px">Incumbent</span>
+                )}
+              </div>
+              <figure class="quote">
+                <blockquote style="margin:0">
+                  {a.answer.split(/\n{2,}/).filter(Boolean).map((p) => <p>{p}</p>)}
+                </blockquote>
+                <figcaption class="source-line">
+                  <span class="srctag">Replied {a.received}</span>
+                  {a.replies > 1 && <span class="srctag">{a.replies} replies, both shown</span>}
+                </figcaption>
+              </figure>
+            </div>
+          ))}
+        </>
+      ))}
+
+      {bears.municipalities[m].nonresponders.length > 0 && (
+        <div class="notice" style="margin-top:18px">
+          <p style="margin-bottom:0">
+            <strong>Did not reply by the deadline:</strong>{" "}
+            {bears.municipalities[m].nonresponders.map((n, i) => (
+              <>
+                {i > 0 && ", "}
+                <a href={`/candidates/${n.candidate_id}/`}>{n.name}</a>
+              </>
+            ))}. They were emailed on September 29 and reminded on October 2.
+          </p>
+        </div>
+      )}
+    </section>
+  ))}
+
+  <h2 style="margin-top:34px">Where this came from</h2>
+  <p>
+    Every answer above is copied word for word from the documents North Shore
+    Bear Advocates published. I've trimmed the greeting and the signature off
+    each email and nothing else — one reply carried a personal phone number.
+    Read the originals yourself:
+  </p>
+  <ul class="linklist">
+    <li>
+      <a href={bears.source.cnv} target="_blank" rel="noopener nofollow">
+        City of North Vancouver — all responses
+      </a>
+    </li>
+    <li>
+      <a href={bears.source.dnv} target="_blank" rel="noopener nofollow">
+        District of North Vancouver — all responses
+      </a>
+    </li>
+  </ul>
+  <p class="candidate-meta">
+    They asked West Vancouver candidates too, which this site doesn't cover.
+    School trustees were not asked. Linking this isn't an endorsement of North
+    Shore Bear Advocates or of how they framed the question.
+  </p>
+</Base>

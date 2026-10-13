@@ -811,3 +811,10 @@ mark {
   }
   .compare-scroll { overflow-x: visible; }
 }
+
+/* The bears page is a different kind of source, so its explanation should not
+   look like every other grey box on the site. */
+.notice-warm {
+  border-left: 4px solid var(--warm);
+  background: var(--surface-2);
+}
