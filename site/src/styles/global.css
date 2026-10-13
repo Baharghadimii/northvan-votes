@@ -818,3 +818,11 @@ mark {
   border-left: 4px solid var(--warm);
   background: var(--surface-2);
 }
+
+/* ---------- bears: searching the names ---------- */
+
+/* Separators live in CSS so the search can hide a name without leaving a
+   stray comma behind. A visible name preceded by another visible name gets
+   one; with JavaScript off nothing is hidden and the list reads normally. */
+.nr-list .nr:not([hidden]) ~ .nr:not([hidden])::before { content: ", "; }
+.bear-group[hidden], .race-section[hidden] { display: none; }
