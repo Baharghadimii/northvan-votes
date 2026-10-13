@@ -826,3 +826,28 @@ mark {
    one; with JavaScript off nothing is hidden and the list reads normally. */
 .nr-list .nr:not([hidden]) ~ .nr:not([hidden])::before { content: ", "; }
 .bear-group[hidden], .race-section[hidden] { display: none; }
+
+/* ---------- translated voter guides ---------- */
+
+/* The native name is what someone scans for, so it leads and is set large
+   enough to read in scripts that carry more detail per character than Latin. */
+.lang-grid {
+  list-style: none; padding: 0; margin: 16px 0 12px;
+  display: grid; gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(10.5rem, 1fr));
+}
+.lang-grid a {
+  display: block; height: 100%;
+  padding: 11px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  text-decoration: none;
+}
+.lang-grid a:hover { border-color: var(--accent); }
+.lang-native {
+  display: block; font-size: 1.05rem; line-height: 1.5; color: var(--text);
+}
+.lang-en {
+  display: block; font-size: 0.8rem; color: var(--text-faint); margin-top: 1px;
+}

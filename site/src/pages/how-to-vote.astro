@@ -5,6 +5,23 @@ import { formatDate, races } from "~/lib/data";
 
 const munis = ["cnv", "dnv"] as const;
 const allRaces = races();
+/** The provincial "Voter's Guide to Local Elections in B.C. 2026", which the
+ *  City hosts in seven languages. Checked on 2026-10-13: every file returns a
+ *  PDF, and each one is genuinely in that script rather than the English file
+ *  under another name. Elections BC's own translated-materials page is for the
+ *  provincial election on October 24, which is a different vote, so these
+ *  City-hosted copies are the right ones to send people to for October 17. */
+const GUIDE_BASE =
+  "https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/Election/2026";
+const GUIDES = [
+  { native: "English", english: "English", code: "en", file: "voter_guide_english" },
+  { native: "فارسی", english: "Farsi", code: "fa", file: "voter_guide_farsi" },
+  { native: "简体中文", english: "Chinese, Simplified", code: "zh-Hans", file: "voter_guide_simplified_chinese" },
+  { native: "繁體中文", english: "Chinese, Traditional", code: "zh-Hant", file: "voter_guide_traditional_chinese" },
+  { native: "ਪੰਜਾਬੀ", english: "Punjabi", code: "pa", file: "voter_guide_punjabi" },
+  { native: "한국어", english: "Korean", code: "ko", file: "voter_guide_korean" },
+  { native: "Français", english: "French", code: "fr", file: "voter_guide_french" },
+].map((g) => ({ ...g, url: `${GUIDE_BASE}/${g.file}.pdf` }));
 ---
 
 <Base
@@ -18,9 +35,9 @@ const allRaces = races();
   </p>
 
   <div class="notice">
-    <p>
-      <strong>Advance voting starts Wednesday, October 7</strong> in both
-      municipalities. You do not have to wait for the 17th.
+    <p data-advance-note>
+      Advance voting runs on different days in the City and the District, and
+      both schedules are below. General voting day is Saturday, October 17.
     </p>
   </div>
 
@@ -75,6 +92,30 @@ const allRaces = races();
     student ID all count. If neither shows your address you can make a solemn
     declaration at the voting place. You don't need to register in advance;
     you can do it when you vote.
+  </p>
+
+  <h2>Reading this in another language</h2>
+  <p>
+    The provincial guide to local elections comes in seven languages, and the
+    City hosts all of them. It covers who is allowed to vote, what counts as
+    ID, and how the ballot works. It is the same guide for the District, even
+    though it sits on the City's website.
+  </p>
+  <ul class="lang-grid">
+    {GUIDES.map((g) => (
+      <li>
+        <a href={g.url} target="_blank" rel="noopener">
+          <span class="lang-native" lang={g.code}>{g.native}</span>
+          {g.native !== g.english && <span class="lang-en">{g.english}</span>}
+        </a>
+      </li>
+    ))}
+  </ul>
+  <p class="candidate-meta">
+    What it doesn't have is North Vancouver's own dates and addresses. Those
+    are below, in English only, and they're the part that decides whether
+    someone gets to vote on Saturday. If you're helping a neighbour or a
+    parent through it, that's the list to go through together.
   </p>
 
   {munis.map((key) => {

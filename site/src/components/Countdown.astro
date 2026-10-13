@@ -99,6 +99,17 @@ const id = `cd-${Math.random().toString(36).slice(2, 9)}`;
       return "No advance voting today. Next: " + up.map(function (x) { return x.text; }).join(", ") + ".";
     }
 
+    // The same sentence, for pages that want it as prose rather than in the
+    // strip. /how-to-vote used to open with a hardcoded "advance voting starts
+    // Wednesday, October 7", which was true for about a week and then quietly
+    // became wrong while sitting at the top of the page people check before
+    // they set off. One source of truth, computed in the reader's today.
+    function advanceNote(now) {
+      if (now >= close) return "Voting has closed. Each municipality publishes its own results.";
+      if (now >= open) return "Today is general voting day. Voting places are open until 8:00 p.m.";
+      return advanceToday();
+    }
+
     function phase(now) {
       // Each phase answers a different question, so the copy changes with it
       // rather than counting down to one fixed instant all month.
@@ -120,6 +131,10 @@ const id = `cd-${Math.random().toString(36).slice(2, 9)}`;
     function tick() {
       var now = Date.now();
       var p = phase(now);
+
+      document.querySelectorAll("[data-advance-note]").forEach(function (el) {
+        el.textContent = advanceNote(now);
+      });
 
       if (p.target === null) {
         if (label) label.textContent = p.lead;
@@ -154,6 +169,13 @@ const id = `cd-${Math.random().toString(36).slice(2, 9)}`;
     }
 
     tick();
+    // This script is inline in the header, so the first tick runs before the
+    // rest of the page is parsed and any [data-advance-note] further down does
+    // not exist yet. Without this it would sit on its fallback wording until
+    // the next interval, which on the header strip is half a minute.
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", tick);
+    }
     // A seconds display needs a second; the header strip does not.
     setInterval(tick, clock ? 1000 : 30000);
   })();
