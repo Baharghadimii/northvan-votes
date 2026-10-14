@@ -7727,6 +7727,66 @@
       }
     ]
   },
+  "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles::31ab4808ce8ebe90": {
+    "background": [
+      {
+        "category": "education",
+        "char_end": 430,
+        "char_start": 117,
+        "flashpoints": [],
+        "quote": "I graduated Bachelor of Arts Major in Philosophy at University of Santo Tomas and undergraduate of Law at San Beda University. We migrated in 1991.\n\nMy passion on social justice and human rights have urged me to pursue Criminology in Douglas College but being new to Canada and a working student has a toll on me.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "career",
+        "char_end": 556,
+        "char_start": 431,
+        "flashpoints": [],
+        "quote": "I worked and earned 22 years experience in payroll, staffing and human resources in unionized setting.\n\nMy commitment to you:",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "local-roots",
+        "char_end": 264,
+        "char_start": 0,
+        "flashpoints": [],
+        "quote": "I am a proud indigenous of the Cordillera Autonomous Region of the Philippines, born and raised in Kalinga province. I graduated Bachelor of Arts Major in Philosophy at University of Santo Tomas and undergraduate of Law at San Beda University. We migrated in 1991.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      }
+    ],
+    "positions": [
+      {
+        "category": "governance-and-transparency",
+        "char_end": 746,
+        "char_start": 558,
+        "flashpoints": [],
+        "quote": "TRANSPARENCY: I will be clear, honest, open and accessible to parents, staff and the community\n\nACCOUNTABILITY: I will answer to the community through public hearing and independent audits",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "schools-education",
+        "char_end": 967,
+        "char_start": 748,
+        "flashpoints": [],
+        "quote": "STUDENT-CENTERED EDUCATION: I will put the students first to build autonomy, critical thinking and lifelong problem-solving skills\n\nSCHOOL SAFETY: I will protect students and staff from emergencies, violence and hazards",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "public-safety-emergency",
+        "char_end": 967,
+        "char_start": 880,
+        "flashpoints": [],
+        "quote": "SCHOOL SAFETY: I will protect students and staff from emergencies, violence and hazards",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      }
+    ]
+  },
   "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles::3329c98d204c5b41": {
     "background": [
       {
@@ -9385,6 +9445,77 @@
         "char_start": 828,
         "flashpoints": [],
         "quote": "Regular Meet the Mayor events, for my full term, not just the campaign. Listen. Meaningful public input before decisions are made, not after. Lead. Pragmatic, disciplined council and community leadership - business acumen, not talk.\n\nI don't accept developer donations. City Hall shouldn't owe anyone but the residents and business owners it serves.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      }
+    ]
+  },
+  "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles::edb813f033260c3f": {
+    "background": [
+      {
+        "category": "public-office",
+        "char_end": 580,
+        "char_start": 0,
+        "flashpoints": [
+          "harry-jerome"
+        ],
+        "quote": "Since 2018, it has been my privilege to serve you on Council.\n\nI initiated the City's living wage certification, expanded childcare on City lands, strengthened supports for tenants displaced by redevelopment, restored City funding for school playground upgrades and launched the Multicultural Community Festival task force.\n\nI also helped deliver the Harry Jerome Community Recreation and Silver Harbour Centres, the North Shore Neighbourhood House rebuild including affordable rental homes, the Central Lonsdale Business Improvement Area, and the City's first tree canopy target.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      }
+    ],
+    "positions": [
+      {
+        "category": "housing",
+        "char_end": 792,
+        "char_start": 731,
+        "flashpoints": [],
+        "quote": "A Home You Can Afford – more affordable homes, fewer barriers",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "childcare-seniors-services",
+        "char_end": 872,
+        "char_start": 794,
+        "flashpoints": [],
+        "quote": "Childcare Close to Home – new spaces on City lands and in housing developments",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "transportation",
+        "char_end": 956,
+        "char_start": 874,
+        "flashpoints": [],
+        "quote": "Less Time in Your Car – rapid transit expansion, safer streets, better bike routes",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "local-economy",
+        "char_end": 1131,
+        "char_start": 1030,
+        "flashpoints": [],
+        "quote": "A City Built for Everyday Life – more local jobs, worker protections, thriving arts and culture scene",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "parks-environment-climate",
+        "char_end": 1219,
+        "char_start": 1133,
+        "flashpoints": [],
+        "quote": "A Climate Ready Livable City – more trees, cooling and protection from extreme weather",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "governance-and-transparency",
+        "char_end": 1333,
+        "char_start": 1221,
+        "flashpoints": [],
+        "quote": "Listening to You – act on the City's engagement plan and explore participatory budgeting for net parking revenue",
         "source_type": "official_statement",
         "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
       }

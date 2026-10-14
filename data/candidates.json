@@ -1343,6 +1343,15 @@
     "positions": [
       {
         "category": "housing",
+        "char_end": 792,
+        "char_start": 731,
+        "flashpoints": [],
+        "quote": "A Home You Can Afford – more affordable homes, fewer barriers",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "housing",
         "char_end": 669,
         "char_start": 0,
         "flashpoints": [],
@@ -1351,13 +1360,13 @@
         "source_url": "https://angelagirard.ca/priorities/affordable-housing/"
       },
       {
-        "category": "housing",
-        "char_end": 2069,
-        "char_start": 1433,
+        "category": "childcare-seniors-services",
+        "char_end": 872,
+        "char_start": 794,
         "flashpoints": [],
-        "quote": "The pressure on existing tenants is just as real. As land and construction costs rise, much of our remaining affordable rental stock is aging. Those tenants face steady rent increases, the threat of renoviction, and displacement when older buildings are redeveloped. That’s why I brought forward a motion to strengthen the supports and amounts developers must pay to tenants being displaced due to rental redevelopments.\n\nThere is no single fix. On Council I’ve supported the housing agreements, zoning changes and provincial alignment work that get the housing we need built. These efforts have had an impact over the past eight years.",
-        "source_type": "campaign_site",
-        "source_url": "https://angelagirard.ca/priorities/affordable-housing/"
+        "quote": "Childcare Close to Home – new spaces on City lands and in housing developments",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
       },
       {
         "category": "childcare-seniors-services",
@@ -1369,56 +1378,11 @@
         "source_url": "https://angelagirard.ca/priorities/child-care/"
       },
       {
-        "category": "childcare-seniors-services",
-        "char_end": 3029,
-        "char_start": 2674,
+        "category": "transportation",
+        "char_end": 956,
+        "char_start": 874,
         "flashpoints": [],
-        "quote": "A healthy city also needs healthy people. B.C. will begin licensing psychotherapists in November 2027, and the standards deciding who qualifies are being consulted on this fall. I’ll be making the case that the Province and regulator recognizes the full range of therapeutic approaches, so residents can find qualified care that actually fits their needs.",
-        "source_type": "campaign_site",
-        "source_url": "https://angelagirard.ca/priorities/economic-development/"
-      },
-      {
-        "category": "parks-environment-climate",
-        "char_end": 695,
-        "char_start": 0,
-        "flashpoints": [],
-        "quote": "Prepare for the heat we’re already getting — expand tree canopy and shade, and make sure cooling spaces are open, staffed and known to residents during extreme heat events\n\nGrow the urban forest — deliver on the City’s 24% canopy target, which cools streets, manages stormwater and cleans the air\n\nBuild for wildfire smoke and heavy rain — clean air spaces during smoke season, and stormwater infrastructure sized for the rainfall we now get, not the rainfall we used to get\n\nHold to our emissions targets — Council set community-wide reduction goals in 2019; the work now is implementation, and reporting honestly on progress\n\nDeliver the Climate and Environment Strategy — the adopted strategy",
-        "source_type": "campaign_site",
-        "source_url": "https://angelagirard.ca/priorities/climate-action/"
-      },
-      {
-        "category": "parks-environment-climate",
-        "char_end": 1000,
-        "char_start": 900,
-        "flashpoints": [],
-        "quote": "Advocate for a cooling strategy setting a maximum indoor temperature of 26°C in multi-unit buildings",
-        "source_type": "campaign_site",
-        "source_url": "https://angelagirard.ca"
-      },
-      {
-        "category": "local-economy",
-        "char_end": 695,
-        "char_start": 0,
-        "flashpoints": [],
-        "quote": "Cut the barriers small businesses face — faster permitting, clearer requirements, and a City that’s easier to deal with when you’re trying to open or expand\n\nBack our Business Improvement Areas — continue supporting the successful work of the Lower Lonsdale BIA in the Shipyards District, and support the new Central Lonsdale BIA , now up and running, to make sure it thrives\n\nDeliver the Lonsdale Great Street Plan — redefine the City’s central commercial corridor so it draws people in and keeps local businesses busy\n\nGrow the Health Innovation District — build on Lions Gate Hospital and the health businesses and organizations clustered around Central Lonsdale to anchor health-sector jobs,",
-        "source_type": "campaign_site",
-        "source_url": "https://angelagirard.ca/priorities/economic-development/"
-      },
-      {
-        "category": "local-economy",
-        "char_end": 2390,
-        "char_start": 1724,
-        "flashpoints": [],
-        "quote": "The City is the economic centre of the North Shore. What happens on Lonsdale, at the Shipyards and along the waterfront determines whether people can build a career here or must commute out of the community to find one.\n\nWe’ve seen what focused investment does. The Shipyards revitalization and the arrival of MONOVA and the Polygon Gallery turned the waterfront into a destination — for residents first, and visitors after. Maclean’s recently called this area one of Canada’s coolest neighbourhoods. That didn’t happen by accident, and it didn’t happen quickly. It happened because Council committed to a plan and stayed with it.\n\nThe same approach works elsewhere.",
-        "source_type": "campaign_site",
-        "source_url": "https://angelagirard.ca/priorities/economic-development/"
-      },
-      {
-        "category": "schools-education",
-        "char_end": 323,
-        "char_start": 63,
-        "flashpoints": [],
-        "quote": "I initiated the City's living wage certification, expanded childcare on City lands, strengthened supports for tenants displaced by redevelopment, restored City funding for school playground upgrades and launched the Multicultural Community Festival task force.",
+        "quote": "Less Time in Your Car – rapid transit expansion, safer streets, better bike routes",
         "source_type": "official_statement",
         "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
       },
@@ -1434,13 +1398,58 @@
         "source_url": "https://angelagirard.ca/priorities/traffic-mobility-transit/"
       },
       {
-        "category": "transportation",
-        "char_end": 1268,
-        "char_start": 1002,
+        "category": "local-economy",
+        "char_end": 1131,
+        "char_start": 1030,
         "flashpoints": [],
-        "quote": "Over my two terms, the City of North Vancouver has ranked first in BC for building rental housing (Make Housing Central, 2022), started more new housing than anywhere else on the North Shore, and won HUB Cycling’s Biggest Leap award for active transportation (2026).",
+        "quote": "A City Built for Everyday Life – more local jobs, worker protections, thriving arts and culture scene",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "local-economy",
+        "char_end": 695,
+        "char_start": 0,
+        "flashpoints": [],
+        "quote": "Cut the barriers small businesses face — faster permitting, clearer requirements, and a City that’s easier to deal with when you’re trying to open or expand\n\nBack our Business Improvement Areas — continue supporting the successful work of the Lower Lonsdale BIA in the Shipyards District, and support the new Central Lonsdale BIA , now up and running, to make sure it thrives\n\nDeliver the Lonsdale Great Street Plan — redefine the City’s central commercial corridor so it draws people in and keeps local businesses busy\n\nGrow the Health Innovation District — build on Lions Gate Hospital and the health businesses and organizations clustered around Central Lonsdale to anchor health-sector jobs,",
         "source_type": "campaign_site",
-        "source_url": "https://angelagirard.ca"
+        "source_url": "https://angelagirard.ca/priorities/economic-development/"
+      },
+      {
+        "category": "parks-environment-climate",
+        "char_end": 1219,
+        "char_start": 1133,
+        "flashpoints": [],
+        "quote": "A Climate Ready Livable City – more trees, cooling and protection from extreme weather",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "parks-environment-climate",
+        "char_end": 695,
+        "char_start": 0,
+        "flashpoints": [],
+        "quote": "Prepare for the heat we’re already getting — expand tree canopy and shade, and make sure cooling spaces are open, staffed and known to residents during extreme heat events\n\nGrow the urban forest — deliver on the City’s 24% canopy target, which cools streets, manages stormwater and cleans the air\n\nBuild for wildfire smoke and heavy rain — clean air spaces during smoke season, and stormwater infrastructure sized for the rainfall we now get, not the rainfall we used to get\n\nHold to our emissions targets — Council set community-wide reduction goals in 2019; the work now is implementation, and reporting honestly on progress\n\nDeliver the Climate and Environment Strategy — the adopted strategy",
+        "source_type": "campaign_site",
+        "source_url": "https://angelagirard.ca/priorities/climate-action/"
+      },
+      {
+        "category": "governance-and-transparency",
+        "char_end": 1333,
+        "char_start": 1221,
+        "flashpoints": [],
+        "quote": "Listening to You – act on the City's engagement plan and explore participatory budgeting for net parking revenue",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "governance-and-transparency",
+        "char_end": 548,
+        "char_start": 179,
+        "flashpoints": [],
+        "quote": "Keep pressing senior governments and TransLink — the projects that matter most aren’t ours to build, which makes advocacy part of the job, not a substitute for it\n\nKeep the North Shore speaking with one voice — North Shore Connects brings three municipalities and two First Nations governments to the table together, because traffic doesn’t stop at municipal boundaries",
+        "source_type": "campaign_site",
+        "source_url": "https://angelagirard.ca/priorities/traffic-mobility-transit/"
       },
       {
         "category": "development-and-growth",
@@ -1461,20 +1470,11 @@
         "source_url": "https://angelagirard.ca/priorities/traffic-mobility-transit/"
       },
       {
-        "category": "governance-and-transparency",
-        "char_end": 548,
-        "char_start": 179,
+        "category": "schools-education",
+        "char_end": 538,
+        "char_start": 476,
         "flashpoints": [],
-        "quote": "Keep pressing senior governments and TransLink — the projects that matter most aren’t ours to build, which makes advocacy part of the job, not a substitute for it\n\nKeep the North Shore speaking with one voice — North Shore Connects brings three municipalities and two First Nations governments to the table together, because traffic doesn’t stop at municipal boundaries",
-        "source_type": "campaign_site",
-        "source_url": "https://angelagirard.ca/priorities/traffic-mobility-transit/"
-      },
-      {
-        "category": "governance-and-transparency",
-        "char_end": 1724,
-        "char_start": 1403,
-        "flashpoints": [],
-        "quote": "That’s where I’ll keep pushing in a third term — by continuing to have small conversations with residents about the big issues, which is how I do this work.\n\nIf re-elected, I’ll continue to listen, advocate on your behalf, and take action , and I’ll keep asking, at every decision, who benefits and who is being left out.",
+        "quote": "Restore City funding for elementary school playground upgrades",
         "source_type": "campaign_site",
         "source_url": "https://angelagirard.ca"
       },
@@ -1504,7 +1504,7 @@
     "sources": [
       {
         "retrieved": "2026-10-08",
-        "text": "Since 2018, it has been my privilege to serve you on Council.\n\nI initiated the City's living wage certification, expanded childcare on City lands, strengthened supports for tenants displaced by redevelopment, restored City funding for school playground upgrades and launched the Multicultural Community Festival task force.\n\nI also helped deliver the Harry Jerome Community Recreation and Silver Harbour Centres, the North Shore Neighbourhood House rebuild including affordable rental homes, the Central Lonsdale Business Improvement Area, and the City's first tree canopy target. Progress isn't guaranteed. If re-elected, I'll keep pushing for an affordable, connected, compassionate and inclusive City.\n\nI want to help deliver:",
+        "text": "Since 2018, it has been my privilege to serve you on Council.\n\nI initiated the City's living wage certification, expanded childcare on City lands, strengthened supports for tenants displaced by redevelopment, restored City funding for school playground upgrades and launched the Multicultural Community Festival task force.\n\nI also helped deliver the Harry Jerome Community Recreation and Silver Harbour Centres, the North Shore Neighbourhood House rebuild including affordable rental homes, the Central Lonsdale Business Improvement Area, and the City's first tree canopy target. Progress isn't guaranteed. If re-elected, I'll keep pushing for an affordable, connected, compassionate and inclusive City.\n\nI want to help deliver:\n\nA Home You Can Afford – more affordable homes, fewer barriers\n\nChildcare Close to Home – new spaces on City lands and in housing developments\n\nLess Time in Your Car – rapid transit expansion, safer streets, better bike routes\n\nIndigenous Reconciliation – true partnerships with local First Nations\n\nA City Built for Everyday Life – more local jobs, worker protections, thriving arts and culture scene\n\nA Climate Ready Livable City – more trees, cooling and protection from extreme weather\n\nListening to You – act on the City's engagement plan and explore participatory budgeting for net parking revenue",
         "title": "City of North Vancouver candidate statement - GIRARD, Angela",
         "type": "official_statement",
         "url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
@@ -5179,12 +5179,40 @@
     "office": "trustee",
     "phone": "778-892-6679",
     "photo_url": "/photos/cnv-trustee-purugganan-ethel.jpg",
-    "positions": [],
+    "positions": [
+      {
+        "category": "governance-and-transparency",
+        "char_end": 746,
+        "char_start": 558,
+        "flashpoints": [],
+        "quote": "TRANSPARENCY: I will be clear, honest, open and accessible to parents, staff and the community\n\nACCOUNTABILITY: I will answer to the community through public hearing and independent audits",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "schools-education",
+        "char_end": 967,
+        "char_start": 748,
+        "flashpoints": [],
+        "quote": "STUDENT-CENTERED EDUCATION: I will put the students first to build autonomy, critical thinking and lifelong problem-solving skills\n\nSCHOOL SAFETY: I will protect students and staff from emergencies, violence and hazards",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "public-safety-emergency",
+        "char_end": 967,
+        "char_start": 880,
+        "flashpoints": [],
+        "quote": "SCHOOL SAFETY: I will protect students and staff from emergencies, violence and hazards",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      }
+    ],
     "socials": {},
     "sources": [
       {
         "retrieved": "2026-10-08",
-        "text": "I am a proud indigenous of the Cordillera Autonomous Region of the Philippines, born and raised in Kalinga province. I graduated Bachelor of Arts Major in Philosophy at University of Santo Tomas and undergraduate of Law at San Beda University. We migrated in 1991.\n\nMy passion on social justice and human rights have urged me to pursue Criminology in Douglas College but being new to Canada and a working student has a toll on me. I worked and earned 22 years experience in payroll, staffing and human resources in unionized setting.\n\nMy commitment to you:\n\nHelp me get the vote and I will be your positive voice and force to be reckoned with on the school board table. Your trust in my commitment and our children are my priority.",
+        "text": "I am a proud indigenous of the Cordillera Autonomous Region of the Philippines, born and raised in Kalinga province. I graduated Bachelor of Arts Major in Philosophy at University of Santo Tomas and undergraduate of Law at San Beda University. We migrated in 1991.\n\nMy passion on social justice and human rights have urged me to pursue Criminology in Douglas College but being new to Canada and a working student has a toll on me. I worked and earned 22 years experience in payroll, staffing and human resources in unionized setting.\n\nMy commitment to you:\n\nTRANSPARENCY: I will be clear, honest, open and accessible to parents, staff and the community\n\nACCOUNTABILITY: I will answer to the community through public hearing and independent audits\n\nSTUDENT-CENTERED EDUCATION: I will put the students first to build autonomy, critical thinking and lifelong problem-solving skills\n\nSCHOOL SAFETY: I will protect students and staff from emergencies, violence and hazards\n\nHelp me get the vote and I will be your positive voice and force to be reckoned with on the school board table. Your trust in my commitment and our children are my priority.",
         "title": "City of North Vancouver candidate statement - PURUGGANAN, Ethel",
         "type": "official_statement",
         "url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"

@@ -79,20 +79,39 @@ def _statement_text(body: Tag) -> str:
     deterministic. Anything that isn't candidate prose (the nomination package
     link, empty spacers) is excluded.
     """
-    paragraphs = body.find_all("p")
+    # Lists as well as paragraphs, in document order. Several candidates write
+    # their platform as a bulleted list under a line ending in a colon; reading
+    # only <p> stored Angela Girard's statement as "... I want to help deliver:"
+    # and threw away the seven things she said she wanted to deliver. Caroline
+    # Wakefield wrote in on October 13 to point it out.
+    blocks = body.find_all(["p", "ul", "ol"])
     marker_index = next(
-        (i for i, p in enumerate(paragraphs) if _is_statement_marker(p)),
+        (i for i, el in enumerate(blocks) if _is_statement_marker(el)),
         None,
     )
     if marker_index is None:
         return ""
 
+    def clean(el: Tag) -> str:
+        text = el.get_text(" ", strip=True).replace("\xa0", " ")
+        return re.sub(r"\s+", " ", text).strip()
+
     parts: list[str] = []
-    for p in paragraphs[marker_index + 1 :]:
-        if p.find("a", href=re.compile(r"Nom-Package", re.I)):
+    for el in blocks[marker_index + 1 :]:
+        if el.find("a", href=re.compile(r"Nom-Package", re.I)):
             continue
-        text = p.get_text(" ", strip=True).replace("\xa0", " ")
-        text = re.sub(r"\s+", " ", text).strip()
+        if el.name in ("ul", "ol"):
+            # One line per item, so a span can quote a single commitment
+            # without dragging in the six around it.
+            for li in el.find_all("li", recursive=False):
+                text = clean(li)
+                if text:
+                    parts.append(text)
+            continue
+        # A <p> that only wraps a list would otherwise repeat it.
+        if el.find(["ul", "ol"]):
+            continue
+        text = clean(el)
         if text:
             parts.append(text)
     return "\n\n".join(parts)

@@ -1108,54 +1108,55 @@
   "cnv-council-girard-angela": [
     {
       "category": "housing",
-      "char_end": 580,
-      "char_start": 63,
-      "flashpoints": [
-        "harry-jerome"
-      ],
-      "quote": "I initiated the City's living wage certification, expanded childcare on City lands, strengthened supports for tenants displaced by redevelopment, restored City funding for school playground upgrades and launched the Multicultural Community Festival task force.\n\nI also helped deliver the Harry Jerome Community Recreation and Silver Harbour Centres, the North Shore Neighbourhood House rebuild including affordable rental homes, the Central Lonsdale Business Improvement Area, and the City's first tree canopy target.",
+      "char_end": 792,
+      "char_start": 731,
+      "flashpoints": [],
+      "quote": "A Home You Can Afford – more affordable homes, fewer barriers",
       "source_type": "official_statement",
       "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
     },
     {
       "category": "childcare-seniors-services",
-      "char_end": 580,
-      "char_start": 63,
-      "flashpoints": [
-        "harry-jerome"
-      ],
-      "quote": "I initiated the City's living wage certification, expanded childcare on City lands, strengthened supports for tenants displaced by redevelopment, restored City funding for school playground upgrades and launched the Multicultural Community Festival task force.\n\nI also helped deliver the Harry Jerome Community Recreation and Silver Harbour Centres, the North Shore Neighbourhood House rebuild including affordable rental homes, the Central Lonsdale Business Improvement Area, and the City's first tree canopy target.",
+      "char_end": 872,
+      "char_start": 794,
+      "flashpoints": [],
+      "quote": "Childcare Close to Home – new spaces on City lands and in housing developments",
       "source_type": "official_statement",
       "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
     },
     {
-      "category": "parks-environment-climate",
-      "char_end": 580,
-      "char_start": 325,
-      "flashpoints": [
-        "harry-jerome"
-      ],
-      "quote": "I also helped deliver the Harry Jerome Community Recreation and Silver Harbour Centres, the North Shore Neighbourhood House rebuild including affordable rental homes, the Central Lonsdale Business Improvement Area, and the City's first tree canopy target.",
+      "category": "transportation",
+      "char_end": 956,
+      "char_start": 874,
+      "flashpoints": [],
+      "quote": "Less Time in Your Car – rapid transit expansion, safer streets, better bike routes",
       "source_type": "official_statement",
       "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
     },
     {
       "category": "local-economy",
-      "char_end": 580,
-      "char_start": 325,
-      "flashpoints": [
-        "harry-jerome"
-      ],
-      "quote": "I also helped deliver the Harry Jerome Community Recreation and Silver Harbour Centres, the North Shore Neighbourhood House rebuild including affordable rental homes, the Central Lonsdale Business Improvement Area, and the City's first tree canopy target.",
+      "char_end": 1131,
+      "char_start": 1030,
+      "flashpoints": [],
+      "quote": "A City Built for Everyday Life – more local jobs, worker protections, thriving arts and culture scene",
       "source_type": "official_statement",
       "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
     },
     {
-      "category": "schools-education",
-      "char_end": 323,
-      "char_start": 63,
+      "category": "parks-environment-climate",
+      "char_end": 1219,
+      "char_start": 1133,
       "flashpoints": [],
-      "quote": "I initiated the City's living wage certification, expanded childcare on City lands, strengthened supports for tenants displaced by redevelopment, restored City funding for school playground upgrades and launched the Multicultural Community Festival task force.",
+      "quote": "A Climate Ready Livable City – more trees, cooling and protection from extreme weather",
+      "source_type": "official_statement",
+      "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+    },
+    {
+      "category": "governance-and-transparency",
+      "char_end": 1333,
+      "char_start": 1221,
+      "flashpoints": [],
+      "quote": "Listening to You – act on the City's engagement plan and explore participatory budgeting for net parking revenue",
       "source_type": "official_statement",
       "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
     },
@@ -5394,6 +5395,35 @@
       "quote": "I know that good decisions start with listening to different perspectives, finding common ground and keeping students at the centre of the conversation.\n\nI would be honoured to bring that approach to the Board. I want to be a thoughtful voice for our community and help ensure our decisions reflect what matters most to our students and families.\n\nGood decisions start with listening to different perspectives and finding common ground, not with arriving at the table already certain.",
       "source_type": "campaign_site",
       "source_url": "https://trishneufeld-sd44.ca"
+    }
+  ],
+  "cnv-trustee-purugganan-ethel": [
+    {
+      "category": "governance-and-transparency",
+      "char_end": 746,
+      "char_start": 558,
+      "flashpoints": [],
+      "quote": "TRANSPARENCY: I will be clear, honest, open and accessible to parents, staff and the community\n\nACCOUNTABILITY: I will answer to the community through public hearing and independent audits",
+      "source_type": "official_statement",
+      "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+    },
+    {
+      "category": "schools-education",
+      "char_end": 967,
+      "char_start": 748,
+      "flashpoints": [],
+      "quote": "STUDENT-CENTERED EDUCATION: I will put the students first to build autonomy, critical thinking and lifelong problem-solving skills\n\nSCHOOL SAFETY: I will protect students and staff from emergencies, violence and hazards",
+      "source_type": "official_statement",
+      "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+    },
+    {
+      "category": "public-safety-emergency",
+      "char_end": 967,
+      "char_start": 880,
+      "flashpoints": [],
+      "quote": "SCHOOL SAFETY: I will protect students and staff from emergencies, violence and hazards",
+      "source_type": "official_statement",
+      "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
     }
   ],
   "cnv-trustee-wilson-antje": [
