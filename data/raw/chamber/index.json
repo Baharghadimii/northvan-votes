@@ -1,0 +1,117 @@
+{
+  "source": "https://www.nvchamber.ca/blog/municipal-election-qas/",
+  "candidates": {
+    "Dave Kurvers": {
+      "url": "https://www.nvchamber.ca/wp-content/uploads/2026/10/Dave-Kurvers.pdf",
+      "text_file": "dave-kurvers.txt"
+    },
+    "Linda Buchanan": {
+      "url": "https://www.nvchamber.ca/wp-content/uploads/2026/10/Linda-Buchanan.pdf",
+      "text_file": "linda-buchanan.txt"
+    },
+    "Andrew Robertson": {
+      "url": "https://www.nvchamber.ca/wp-content/uploads/2026/10/Andrew-Robertson.pdf",
+      "text_file": "andrew-robertson.txt"
+    },
+    "Angela Girard": {
+      "url": "https://www.nvchamber.ca/wp-content/uploads/2026/10/Angela-Girard.pdf",
+      "text_file": "angela-girard.txt"
+    },
+    "Anna Boltenko": {
+      "url": "https://www.nvchamber.ca/wp-content/uploads/2026/10/Anna-Boltenko.pdf",
+      "text_file": "anna-boltenko.txt"
+    },
+    "Don Bell": {
+      "url": "https://www.nvchamber.ca/wp-content/uploads/2026/10/Don-Bell.pdf",
+      "text_file": "don-bell.txt"
+    },
+    "Jeremy Cato": {
+      "url": "https://www.nvchamber.ca/wp-content/uploads/2026/10/Jeremy-Cato.pdf",
+      "text_file": "jeremy-cato.txt"
+    },
+    "Jessica McIlroy": {
+      "url": "https://www.nvchamber.ca/wp-content/uploads/2026/10/Jessica-McIlroy.pdf",
+      "text_file": "jessica-mcilroy.txt"
+    },
+    "Jullian Kolstee": {
+      "url": "https://www.nvchamber.ca/wp-content/uploads/2026/10/Jullian-Kolstee.pdf",
+      "text_file": "jullian-kolstee.txt"
+    },
+    "Ken Izatt": {
+      "url": "https://www.nvchamber.ca/wp-content/uploads/2026/10/Ken-Izatt.pdf",
+      "text_file": "ken-izatt.txt"
+    },
+    "Krishna Raisinghani": {
+      "url": "https://www.nvchamber.ca/wp-content/uploads/2026/10/Krishna-Raisinghani.pdf",
+      "text_file": "krishna-raisinghani.txt"
+    },
+    "Max Lai": {
+      "url": "https://www.nvchamber.ca/wp-content/uploads/2026/10/Max-Lai.pdf",
+      "text_file": "max-lai.txt"
+    },
+    "Sean Alexander": {
+      "url": "https://www.nvchamber.ca/wp-content/uploads/2026/10/Sean-Alexander.pdf",
+      "text_file": "sean-alexander.txt"
+    },
+    "Shervin Shahriari": {
+      "url": "https://www.nvchamber.ca/wp-content/uploads/2026/10/Shervin-Shahriari.pdf",
+      "text_file": "shervin-shahriari.txt"
+    },
+    "Tammy Bentz": {
+      "url": "https://www.nvchamber.ca/wp-content/uploads/2026/10/Tammy-Bentz.pdf",
+      "text_file": "tammy-bentz.txt"
+    },
+    "Tony Valente": {
+      "url": "https://www.nvchamber.ca/wp-content/uploads/2026/10/Tony-Valente.pdf",
+      "text_file": "tony-valente.txt"
+    },
+    "Graham Alexander": {
+      "url": "https://www.nvchamber.ca/wp-content/uploads/2026/10/Graham-Alexander.pdf",
+      "text_file": "graham-alexander.txt"
+    },
+    "Max Zahedi": {
+      "url": "https://www.nvchamber.ca/wp-content/uploads/2026/10/Max-Zahedi.pdf",
+      "text_file": "max-zahedi.txt"
+    },
+    "Mike Little": {
+      "url": "https://www.nvchamber.ca/wp-content/uploads/2026/10/Mike-Little.pdf",
+      "text_file": "mike-little.txt"
+    },
+    "Stephan Nieweler": {
+      "url": "https://www.nvchamber.ca/wp-content/uploads/2026/10/Stephan-Nieweler.pdf",
+      "text_file": "stephan-nieweler.txt"
+    },
+    "Catherine Pope": {
+      "url": "https://www.nvchamber.ca/wp-content/uploads/2026/10/Catherine-Pope.pdf",
+      "text_file": "catherine-pope.txt"
+    },
+    "Daniel Anderson": {
+      "url": "https://www.nvchamber.ca/wp-content/uploads/2026/10/Daniel-Anderson.pdf",
+      "text_file": "daniel-anderson.txt"
+    },
+    "Linda Munro": {
+      "url": "https://www.nvchamber.ca/wp-content/uploads/2026/10/Linda-Munro.pdf",
+      "text_file": "linda-munro.txt"
+    },
+    "Lisa Muri": {
+      "url": "https://www.nvchamber.ca/wp-content/uploads/2026/10/Lisa-Muri.pdf",
+      "text_file": "lisa-muri.txt"
+    },
+    "Matthew Bond": {
+      "url": "https://www.nvchamber.ca/wp-content/uploads/2026/10/Matthew-Bond.pdf",
+      "text_file": "matthew-bond.txt"
+    },
+    "Stephanie Wilson": {
+      "url": "https://www.nvchamber.ca/wp-content/uploads/2026/10/Stephanie-Wilson.pdf",
+      "text_file": "stephanie-wilson.txt"
+    },
+    "Trey Bell": {
+      "url": "https://www.nvchamber.ca/wp-content/uploads/2026/10/Trey-Bell.pdf",
+      "text_file": "trey-bell.txt"
+    },
+    "Victoria Nwabuisi": {
+      "url": "https://www.nvchamber.ca/wp-content/uploads/2026/10/Victoria-Nwabuisi.pdf",
+      "text_file": "victoria-nwabuisi.txt"
+    }
+  }
+}

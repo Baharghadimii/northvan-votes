@@ -1,0 +1,114 @@
+---
+/** Name search for a page of answers to somebody else's questionnaire.
+ *
+ *  Both questionnaire pages are one long column, and the complaint that
+ *  produced this was simply that finding one person meant scrolling past
+ *  everyone. Shared rather than copied, because the fiddly part is not the
+ *  filtering, it is what the page should say when the name you typed belongs
+ *  to somebody who never replied.
+ */
+interface Props {
+  /** What a reader is searching within, for the no-match line. */
+  askedOf?: string;
+}
+const { askedOf = "the mayor and council candidates" } = Astro.props;
+---
+
+<div class="name-search">
+  <label for="answer-search">Looking for one candidate?</label>
+  <div class="name-search-row">
+    <input
+      id="answer-search"
+      type="search"
+      data-answer-search
+      placeholder="Type a name"
+      autocomplete="off"
+      spellcheck="false"
+    />
+    <button type="button" data-answer-clear hidden>Clear</button>
+  </div>
+  <p class="issue-filter-count" data-answer-count hidden></p>
+</div>
+
+<script is:inline define:vars={{ askedOf }}>
+  // Names only: matching the answers themselves would return everybody for
+  // "transportation" or "bear".
+  //
+  // A search that matches somebody who never replied has to say so. Landing on
+  // "no results" for Mike Little would read as though he was never asked, which
+  // is the opposite of what these pages record.
+  (function () {
+    var search = document.querySelector("[data-answer-search]");
+    if (!search) return;
+    var clear = document.querySelector("[data-answer-clear]");
+    var count = document.querySelector("[data-answer-count]");
+    function show(el, on) { el.hidden = !on; return on; }
+
+    function apply() {
+      // Queried on every call, not captured once. This script sits where the
+      // search box sits, which is above the answers, so at parse time none of
+      // the cards exist yet and a list captured here would be empty forever.
+      var cards = document.querySelectorAll(".card[data-answer-name]");
+      var silentNames = document.querySelectorAll(".nr[data-answer-name]");
+      var q = search.value.trim().toLowerCase();
+      var answered = 0, silent = 0;
+
+      cards.forEach(function (el) {
+        if (show(el, !q || (el.dataset.answerName || "").indexOf(q) !== -1) && q) answered++;
+      });
+      silentNames.forEach(function (el) {
+        if (show(el, !q || (el.dataset.answerName || "").indexOf(q) !== -1) && q) silent++;
+      });
+
+      // An office heading with nothing under it, a "did not reply" box with
+      // every name filtered out, a municipality with neither: all just noise.
+      document.querySelectorAll("[data-answer-group]").forEach(function (g) {
+        g.hidden = !g.querySelector(".card:not([hidden])");
+      });
+      document.querySelectorAll("[data-answer-nonresponders]").forEach(function (n) {
+        n.hidden = !n.querySelector(".nr:not([hidden])");
+      });
+      document.querySelectorAll(".race-section").forEach(function (sec) {
+        sec.hidden = !!q && !sec.querySelector(".card:not([hidden]), .nr:not([hidden])");
+      });
+      // "19 of 22 answered" is about the race, not about the one card left.
+      document.querySelectorAll("[data-answer-seats]").forEach(function (el) {
+        el.hidden = !!q;
+      });
+
+      if (clear) clear.hidden = !q;
+      if (!q) {
+        count.hidden = true;
+        count.textContent = "";
+        return;
+      }
+      count.hidden = false;
+      if (answered && silent) {
+        count.textContent = answered + " answered, " + silent + " did not.";
+      } else if (answered) {
+        count.textContent = answered === 1 ? "One answer." : answered + " answers.";
+      } else if (silent) {
+        count.textContent = silent === 1
+          ? "Asked, and did not reply."
+          : "Asked, and none of them replied.";
+      } else {
+        count.textContent = "No match. Try a surname. Only " + askedOf +
+          " were sent these questions.";
+      }
+    }
+
+    search.addEventListener("input", apply);
+    search.addEventListener("keydown", function (e) {
+      if (e.key === "Enter") e.preventDefault();
+    });
+    if (clear) {
+      clear.addEventListener("click", function () {
+        search.value = "";
+        search.focus();
+        apply();
+      });
+    }
+    // Browsers restore the typed value on a back navigation.
+    if (search.value) apply();
+  })();
+</script>

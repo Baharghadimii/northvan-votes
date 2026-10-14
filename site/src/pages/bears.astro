@@ -1,6 +1,7 @@
 ---
 import Base from "~/layouts/Base.astro";
 import bears from "~/data/bears.json";
+import AnswerSearch from "~/components/AnswerSearch.astro";
 import { candidates, MUNICIPALITIES, OFFICES } from "~/lib/data";
 
 const byId = new Map(candidates.map((c) => [c.id, c]));
@@ -73,39 +74,25 @@ function grouped(m: (typeof munis)[number]) {
     </figcaption>
   </figure>
 
-  <div class="name-search">
-    <label for="bear-search">Looking for one candidate?</label>
-    <div class="name-search-row">
-      <input
-        id="bear-search"
-        type="search"
-        data-bear-search
-        placeholder="Type a name"
-        autocomplete="off"
-        spellcheck="false"
-      />
-      <button type="button" data-bear-clear hidden>Clear</button>
-    </div>
-    <p class="issue-filter-count" data-bear-count hidden></p>
-  </div>
+  <AnswerSearch askedOf="the mayor and council candidates" />
 
   {munis.map((m) => (
     <section id={m} class="race-section">
       <div class="race-heading">
         <h2>{MUNICIPALITIES[m]}</h2>
-        <span class="seats" data-bear-seats>
+        <span class="seats" data-answer-seats>
           {bears.municipalities[m].answers.length} of {bears.municipalities[m].asked} answered
         </span>
       </div>
 
       {grouped(m).map((g) => (
-        <div class="bear-group">
+        <div class="bear-group" data-answer-group>
           <h3 style="margin-top:22px">{g.label}</h3>
           {g.items.map((a) => (
             <div
               class="card"
               style="margin-bottom:14px"
-              data-bear-name={`${byId.get(a.candidate_id)?.surname ?? ""} ${a.name}`.toLowerCase()}
+              data-answer-name={`${byId.get(a.candidate_id)?.surname ?? ""} ${a.name}`.toLowerCase()}
             >
               <div class="candidate-name">
                 <a href={`/candidates/${a.candidate_id}/`}>{a.name}</a>
@@ -128,14 +115,14 @@ function grouped(m: (typeof munis)[number]) {
       ))}
 
       {bears.municipalities[m].nonresponders.length > 0 && (
-        <div class="notice" style="margin-top:18px" data-bear-nonresponders>
+        <div class="notice" style="margin-top:18px" data-answer-nonresponders>
           <p style="margin-bottom:0">
             <strong>Did not reply by the deadline:</strong>{" "}
             <span class="nr-list">
               {bears.municipalities[m].nonresponders.map((n) => (
                 <span
                   class="nr"
-                  data-bear-name={`${byId.get(n.candidate_id)?.surname ?? ""} ${n.name}`.toLowerCase()}
+                  data-answer-name={`${byId.get(n.candidate_id)?.surname ?? ""} ${n.name}`.toLowerCase()}
                 >
                   <a href={`/candidates/${n.candidate_id}/`}>{n.name}</a>
                 </span>
@@ -178,84 +165,4 @@ function grouped(m: (typeof munis)[number]) {
     Shore Bear Advocates or of how they framed the question.
   </p>
 
-  <script is:inline>
-    // Find one candidate without scrolling the whole page. Names only: matching
-    // the answers themselves would return everybody for "bear" and "garbage".
-    //
-    // A search that matches somebody who never replied has to say so. Landing
-    // on "no results" for Mike Little would read as though he was never asked,
-    // which is the opposite of what this page records.
-    (function () {
-      var search = document.querySelector("[data-bear-search]");
-      if (!search) return;
-      var clear = document.querySelector("[data-bear-clear]");
-      var count = document.querySelector("[data-bear-count]");
-      var cards = document.querySelectorAll(".card[data-bear-name]");
-      var silentNames = document.querySelectorAll(".nr[data-bear-name]");
-
-      function show(el, on) { el.hidden = !on; return on; }
-
-      function apply() {
-        var q = search.value.trim().toLowerCase();
-        var answered = 0, silent = 0;
-
-        cards.forEach(function (el) {
-          if (show(el, !q || (el.dataset.bearName || "").indexOf(q) !== -1) && q) answered++;
-        });
-        silentNames.forEach(function (el) {
-          if (show(el, !q || (el.dataset.bearName || "").indexOf(q) !== -1) && q) silent++;
-        });
-
-        // An office heading with nothing under it, a "did not reply" box with
-        // every name filtered out, a municipality with neither: all just noise.
-        document.querySelectorAll(".bear-group").forEach(function (g) {
-          g.hidden = !g.querySelector(".card:not([hidden])");
-        });
-        document.querySelectorAll("[data-bear-nonresponders]").forEach(function (n) {
-          n.hidden = !n.querySelector(".nr:not([hidden])");
-        });
-        document.querySelectorAll(".race-section").forEach(function (sec) {
-          sec.hidden = !!q && !sec.querySelector(".card:not([hidden]), .nr:not([hidden])");
-        });
-        // "19 of 22 answered" is about the race, not about the one card left.
-        document.querySelectorAll("[data-bear-seats]").forEach(function (el) {
-          el.hidden = !!q;
-        });
-
-        if (clear) clear.hidden = !q;
-        if (!q) {
-          count.hidden = true;
-          count.textContent = "";
-          return;
-        }
-        count.hidden = false;
-        if (answered && silent) {
-          count.textContent = answered + " answered, " + silent + " did not.";
-        } else if (answered) {
-          count.textContent = answered === 1 ? "One answer." : answered + " answers.";
-        } else if (silent) {
-          count.textContent = silent === 1
-            ? "Asked, and did not reply."
-            : "Asked, and none of them replied.";
-        } else {
-          count.textContent = "No match. Try a surname. Only the mayor and " +
-            "council candidates were sent this question, not the trustees.";
-        }
-      }
-
-      search.addEventListener("input", apply);
-      search.addEventListener("keydown", function (e) {
-        if (e.key === "Enter") e.preventDefault();
-      });
-      if (clear) {
-        clear.addEventListener("click", function () {
-          search.value = "";
-          search.focus();
-          apply();
-        });
-      }
-      // Browsers restore the typed value on a back navigation.
-      if (search.value) apply();
-    })();
-  </script>
 </Base>

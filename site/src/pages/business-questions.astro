@@ -1,0 +1,177 @@
+---
+import Base from "~/layouts/Base.astro";
+import chamber from "~/data/chamber.json";
+import AnswerSearch from "~/components/AnswerSearch.astro";
+import { candidates, MUNICIPALITIES, OFFICES } from "~/lib/data";
+
+const byId = new Map(candidates.map((c) => [c.id, c]));
+const munis = ["cnv", "dnv"] as const;
+
+const totalAnswered = munis.reduce((n, m) => n + chamber.municipalities[m].answers.length, 0);
+const totalAsked = munis.reduce((n, m) => n + chamber.municipalities[m].asked, 0);
+
+function grouped(m: (typeof munis)[number]) {
+  const answers = chamber.municipalities[m].answers;
+  return (["mayor", "council"] as const)
+    .map((office) => ({
+      office,
+      label: OFFICES[office],
+      items: answers.filter((a) => byId.get(a.candidate_id)?.office === office),
+    }))
+    .filter((g) => g.items.length > 0);
+}
+
+function paras(text: string) {
+  return text.split(/\n{2,}/).filter(Boolean);
+}
+---
+
+<Base
+  title="Candidates on transportation and small business"
+  description="What North Vancouver's mayor and council candidates told the North Vancouver Chamber about transportation and supporting small business."
+>
+  <p style="font-size:0.88rem"><a href="/">← All issues</a></p>
+  <h1>Candidates on transportation and small business</h1>
+  <p class="lede">
+    {totalAnswered} of the {totalAsked} people running for mayor or council
+    answered two questions from the North Vancouver Chamber. Their answers are
+    below, in full.
+  </p>
+
+  <div class="notice notice-warm">
+    <p>
+      <strong>This page works differently from the rest of the site.</strong>{" "}
+      Everywhere else I quote what candidates published themselves. These are
+      answers written for somebody else's questions.
+    </p>
+    <p>
+      The{" "}
+      <a href="https://www.nvchamber.ca/" target="_blank" rel="noopener nofollow">North Vancouver Chamber</a>{" "}
+      invited every mayor and council candidate in both municipalities to answer
+      two questions in 200 words each, and published every reply it got by its
+      deadline. The questions are a business organisation's questions, which is
+      worth holding in mind while you read: a candidate who says little here may
+      simply have had less to say to that audience.
+    </p>
+    <p style="margin-bottom:0">
+      <strong>It also names the people who didn't reply</strong>, which only one
+      other page here does. Everywhere else a blank means I found nothing. Here
+      everyone was asked the same thing, so it is a fact about them rather than
+      about my reading. It is still only that, and an unanswered email in the
+      last month of a campaign is not a position on anything.
+    </p>
+  </div>
+
+  <h2>The questions they were asked</h2>
+  {chamber.questions.map((q, i) => (
+    <figure class="quote">
+      <blockquote style="margin:0"><p>{q}</p></blockquote>
+      <figcaption class="source-line">
+        <span class="srctag">Question {i + 1}</span>
+        <span class="src-ref">asked by the North Vancouver Chamber</span>
+      </figcaption>
+    </figure>
+  ))}
+
+  <AnswerSearch askedOf="the mayor and council candidates" />
+
+  {munis.map((m) => (
+    <section id={m} class="race-section">
+      <div class="race-heading">
+        <h2>{MUNICIPALITIES[m]}</h2>
+        <span class="seats" data-answer-seats>
+          {chamber.municipalities[m].answers.length} of {chamber.municipalities[m].asked} answered
+        </span>
+      </div>
+
+      {grouped(m).map((g) => (
+        <div class="bear-group" data-answer-group>
+          <h3 style="margin-top:22px">{g.label}</h3>
+          {g.items.map((a) => (
+            <div
+              class="card"
+              style="margin-bottom:14px"
+              data-answer-name={`${byId.get(a.candidate_id)?.surname ?? ""} ${a.name}`.toLowerCase()}
+            >
+              <div class="candidate-name">
+                <a href={`/candidates/${a.candidate_id}/`}>{a.name}</a>
+                {byId.get(a.candidate_id)?.incumbent && (
+                  <span class="tag tag-incumbent" style="margin-left:6px">Incumbent</span>
+                )}
+              </div>
+
+              {"combined" in a ? (
+                <figure class="quote">
+                  <blockquote style="margin:0">
+                    {paras(a.answer1).map((p) => <p>{p}</p>)}
+                  </blockquote>
+                  <figcaption class="source-line">
+                    <span class="srctag">Answered both questions together</span>
+                  </figcaption>
+                </figure>
+              ) : (
+                <>
+                  <figure class="quote">
+                    <blockquote style="margin:0">
+                      {paras(a.answer1).map((p) => <p>{p}</p>)}
+                    </blockquote>
+                    <figcaption class="source-line">
+                      <span class="srctag">On transportation</span>
+                    </figcaption>
+                  </figure>
+                  <figure class="quote">
+                    <blockquote style="margin:0">
+                      {paras(a.answer2).map((p) => <p>{p}</p>)}
+                    </blockquote>
+                    <figcaption class="source-line">
+                      <span class="srctag">On small business</span>
+                    </figcaption>
+                  </figure>
+                </>
+              )}
+            </div>
+          ))}
+        </div>
+      ))}
+
+      {chamber.municipalities[m].nonresponders.length > 0 && (
+        <div class="notice" style="margin-top:18px" data-answer-nonresponders>
+          <p style="margin-bottom:0">
+            <strong>Did not reply by the Chamber's deadline:</strong>{" "}
+            <span class="nr-list">
+              {chamber.municipalities[m].nonresponders.map((n) => (
+                <span
+                  class="nr"
+                  data-answer-name={`${byId.get(n.candidate_id)?.surname ?? ""} ${n.name}`.toLowerCase()}
+                >
+                  <a href={`/candidates/${n.candidate_id}/`}>{n.name}</a>
+                </span>
+              ))}
+            </span>.
+          </p>
+        </div>
+      )}
+    </section>
+  ))}
+
+  <h2 style="margin-top:34px">Where this came from</h2>
+  <p>
+    Every answer above is copied word for word out of the one-page PDF the
+    Chamber published for that candidate. The only change is that the PDFs break
+    lines wherever the page ended, and I've joined those back into sentences.
+    Read the originals yourself:
+  </p>
+  <ul class="linklist">
+    <li>
+      <a href={chamber.source} target="_blank" rel="noopener nofollow">
+        North Vancouver Chamber — candidate responses
+      </a>
+    </li>
+  </ul>
+  <p class="candidate-meta">
+    School trustees were not asked. Ken Izatt answered both questions in one
+    piece rather than separately, so his reply is shown whole. Linking this
+    isn't an endorsement of the Chamber or of how it framed the questions, and
+    the Chamber has not endorsed anyone.
+  </p>
+</Base>
