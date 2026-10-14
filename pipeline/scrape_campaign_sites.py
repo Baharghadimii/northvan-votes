@@ -35,7 +35,14 @@ OUT = ROOT / "data" / "campaign_pages.json"
 # and listening to you, fell off the end and were never read. A cap has to
 # exist so one enormous site cannot drown out the rest, but it should sit
 # above the biggest honest campaign site rather than through the middle of it.
-MAX_PAGES = 10
+#
+# Twelve, because that is where the ordinary sites stop: Dave Kurvers and Angela
+# Girard publish the largest honest ones at ten pages each, and both are now
+# read whole. One site is a genuine outlier. Max Zahedi's runs to roughly forty
+# pages and over 100,000 characters, several times anyone else's, and no cap set
+# by somebody else's site will ever be the right size for it. Twelve truncates
+# his and nobody else's, which /methodology says out loud.
+MAX_PAGES = 12
 MIN_PARAGRAPH_CHARS = 60
 MIN_PAGE_CHARS = 200
 
@@ -72,6 +79,10 @@ SKIP = re.compile(
     r"|/(donate|contribute|volunteer|signup|sign-up|contact|privacy|terms|cart|checkout)"
     r"|/(coming-soon|maintenance-mode|under-construction)"
     r"|/(thank-you|thanks|how-to-vote|where-to-vote|voting-info)"
+    # Boilerplate that is not the candidate. On a capped site these take a slot
+    # from something real: Max Zahedi's privacy policy was being read while his
+    # page on the wastewater plant was not.
+    r"|/(legal|media-kit|press-kit|accessibility-statement)"
     r"|mailto:|tel:|javascript:",
     re.I,
 )

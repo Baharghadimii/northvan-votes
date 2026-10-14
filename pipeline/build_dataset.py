@@ -517,7 +517,36 @@ def build(refresh: bool = False) -> list[Candidate]:
     return candidates
 
 
+def check_nobody_emptied(candidates: list[Candidate]) -> None:
+    """Refuse to publish a build that silently blanks somebody's page.
+
+    campaign_pages.json is written by two programs: the plain scraper and the
+    Playwright renderer for sites that need a browser. Running the scraper last
+    overwrites the rendered entries, and on 2026-10-14 that took Betty Forbes, a
+    sitting District councillor, from twelve positions to none. Everything else
+    looked healthy -- 59 candidates, every assertion green -- because losing one
+    person's whole page is not a number anything else was watching.
+    """
+    if not OUT.exists():
+        return
+    before = {c["id"]: len(c["positions"]) for c in json.loads(OUT.read_text(encoding="utf-8"))}
+    emptied = [
+        c for c in candidates
+        if not c.positions and before.get(c.id, 0) > 0
+    ]
+    if emptied:
+        lines = "\n".join(f"    {c.name}: {before[c.id]} positions -> 0" for c in emptied)
+        raise BuildError(
+            "These candidates had positions and now have none. Nothing was "
+            f"written.\n{lines}\n"
+            "  If a campaign site genuinely went down, re-run the renderer "
+            "(python -m pipeline.render_campaign_sites) before deciding this "
+            "is real."
+        )
+
+
 def write(candidates: list[Candidate]) -> None:
+    check_nobody_emptied(candidates)
     payload = [json.loads(c.model_dump_json()) for c in candidates]
     blob = json.dumps(payload, indent=2, ensure_ascii=False, sort_keys=True) + "\n"
     for target in (OUT, SITE_DATA):

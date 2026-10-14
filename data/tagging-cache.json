@@ -6685,6 +6685,49 @@
       }
     ]
   },
+  "https://maxformayor.ca/news/eight-budgets-twice-as-fast.html::44b6f0deb6f90e34": {
+    "background": [],
+    "positions": [
+      {
+        "category": "taxes-and-spending",
+        "char_end": 2772,
+        "char_start": 0,
+        "flashpoints": [
+          "wastewater-treatment-plant"
+        ],
+        "quote": "From the District’s own financial plans: tax increases averaged 2.75% a year from 2019 to 2022 and 5.32% from 2023 to 2026. This year’s 3.53% came with service reductions the plan expects every year for five years.\n\nThe same mayor has chaired the District of North Vancouver’s council for all eight budgets since the 2018 election. The District’s own financial plans show what those budgets did to the property tax.\n\n2019 to 2022: increases of 3%, 2%, 3% and 3%, an average of 2.75% a year\n\n2023 to 2026: increases of 5.25%, 7%, 5.5% and 3.53%, an average of 5.32% a year\n\nCompounded, the first four budgets added 11.5% to the municipal tax and the second four added 23.0%: twice as fast. The 2020 increase was set at 3% and cut to 2% for COVID-19; counted at 3%, the second term is still 77% higher.\n\nThe District’s 2026–2030 plan says keeping services as they were would have needed a 7.5% increase. Council approved 3.53% and closed the gap with about $5 million of operating reductions. The year before, the plan’s starting point was 9% and council approved 5.5%.\n\nThe same plan says, on page 27: “Reductions in service are expected every year of this five-year plan.” It does not say which services. Staff are to bring council that information later in 2026. Residents should see it before they vote on October 17.\n\nWater, sewer and garbage charges rose faster than property tax in all eight budgets: 59% against 37%. A single-family home paid $1,920 for them in 2022 and $2,571 in 2026. Much of that is Metro Vancouver’s charges, including the North Shore treatment plant, and the District is drawing $16.8 million from its reserves to soften the increases until 2029. Reserves spent now are not there later.\n\nThe 1% of each increase that normally goes to replacing roads, pipes and buildings was suspended in 2023 and rebuilt to 1.5% by 2026. The District now puts the replacement value of what it owns at $4.6 billion, up from $2.3 billion in 2020.\n\nThe District’s taxes are not the region’s highest, and neither are its increases: Vancouver, New Westminster and Surrey raised more over this term. Much of the pressure, from Metro Vancouver’s charges to policing, collective agreements and construction costs, is outside council’s control. The full record sets out both, with a comparison against seven other councils.\n\nReview every service line by line before the next tax increase. Explain every increase in plain language before it is approved, including the infrastructure deficit. List the utility fees beside the tax rate in every budget, and require a public explanation whenever a fee rises faster than the tax rate. I am not promising a tax freeze: essential services come first, and savings come from waste, duplication and delay, not from roads or fire.",
+        "source_type": "campaign_site",
+        "source_url": "https://maxformayor.ca/news/eight-budgets-twice-as-fast.html"
+      },
+      {
+        "category": "governance-and-transparency",
+        "char_end": 1319,
+        "char_start": 1069,
+        "flashpoints": [],
+        "quote": "The same plan says, on page 27: “Reductions in service are expected every year of this five-year plan.” It does not say which services. Staff are to bring council that information later in 2026. Residents should see it before they vote on October 17.",
+        "source_type": "campaign_site",
+        "source_url": "https://maxformayor.ca/news/eight-budgets-twice-as-fast.html"
+      },
+      {
+        "category": "governance-and-transparency",
+        "char_end": 2632,
+        "char_start": 2248,
+        "flashpoints": [],
+        "quote": "The full record sets out both, with a comparison against seven other councils.\n\nReview every service line by line before the next tax increase. Explain every increase in plain language before it is approved, including the infrastructure deficit. List the utility fees beside the tax rate in every budget, and require a public explanation whenever a fee rises faster than the tax rate.",
+        "source_type": "campaign_site",
+        "source_url": "https://maxformayor.ca/news/eight-budgets-twice-as-fast.html"
+      },
+      {
+        "category": "governance-and-transparency",
+        "char_end": 4319,
+        "char_start": 4174,
+        "flashpoints": [],
+        "quote": "At last night’s all-candidates meeting, the current mayor and councillors brought new solutions. Why weren’t they used while they were in office?",
+        "source_type": "campaign_site",
+        "source_url": "https://maxformayor.ca/news/eight-budgets-twice-as-fast.html"
+      }
+    ]
+  },
   "https://maxformayor.ca/news/the-housing-target-81-per-cent.html::b75e56daa267fe85": {
     "background": [],
     "positions": [
@@ -7778,6 +7821,198 @@
         "quote": "Resident petition: I will launch a North Shore wastewater fairness petition, open to residents, businesses and neighbouring councils.\n\nQuarterly reports: I will report every quarter on advocacy, government responses and funding decisions, including what any relief means for a typical household bill.",
         "source_type": "campaign_site",
         "source_url": "https://maxformayor.ca/priorities.html"
+      }
+    ]
+  },
+  "https://maxformayor.ca/taxes.html::7ba39e06df23aafe": {
+    "background": [],
+    "positions": [
+      {
+        "category": "taxes-and-spending",
+        "char_end": 521,
+        "char_start": 417,
+        "flashpoints": [],
+        "quote": "Across all eight budgets the increases compound to 37.1%. The utility bill rose 59% over the same years.",
+        "source_type": "campaign_site",
+        "source_url": "https://maxformayor.ca/taxes.html"
+      },
+      {
+        "category": "taxes-and-spending",
+        "char_end": 3962,
+        "char_start": 3888,
+        "flashpoints": [],
+        "quote": "Compounded over the eight budgets: utilities up 59% , property tax up 37%.",
+        "source_type": "campaign_site",
+        "source_url": "https://maxformayor.ca/taxes.html"
+      },
+      {
+        "category": "taxes-and-spending",
+        "char_end": 9278,
+        "char_start": 8863,
+        "flashpoints": [],
+        "quote": "The District’s increases are not the region’s highest. Other councils raised taxes more over this term, and the District’s 2023 plan called its 5.25% among the lowest in the region that year ( 2023–2027 plan, p. 7 ).\n\nMuch of the pressure is real and outside council’s control. Collective agreements, policing, provincial housing legislation, construction costs and Metro Vancouver’s charges all push the budget up.",
+        "source_type": "campaign_site",
+        "source_url": "https://maxformayor.ca/taxes.html"
+      },
+      {
+        "category": "taxes-and-spending",
+        "char_end": 9994,
+        "char_start": 9856,
+        "flashpoints": [],
+        "quote": "List the utility fees beside the tax rate in every budget, and require a public explanation whenever a fee rises faster than the tax rate.",
+        "source_type": "campaign_site",
+        "source_url": "https://maxformayor.ca/taxes.html"
+      },
+      {
+        "category": "governance-and-transparency",
+        "char_end": 2796,
+        "char_start": 2702,
+        "flashpoints": [],
+        "quote": "Will the information on service levels promised for later in 2026 be public before voting day?",
+        "source_type": "campaign_site",
+        "source_url": "https://maxformayor.ca/taxes.html"
+      },
+      {
+        "category": "governance-and-transparency",
+        "char_end": 9994,
+        "char_start": 9856,
+        "flashpoints": [],
+        "quote": "List the utility fees beside the tax rate in every budget, and require a public explanation whenever a fee rises faster than the tax rate.",
+        "source_type": "campaign_site",
+        "source_url": "https://maxformayor.ca/taxes.html"
+      },
+      {
+        "category": "governance-and-transparency",
+        "char_end": 10377,
+        "char_start": 10250,
+        "flashpoints": [],
+        "quote": "Every figure above links to the District document and PDF page it comes from: type the page number into your reader’s page box.",
+        "source_type": "campaign_site",
+        "source_url": "https://maxformayor.ca/taxes.html"
+      },
+      {
+        "category": "governance-and-transparency",
+        "char_end": 10532,
+        "char_start": 10454,
+        "flashpoints": [],
+        "quote": "If you find an error, send the document and the page and it will be corrected.",
+        "source_type": "campaign_site",
+        "source_url": "https://maxformayor.ca/taxes.html"
+      }
+    ]
+  },
+  "https://maxformayor.ca/traffic.html::8cc1679e1e9e8f07": {
+    "background": [],
+    "positions": [
+      {
+        "category": "transportation",
+        "char_end": 369,
+        "char_start": 0,
+        "flashpoints": [],
+        "quote": "Getting across the District should not be the hardest part of the day. The District controls its own roads, signals, sidewalks and construction permits; the Province owns Highway 1 and both bridges; TransLink runs the buses.\n\nThis page says which is which, and what a mayor can actually move.\n\nDevelopment keeps increasing, but our roads and transit are not keeping up.",
+        "source_type": "campaign_site",
+        "source_url": "https://maxformayor.ca/traffic.html"
+      },
+      {
+        "category": "transportation",
+        "char_end": 2274,
+        "char_start": 453,
+        "flashpoints": [],
+        "quote": "Chair the council that adopts the District’s Transportation Plan and its annual capital budget for roads, crossings and cycling connections.\n\nSit on the TransLink Mayors’ Council, where every mayor in the region has a seat and a vote on investment plans and service levels.\n\nDirect, through council, how the District coordinates and communicates its own construction.\n\nSpeak for the District to the Province on highway and bridge congestion — persistently, with the numbers in hand, and without pretending the District controls them.\n\nImprove Traffic, Park Parking and Construction Coordination: the proposals\n\nA public list of District bottlenecks within 100 days, better coordination to reduce avoidable overlapping closures, and simpler resident parking at parks. Each proposal says how it would be done, who has to agree, and what it costs or gives up.\n\nOne published District construction calendar, and a working rule that two neighbouring corridors are not closed at the same time when the District controls the permit.\n\nUse the Mayors’ Council seat to press for North Shore bus frequency and for bus rapid transit, with a single North Shore position agreed with the City and West Vancouver.\n\nSignal-timing reviews on the District’s own arterials, published with before-and-after results.\n\nKeep delivering the active-transportation projects already in the Transportation Plan, starting with school routes and town centres.\n\n5 Recognize the needs of drivers, seniors and people with disabilities Proposal\n\nAccessible crossings and bus stops in every town-centre project, and HandyDART reliability raised at the Mayors’ Council.\n\n6 Work with regional and provincial transportation partners Proposal\n\nA standing North Shore transportation table with the City, West Vancouver and the Province, with its notes published.",
+        "source_type": "campaign_site",
+        "source_url": "https://maxformayor.ca/traffic.html"
+      },
+      {
+        "category": "transportation",
+        "char_end": 3469,
+        "char_start": 2470,
+        "flashpoints": [],
+        "quote": "Coordinate the District’s own road construction so neighbouring corridors are not closed at once, publish the schedule, review signal timing on District arterials, keep building safer walking and cycling routes, and use the mayor’s seat on the TransLink Mayors’ Council to push for more reliable North Shore transit. He does not promise to fix bridge or highway congestion, which the Province controls.\n\nCan the Mayor of the District of North Vancouver fix the Lions Gate or Ironworkers bridges?\n\nNo. Both bridges and Highway 1 belong to the Province of British Columbia. A mayor can make the case to the Province and to TransLink, ideally alongside the other North Shore mayors, but cannot widen, re-time or rebuild a provincial crossing.\n\nWho is responsible for Lynn Valley Road and Mountain Highway?\n\nThe District of North Vancouver. They are District roads, so their signals, crossings, lane design and construction scheduling are decisions the District makes and a mayor and council can change.",
+        "source_type": "campaign_site",
+        "source_url": "https://maxformayor.ca/traffic.html"
+      },
+      {
+        "category": "transportation",
+        "char_end": 6072,
+        "char_start": 4430,
+        "flashpoints": [
+          "third-crossing"
+        ],
+        "quote": "District roads, traffic signals, sidewalks, bike routes and construction permits on District streets — including Lynn Valley Road, Mountain Highway and Mount Seymour Parkway\n\nHighway 1 (the Upper Levels), the Lions Gate Bridge, the Ironworkers Memorial Bridge and their interchanges\n\nBus routes and frequency, RapidBus, SeaBus, HandyDART and regional rapid-transit planning\n\nTransLink, with investment plans approved by the Mayors’ Council on Regional Transportation\n\nThe North Shore Area Transit Plan — the long-term transit vision for the North Shore\n\nWho has to agree District engineering staff; utilities; the Province for highway work.\n\nThe trade-off Sequencing projects can make some of them take longer. The calendar says so in advance instead of surprising people.\n\nWho has to agree TransLink; the Mayors’ Council; the other two North Shore mayors.\n\nThe trade-off TransLink decides. A mayor’s tools are persistence and a united North Shore, not a promise of a route.\n\nThe trade-off Timing that favours through traffic can lengthen pedestrian waits at crossings. The results are published so residents can judge the balance.\n\nWho has to agree District staff; the Province’s cost-share programs for cycling infrastructure.\n\nThe trade-off Protected space for walking and cycling comes out of road width or parking. Each project says which.\n\nThe trade-off Accessibility work is unglamorous and competes with bigger projects for the same budget.\n\nWho has to agree City of North Vancouver; District of West Vancouver; Province of BC; TransLink.\n\nThe trade-off Tables produce agreement slowly. Publishing the notes is what keeps them honest.",
+        "source_type": "campaign_site",
+        "source_url": "https://maxformayor.ca/traffic.html"
+      },
+      {
+        "category": "governance-and-transparency",
+        "char_end": 292,
+        "char_start": 226,
+        "flashpoints": [],
+        "quote": "This page says which is which, and what a mayor can actually move.",
+        "source_type": "campaign_site",
+        "source_url": "https://maxformayor.ca/traffic.html"
+      },
+      {
+        "category": "governance-and-transparency",
+        "char_end": 451,
+        "char_start": 371,
+        "flashpoints": [],
+        "quote": "Each row is a checkable fact, with its source on the Sources and documents page.",
+        "source_type": "campaign_site",
+        "source_url": "https://maxformayor.ca/traffic.html"
+      },
+      {
+        "category": "governance-and-transparency",
+        "char_end": 1478,
+        "char_start": 1064,
+        "flashpoints": [],
+        "quote": "A public list of District bottlenecks within 100 days, better coordination to reduce avoidable overlapping closures, and simpler resident parking at parks. Each proposal says how it would be done, who has to agree, and what it costs or gives up.\n\nOne published District construction calendar, and a working rule that two neighbouring corridors are not closed at the same time when the District controls the permit.",
+        "source_type": "campaign_site",
+        "source_url": "https://maxformayor.ca/traffic.html"
+      },
+      {
+        "category": "governance-and-transparency",
+        "char_end": 1747,
+        "char_start": 1652,
+        "flashpoints": [],
+        "quote": "Signal-timing reviews on the District’s own arterials, published with before-and-after results.",
+        "source_type": "campaign_site",
+        "source_url": "https://maxformayor.ca/traffic.html"
+      },
+      {
+        "category": "governance-and-transparency",
+        "char_end": 2274,
+        "char_start": 2157,
+        "flashpoints": [],
+        "quote": "A standing North Shore transportation table with the City, West Vancouver and the Province, with its notes published.",
+        "source_type": "campaign_site",
+        "source_url": "https://maxformayor.ca/traffic.html"
+      },
+      {
+        "category": "governance-and-transparency",
+        "char_end": 6072,
+        "char_start": 5880,
+        "flashpoints": [],
+        "quote": "Who has to agree City of North Vancouver; District of West Vancouver; Province of BC; TransLink.\n\nThe trade-off Tables produce agreement slowly. Publishing the notes is what keeps them honest.",
+        "source_type": "campaign_site",
+        "source_url": "https://maxformayor.ca/traffic.html"
+      },
+      {
+        "category": "childcare-seniors-services",
+        "char_end": 2085,
+        "char_start": 1883,
+        "flashpoints": [],
+        "quote": "5 Recognize the needs of drivers, seniors and people with disabilities Proposal\n\nAccessible crossings and bus stops in every town-centre project, and HandyDART reliability raised at the Mayors’ Council.",
+        "source_type": "campaign_site",
+        "source_url": "https://maxformayor.ca/traffic.html"
+      },
+      {
+        "category": "development-and-growth",
+        "char_end": 369,
+        "char_start": 294,
+        "flashpoints": [],
+        "quote": "Development keeps increasing, but our roads and transit are not keeping up.",
+        "source_type": "campaign_site",
+        "source_url": "https://maxformayor.ca/traffic.html"
       }
     ]
   },
