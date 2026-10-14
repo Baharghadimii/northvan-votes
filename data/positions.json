@@ -578,10 +578,10 @@
     },
     {
       "category": "governance-and-transparency",
-      "char_end": 1350,
+      "char_end": 1333,
       "char_start": 939,
       "flashpoints": [],
-      "quote": "As a Councillor, I will listen and be accountable first and foremost to North Van Residents before making decisions. I'll use evidence to guide policy, keep residents informed, and put long-term community interests ahead of short-term politics. I will work collaboratively with residents, local businesses, Indigenous partners, and other levels of government to find practical timely solutions.\n\nCandidate Video",
+      "quote": "As a Councillor, I will listen and be accountable first and foremost to North Van Residents before making decisions. I'll use evidence to guide policy, keep residents informed, and put long-term community interests ahead of short-term politics. I will work collaboratively with residents, local businesses, Indigenous partners, and other levels of government to find practical timely solutions.",
       "source_type": "official_statement",
       "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
     },
@@ -2038,10 +2038,10 @@
   "cnv-council-heywood-guy": [
     {
       "category": "governance-and-transparency",
-      "char_end": 1132,
+      "char_end": 1115,
       "char_start": 874,
       "flashpoints": [],
-      "quote": "I believe that is true, but not because of our local governments. We who are blessed to live in a place that has so much, should work together and show the world how truly good government can be a source of pride and an example to the world.\n\nCandidate Video",
+      "quote": "I believe that is true, but not because of our local governments. We who are blessed to live in a place that has so much, should work together and show the world how truly good government can be a source of pride and an example to the world.",
       "source_type": "official_statement",
       "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
     },
@@ -2881,6 +2881,15 @@
       "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
     },
     {
+      "category": "public-safety-emergency",
+      "char_end": 969,
+      "char_start": 827,
+      "flashpoints": [],
+      "quote": "I'll advocate for safer, more welcoming neighbourhoods, vibrant public spaces, and the local businesses that give our community its character.",
+      "source_type": "official_statement",
+      "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+    },
+    {
       "category": "governance-and-transparency",
       "char_end": 1075,
       "char_start": 970,
@@ -3635,19 +3644,19 @@
     },
     {
       "category": "transportation",
-      "char_end": 1386,
+      "char_end": 1369,
       "char_start": 1170,
       "flashpoints": [],
-      "quote": "My second-term priorities are public input, traffic flow, transit, affordable housing, protections for displaced tenants, more trees and parks, business vitality, and stewardship of taxpayer dollars.\n\nCandidate Video",
+      "quote": "My second-term priorities are public input, traffic flow, transit, affordable housing, protections for displaced tenants, more trees and parks, business vitality, and stewardship of taxpayer dollars.",
       "source_type": "official_statement",
       "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
     },
     {
       "category": "housing",
-      "char_end": 1386,
+      "char_end": 1369,
       "char_start": 1135,
       "flashpoints": [],
-      "quote": "I stood up for displaced tenants.\n\nMy second-term priorities are public input, traffic flow, transit, affordable housing, protections for displaced tenants, more trees and parks, business vitality, and stewardship of taxpayer dollars.\n\nCandidate Video",
+      "quote": "I stood up for displaced tenants.\n\nMy second-term priorities are public input, traffic flow, transit, affordable housing, protections for displaced tenants, more trees and parks, business vitality, and stewardship of taxpayer dollars.",
       "source_type": "official_statement",
       "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
     },
@@ -3673,19 +3682,28 @@
     },
     {
       "category": "taxes-and-spending",
-      "char_end": 1386,
+      "char_end": 1369,
       "char_start": 1170,
       "flashpoints": [],
-      "quote": "My second-term priorities are public input, traffic flow, transit, affordable housing, protections for displaced tenants, more trees and parks, business vitality, and stewardship of taxpayer dollars.\n\nCandidate Video",
+      "quote": "My second-term priorities are public input, traffic flow, transit, affordable housing, protections for displaced tenants, more trees and parks, business vitality, and stewardship of taxpayer dollars.",
+      "source_type": "official_statement",
+      "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+    },
+    {
+      "category": "development-and-growth",
+      "char_end": 686,
+      "char_start": 488,
+      "flashpoints": [],
+      "quote": "I supported North Shore Neighbourhood House redevelopment, including housing for families and workers. I championed pedestrian safety, accessibility, mature tree retention and heritage preservation.",
       "source_type": "official_statement",
       "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
     },
     {
       "category": "parks-environment-climate",
-      "char_end": 1386,
+      "char_end": 1369,
       "char_start": 1170,
       "flashpoints": [],
-      "quote": "My second-term priorities are public input, traffic flow, transit, affordable housing, protections for displaced tenants, more trees and parks, business vitality, and stewardship of taxpayer dollars.\n\nCandidate Video",
+      "quote": "My second-term priorities are public input, traffic flow, transit, affordable housing, protections for displaced tenants, more trees and parks, business vitality, and stewardship of taxpayer dollars.",
       "source_type": "official_statement",
       "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
     },
@@ -3702,30 +3720,30 @@
     },
     {
       "category": "local-economy",
-      "char_end": 1386,
+      "char_end": 1369,
       "char_start": 1170,
       "flashpoints": [],
-      "quote": "My second-term priorities are public input, traffic flow, transit, affordable housing, protections for displaced tenants, more trees and parks, business vitality, and stewardship of taxpayer dollars.\n\nCandidate Video",
+      "quote": "My second-term priorities are public input, traffic flow, transit, affordable housing, protections for displaced tenants, more trees and parks, business vitality, and stewardship of taxpayer dollars.",
       "source_type": "official_statement",
       "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
     },
     {
       "category": "governance-and-transparency",
-      "char_end": 807,
+      "char_end": 870,
       "char_start": 687,
       "flashpoints": [
         "wastewater-treatment-plant"
       ],
-      "quote": "I raised concerns about wastewater treatment plant costs and strongly supported calls for an independent public inquiry.",
+      "quote": "I raised concerns about wastewater treatment plant costs and strongly supported calls for an independent public inquiry.\n\nMy first term demonstrated the value of independent thinking.",
       "source_type": "official_statement",
       "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
     },
     {
       "category": "governance-and-transparency",
-      "char_end": 1386,
+      "char_end": 1369,
       "char_start": 1170,
       "flashpoints": [],
-      "quote": "My second-term priorities are public input, traffic flow, transit, affordable housing, protections for displaced tenants, more trees and parks, business vitality, and stewardship of taxpayer dollars.\n\nCandidate Video",
+      "quote": "My second-term priorities are public input, traffic flow, transit, affordable housing, protections for displaced tenants, more trees and parks, business vitality, and stewardship of taxpayer dollars.",
       "source_type": "official_statement",
       "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
     },

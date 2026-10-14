@@ -14108,6 +14108,264 @@
       }
     ]
   },
+  "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles::1b15cfbecac81abc": {
+    "background": [
+      {
+        "category": "public-office",
+        "char_end": 177,
+        "char_start": 73,
+        "flashpoints": [],
+        "quote": "First elected to Council in 2022, I listen to residents, think independently and stand up for residents.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "public-office",
+        "char_end": 807,
+        "char_start": 327,
+        "flashpoints": [
+          "wastewater-treatment-plant"
+        ],
+        "quote": "I chaired the North Vancouver Museum & Archives Commission and City Library Board, and authored North Vancouver’s Lonsdale Neighbourhood, a local history book.\n\nI supported North Shore Neighbourhood House redevelopment, including housing for families and workers. I championed pedestrian safety, accessibility, mature tree retention and heritage preservation. I raised concerns about wastewater treatment plant costs and strongly supported calls for an independent public inquiry.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "public-office",
+        "char_end": 1168,
+        "char_start": 871,
+        "flashpoints": [
+          "harry-jerome"
+        ],
+        "quote": "On pay parking, I listened to residents and businesses and advocated for 30-minute free curbside parking and 3-hour free parking at Harry Jerome. I opposed the Swim Deck project after concluding that its cost estimate was conceptual and not sufficiently detailed. I stood up for displaced tenants.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "career",
+        "char_end": 326,
+        "char_start": 179,
+        "flashpoints": [],
+        "quote": "I have 35+ years of experience, including teaching project and business management at Langara College and a lifelong commitment to North Vancouver.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "community",
+        "char_end": 486,
+        "char_start": 327,
+        "flashpoints": [],
+        "quote": "I chaired the North Vancouver Museum & Archives Commission and City Library Board, and authored North Vancouver’s Lonsdale Neighbourhood, a local history book.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "local-roots",
+        "char_end": 72,
+        "char_start": 0,
+        "flashpoints": [],
+        "quote": "I have lived in North Vancouver for over 40 years, and I love this City.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      }
+    ],
+    "positions": [
+      {
+        "category": "transportation",
+        "char_end": 1016,
+        "char_start": 871,
+        "flashpoints": [
+          "harry-jerome"
+        ],
+        "quote": "On pay parking, I listened to residents and businesses and advocated for 30-minute free curbside parking and 3-hour free parking at Harry Jerome.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "transportation",
+        "char_end": 1369,
+        "char_start": 1170,
+        "flashpoints": [],
+        "quote": "My second-term priorities are public input, traffic flow, transit, affordable housing, protections for displaced tenants, more trees and parks, business vitality, and stewardship of taxpayer dollars.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "housing",
+        "char_end": 1369,
+        "char_start": 1135,
+        "flashpoints": [],
+        "quote": "I stood up for displaced tenants.\n\nMy second-term priorities are public input, traffic flow, transit, affordable housing, protections for displaced tenants, more trees and parks, business vitality, and stewardship of taxpayer dollars.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "taxes-and-spending",
+        "char_end": 807,
+        "char_start": 687,
+        "flashpoints": [
+          "wastewater-treatment-plant"
+        ],
+        "quote": "I raised concerns about wastewater treatment plant costs and strongly supported calls for an independent public inquiry.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "taxes-and-spending",
+        "char_end": 1134,
+        "char_start": 1017,
+        "flashpoints": [],
+        "quote": "I opposed the Swim Deck project after concluding that its cost estimate was conceptual and not sufficiently detailed.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "taxes-and-spending",
+        "char_end": 1369,
+        "char_start": 1170,
+        "flashpoints": [],
+        "quote": "My second-term priorities are public input, traffic flow, transit, affordable housing, protections for displaced tenants, more trees and parks, business vitality, and stewardship of taxpayer dollars.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "development-and-growth",
+        "char_end": 686,
+        "char_start": 488,
+        "flashpoints": [],
+        "quote": "I supported North Shore Neighbourhood House redevelopment, including housing for families and workers. I championed pedestrian safety, accessibility, mature tree retention and heritage preservation.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "parks-environment-climate",
+        "char_end": 1369,
+        "char_start": 1170,
+        "flashpoints": [],
+        "quote": "My second-term priorities are public input, traffic flow, transit, affordable housing, protections for displaced tenants, more trees and parks, business vitality, and stewardship of taxpayer dollars.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "local-economy",
+        "char_end": 1016,
+        "char_start": 871,
+        "flashpoints": [
+          "harry-jerome"
+        ],
+        "quote": "On pay parking, I listened to residents and businesses and advocated for 30-minute free curbside parking and 3-hour free parking at Harry Jerome.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "local-economy",
+        "char_end": 1369,
+        "char_start": 1170,
+        "flashpoints": [],
+        "quote": "My second-term priorities are public input, traffic flow, transit, affordable housing, protections for displaced tenants, more trees and parks, business vitality, and stewardship of taxpayer dollars.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "governance-and-transparency",
+        "char_end": 870,
+        "char_start": 687,
+        "flashpoints": [
+          "wastewater-treatment-plant"
+        ],
+        "quote": "I raised concerns about wastewater treatment plant costs and strongly supported calls for an independent public inquiry.\n\nMy first term demonstrated the value of independent thinking.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "governance-and-transparency",
+        "char_end": 1369,
+        "char_start": 1170,
+        "flashpoints": [],
+        "quote": "My second-term priorities are public input, traffic flow, transit, affordable housing, protections for displaced tenants, more trees and parks, business vitality, and stewardship of taxpayer dollars.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      }
+    ]
+  },
+  "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles::28e2b3dd2496963e": {
+    "background": [
+      {
+        "category": "local-roots",
+        "char_end": 283,
+        "char_start": 0,
+        "flashpoints": [],
+        "quote": "My family's North Vancouver story began more than 30 years ago, when my parents ran a small convenience store near Lonsdale and 15th. I grew up here, and today my wife and I have built our lives in Central Lonsdale.\n\nThis city gave my family a place to call home and shaped who I am.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "career",
+        "char_end": 503,
+        "char_start": 362,
+        "flashpoints": [],
+        "quote": "I bring more than 16 years of experience in finance, strategy, and planning, and I serve as Chair of the City's Advisory Planning Commission.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "public-office",
+        "char_end": 503,
+        "char_start": 362,
+        "flashpoints": [],
+        "quote": "I bring more than 16 years of experience in finance, strategy, and planning, and I serve as Chair of the City's Advisory Planning Commission.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      }
+    ],
+    "positions": [
+      {
+        "category": "housing",
+        "char_end": 826,
+        "char_start": 635,
+        "flashpoints": [],
+        "quote": "My priorities are thoughtful growth and housing, with the right homes for families, renters, seniors, and essential workers, supported by the infrastructure and services a growing city needs.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "development-and-growth",
+        "char_end": 826,
+        "char_start": 635,
+        "flashpoints": [],
+        "quote": "My priorities are thoughtful growth and housing, with the right homes for families, renters, seniors, and essential workers, supported by the infrastructure and services a growing city needs.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "local-economy",
+        "char_end": 969,
+        "char_start": 827,
+        "flashpoints": [],
+        "quote": "I'll advocate for safer, more welcoming neighbourhoods, vibrant public spaces, and the local businesses that give our community its character.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "public-safety-emergency",
+        "char_end": 969,
+        "char_start": 827,
+        "flashpoints": [],
+        "quote": "I'll advocate for safer, more welcoming neighbourhoods, vibrant public spaces, and the local businesses that give our community its character.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "governance-and-transparency",
+        "char_end": 1075,
+        "char_start": 970,
+        "flashpoints": [],
+        "quote": "I'll push for a City Hall that brings people in earlier, explains decisions clearly, and follows through.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      }
+    ]
+  },
   "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles::2cd2ab14553fdb37": {
     "background": [
       {
@@ -14708,6 +14966,102 @@
       }
     ]
   },
+  "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles::6b386d68c00c53df": {
+    "background": [
+      {
+        "category": "career",
+        "char_end": 421,
+        "char_start": 243,
+        "flashpoints": [],
+        "quote": "As a parent, educator, communications professional, and community volunteer, I understand the importance of protecting what makes our city special while preparing for its future.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "community",
+        "char_end": 421,
+        "char_start": 243,
+        "flashpoints": [],
+        "quote": "As a parent, educator, communications professional, and community volunteer, I understand the importance of protecting what makes our city special while preparing for its future.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "local-roots",
+        "char_end": 421,
+        "char_start": 191,
+        "flashpoints": [],
+        "quote": "I've called North Vancouver home for over 25 years. As a parent, educator, communications professional, and community volunteer, I understand the importance of protecting what makes our city special while preparing for its future.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      }
+    ],
+    "positions": [
+      {
+        "category": "taxes-and-spending",
+        "char_end": 549,
+        "char_start": 422,
+        "flashpoints": [],
+        "quote": "I will work to make major spending decisions transparent, carefully evaluated, and focused on services residents actually need.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "housing",
+        "char_end": 671,
+        "char_start": 551,
+        "flashpoints": [],
+        "quote": "I will push for responsible growth that respects neighbourhood character while adding the housing North Vancouver needs.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "development-and-growth",
+        "char_end": 671,
+        "char_start": 551,
+        "flashpoints": [],
+        "quote": "I will push for responsible growth that respects neighbourhood character while adding the housing North Vancouver needs.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "parks-environment-climate",
+        "char_end": 784,
+        "char_start": 672,
+        "flashpoints": [],
+        "quote": "I will support practical action on climate resilience, including protecting our trees, parks, and public spaces.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "transportation",
+        "char_end": 937,
+        "char_start": 785,
+        "flashpoints": [],
+        "quote": "I will advocate for safer streets and better choices for walking, cycling and transit, while recognizing that many residents still depend on their cars.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "governance-and-transparency",
+        "char_end": 549,
+        "char_start": 422,
+        "flashpoints": [],
+        "quote": "I will work to make major spending decisions transparent, carefully evaluated, and focused on services residents actually need.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "governance-and-transparency",
+        "char_end": 1333,
+        "char_start": 939,
+        "flashpoints": [],
+        "quote": "As a Councillor, I will listen and be accountable first and foremost to North Van Residents before making decisions. I'll use evidence to guide policy, keep residents informed, and put long-term community interests ahead of short-term politics. I will work collaboratively with residents, local businesses, Indigenous partners, and other levels of government to find practical timely solutions.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      }
+    ]
+  },
   "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles::70abfc18ec7f18fb": {
     "background": [
       {
@@ -14933,6 +15287,48 @@
         "char_start": 810,
         "flashpoints": [],
         "quote": "Tenant Protection & Housing: Champions a binding Tenant Relocation Bylaw and a 10-year Revitalization Tax Exemption to incentivize repairing older buildings over demolition.\n\nParks & Green Space: Plans to convert the city-owned lot on East 1st Street into a permanent park, upgrade sports fields to all-weather surfaces, and incentivize functional green space in new developments.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      }
+    ]
+  },
+  "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles::877b7fe617d86183": {
+    "background": [
+      {
+        "category": "local-roots",
+        "char_end": 101,
+        "char_start": 0,
+        "flashpoints": [],
+        "quote": "I grew up in North Vancouver and live with my spouse, children, and retired mom in my childhood home.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "career",
+        "char_end": 865,
+        "char_start": 731,
+        "flashpoints": [],
+        "quote": "As a public sector scientist, educator, and healthcare worker, I solve complex problems for our community and for individuals in need.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      }
+    ],
+    "positions": [
+      {
+        "category": "housing",
+        "char_end": 729,
+        "char_start": 102,
+        "flashpoints": [],
+        "quote": "I know just how hard it is for families to stay in North Vancouver in affordable homes that meet their needs.\n\nToo many of our younger residents, workers, and friends are being priced out of our community. This must change quickly if we want to address the challenges of supporting an ageing population, reducing commuter traffic, improving affordability, and maintaining our cohesive community character.\n\nWe can do this by growing differently – with housing policies that encourage the types of homes people need, reduce costs and delays for new homes, protect existing affordability, and increase non-market housing options.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "development-and-growth",
+        "char_end": 729,
+        "char_start": 308,
+        "flashpoints": [],
+        "quote": "This must change quickly if we want to address the challenges of supporting an ageing population, reducing commuter traffic, improving affordability, and maintaining our cohesive community character.\n\nWe can do this by growing differently – with housing policies that encourage the types of homes people need, reduce costs and delays for new homes, protect existing affordability, and increase non-market housing options.",
         "source_type": "official_statement",
         "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
       }
@@ -15711,6 +16107,48 @@
       }
     ]
   },
+  "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles::da4103071329c731": {
+    "background": [
+      {
+        "category": "public-office",
+        "char_end": 346,
+        "char_start": 160,
+        "flashpoints": [],
+        "quote": "I have already served on City Council, for two terms ending when I did not run for re-election in 2014. Prior to that I served on the School Board and the NorthVan Recreation Commission.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "career",
+        "char_end": 810,
+        "char_start": 609,
+        "flashpoints": [],
+        "quote": "I am a CPA, former banker, with experience in mining, forestry, funerals and renewable energy. Today I help companies and First Nations with banking and finance challenges as an independent consultant.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "community",
+        "char_end": 476,
+        "char_start": 348,
+        "flashpoints": [],
+        "quote": "I am a volunteer at North Shore Neighbourhood House, helping people with tax returns, and at St Andrews Church delivering bread.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      }
+    ],
+    "positions": [
+      {
+        "category": "governance-and-transparency",
+        "char_end": 1115,
+        "char_start": 874,
+        "flashpoints": [],
+        "quote": "I believe that is true, but not because of our local governments. We who are blessed to live in a place that has so much, should work together and show the world how truly good government can be a source of pride and an example to the world.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      }
+    ]
+  },
   "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles::dfffb1f5f5ea2874": {
     "background": [
       {
@@ -15966,6 +16404,47 @@
         "char_start": 1221,
         "flashpoints": [],
         "quote": "Listening to You – act on the City's engagement plan and explore participatory budgeting for net parking revenue",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      }
+    ]
+  },
+  "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles::f4772d49272ec6f2": {
+    "background": [],
+    "positions": [
+      {
+        "category": "governance-and-transparency",
+        "char_end": 680,
+        "char_start": 159,
+        "flashpoints": [],
+        "quote": "A Councillor’s job isn’t to play politics, serve interest groups, or follow slates and lobbyists, it is to represent you.\n\nWhen looking at slates and interest groups on municipal committees, ask yourself: Are they truly representing you, or pushing a pre-set agenda that ignores your needs and wants?\n\nYou shouldn’t wake up to sudden developments in front of your house without warning. Decisions at City Hall must be made transparently and accountably. Government must work for residents of North Vancouver, not agendas.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "governance-and-transparency",
+        "char_end": 1274,
+        "char_start": 731,
+        "flashpoints": [],
+        "quote": "My mandate is simple: bring people together rather than campaign on hot-button topics. Proactive transparency on City plans, projects, and bylaws isn't an extra service, it is an elected official's core job.\n\nAs your City Councillor, my commitment lasts all four years:\n\n• No Surprises: Clear, upfront communication on local projects before shovels hit the ground.\n\n• Direct Access: Open channels for residents to reach Council without red tape.\n\n• Year-Round Service: Continuous door-knocking, returning phone calls, and remaining accessible.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "development-and-growth",
+        "char_end": 545,
+        "char_start": 461,
+        "flashpoints": [],
+        "quote": "You shouldn’t wake up to sudden developments in front of your house without warning.",
+        "source_type": "official_statement",
+        "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+      },
+      {
+        "category": "development-and-growth",
+        "char_end": 1095,
+        "char_start": 1002,
+        "flashpoints": [],
+        "quote": "• No Surprises: Clear, upfront communication on local projects before shovels hit the ground.",
         "source_type": "official_statement",
         "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
       }

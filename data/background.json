@@ -862,20 +862,20 @@
       "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
     },
     {
-      "category": "community",
-      "char_end": 476,
-      "char_start": 348,
-      "flashpoints": [],
-      "quote": "I am a volunteer at North Shore Neighbourhood House, helping people with tax returns, and at St Andrews Church delivering bread.",
-      "source_type": "official_statement",
-      "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
-    },
-    {
       "category": "career",
       "char_end": 810,
       "char_start": 609,
       "flashpoints": [],
       "quote": "I am a CPA, former banker, with experience in mining, forestry, funerals and renewable energy. Today I help companies and First Nations with banking and finance challenges as an independent consultant.",
+      "source_type": "official_statement",
+      "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
+    },
+    {
+      "category": "community",
+      "char_end": 476,
+      "char_start": 348,
+      "flashpoints": [],
+      "quote": "I am a volunteer at North Shore Neighbourhood House, helping people with tax returns, and at St Andrews Church delivering bread.",
       "source_type": "official_statement",
       "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
     },
@@ -1295,11 +1295,11 @@
   ],
   "cnv-council-raisinghani-krishna": [
     {
-      "category": "public-office",
-      "char_end": 503,
-      "char_start": 362,
+      "category": "local-roots",
+      "char_end": 283,
+      "char_start": 0,
       "flashpoints": [],
-      "quote": "I bring more than 16 years of experience in finance, strategy, and planning, and I serve as Chair of the City's Advisory Planning Commission.",
+      "quote": "My family's North Vancouver story began more than 30 years ago, when my parents ran a small convenience store near Lonsdale and 15th. I grew up here, and today my wife and I have built our lives in Central Lonsdale.\n\nThis city gave my family a place to call home and shaped who I am.",
       "source_type": "official_statement",
       "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
     },
@@ -1313,11 +1313,11 @@
       "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
     },
     {
-      "category": "local-roots",
-      "char_end": 215,
-      "char_start": 0,
+      "category": "public-office",
+      "char_end": 503,
+      "char_start": 362,
       "flashpoints": [],
-      "quote": "My family's North Vancouver story began more than 30 years ago, when my parents ran a small convenience store near Lonsdale and 15th. I grew up here, and today my wife and I have built our lives in Central Lonsdale.",
+      "quote": "I bring more than 16 years of experience in finance, strategy, and planning, and I serve as Chair of the City's Advisory Planning Commission.",
       "source_type": "official_statement",
       "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles"
     },

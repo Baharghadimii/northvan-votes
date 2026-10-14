@@ -98,7 +98,12 @@ def _statement_text(body: Tag) -> str:
 
     parts: list[str] = []
     for el in blocks[marker_index + 1 :]:
-        if el.find("a", href=re.compile(r"Nom-Package", re.I)):
+        # A paragraph that is nothing but a link is a row of page furniture:
+        # "Nomination Package - PDF", "Candidate Video". Three candidates had
+        # the words "Candidate Video" published on the end of a quote, as
+        # though they had written them.
+        link = el.find("a")
+        if link and el.get_text(" ", strip=True) == link.get_text(" ", strip=True):
             continue
         if el.name in ("ul", "ol"):
             # One line per item, so a span can quote a single commitment
@@ -117,8 +122,34 @@ def _statement_text(body: Tag) -> str:
     return "\n\n".join(parts)
 
 
+
+def _video_url(body: Tag) -> str | None:
+    """The candidate's video on the City's profile page, as a watchable link.
+
+    Some profiles carry an <iframe> embed and some a plain link, so both are
+    read. Embed URLs are turned back into the page a person can open, because
+    the site links out to the video rather than embedding it.
+    """
+    link = body.find("a", string=re.compile(r"candidate\s*video", re.I))
+    url = link["href"] if link and link.get("href") else None
+    if not url:
+        frame = body.find("iframe")
+        url = frame["src"] if frame and frame.get("src") else None
+    if not url:
+        return None
+    url = url.split("?")[0]
+    m = re.match(r"https?://(?:www\.)?youtube\.com/embed/([\w-]+)", url)
+    if m:
+        return f"https://www.youtube.com/watch?v={m.group(1)}"
+    m = re.match(r"https?://player\.vimeo\.com/video/(\d+)", url)
+    if m:
+        return f"https://vimeo.com/{m.group(1)}"
+    return url
+
+
 def _parse_body(body: Tag) -> dict:
     out: dict = {
+        "video_url": None,
         "photo_url": None,
         "phone": None,
         "email": None,
@@ -126,6 +157,8 @@ def _parse_body(body: Tag) -> dict:
         "socials": {},
         "nomination_docs": [],
     }
+
+    out["video_url"] = _video_url(body)
 
     img = body.find("img")
     if img and img.get("src"):
@@ -212,6 +245,7 @@ def scrape(refresh: bool = False) -> list[Candidate]:
                 website=parsed["website"],
                 socials=parsed["socials"],
                 nomination_docs=parsed["nomination_docs"],
+                video_url=parsed["video_url"],
                 sources=sources,
             )
         )

@@ -76,6 +76,14 @@ const SOCIAL_LABELS: Record<string, string> = {
     {socials.map(([k, url]) => (
       <li><a href={url} target="_blank" rel="noopener nofollow">{SOCIAL_LABELS[k] ?? k}</a></li>
     ))}
+    {candidate.video_url && (
+      <li>
+        <a href={candidate.video_url} target="_blank" rel="noopener nofollow">
+          Candidate video
+        </a>{" "}
+        <span class="candidate-meta">recorded for the City's profile page</span>
+      </li>
+    )}
     {candidate.nomination_docs.map((d) => (
       <li><a href={d} target="_blank" rel="noopener">Nomination documents</a></li>
     ))}

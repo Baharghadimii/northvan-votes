@@ -93,6 +93,11 @@ class Candidate(BaseModel):
     socials: dict[str, str] = Field(default_factory=dict)
     nomination_docs: list[str] = Field(default_factory=list)
     financial_disclosure: list[str] = Field(default_factory=list)
+    # A short video the candidate recorded, linked from the City's own profile
+    # page. The City offered the slot to all 28 of its candidates; the District
+    # ran no equivalent. Linked, never embedded: an embed would load a tracker
+    # from YouTube or Vimeo on a site that promises no third party sees you.
+    video_url: str | None = None
     sources: list[Source] = Field(default_factory=list)
     positions: list[Position] = Field(default_factory=list)
     # Who they are and what they have done, as opposed to what they would do.
