@@ -29,7 +29,13 @@ ROOT = Path(__file__).resolve().parent.parent
 CANDIDATES = ROOT / "data" / "candidates.json"
 OUT = ROOT / "data" / "campaign_pages.json"
 
-MAX_PAGES = 6
+# Six was arbitrary, and five candidates were hitting it, which meant the
+# people who wrote the most were the ones losing material. Angela Girard
+# publishes seven priorities pages; two of them, Indigenous reconciliation
+# and listening to you, fell off the end and were never read. A cap has to
+# exist so one enormous site cannot drown out the rest, but it should sit
+# above the biggest honest campaign site rather than through the middle of it.
+MAX_PAGES = 10
 MIN_PARAGRAPH_CHARS = 60
 MIN_PAGE_CHARS = 200
 
@@ -47,10 +53,25 @@ PRIORITY = [
     (40, re.compile(r"housing|transport|transit|traffic|climate|tax|safety|school", re.I)),
 ]
 
+def page_key(url: str) -> str:
+    """One key per page, whatever spelling a link used to get there.
+
+    Raising MAX_PAGES surfaced the bug: Kulvir Mann's platform was crawled
+    twice, as kulvirmann.ca/platform/ and www.kulvirmann.ca/platform, and the
+    site would have published the same paragraphs twice under his name. Scheme,
+    a leading www. and a trailing slash are spelling, not identity. The original
+    URL is still what gets stored and cited; only the key is normalised.
+    """
+    u = urlparse(urldefrag(url).url)
+    host = u.netloc.lower().removeprefix("www.")
+    return host + "/" + u.path.strip("/").lower()
+
+
 SKIP = re.compile(
     r"\.(pdf|jpe?g|png|gif|svg|webp|mp4|mov|zip|docx?|xlsx?)$"
     r"|/(donate|contribute|volunteer|signup|sign-up|contact|privacy|terms|cart|checkout)"
     r"|/(coming-soon|maintenance-mode|under-construction)"
+    r"|/(thank-you|thanks|how-to-vote|where-to-vote|voting-info)"
     r"|mailto:|tel:|javascript:",
     re.I,
 )
@@ -177,7 +198,7 @@ def sitemap_urls(website: str, get) -> list[str]:
     seen: set[str] = set()
     out: list[str] = []
     for u in sorted(dict.fromkeys(found), key=rank):
-        k = u.rstrip("/")
+        k = page_key(u)
         if k in seen:
             continue
         seen.add(k)
@@ -202,13 +223,13 @@ def crawl(website: str, name: str) -> list[Source]:
 
     soup = BeautifulSoup(home_html, "lxml")
     pages: list[tuple[int, str]] = [(999, website)]
-    seen_urls = {urldefrag(website).url.rstrip("/")}
+    seen_urls = {page_key(website)}
 
     for a in soup.find_all("a", href=True):
         href = urldefrag(urljoin(website, a["href"])).url
         if not same_host(urlparse(href).netloc, host) or SKIP.search(href):
             continue
-        key = href.rstrip("/")
+        key = page_key(href)
         if key in seen_urls:
             continue
         s = score(href, a.get_text(" ", strip=True))
