@@ -38,3 +38,17 @@
   url: https://www.facebook.com/Mike4DNVMayor
   source: localelections.ca (mikelittle.ca redirects here)
   crawl: false
+
+# Found on their own VoteMate profiles on 2026-10-16, after Layne North wrote
+# in to say they had no profile here and nobody had told them the site existed.
+# Both were running campaign sites the District never listed.
+- name: Laura Nickerson
+  url: https://lauranickerson.com
+  source: the candidate's own VoteMate profile
+- name: Layne North
+  url: https://votenorth.nationbuilder.com
+  source: the candidate's own VoteMate profile
+  # Cloudflare challenges automated requests, same as Mike Little's and Lisa
+  # Muri's. Linked so readers can go, never read, and bot checks aren't
+  # something this site works around.
+  crawl: false

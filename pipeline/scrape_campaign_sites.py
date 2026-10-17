@@ -20,7 +20,7 @@ from datetime import date
 from pathlib import Path
 from urllib.parse import urldefrag, urljoin, urlparse
 
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, Tag
 
 from pipeline.fetching import Blocked, fetch, retrieved_at
 from pipeline.models import Source
@@ -104,6 +104,56 @@ def score(href: str, text: str) -> int:
     return 0
 
 
+INLINE = ("span", "b", "i", "em", "strong", "u", "font", "mark", "abbr", "small")
+
+
+def join_split_words(body: Tag) -> None:
+    """Repair words that site builders chop in half with markup.
+
+    get_text(" ") puts a space at every tag boundary, which is right between
+    two paragraphs and wrong in the middle of a word. Laura Nickerson's page
+    renders "...with stude</span><span ...>nt learning...", so her quote came
+    out as "stude nt learning" with her name on it.
+
+    Only the proven case is touched: an inline tag whose previous sibling ends
+    in a letter with no whitespace between them. Unwrapping every inline tag
+    instead was tried first and silently dropped 30,000 characters across 38
+    pages, because it changed which elements the collector treats as leaves.
+    """
+    # Both sides of the boundary have to go. Unwrapping only the second span of
+    # "recognisi</span><span>ng" leaves the first one there, and get_text still
+    # puts a space at its edge. Repeat until a pass changes nothing, since each
+    # unwrap can expose another boundary behind it.
+    for _ in range(8):
+        changed = False
+        for tag in body.find_all(INLINE):
+            mine = tag.get_text()
+            if not mine:
+                continue
+            prev, nxt = tag.previous_sibling, tag.next_sibling
+            before = "" if prev is None else (prev if isinstance(prev, str) else prev.get_text())
+            after = "" if nxt is None else (nxt if isinstance(nxt, str) else nxt.get_text())
+            # Split on the left: "...stude</span><span>nt..." or plain text before.
+            left = bool(before) and before[-1].isalpha() and mine[0].isalpha()
+            # Split on the right: "<span>stude</span>nt...", where the rest of
+            # the word is a bare text node the loop never visits.
+            right = bool(after) and after[0].isalpha() and mine[-1].isalpha()
+            if not (left or right):
+                continue
+            if left and isinstance(prev, Tag) and prev.name in INLINE:
+                prev.unwrap()
+            if right and isinstance(nxt, Tag) and nxt.name in INLINE:
+                nxt.unwrap()
+            tag.unwrap()
+            changed = True
+        # Unwrapping leaves two adjacent text nodes, and get_text(" ") puts its
+        # separator between those as happily as between two tags. smooth()
+        # welds them into one string, which is what actually closes the gap.
+        body.smooth()
+        if not changed:
+            break
+
+
 def clean_text(soup: BeautifulSoup) -> str:
     """Paragraph text a human would read, joined the same way statements are."""
     for tag in soup(["script", "style", "nav", "header", "footer", "noscript", "form", "svg"]):
@@ -112,6 +162,7 @@ def clean_text(soup: BeautifulSoup) -> str:
         tag.decompose()
 
     body = soup.find("main") or soup.find(attrs={"role": "main"}) or soup.body or soup
+    join_split_words(body)
 
     def collect(elements) -> list[str]:
         parts: list[str] = []

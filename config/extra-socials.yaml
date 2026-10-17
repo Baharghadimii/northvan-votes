@@ -31,3 +31,12 @@
     located 2026-10-05 after the address the District publishes stopped
     resolving; verified as his (1.8K followers, listed as Mayor at North
     Vancouver District)
+
+# Found on her own VoteMate profile on 2026-10-16, while checking why Layne
+# North's page here was empty. Hers was too, and she has been running a
+# campaign site and an Instagram the District never listed.
+- name: Laura Nickerson
+  id: dnv-trustee-nickerson-laura
+  key: instagram
+  url: https://instagram.com/elect_lauranickerson
+  source: the candidate's own VoteMate profile, 2026-10-16
