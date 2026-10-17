@@ -5,7 +5,7 @@ export type Municipality = "cnv" | "dnv";
 export type Office = "mayor" | "council" | "trustee";
 
 export interface Source {
-  type: "official_statement" | "campaign_site" | "votemate";
+  type: "official_statement" | "campaign_site";
   url: string;
   title: string | null;
   text: string;

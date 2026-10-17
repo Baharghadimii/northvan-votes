@@ -10,7 +10,6 @@ from __future__ import annotations
 import json
 import re
 import sys
-from datetime import date
 from pathlib import Path
 
 from pipeline.models import Candidate, Position, Source
@@ -22,7 +21,6 @@ OUT = ROOT / "data" / "candidates.json"
 POSITIONS = ROOT / "data" / "positions.json"
 BACKGROUND = ROOT / "data" / "background.json"
 CAMPAIGN = ROOT / "data" / "campaign_pages.json"
-VOTEMATE = ROOT / "data" / "votemate.json"
 EXTRA_SITES = ROOT / "config" / "extra-websites.yaml"
 # The site imports this copy at build time; data/candidates.json stays the
 # canonical, reviewable artefact.
@@ -131,35 +129,6 @@ def attach_campaign_pages(candidates: list[Candidate]) -> None:
         for entry in raw:
             if entry["url"] not in have:
                 by_id[cid].sources.append(Source(**entry))
-
-
-def attach_votemate(candidates: list[Candidate]) -> None:
-    """Add each candidate's own VoteMate profile as a source.
-
-    Layne North, a trustee with no filed statement, wrote the evening before
-    the election to say there was nothing from them here and pointed at this:
-    "It can also be copied from Vote Mate." Read for everyone rather than for
-    the candidate who asked. 54 of the 59 have filled one in, which is better
-    coverage than either of the two sources this site started with.
-    """
-    if not VOTEMATE.exists():
-        return
-    profiles = json.loads(VOTEMATE.read_text(encoding="utf-8"))
-    by_id = {c.id: c for c in candidates}
-    unknown = sorted(set(profiles) - set(by_id))
-    if unknown:
-        raise BuildError(f"data/votemate.json has unknown ids: {unknown}")
-    for cid, p in profiles.items():
-        c = by_id[cid]
-        if any(s.url == p["url"] for s in c.sources):
-            continue
-        c.sources.append(Source(
-            type="votemate",
-            url=p["url"],
-            title=f"VoteMate profile - {p['name']}",
-            text=p["text"],
-            retrieved=date.fromisoformat(p["retrieved"]),
-        ))
 
 
 # A candidate's own site repeats its pitch across pages, so the same sentence
@@ -531,7 +500,6 @@ def build(refresh: bool = False) -> list[Candidate]:
     candidates = scrape_cnv(refresh=refresh) + scrape_dnv(refresh=refresh)
     attach_extra_websites(candidates)
     attach_campaign_pages(candidates)
-    attach_votemate(candidates)
     attach_positions(candidates)
     # Before pruning, so a testimonial never wins a slot a real quote could use.
     dropped = drop_other_voices(candidates)
