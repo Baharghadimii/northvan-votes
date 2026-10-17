@@ -21,6 +21,7 @@ OUT = ROOT / "data" / "candidates.json"
 POSITIONS = ROOT / "data" / "positions.json"
 BACKGROUND = ROOT / "data" / "background.json"
 CAMPAIGN = ROOT / "data" / "campaign_pages.json"
+VOTEMATE_LINKS = ROOT / "data" / "votemate-links.json"
 EXTRA_SITES = ROOT / "config" / "extra-websites.yaml"
 # The site imports this copy at build time; data/candidates.json stays the
 # canonical, reviewable artefact.
@@ -129,6 +130,25 @@ def attach_campaign_pages(candidates: list[Candidate]) -> None:
         for entry in raw:
             if entry["url"] not in have:
                 by_id[cid].sources.append(Source(**entry))
+
+
+def attach_votemate_links(candidates: list[Candidate]) -> None:
+    """Link each candidate's VoteMate profile, where they have filled one in.
+
+    A link, never a quote. Most candidates have written more there than this
+    site shows, and a reader deserves to know where. Every profile with content
+    gets one, not only the candidates who have little here, because a courtesy
+    scoped to the people who ask for it is not a courtesy.
+    """
+    if not VOTEMATE_LINKS.exists():
+        return
+    links = json.loads(VOTEMATE_LINKS.read_text(encoding="utf-8"))
+    by_id = {c.id: c for c in candidates}
+    unknown = sorted(set(links) - set(by_id))
+    if unknown:
+        raise BuildError(f"data/votemate-links.json has unknown ids: {unknown}")
+    for cid, url in links.items():
+        by_id[cid].votemate_url = url
 
 
 # A candidate's own site repeats its pitch across pages, so the same sentence
@@ -500,6 +520,7 @@ def build(refresh: bool = False) -> list[Candidate]:
     candidates = scrape_cnv(refresh=refresh) + scrape_dnv(refresh=refresh)
     attach_extra_websites(candidates)
     attach_campaign_pages(candidates)
+    attach_votemate_links(candidates)
     attach_positions(candidates)
     # Before pruning, so a testimonial never wins a slot a real quote could use.
     dropped = drop_other_voices(candidates)

@@ -98,6 +98,11 @@ class Candidate(BaseModel):
     # ran no equivalent. Linked, never embedded: an embed would load a tracker
     # from YouTube or Vimeo on a site that promises no third party sees you.
     video_url: str | None = None
+    # Their profile on votemate.org, linked and never quoted. VoteMate sets the
+    # questions and publishes the result, which makes it a third party's page
+    # rather than the candidate's own, the same reason the bear and Chamber
+    # answers live on their own pages instead of in anyone's positions.
+    votemate_url: str | None = None
     sources: list[Source] = Field(default_factory=list)
     positions: list[Position] = Field(default_factory=list)
     # Who they are and what they have done, as opposed to what they would do.

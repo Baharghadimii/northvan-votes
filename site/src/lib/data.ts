@@ -39,6 +39,8 @@ export interface Candidate {
   /** A short video on the City's own candidate profile page. City only; the
    *  District ran no equivalent. Linked, never embedded. */
   video_url?: string | null;
+  /** Their VoteMate profile. Linked, never quoted. */
+  votemate_url?: string | null;
   sources: Source[];
   positions: Position[];
   /** Who they are and what they have done, rather than what they would do. */
