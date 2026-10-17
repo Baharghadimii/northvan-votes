@@ -45,10 +45,10 @@
 - name: Laura Nickerson
   url: https://lauranickerson.com
   source: the candidate's own VoteMate profile
-- name: Layne North
-  url: https://votenorth.nationbuilder.com
-  source: the candidate's own VoteMate profile
-  # Cloudflare challenges automated requests, same as Mike Little's and Lisa
-  # Muri's. Linked so readers can go, never read, and bot checks aren't
-  # something this site works around.
-  crawl: false
+# Layne North's VoteMate profile lists votenorth.nationbuilder.com. It was
+# added here on 2026-10-16 and taken out again the same evening: opened in a
+# browser it redirects to a NationBuilder signup form, titled "Your nation",
+# carrying the banner "This site uses demo content for illustrative purposes
+# only". It is an unconfigured template, not a published campaign site, so
+# linking it would send a voter to a signup form the night before the vote.
+# Left out deliberately. If it goes live, it belongs here.
