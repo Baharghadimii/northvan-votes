@@ -9,7 +9,12 @@ const source = sourceFor(candidate, position.source_url);
 // Statement paragraphs are joined with blank lines upstream; preserve them.
 const paragraphs = position.quote.split(/\n{2,}/).filter(Boolean);
 const official = position.source_type === "official_statement";
-const label = official ? "Filed statement" : "Their campaign site";
+const LABELS = {
+  official_statement: "Filed statement",
+  campaign_site: "Their campaign site",
+  votemate: "Their VoteMate profile",
+};
+const label = LABELS[position.source_type] ?? "Their campaign site";
 ---
 <figure class="quote">
   <blockquote style="margin:0">

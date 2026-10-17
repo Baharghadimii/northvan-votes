@@ -16,7 +16,10 @@ from pydantic import BaseModel, Field, field_validator
 
 Municipality = Literal["cnv", "dnv"]
 Office = Literal["mayor", "council", "trustee"]
-SourceType = Literal["official_statement", "campaign_site"]
+# "votemate" is the candidate's own profile on votemate.org, which every
+# candidate in BC can claim for free. Written by them, published by them,
+# and more evenly available than a campaign website, which costs money.
+SourceType = Literal["official_statement", "campaign_site", "votemate"]
 
 OFFICE_LABELS: dict[Office, str] = {
     "mayor": "Mayor",
