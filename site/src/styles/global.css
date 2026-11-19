@@ -488,10 +488,12 @@ button.star[aria-pressed="true"] { color: #c99a2e; }
 .ballot-race h3 { margin-bottom: 4px; }
 .ballot-race ol { margin: 6px 0 0; padding-left: 22px; }
 .ballot-race li { margin-bottom: 3px; }
-.overpick { color: #a4462b; font-weight: 600; }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .overpick { color: #e88b6d; }
+
+.voting-places {
+  columns: 2; column-gap: 30px; font-size: 0.92rem; padding-left: 18px;
 }
+.voting-places li { break-inside: avoid; margin-bottom: 5px; }
+@media (max-width: 620px) { .voting-places { columns: 1; } }
 
 @media print {
   .shortlist-bar, button.star, .notice { display: none; }

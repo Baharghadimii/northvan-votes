@@ -2,70 +2,33 @@
 import Base from "~/layouts/Base.astro";
 import { VOTING, VERIFIED } from "~/lib/voting";
 import { formatDate, races } from "~/lib/data";
+import { RESULTS_SOURCES, electedIn } from "~/lib/results";
 
+// The election is over. This page used to tell people when, where and how to
+// vote; it now keeps that as a record, in the past tense, and points at the
+// official results. The URL stays the same so old links still land here.
 const munis = ["cnv", "dnv"] as const;
 const allRaces = races();
-/** The provincial "Voter's Guide to Local Elections in B.C. 2026", which the
- *  City hosts in seven languages. Checked on 2026-10-13: every file returns a
- *  PDF, and each one is genuinely in that script rather than the English file
- *  under another name. Elections BC's own translated-materials page is for the
- *  provincial election on October 24, which is a different vote, so these
- *  City-hosted copies are the right ones to send people to for October 17. */
-const GUIDE_BASE =
-  "https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/Election/2026";
-const GUIDES = [
-  { native: "English", english: "English", code: "en", file: "voter_guide_english" },
-  { native: "فارسی", english: "Farsi", code: "fa", file: "voter_guide_farsi" },
-  { native: "简体中文", english: "Chinese, Simplified", code: "zh-Hans", file: "voter_guide_simplified_chinese" },
-  { native: "繁體中文", english: "Chinese, Traditional", code: "zh-Hant", file: "voter_guide_traditional_chinese" },
-  { native: "ਪੰਜਾਬੀ", english: "Punjabi", code: "pa", file: "voter_guide_punjabi" },
-  { native: "한국어", english: "Korean", code: "ko", file: "voter_guide_korean" },
-  { native: "Français", english: "French", code: "fr", file: "voter_guide_french" },
-].map((g) => ({ ...g, url: `${GUIDE_BASE}/${g.file}.pdf` }));
 ---
 
 <Base
-  title="How to vote"
-  description="Which North Vancouver municipality you vote in, when and where to vote, and what ID to bring for October 17, 2026."
+  title="How the vote worked"
+  description="How the October 17, 2026 North Vancouver election worked: two municipalities, two ballots, how many people each voter could choose, and where the official results are."
 >
-  <h1>How to vote on October 17</h1>
+  <h1>How the October 17 vote worked</h1>
   <p class="lede">
-    North Vancouver is two separate municipalities with two separate ballots.
-    Work out which one you're in first. Everything else follows from that.
+    North Vancouver is two separate municipalities, and each held its own
+    election with its own ballot. Voting closed at 8:00 p.m. on Saturday,
+    October 17, 2026, and{" "}<a href="/#results">both have declared their
+    official results</a>.
   </p>
 
-  <div class="notice">
-    <p>
-      <strong>Voting has closed.</strong> The election was on Saturday, October
-      17, 2026, and{" "}<a href="/#results">both municipalities have declared
-      their official results</a>. The rest of this page is kept as it was before
-      the election.
-    </p>
-  </div>
-
-  <h2>The names on the ballot are final</h2>
+  <h2>Two municipalities, two ballots</h2>
   <p>
-    Candidates had until 4:00 p.m. on September 18 to withdraw their nomination.
-    That deadline is set in provincial law and it passed weeks ago, so the list
-    cannot change now. Every name on this site is a name you will see on your
-    ballot paper.
-  </p>
-  <p>
-    This matters because people do stop campaigning, and word gets around that
-    someone has dropped out. Quietly giving up is not the same as withdrawing
-    before the deadline. If you hear that a candidate is no longer running,
-    check the
-    <a href="https://www.cnv.org/City-Hall/General-Local-Election/2026-General-Local-Election/Candidate-Profiles" target="_blank" rel="noopener">City's own list</a>{" "}
-    or the{" "}
-    <a href="https://www.dnv.org/government-administration/see-who-is-running" target="_blank" rel="noopener">District's</a>{" "}
-    rather than taking my word or anyone else's. Those two pages are the ballot.
-  </p>
-
-  <h2>Which one am I in?</h2>
-  <p>
-    They're genuinely different local governments, each with its own mayor and
-    council. You vote in exactly one: whichever you live in, or if you own
-    property here without living here, whichever the property is in.
+    The City and the District are different local governments, each with its
+    own mayor and council. Each voter voted in exactly one: whichever they lived
+    in, or, for someone who owned property here without living here, whichever
+    the property was in.
   </p>
   <ul>
     <li>
@@ -80,140 +43,89 @@ const GUIDES = [
     </li>
   </ul>
   <p>
-    Not sure? Your property tax or utility bill names the municipality that
-    issued it. Or call either election office and they'll tell you in a minute.
-    I deliberately don't guess this from your address, because sending you to
-    the wrong ballot would be worse than asking you to check.
+    Not sure which council represents you? Your property tax or utility bill
+    names the municipality that issued it.
   </p>
 
-  <h2>What to bring</h2>
+  <h2>How the ballot worked</h2>
   <p>
-    <strong>Two pieces of ID</strong>, at least one with your signature, together
-    proving your name and address. A BC driver's licence, BC Services
-    Card, passport, utility bill, property tax notice, credit or debit card, or
-    student ID all count. If neither shows your address you can make a solemn
-    declaration at the voting place. You don't need to register in advance;
-    you can do it when you vote.
+    Each voter could mark as many names as there were seats, not one. Council
+    elected six, so voters could mark up to six names, and the six with the most
+    votes won. Marking fewer was allowed. Marking more than the number of seats
+    meant that part of the ballot could not be counted.
+  </p>
+  <p>
+    School trustees for School District 44 were elected by voters in both
+    municipalities, but on separate ballots with different candidates.
   </p>
 
-  <h2>Reading this in another language</h2>
+  <h2>What was on each ballot</h2>
+  <div class="grid grid-2" style="margin-top:12px">
+    {munis.map((m) => {
+      const src = RESULTS_SOURCES[m];
+      return (
+        <div class="card">
+          <h3 style="margin-top:0">{src.name}</h3>
+          <ul style="margin:0; padding-left:18px">
+            {allRaces.filter((r) => r.municipality === m).map((r) => (
+              <li style="margin-bottom:6px">
+                <a href={`/candidates/#${r.key}`}>{r.label.split(" — ")[1]}</a>:
+                {" "}{r.candidates.length} ran for {r.seats === 1 ? "1 seat" : `${r.seats} seats`}.
+                {" "}<span class="candidate-meta">
+                  Elected: {electedIn(r.candidates).map((c) => c.name).join(", ")}.
+                </span>
+              </li>
+            ))}
+          </ul>
+          <p class="candidate-meta" style="margin:10px 0 0">
+            Source:{" "}<a href={src.url} target="_blank" rel="noopener">{src.label}</a>,
+            declared {src.declared}.
+          </p>
+        </div>
+      );
+    })}
+  </div>
+
+  <h2 style="margin-top:38px">When and where people voted</h2>
   <p>
-    The provincial guide to local elections comes in seven languages, and the
-    City hosts all of them. It covers who is allowed to vote, what counts as
-    ID, and how the ballot works. It is the same guide for the District, even
-    though it sits on the City's website.
-  </p>
-  <ul class="lang-grid">
-    {GUIDES.map((g) => (
-      <li>
-        <a href={g.url} target="_blank" rel="noopener">
-          <span class="lang-native" lang={g.code}>{g.native}</span>
-          {g.native !== g.english && <span class="lang-en">{g.english}</span>}
-        </a>
-      </li>
-    ))}
-  </ul>
-  <p class="candidate-meta">
-    What it doesn't have is North Vancouver's own dates and addresses. Those
-    are below, in English only, and they're the part that decides whether
-    someone gets to vote on Saturday. If you're helping a neighbour or a
-    parent through it, that's the list to go through together.
+    Kept as a record. These are the dates and places each municipality
+    published before the election.
   </p>
 
   {munis.map((key) => {
     const m = VOTING[key];
     return (
-      <section style="margin-top:36px">
-        <div class="race-heading"><h2>{m.name}</h2></div>
+      <details class="silent" style="margin-top:12px">
+        <summary>{m.name}: advance voting and general voting day</summary>
 
-        <h3 style="margin-top:18px">Advance voting</h3>
-        <div class="grid grid-2">
+        <h3 style="margin-top:14px">Advance voting</h3>
+        <ul style="padding-left:18px; font-size:0.92rem">
           {m.advance.map((day) => (
-            <div class="card">
-              <strong>{day.date}</strong>
-              <div class="candidate-meta">{day.hours}</div>
-              <ul style="margin:8px 0 0; padding-left:18px; font-size:0.9rem">
-                {day.places.map((p) => (
-                  <li>{p.name}<br /><span style="color:var(--text-faint)">{p.address}</span></li>
-                ))}
-              </ul>
-            </div>
+            <li style="margin-bottom:5px">
+              <strong>{day.date}</strong>, {day.hours}:{" "}
+              {day.places.map((p) => `${p.name}, ${p.address}`).join("; ")}
+            </li>
           ))}
-        </div>
+        </ul>
 
-        <h3 style="margin-top:22px">General voting day — Saturday, October 17</h3>
-        <p class="candidate-meta">Open {m.generalDay.hours}. You may vote at any of these places.</p>
-        <ul style="columns:2; column-gap:30px; font-size:0.92rem; padding-left:18px">
+        <h3 style="margin-top:14px">General voting day, Saturday, October 17</h3>
+        <p class="candidate-meta">Open {m.generalDay.hours}, at any of these places.</p>
+        <ul class="voting-places">
           {m.generalDay.places.map((p) => (
-            <li style="break-inside:avoid; margin-bottom:5px">
+            <li>
               {p.name}<br />
               <span style="color:var(--text-faint)">{p.address}</span>
-              {p.note === "curbside" && <span class="tag" style="margin-left:5px">curbside</span>}
             </li>
           ))}
         </ul>
 
         {m.special && <p class="candidate-meta">{m.special}</p>}
-        {m.extras.map((e) => <p class="candidate-meta">{e}</p>)}
 
         <p style="font-size:0.85rem; color:var(--text-faint)">
-          Source: <a href={m.source} target="_blank" rel="noopener">{m.name} election page</a> ·
-          {" "}Elections office {m.contact.phone},
-          {" "}<a href={`mailto:${m.contact.email}`}>{m.contact.email}</a>
+          Source:{" "}<a href={m.source} target="_blank" rel="noopener">{m.name} election page</a>,
+          last checked {formatDate(VERIFIED)}.
         </p>
-      </section>
+      </details>
     );
   })}
-
-  <h2 style="margin-top:38px">How the ballot actually works</h2>
-  <p>
-    This trips up almost everyone, so plainly: <strong>you vote for as many
-    people as there are seats, not one.</strong> Council elects six, so you may
-    mark up to six names. Not one, and not a ranking. Every name you mark counts
-    as a full vote for that person, and the six with the most votes win.
-  </p>
-  <p>
-    You can mark fewer than six if you only want to support two or three. That's
-    completely valid, and some people do it deliberately: every extra name you
-    mark is a vote helping someone beat the candidates you actually want.
-  </p>
-  <div class="notice">
-    <p>
-      <strong>Don't mark more than the number of seats.</strong> Mark seven names
-      for council and that part of your ballot can't be counted. Your mayor and
-      school trustee choices are a separate contest on the same ballot and still
-      count, but the council votes are lost. If you're unsure at the voting place,
-      ask — that's what the election officials are there for.
-    </p>
-  </div>
-  <p class="candidate-meta">
-    If you'd like to work out your picks before you go, the
-    <a href="/shortlist/">ballot list</a> counts them for you and warns you if
-    you've starred too many in a race.
-  </p>
-
-  <h2 style="margin-top:38px">What's on your ballot</h2>
-  <ul class="linklist">
-    {allRaces.map((r) => (
-      <li>
-        <a class="tag" href={`/candidates/#${r.key}`} style="text-decoration:none">
-          {r.label} — choose {r.seats} of {r.candidates.length}
-        </a>
-      </li>
-    ))}
-  </ul>
-  <p class="candidate-meta" style="margin-top:10px">
-    School trustees for School District 44 are elected by voters in both
-    municipalities, but on separate ballots with different candidates.
-  </p>
-
-  <div class="notice" style="margin-top:28px">
-    <p>
-      I transcribed these dates, hours and locations from the two municipal
-      websites and last checked them on {formatDate(VERIFIED)}. They're the ones
-      that matter on the day, so if anything here disagrees with the official
-      page, believe the official page and{" "}
-      <a href="/methodology/#corrections">tell me</a>.
-    </p>
-  </div>
 </Base>

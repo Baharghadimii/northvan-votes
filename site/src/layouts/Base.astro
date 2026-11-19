@@ -30,7 +30,7 @@ const nav = [
   { href: "/compare/", label: "Compare" },
   { href: "/search/", label: "Search" },
   { href: "/meetings/", label: "Meetings" },
-  { href: "/how-to-vote/", label: "How to vote" },
+  { href: "/how-to-vote/", label: "How it worked" },
   { href: "/methodology/", label: "Methodology" },
 ];
 ---
@@ -111,8 +111,8 @@ const nav = [
 
     {shortlist && (
       <div class="shortlist-bar" id="shortlist-bar" hidden>
-        <span><strong id="shortlist-count">0 candidates</strong> on your ballot list</span>
-        <a href="/shortlist/">View and print</a>
+        <span><strong id="shortlist-count">0 candidates</strong> starred</span>
+        <a href="/shortlist/">View your list</a>
       </div>
     )}
 
@@ -287,7 +287,7 @@ const nav = [
             document.querySelectorAll("[data-star]").forEach(function (b) {
               var on = picked.indexOf(b.dataset.star) !== -1;
               b.setAttribute("aria-pressed", on ? "true" : "false");
-              b.title = on ? "Remove from your ballot list" : "Add to your ballot list";
+              b.title = on ? "Remove from your starred list" : "Add to your starred list";
               b.querySelector("span").textContent = on ? "\u2605" : "\u2606";
             });
             var bar = document.getElementById("shortlist-bar");
@@ -305,7 +305,7 @@ const nav = [
             btn.type = "button";
             btn.className = "star";
             btn.dataset.star = id;
-            btn.setAttribute("aria-label", "Add " + name + " to your ballot list");
+            btn.setAttribute("aria-label", "Add " + name + " to your starred list");
             btn.innerHTML = "<span aria-hidden=\"true\">\u2606</span>";
             btn.addEventListener("click", function () {
               var i = picked.indexOf(id);
