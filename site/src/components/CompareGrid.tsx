@@ -4,6 +4,7 @@ export interface CompareCandidate {
   id: string;
   name: string;
   incumbent: boolean;
+  elected: boolean;
   race: string;
   sortkey: string;
   hasStatement: boolean;
@@ -122,6 +123,7 @@ export default function CompareGrid({ candidates, racesList, categories }: Props
               onClick={() => toggle(c.id)}
             >
               {c.name}
+              {c.elected && <em> · elected</em>}
               {c.incumbent && <em> · incumbent</em>}
               {!c.hasStatement && <em> · no statement</em>}
             </button>
@@ -160,6 +162,7 @@ export default function CompareGrid({ candidates, racesList, categories }: Props
                 {chosen.map((c) => (
                   <th scope="col" key={c.id}>
                     <a href={`/candidates/${c.id}/`}>{c.name}</a>
+                    {c.elected && <span className="tag tag-elected">Elected</span>}
                     {c.incumbent && <span className="tag tag-incumbent">Incumbent</span>}
                   </th>
                 ))}

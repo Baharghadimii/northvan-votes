@@ -498,6 +498,58 @@ button.star[aria-pressed="true"] { color: #c99a2e; }
   .ballot-race { break-inside: avoid; }
 }
 
+/* ---------- results ---------- */
+
+.results-strip { display: flex; flex-wrap: wrap; gap: 0 10px; align-items: baseline; }
+.results-strip a { color: var(--accent-text); font-weight: 650; }
+.results-strip-sub { opacity: 0.75; }
+@media (max-width: 620px) { .results-strip-sub { display: none; } }
+
+.results {
+  display: grid; gap: 16px; margin: 22px 0 8px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
+}
+.results-muni {
+  background: var(--surface); border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius); padding: 16px 20px 14px;
+  box-shadow: var(--shadow);
+}
+.results-muni h2 { font-size: 1.15rem; margin: 0 0 4px; }
+.results-race { margin-top: 12px; }
+.results-race h3 {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px;
+  font-family: var(--font); font-size: 0.8rem; letter-spacing: 0.05em;
+  text-transform: uppercase; color: var(--text-muted); margin: 0 0 4px;
+}
+.results-race h3 span {
+  letter-spacing: 0; text-transform: none; font-weight: 400; color: var(--text-faint);
+}
+.results-race ul { list-style: none; margin: 0; padding: 0; }
+.results-race li {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
+  padding: 5px 0; border-bottom: 1px solid var(--border);
+}
+.results-race li:last-child { border-bottom: 0; }
+.results-race li a { font-weight: 600; }
+.results-votes {
+  color: var(--text-muted); font-size: 0.88rem;
+  font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+.results-source { margin: 12px 0 0; font-size: 0.84rem; color: var(--text-muted); }
+.results-note { font-size: 0.85rem; color: var(--text-faint); margin: 6px 0 0; }
+
+.tag-elected {
+  background: var(--accent); color: #fff;
+  border-color: transparent; font-weight: 650;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .tag-elected { color: #10201d; }
+}
+
+.result-line { margin: 10px 0 0; font-size: 0.92rem; color: var(--text-muted); }
+.result-line strong { color: var(--text); }
+
 /* ---------- countdown ---------- */
 
 .countdown-inline { display: flex; flex-wrap: wrap; gap: 0 6px; align-items: baseline; }

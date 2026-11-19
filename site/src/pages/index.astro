@@ -1,8 +1,8 @@
 ---
 import Base from "~/layouts/Base.astro";
-import Countdown from "~/components/Countdown.astro";
 import FaceWall from "~/components/FaceWall.astro";
-import { categoriesByCoverage, candidates, races, flashpoints } from "~/lib/data";
+import { categoriesByCoverage, candidates, races, flashpoints, OFFICES } from "~/lib/data";
+import { RESULTS_SOURCES, electedIn, resultFor, formatVotes } from "~/lib/results";
 
 const cats = categoriesByCoverage();
 const withStatement = candidates.filter((c) => c.sources.length > 0).length;
@@ -12,31 +12,77 @@ const allRaces = races();
 
 <Base
   title="North Van Votes"
-  description="What all 59 candidates in the October 17 North Vancouver election have actually said, sorted by issue. Their words, with links to the source."
+  description="Who was elected in the October 17, 2026 North Vancouver election, with links to the official results, and what all 59 candidates said beforehand, sorted by issue."
   ownCountdown
 >
-  <h1>59 people want your vote on October 17.</h1>
+  <h1>Who was elected on October 17.</h1>
   <p class="lede">
+    The City and the District of North Vancouver have each declared their
+    official results. Here is who was elected to each office, with a link to
+    the official count. Everything else on this site is what all 59 candidates
+    said before the election, kept exactly as it was.
+  </p>
+
+  <section id="results" class="results" aria-label="Official results">
+    {(["cnv", "dnv"] as const).map((m) => {
+      const src = RESULTS_SOURCES[m];
+      return (
+        <div class="results-muni">
+          <h2>{src.name}</h2>
+          {allRaces.filter((r) => r.municipality === m).map((r) => (
+            <div class="results-race">
+              <h3>
+                {r.office === "council" ? "Councillors" : r.office === "trustee" ? "School trustees" : OFFICES[r.office]}
+                <span>{r.seats === 1 ? "1 elected" : `${r.seats} elected`} of {r.candidates.length}</span>
+              </h3>
+              <ul>
+                {electedIn(r.candidates).map((c) => (
+                  <li>
+                    <a href={`/candidates/${c.id}/`}>{c.name}</a>
+                    <span class="results-votes">{formatVotes(resultFor(c).votes)}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+          <p class="results-source">
+            Source:{" "}<a href={src.url} target="_blank" rel="noopener">{src.label}</a>,
+            declared {src.declared}.
+            {src.declarationUrl && (
+              <>
+                {" "}<a href={src.declarationUrl} target="_blank" rel="noopener">Signed declaration (PDF)</a>.
+              </>
+            )}
+          </p>
+        </div>
+      );
+    })}
+  </section>
+  <p class="results-note">
+    Listed by votes received. Every candidate's page, elected or not, shows
+    their official vote count.
+  </p>
+
+  <h2 style="margin-top:40px">What the candidates said before the election</h2>
+  <p style="color:var(--text-muted); font-size:0.94rem; max-width:44rem">
     I couldn't find a straight answer on where any of them stood, so I built
     this. Pick something you care about. Traffic, housing, schools. Then read
-    what each candidate actually said about it. Their words, not mine, with a
-    link to where they said it.
+    what each candidate said about it. Their words, not mine, with a link to
+    where they said it.
   </p>
 
   <FaceWall />
   <p class="facewall-caption">
-    All 59 of them. Hover a face, or{" "}<a href="/candidates/">see the whole list</a>.
+    All 59 who ran. Hover a face, or{" "}<a href="/candidates/">see the whole list</a>.
   </p>
 
-  <Countdown variant="hero" />
-
   <div class="stat-row">
-    <div class="stat"><b>{candidates.length}</b><span>running across two municipalities</span></div>
+    <div class="stat"><b>{candidates.length}</b><span>ran across two municipalities</span></div>
     <div class="stat"><b>{withStatement}</b><span>filed a written statement</span></div>
     <div class="stat"><b>{tagged}</b><span>said something I could quote</span></div>
   </div>
 
-  <h2 id="issues" style="margin-top:32px">What are they actually talking about?</h2>
+  <h2 id="issues" style="margin-top:32px">What were they talking about?</h2>
   <p style="color:var(--text-muted); font-size:0.94rem; max-width:44rem">
     The number under each topic is how many of the 59 I found saying something
     about it. A low number means most of them didn't write about it. It doesn't
@@ -94,26 +140,16 @@ const allRaces = races();
     have no campaign site.
   </p>
 
-  <h2 style="margin-top:44px">Or start with your ballot</h2>
-  <p style="color:var(--text-muted); font-size:0.94rem">
-    You only vote in one of the two, and plenty of people here aren't sure
-    which. <a href="/how-to-vote/">The voting page sorts that out.</a>
-  </p>
+  <h2 style="margin-top:44px">Or start with a race</h2>
   <ul class="linklist" style="margin-top:12px">
     {allRaces.map((r) => (
       <li>
         <a class="tag" href={`/candidates/#${r.key}`} style="text-decoration:none">
-          {r.label} — {r.candidates.length} running, {r.seats} elected
+          {r.label} — {r.candidates.length} ran, {r.seats} elected
         </a>
       </li>
     ))}
   </ul>
-  <p style="margin-top:14px; color:var(--text-muted); font-size:0.94rem">
-    As you read, hit the ☆ next to anyone you'd vote for. That builds{" "}
-    <a href="/shortlist/">a list you can print or keep open on your phone</a>{" "}
-    when you go. You're picking six councillors, which is a lot to hold in your
-    head.
-  </p>
 
   <div class="notice" style="margin-top:36px">
     <p>

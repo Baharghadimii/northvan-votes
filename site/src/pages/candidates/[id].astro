@@ -6,6 +6,7 @@ import {
   candidates, categories, backgroundKinds, MUNICIPALITIES, OFFICES, SEATS,
   formatDate, UNREADABLE_SITES, type Candidate,
 } from "~/lib/data";
+import { RESULTS_SOURCES, resultFor, formatVotes } from "~/lib/results";
 
 export function getStaticPaths() {
   return candidates.map((c) => ({ params: { id: c.id }, props: { candidate: c } }));
@@ -34,6 +35,8 @@ const byBackground = backgroundKinds
   .filter((g) => g.entries.length > 0);
 
 const seats = SEATS[`${candidate.municipality}-${candidate.office}`];
+const result = resultFor(candidate);
+const resultsSource = RESULTS_SOURCES[candidate.municipality];
 const statement = candidate.sources.find((s) => s.type === "official_statement");
 const socialOrder = ["website", "facebook_campaign", "facebook", "instagram", "twitter", "linkedin", "youtube", "bluesky", "threads", "tiktok"];
 const socials = Object.entries(candidate.socials).sort(
@@ -58,15 +61,22 @@ const SOCIAL_LABELS: Record<string, string> = {
       <h1 style="margin-bottom:2px">{candidate.name}</h1>
       <p style="margin:0; color:var(--text-muted)">
         {OFFICES[candidate.office]} candidate · {MUNICIPALITIES[candidate.municipality]}
+        {result.elected && <span class="tag tag-elected" style="margin-left:8px">Elected</span>}
         {candidate.incumbent && <span class="tag tag-incumbent" style="margin-left:8px">Incumbent</span>}
       </p>
     </div>
   </div>
 
+  <p class="result-line">
+    {result.elected
+      ? <><strong>Elected</strong> on October 17, 2026 with {formatVotes(result.votes)}.</>
+      : <>Received {formatVotes(result.votes)} on October 17, 2026. Not elected.</>}
+    {" "}{seats === 1 ? "One seat" : `${seats} seats`} for this office.{" "}
+    <a href={resultsSource.url} target="_blank" rel="noopener">Official results</a>
+  </p>
   <p style="color:var(--text-faint); font-size:0.88rem">
-    {seats === 1
-      ? "One is elected to this office."
-      : `${seats} are elected to this office.`}
+    Everything below is what they said before the election, kept exactly as it
+    was published.
   </p>
 
   <ul class="linklist" style="margin:16px 0 24px">

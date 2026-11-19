@@ -1,0 +1,297 @@
+{
+  "cnv-council-bell-don": {
+    "official_name": "Don BELL",
+    "votes": 5935,
+    "elected": true
+  },
+  "cnv-council-valente-tony": {
+    "official_name": "Tony VALENTE",
+    "votes": 5881,
+    "elected": true
+  },
+  "cnv-council-girard-angela": {
+    "official_name": "Angela GIRARD",
+    "votes": 5382,
+    "elected": true
+  },
+  "cnv-council-robertson-andrew": {
+    "official_name": "Andrew ROBERTSON",
+    "votes": 5192,
+    "elected": true
+  },
+  "cnv-council-shahriari-shervin": {
+    "official_name": "Shervin SHAHRIARI",
+    "votes": 5172,
+    "elected": true
+  },
+  "cnv-council-back-holly": {
+    "official_name": "Holly BACK",
+    "votes": 4452,
+    "elected": true
+  },
+  "cnv-council-heywood-guy": {
+    "official_name": "Guy HEYWOOD",
+    "votes": 4419,
+    "elected": false
+  },
+  "cnv-council-cato-jeremy": {
+    "official_name": "Jeremy CATO",
+    "votes": 4362,
+    "elected": false
+  },
+  "cnv-council-raisinghani-krishna": {
+    "official_name": "Krishna RAISINGHANI",
+    "votes": 4320,
+    "elected": false
+  },
+  "cnv-council-mcilroy-jessica": {
+    "official_name": "Jessica MCILROY",
+    "votes": 4270,
+    "elected": false
+  },
+  "cnv-council-bentz-tammy": {
+    "official_name": "Tammy BENTZ",
+    "votes": 3434,
+    "elected": false
+  },
+  "cnv-council-izatt-ken": {
+    "official_name": "Ken IZATT",
+    "votes": 3378,
+    "elected": false
+  },
+  "cnv-council-boltenko-anna": {
+    "official_name": "Anna BOLTENKO",
+    "votes": 3085,
+    "elected": false
+  },
+  "cnv-council-alexander-sean": {
+    "official_name": "Sean ALEXANDER",
+    "votes": 2344,
+    "elected": false
+  },
+  "cnv-council-tumaneng-lailani": {
+    "official_name": "Lailani TUMANENG",
+    "votes": 2162,
+    "elected": false
+  },
+  "cnv-council-kolstee-jullian": {
+    "official_name": "Jullian KOLSTEE",
+    "votes": 1493,
+    "elected": false
+  },
+  "cnv-council-lai-max": {
+    "official_name": "Max LAI",
+    "votes": 1296,
+    "elected": false
+  },
+  "cnv-council-brun-david": {
+    "official_name": "David BRUN",
+    "votes": 997,
+    "elected": false
+  },
+  "cnv-mayor-buchanan-linda": {
+    "official_name": "Linda BUCHANAN",
+    "votes": 6056,
+    "elected": true
+  },
+  "cnv-mayor-mcgraw-mike": {
+    "official_name": "Mike MCGRAW",
+    "votes": 5163,
+    "elected": false
+  },
+  "cnv-mayor-kurvers-dave": {
+    "official_name": "Dave KURVERS",
+    "votes": 1602,
+    "elected": false
+  },
+  "cnv-mayor-king-oliver": {
+    "official_name": "Oliver KING",
+    "votes": 258,
+    "elected": false
+  },
+  "cnv-trustee-wilson-antje": {
+    "official_name": "Antje WILSON",
+    "votes": 7274,
+    "elected": true
+  },
+  "cnv-trustee-neufeld-trish": {
+    "official_name": "Trish NEUFELD",
+    "votes": 6416,
+    "elected": true
+  },
+  "cnv-trustee-hung-peggy": {
+    "official_name": "Peggy HUNG",
+    "votes": 5704,
+    "elected": true
+  },
+  "cnv-trustee-purugganan-ethel": {
+    "official_name": "Ethel PURUGGANAN",
+    "votes": 2603,
+    "elected": false
+  },
+  "cnv-trustee-azizi-manoochehr": {
+    "official_name": "Manoochehr AZIZI",
+    "votes": 2539,
+    "elected": false
+  },
+  "cnv-trustee-navales-senora": {
+    "official_name": "Senora NAVALES",
+    "votes": 2077,
+    "elected": false
+  },
+  "dnv-council-pope-catherine": {
+    "official_name": "POPE, Catherine",
+    "votes": 10433,
+    "elected": true
+  },
+  "dnv-council-muri-lisa": {
+    "official_name": "MURI, Lisa",
+    "votes": 10008,
+    "elected": true
+  },
+  "dnv-council-back-jordan": {
+    "official_name": "BACK, Jordan",
+    "votes": 9643,
+    "elected": true
+  },
+  "dnv-council-hanson-jim": {
+    "official_name": "HANSON, Jim",
+    "votes": 8758,
+    "elected": true
+  },
+  "dnv-council-bond-mathew": {
+    "official_name": "BOND, Mathew",
+    "votes": 8378,
+    "elected": true
+  },
+  "dnv-council-anderson-daniel": {
+    "official_name": "ANDERSON, Daniel",
+    "votes": 8233,
+    "elected": true
+  },
+  "dnv-council-munro-linda": {
+    "official_name": "MUNRO, Linda",
+    "votes": 8139,
+    "elected": false
+  },
+  "dnv-council-bell-trey": {
+    "official_name": "BELL, Trey",
+    "votes": 7151,
+    "elected": false
+  },
+  "dnv-council-mah-herman": {
+    "official_name": "MAH, Herman",
+    "votes": 6501,
+    "elected": false
+  },
+  "dnv-council-mann-kulvir": {
+    "official_name": "MANN, Kulvir",
+    "votes": 6427,
+    "elected": false
+  },
+  "dnv-council-kyle-aidan": {
+    "official_name": "KYLE, Aidan",
+    "votes": 5538,
+    "elected": false
+  },
+  "dnv-council-forbes-betty": {
+    "official_name": "FORBES, Betty",
+    "votes": 4142,
+    "elected": false
+  },
+  "dnv-council-wilson-stephanie": {
+    "official_name": "WILSON, Stephanie",
+    "votes": 3966,
+    "elected": false
+  },
+  "dnv-council-nwabuisi-victoria": {
+    "official_name": "NWABUISI, Victoria",
+    "votes": 3515,
+    "elected": false
+  },
+  "dnv-council-boyd-daina": {
+    "official_name": "BOYD, Daina",
+    "votes": 2492,
+    "elected": false
+  },
+  "dnv-mayor-little-mike": {
+    "official_name": "LITTLE, Mike",
+    "votes": 10431,
+    "elected": true
+  },
+  "dnv-mayor-nieweler-stephan": {
+    "official_name": "NIEWELER, Stephan",
+    "votes": 6145,
+    "elected": false
+  },
+  "dnv-mayor-zahedi-max": {
+    "official_name": "ZAHEDI, Max",
+    "votes": 1934,
+    "elected": false
+  },
+  "dnv-mayor-alexander-graham": {
+    "official_name": "ALEXANDER, Graham",
+    "votes": 1583,
+    "elected": false
+  },
+  "dnv-mayor-pucci-paolo": {
+    "official_name": "PUCCI, Paolo",
+    "votes": 196,
+    "elected": false
+  },
+  "dnv-trustee-tsiakos-george": {
+    "official_name": "TSIAKOS, George",
+    "votes": 9468,
+    "elected": true
+  },
+  "dnv-trustee-haines-rob": {
+    "official_name": "HAINES, Rob",
+    "votes": 7265,
+    "elected": true
+  },
+  "dnv-trustee-gerlach-cyndi": {
+    "official_name": "GERLACH, Cyndi",
+    "votes": 7163,
+    "elected": true
+  },
+  "dnv-trustee-branston-jennifer": {
+    "official_name": "BRANSTON, Jennifer",
+    "votes": 6290,
+    "elected": true
+  },
+  "dnv-trustee-boehm-mike": {
+    "official_name": "BOEHM, Mike",
+    "votes": 5311,
+    "elected": false
+  },
+  "dnv-trustee-rinfret-ainslie": {
+    "official_name": "RINFRET, Ainslie",
+    "votes": 4904,
+    "elected": false
+  },
+  "dnv-trustee-khan-raheela": {
+    "official_name": "KHAN, Raheela",
+    "votes": 4752,
+    "elected": false
+  },
+  "dnv-trustee-nickerson-laura": {
+    "official_name": "NICKERSON, Laura",
+    "votes": 3720,
+    "elected": false
+  },
+  "dnv-trustee-charrois-michael": {
+    "official_name": "CHARROIS, Michael",
+    "votes": 3130,
+    "elected": false
+  },
+  "dnv-trustee-north-layne": {
+    "official_name": "NORTH, Layne",
+    "votes": 2031,
+    "elected": false
+  },
+  "dnv-trustee-perfecto-raphael": {
+    "official_name": "PERFECTO, Raphael",
+    "votes": 1475,
+    "elected": false
+  }
+}

@@ -2,6 +2,7 @@
 import type { Candidate } from "~/lib/data";
 import Avatar from "./Avatar.astro";
 import { MUNICIPALITIES_SHORT, OFFICES } from "~/lib/data";
+import { isElected } from "~/lib/results";
 
 interface Props { candidate: Candidate; showRace?: boolean; }
 const { candidate, showRace = false } = Astro.props;
@@ -11,6 +12,7 @@ const { candidate, showRace = false } = Astro.props;
   <div style="min-width:0">
     <div class="candidate-name">
       <a href={`/candidates/${candidate.id}/`}>{candidate.name}</a>
+      {isElected(candidate) && <span class="tag tag-elected" style="margin-left:6px">Elected</span>}
       {candidate.incumbent && <span class="tag tag-incumbent" style="margin-left:6px">Incumbent</span>}
     </div>
     <div class="candidate-meta">

@@ -1,6 +1,5 @@
 ---
 import "~/styles/global.css";
-import Countdown from "~/components/Countdown.astro";
 import Support from "~/components/Support.astro";
 
 interface Props {
@@ -10,8 +9,8 @@ interface Props {
   shuffle?: boolean;
   /** Pages that should offer star-to-shortlist on each candidate. */
   shortlist?: boolean;
-  /** Set by a page that renders its own large countdown, so the thin strip
-   *  at the top is not saying the same thing twice. */
+  /** Set by a page that shows the results itself (the home page), so the
+   *  thin strip at the top is not saying the same thing twice. */
   ownCountdown?: boolean;
   /** Same idea for the coffee button: a page showing the full support block
    *  does not also want the footer line a few centimetres below it. */
@@ -53,7 +52,15 @@ const nav = [
 
     {!ownCountdown && (
       <div class="countdown">
-        <div class="wrap"><Countdown /></div>
+        <div class="wrap results-strip">
+          <span>
+            The October 17, 2026 election is over.{" "}
+            <a href="/#results">See who was elected</a>.
+          </span>
+          <span class="results-strip-sub">
+            Quotes on this site are what candidates said before the election.
+          </span>
+        </div>
       </div>
     )}
 

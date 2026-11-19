@@ -2,6 +2,7 @@
 import Base from "~/layouts/Base.astro";
 import CompareGrid from "~/components/CompareGrid";
 import { candidates, categories, races } from "~/lib/data";
+import { isElected } from "~/lib/results";
 
 // Ship only what the grid needs, not the whole dataset.
 const payload = candidates.map((c) => {
@@ -13,6 +14,7 @@ const payload = candidates.map((c) => {
     id: c.id,
     name: c.name,
     incumbent: c.incumbent,
+    elected: isElected(c),
     race: `${c.municipality}-${c.office}`,
     sortkey: `${c.surname} ${c.name}`,
     hasStatement: c.sources.length > 0,

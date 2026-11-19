@@ -16,8 +16,10 @@ const allRaces = races();
 >
   <h1>All {candidates.length} candidates</h1>
   <p class="lede">
-    You vote in one municipality only, the City or the District, never both.
-    {" "}<a href="/how-to-vote/">Not sure which?</a>
+    Everyone who ran in the City and the District on October 17, 2026. The
+    people elected are marked, and{" "}<a href="/#results">the official results
+    are summarised here</a>. What each of them says on this site is what they
+    said before the election.
   </p>
 
   <div class="name-search">
@@ -57,7 +59,7 @@ const allRaces = races();
     <section id={race.key} class="race-section">
       <div class="race-heading">
         <h2>{race.label}</h2>
-        <span class="seats">{race.candidates.length} running · you elect {race.seats}</span>
+        <span class="seats">{race.candidates.length} ran · {race.seats} elected</span>
       </div>
       <div class="grid grid-2" data-shuffle style="margin-top:14px">
         {seededShuffle(race.candidates, BUILD_SEED + race.key.length).map((c) => {
