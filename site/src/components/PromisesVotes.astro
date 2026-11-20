@@ -1,5 +1,7 @@
 ---
-import Base from "~/layouts/Base.astro";
+/** The Promises and votes overview: status, both councils' member cards and
+ *  how it works. It is the home page; member pages live under
+ *  /promises-and-votes/<id>/. */
 import Avatar from "~/components/Avatar.astro";
 import CityVotesNote from "~/components/CityVotesNote.astro";
 import { MUNICIPALITIES, formatDate, type Municipality } from "~/lib/data";
@@ -10,19 +12,6 @@ import {
 const munis: Municipality[] = ["cnv", "dnv"];
 const count = (m: Municipality) => VOTES.filter((v) => v.municipality === m).length;
 ---
-
-<Base
-  title="Promises and votes"
-  description="What each member of North Vancouver's new City and District councils said during the 2026 campaign, issue by issue, next to how they have voted since taking office."
->
-  <h1>Promises and votes</h1>
-  <p class="lede">
-    For each member of the new City and District councils: what they said
-    during the 2026 campaign, issue by issue, next to how they have voted since
-    taking office. Their words and their votes, each linked to the source.
-    No ratings and no verdicts. What you make of it is up to you.
-  </p>
-
   <div class="notice">
     <p>
       <strong>It's early in the term.</strong> Both councils were sworn in on
@@ -157,4 +146,3 @@ const count = (m: Municipality) => VOTES.filter((v) => v.municipality === m).len
     <a href="mailto:corrections@northvanvotes.ca">corrections@northvanvotes.ca</a>{" "}
     and I'll fix it. <a href="/methodology/">More on how this site is built.</a>
   </p>
-</Base>

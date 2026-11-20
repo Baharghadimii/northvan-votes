@@ -517,7 +517,7 @@ button.star[aria-pressed="true"] { color: #c99a2e; }
   border-radius: var(--radius); padding: 16px 20px 14px;
   box-shadow: var(--shadow);
 }
-.results-muni h2 { font-size: 1.15rem; margin: 0 0 4px; }
+.results-muni-name { font-size: 1.15rem; margin: 0 0 4px; }
 .results-race { margin-top: 12px; }
 .results-race h3 {
   display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px;

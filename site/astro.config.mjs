@@ -8,4 +8,6 @@ export default defineConfig({
   site: "https://northvanvotes.ca",
   build: { inlineStylesheets: "auto" },
   devToolbar: { enabled: false },
+  // Promises and votes became the home page on 2026-11-19; keep old links working.
+  redirects: { "/promises-and-votes": "/" },
 });

@@ -1,0 +1,45 @@
+---
+/** The official 2026 results, both municipalities, with sources. */
+import { races, OFFICES } from "~/lib/data";
+import { RESULTS_SOURCES, electedIn, resultFor, formatVotes } from "~/lib/results";
+const allRaces = races();
+---
+<section id="results" class="results" aria-label="Official results">
+  {(["cnv", "dnv"] as const).map((m) => {
+    const src = RESULTS_SOURCES[m];
+    return (
+      <div class="results-muni">
+        <h3 class="results-muni-name">{src.name}</h3>
+        {allRaces.filter((r) => r.municipality === m).map((r) => (
+          <div class="results-race">
+            <h3>
+              {r.office === "council" ? "Councillors" : r.office === "trustee" ? "School trustees" : OFFICES[r.office]}
+              <span>{r.seats === 1 ? "1 elected" : `${r.seats} elected`} of {r.candidates.length}</span>
+            </h3>
+            <ul>
+              {electedIn(r.candidates).map((c) => (
+                <li>
+                  <a href={`/candidates/${c.id}/`}>{c.name}</a>
+                  <span class="results-votes">{formatVotes(resultFor(c).votes)}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+        <p class="results-source">
+          Source:{" "}<a href={src.url} target="_blank" rel="noopener">{src.label}</a>,
+          declared {src.declared}.
+          {src.declarationUrl && (
+            <>
+              {" "}<a href={src.declarationUrl} target="_blank" rel="noopener">Signed declaration (PDF)</a>.
+            </>
+          )}
+        </p>
+      </div>
+    );
+  })}
+</section>
+<p class="results-note">
+  Listed by votes received. Every candidate's page, elected or not, shows
+  their official vote count.
+</p>

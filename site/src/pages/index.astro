@@ -1,172 +1,30 @@
 ---
 import Base from "~/layouts/Base.astro";
-import FaceWall from "~/components/FaceWall.astro";
-import { categoriesByCoverage, candidates, races, flashpoints, OFFICES } from "~/lib/data";
-import { RESULTS_SOURCES, electedIn, resultFor, formatVotes } from "~/lib/results";
-
-const cats = categoriesByCoverage();
-const withStatement = candidates.filter((c) => c.sources.length > 0).length;
-const tagged = candidates.filter((c) => c.positions.length > 0).length;
-const allRaces = races();
+import ResultsBox from "~/components/ResultsBox.astro";
+import PromisesVotes from "~/components/PromisesVotes.astro";
 ---
 
 <Base
   title="North Van Votes"
-  description="Who was elected in the October 17, 2026 North Vancouver election, with links to the official results, and what all 59 candidates said beforehand, sorted by issue."
+  description="What each member of North Vancouver's new City and District councils said during the 2026 campaign, issue by issue, next to how they have voted since taking office. With the official election results."
   ownCountdown
 >
-  <h1>Who was elected on October 17.</h1>
+  <h1>Promises and votes</h1>
   <p class="lede">
-    The City and the District of North Vancouver have each declared their
-    official results. Here is who was elected to each office, with a link to
-    the official count. Everything else on this site is what all 59 candidates
-    said before the election, kept exactly as it was.
+    For each member of the new City and District councils: what they said
+    during the 2026 campaign, issue by issue, next to how they have voted since
+    taking office. Their words and their votes, each linked to the source.
+    No ratings and no verdicts. What you make of it is up to you.
   </p>
 
-  <section id="results" class="results" aria-label="Official results">
-    {(["cnv", "dnv"] as const).map((m) => {
-      const src = RESULTS_SOURCES[m];
-      return (
-        <div class="results-muni">
-          <h2>{src.name}</h2>
-          {allRaces.filter((r) => r.municipality === m).map((r) => (
-            <div class="results-race">
-              <h3>
-                {r.office === "council" ? "Councillors" : r.office === "trustee" ? "School trustees" : OFFICES[r.office]}
-                <span>{r.seats === 1 ? "1 elected" : `${r.seats} elected`} of {r.candidates.length}</span>
-              </h3>
-              <ul>
-                {electedIn(r.candidates).map((c) => (
-                  <li>
-                    <a href={`/candidates/${c.id}/`}>{c.name}</a>
-                    <span class="results-votes">{formatVotes(resultFor(c).votes)}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-          <p class="results-source">
-            Source:{" "}<a href={src.url} target="_blank" rel="noopener">{src.label}</a>,
-            declared {src.declared}.
-            {src.declarationUrl && (
-              <>
-                {" "}<a href={src.declarationUrl} target="_blank" rel="noopener">Signed declaration (PDF)</a>.
-              </>
-            )}
-          </p>
-        </div>
-      );
-    })}
-  </section>
-  <p class="results-note">
-    Listed by votes received. Every candidate's page, elected or not, shows
-    their official vote count.
+  <h2 style="margin-top:28px">Who was elected on October 17</h2>
+  <ResultsBox />
+
+  <h2 style="margin-top:40px">How they're voting</h2>
+  <PromisesVotes />
+
+  <p class="pv-source" style="margin-top:36px">
+    Looking for what all 59 candidates said before the election?{" "}
+    <a href="/issues/">It's sorted by issue here</a>, unchanged.
   </p>
-
-  <div class="notice" style="margin-top:22px">
-    <p>
-      <strong>New: <a href="/promises-and-votes/">Promises and votes</a>.</strong>{" "}
-      For each member of the new City and District councils, what they said
-      during the campaign next to how they have voted since taking office.
-      It's early in the term, so there are only a few votes so far.
-    </p>
-  </div>
-
-  <h2 style="margin-top:40px">What the candidates said before the election</h2>
-  <p style="color:var(--text-muted); font-size:0.94rem; max-width:44rem">
-    I couldn't find a straight answer on where any of them stood, so I built
-    this. Pick something you care about. Traffic, housing, schools. Then read
-    what each candidate said about it. Their words, not mine, with a link to
-    where they said it.
-  </p>
-
-  <FaceWall />
-  <p class="facewall-caption">
-    All 59 who ran. Hover a face, or{" "}<a href="/candidates/">see the whole list</a>.
-  </p>
-
-  <div class="stat-row">
-    <div class="stat"><b>{candidates.length}</b><span>ran across two municipalities</span></div>
-    <div class="stat"><b>{withStatement}</b><span>filed a written statement</span></div>
-    <div class="stat"><b>{tagged}</b><span>said something I could quote</span></div>
-  </div>
-
-  <h2 id="issues" style="margin-top:32px">What were they talking about?</h2>
-  <p style="color:var(--text-muted); font-size:0.94rem; max-width:44rem">
-    The number under each topic is how many of the 59 I found saying something
-    about it. A low number means most of them didn't write about it. It doesn't
-    mean it isn't worth caring about.
-  </p>
-
-  <div class="grid grid-2 grid-3" style="margin-top:18px">
-    {cats.map((c) => (
-      <a class="card issue-card" href={`/issues/${c.id}/`} style={`--cat-hue:${c.hue}`}>
-        <h3>{c.label}</h3>
-        <p>{c.description}</p>
-        <div class="count">
-          {c.count === 0
-            ? "No candidate has addressed this"
-            : `${c.count} of ${candidates.length} candidates`}
-        </div>
-      </a>
-    ))}
-  </div>
-
-  <h2 style="margin-top:44px">The specific fights</h2>
-  <p style="color:var(--text-muted); font-size:0.94rem; max-width:44rem">
-    Named things people here actually argue about, rather than broad topics.
-    These pick up candidates who used the words.
-  </p>
-  <ul class="linklist" style="margin-top:14px">
-    {flashpoints.map((f) => {
-      const n = candidates.filter((c) =>
-        [...c.positions, ...c.background].some((p) => p.flashpoints.includes(f.id)),
-      ).length;
-      return n > 0 ? (
-        <li>
-          <a class="tag" href={`/flashpoints/${f.id}/`} style="text-decoration:none">
-            {f.label} — {n}
-          </a>
-        </li>
-      ) : null;
-    })}
-  </ul>
-
-  <h2 style="margin-top:44px">Two sets of questions somebody else asked</h2>
-  <p style="color:var(--text-muted); font-size:0.94rem; max-width:44rem">
-    Barely anyone mentions bears in a filed statement, but when North Shore Bear
-    Advocates emailed every mayor and council candidate one question about them,
-    33 of 42 wrote back.{" "}
-    <a href="/bears/">Read what they said.</a>{" "}
-    The North Vancouver Chamber put two questions to the same 42 people, on
-    transportation and on small business, and 28 answered.{" "}
-    <a href="/business-questions/">Read those too.</a>
-  </p>
-  <p style="color:var(--text-muted); font-size:0.94rem; max-width:44rem">
-    Both are quoted from replies rather than from anything the candidates
-    published, so each page explains itself before it starts. Between them they
-    are the only writing on this site from several people who filed nothing and
-    have no campaign site.
-  </p>
-
-  <h2 style="margin-top:44px">Or start with a race</h2>
-  <ul class="linklist" style="margin-top:12px">
-    {allRaces.map((r) => (
-      <li>
-        <a class="tag" href={`/candidates/#${r.key}`} style="text-decoration:none">
-          {r.label} — {r.candidates.length} ran, {r.seats} elected
-        </a>
-      </li>
-    ))}
-  </ul>
-
-  <div class="notice" style="margin-top:36px">
-    <p>
-      <strong>I don't rate anyone.</strong> No scores, no grades, no
-      endorsements, no opinion of mine about who deserves your vote. Everyone
-      gets the same space, every quote is copied word for word, and when someone
-      hasn't talked about a topic I say so rather than guess what they think.
-      <a href="/methodology/">Here's exactly how I built it.</a>
-    </p>
-  </div>
 </Base>
