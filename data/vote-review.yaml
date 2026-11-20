@@ -52,7 +52,7 @@ entries:
     Back: for
   needs_check: []
   checked_against_minutes: false
-  status: pending
+  status: approved
 - vote_id: cnv-R2026-11-02/2
   municipality: cnv
   date: '2026-11-02'
@@ -83,7 +83,7 @@ entries:
     Back: for
   needs_check: []
   checked_against_minutes: false
-  status: pending
+  status: approved
 - vote_id: cnv-R2026-11-16/5
   municipality: cnv
   date: '2026-11-16'
@@ -118,7 +118,7 @@ entries:
     Back: for
   needs_check: []
   checked_against_minutes: false
-  status: pending
+  status: approved
 - vote_id: cnv-R2026-11-16/6
   municipality: cnv
   date: '2026-11-16'
@@ -148,7 +148,7 @@ entries:
     Back: for
   needs_check: []
   checked_against_minutes: false
-  status: pending
+  status: approved
 - vote_id: cnv-R2026-11-16/7
   municipality: cnv
   date: '2026-11-16'
@@ -242,4 +242,4 @@ entries:
     Back: for
   needs_check: []
   checked_against_minutes: false
-  status: pending
+  status: approved
