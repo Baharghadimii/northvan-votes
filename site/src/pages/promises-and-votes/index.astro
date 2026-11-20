@@ -1,0 +1,160 @@
+---
+import Base from "~/layouts/Base.astro";
+import Avatar from "~/components/Avatar.astro";
+import CityVotesNote from "~/components/CityVotesNote.astro";
+import { MUNICIPALITIES, formatDate, type Municipality } from "~/lib/data";
+import {
+  TERM_START, STATUS, membersOf, votesBy, chamberReplies, VOTES,
+} from "~/lib/votes";
+
+const munis: Municipality[] = ["cnv", "dnv"];
+const count = (m: Municipality) => VOTES.filter((v) => v.municipality === m).length;
+---
+
+<Base
+  title="Promises and votes"
+  description="What each member of North Vancouver's new City and District councils said during the 2026 campaign, issue by issue, next to how they have voted since taking office."
+>
+  <h1>Promises and votes</h1>
+  <p class="lede">
+    For each member of the new City and District councils: what they said
+    during the 2026 campaign, issue by issue, next to how they have voted since
+    taking office. Their words and their votes, each linked to the source.
+    No ratings and no verdicts. What you make of it is up to you.
+  </p>
+
+  <div class="notice">
+    <p>
+      <strong>It's early in the term.</strong> Both councils were sworn in on
+      {" "}{formatDate(TERM_START)}, so there are very few votes yet, and most of
+      the first ones are appointments and routine business. This fills in as
+      councils vote and I review each one.
+    </p>
+    <ul class="pv-status">
+      {munis.map((m) => (
+        <li>
+          <strong>{MUNICIPALITIES[m]}:</strong>{" "}
+          {count(m) === 1 ? "1 vote" : `${count(m)} votes`} shown
+          {STATUS[m].awaiting_review > 0 && <>, {STATUS[m].awaiting_review} more waiting for my review</>}.
+          {" "}Last checked {formatDate(STATUS[m].retrieved)}.
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  {munis.map((m) => {
+    const members = membersOf(m);
+    return (
+      <section class="race-section" id={m}>
+        <div class="race-heading">
+          <h2>{MUNICIPALITIES[m]} council</h2>
+          <span class="seats">{members.length} members</span>
+        </div>
+        {m === "cnv" ? (
+          <CityVotesNote />
+        ) : (
+          <p class="pv-source">
+            District votes come from the District's own{" "}
+            <a href={STATUS.dnv.source_page} target="_blank" rel="noopener">Council
+            voting decisions</a>{" "}table, where the District records how each
+            member voted. It is usually updated within about two days of a vote.
+            {count("dnv") === 0 && STATUS.dnv.awaiting_review === 0 && (
+              <>
+                {" "}As of {formatDate(STATUS.dnv.retrieved)} it shows no votes by
+                the new council yet. Its only entry since they took office is an
+                orientation workshop where no motion was put.
+              </>
+            )}
+          </p>
+        )}
+        <div class="grid grid-2" style="margin-top:14px">
+          {members.map((c) => {
+            const said = c.positions.length + chamberReplies(c).length;
+            const voted = votesBy(c).length;
+            return (
+              <div class="card card-link">
+                <div class="candidate-row">
+                  <Avatar candidate={c} />
+                  <div style="min-width:0">
+                    <div class="candidate-name">
+                      <a href={`/promises-and-votes/${c.id}/`}>{c.name}</a>
+                    </div>
+                    <div class="candidate-meta">
+                      {c.office === "mayor" ? "Mayor" : "Councillor"}
+                    </div>
+                    <div class="candidate-meta" style="margin-top:6px">
+                      {said === 1 ? "1 campaign quote" : `${said} campaign quotes`}
+                      {" · "}
+                      {voted === 1 ? "1 vote" : `${voted} votes`}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+    );
+  })}
+
+  <h2 id="how" style="margin-top:48px">How this works</h2>
+
+  <h3>The campaign words</h3>
+  <p>
+    These are the same quotes as everywhere else on this site: what each
+    person published before the election, copied word for word, with a link to
+    where they said it. Where they answered the North Vancouver Chamber's
+    questions on transportation and small business, those answers appear
+    under those two issues too, labelled as replies. Nothing has been added
+    since the election.
+  </p>
+
+  <h3>The votes</h3>
+  <p>
+    Only votes since {formatDate(TERM_START)}, when the new councils took
+    office. The two municipalities publish their votes differently:
+  </p>
+  <ul>
+    <li>
+      <strong>District of North Vancouver:</strong> from the District's{" "}
+      <a href={STATUS.dnv.source_page} target="_blank" rel="noopener">Council
+      voting decisions</a>{" "}table, which records each member's vote. I show
+      what it records, including "absent" and "N/A".
+    </li>
+    <li>
+      <strong>City of North Vancouver:</strong> read from the{" "}
+      <a href={STATUS.cnv.source_page} target="_blank" rel="noopener">council
+      minutes</a>, because the City publishes no vote table. The box above
+      explains how, and what that can and can't tell you.
+    </li>
+  </ul>
+  <p>
+    Purely procedural motions (approving the agenda, adopting minutes,
+    adjourning) are left out. So are decisions made in closed session, unless
+    council later releases them.
+  </p>
+
+  <h3>Matching a vote to an issue</h3>
+  <p>
+    A computer program drafts a suggestion for each vote: which of this site's
+    issues it relates to, if any, and a one-sentence plain-language summary.
+    I then read each vote against its official wording and decide. Nothing
+    appears here until I have. Matching is a judgement, made by a person, and
+    reasonable people could draw some lines differently. A vote listed under
+    an issue means it relates to that issue. It doesn't mean it keeps or
+    breaks anything anyone said.
+  </p>
+  <p>
+    The one-line summaries are mine and are labelled "Our summary". The
+    official wording is one click away on every vote, with links to the
+    minutes and, where there is one, the video.
+  </p>
+
+  <h3>Updates and corrections</h3>
+  <p>
+    I check both councils' records about once a month. If something here is
+    wrong, a vote, a match or a summary, email{" "}
+    <a href="mailto:corrections@northvanvotes.ca">corrections@northvanvotes.ca</a>{" "}
+    and I'll fix it. <a href="/methodology/">More on how this site is built.</a>
+  </p>
+</Base>

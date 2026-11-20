@@ -17,6 +17,9 @@ cd "$(dirname "${BASH_SOURCE[0]}")/.."
 echo "==> Rebuilding the dataset (asserts before it will publish anything)"
 .venv/bin/python -m pipeline.build_dataset
 
+echo "==> Publishing approved Promises-and-votes entries (asserts before it will publish)"
+.venv/bin/python -m pipeline.build_votes
+
 echo "==> Building the site"
 # Astro reports a per-page render failure as [ERROR] but still exits 0 and
 # still writes dist/, so `set -e` alone will not catch it. Deploying that
@@ -36,7 +39,8 @@ fi
 PAGES=$(find site/dist -name "*.html" | wc -l | tr -d " ")
 CANDIDATES=$(find site/dist/candidates -mindepth 1 -maxdepth 1 -type d | wc -l | tr -d " ")
 echo "==> Built ${PAGES} pages, ${CANDIDATES} candidate pages"
-if [ "$PAGES" -lt 70 ] || [ "$CANDIDATES" -lt 59 ]; then
+PV=$(find site/dist/promises-and-votes -name index.html 2>/dev/null | wc -l | tr -d " ")
+if [ "$PAGES" -lt 70 ] || [ "$CANDIDATES" -lt 59 ] || [ "$PV" -lt 15 ]; then
   echo "!! Too few pages built (expected 70+ and 59 candidates). Not uploading." >&2
   exit 1
 fi

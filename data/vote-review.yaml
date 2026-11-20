@@ -1,0 +1,245 @@
+# Promises and votes: the review file. Nothing here publishes until you say so.
+#
+# Each entry is one council vote since the new councils took office, from the
+# District (its own vote table) or the City (read from its minutes).
+# pipeline.draft_vote_matches drafted it; you decide it. For each entry:
+#
+#   1. Read `official_text` (the resolution) and `title`. `minutes` links to
+#      the page of the minutes it comes from.
+#   2. Fix `summary` until it is one plain, neutral sentence about what the
+#      motion did. It publishes as "our summary". No adjectives about the
+#      item, no mention of who voted which way.
+#   3. Set `issues` to the issue ids it belongs under (any of the ids listed
+#      below), or [] if it relates to none. `proposed_issues` is only the draft.
+#   4. City entries only: `votes` is each member's vote AS READ FROM THE
+#      MINUTES (present and not named as opposed = for). If `needs_check`
+#      lists anything, open the minutes, correct `votes` if needed, and set
+#      `checked_against_minutes: true`. An entry with needs_check cannot be
+#      approved without it.
+#   5. Change `status` to `approved`. Leave it `pending` to decide later.
+#      An approved vote with issues: [] still appears in each member's full
+#      list of votes, just not under an issue.
+#
+# Then run: .venv/bin/python -m pipeline.build_votes
+#
+# Issue ids: transportation, housing, taxes-and-spending, development-and-growth, parks-environment-climate, public-safety-emergency, childcare-seniors-services, local-economy, governance-and-transparency, schools-education
+
+entries:
+- vote_id: cnv-R2026-11-02/1
+  municipality: cnv
+  date: '2026-11-02'
+  title: Appointment of Director to the Metro Vancouver Regional District Board of Directors
+  result: Carried
+  minutes: https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/Council-Meeting-Minutes/2026/2026-11-02-INAUGURAL-Council-Meeting-Minutes-November-2-2026.pdf#page=2
+  official_text: THAT the appointment of Mayor Linda Buchanan (Director) and Councillor Angela
+    Girard (Alternate Director) as the City of North Vancouver representatives to the Metro
+    Vancouver Regional District Board of Directors, for the 4-year term of Council, be endorsed.
+  municipality_categories: []
+  category_hints: []
+  proposed_issues: []
+  proposal_reason: This is a routine inaugural-meeting appointment of the City's representatives
+    to the Metro Vancouver board, a procedural item with no policy direction.
+  issues: []
+  summary: Endorsed the mayor as the City's director and a councillor as alternate director
+    on the Metro Vancouver Regional District board for the four-year council term.
+  votes:
+    Buchanan: for
+    Bell: for
+    Valente: for
+    Girard: for
+    Robertson: for
+    Shahriari: for
+    Back: for
+  needs_check: []
+  checked_against_minutes: false
+  status: pending
+- vote_id: cnv-R2026-11-02/2
+  municipality: cnv
+  date: '2026-11-02'
+  title: 2027 Council Appointments to Statutory, Management and Advisory Committees
+  result: Carried
+  minutes: https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/Council-Meeting-Minutes/2026/2026-11-02-INAUGURAL-Council-Meeting-Minutes-November-2-2026.pdf#page=2
+  official_text: 'PURSUANT to the report of the Director, Legislative Services and Corporate
+    Officer, dated October 28, 2026, entitled “2027 Council Appointments to Statutory, Management
+    and Advisory Committees”:
+
+    THAT the 2027 Council Appointments to Statutory, Management and Advisory Committees for
+    November 3, 2026 to December 31, 2027 be endorsed, as presented.'
+  municipality_categories: []
+  category_hints: []
+  proposed_issues: []
+  proposal_reason: This is a routine endorsement of council members' committee appointments
+    at the inaugural meeting, which is procedural and does not bear on any listed issue.
+  issues: []
+  summary: Endorsed the list of councillors' appointments to statutory, management and advisory
+    committees for November 3, 2026 to December 31, 2027.
+  votes:
+    Buchanan: for
+    Bell: for
+    Valente: for
+    Girard: for
+    Robertson: for
+    Shahriari: for
+    Back: for
+  needs_check: []
+  checked_against_minutes: false
+  status: pending
+- vote_id: cnv-R2026-11-16/5
+  municipality: cnv
+  date: '2026-11-16'
+  title: Results of the General Local Election Held in the City of North Vancouver on October
+    17, 2026
+  result: Carried
+  minutes: https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/Council-Meeting-Minutes/2026/2026-11-16-Regular-Council-Meeting-Minutes-November-16-2026.pdf#page=2
+  official_text: 'PURSUANT to the report of the Chief Election Officer, dated October 21,
+    2026, entitled “Results of the General Local Election Held in the City of North Vancouver
+    on October 17, 2026”:
+
+    THAT the Certificate of the Chief Election Officer, dated October 21, 2026, containing
+    the results of the General Local Election (Mayor, Councillors, and School Trustees), held
+    in the City of North Vancouver on October 17, 2026, be received and recorded in full in
+    the Minutes.'
+  municipality_categories: []
+  category_hints: []
+  proposed_issues: []
+  proposal_reason: The motion only received and recorded the Chief Election Officer's certificate
+    of election results, a routine procedural step that does not plainly bear on any listed
+    issue.
+  issues: []
+  summary: Received the Chief Election Officer's certificate of the October 17, 2026 election
+    results for mayor, councillors and school trustees and recorded it in the minutes.
+  votes:
+    Buchanan: for
+    Bell: for
+    Valente: for
+    Girard: for
+    Robertson: for
+    Shahriari: for
+    Back: for
+  needs_check: []
+  checked_against_minutes: false
+  status: pending
+- vote_id: cnv-R2026-11-16/6
+  municipality: cnv
+  date: '2026-11-16'
+  title: Appointment of Auditors for 2026 to 2030
+  result: Carried
+  minutes: https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/Council-Meeting-Minutes/2026/2026-11-16-Regular-Council-Meeting-Minutes-November-16-2026.pdf#page=4
+  official_text: 'PURSUANT to the report of the Chief Financial Officer, dated October 28,
+    2026, entitled “Appointment of Auditors for 2026 to 2030”:
+
+    THAT MNP LLP be appointed as auditors for the City of North Vancouver for the fiscal years
+    2026 to 2030.'
+  municipality_categories: []
+  category_hints: []
+  proposed_issues: []
+  proposal_reason: The motion appointed the City's external auditor for 2026 to 2030, a routine
+    statutory appointment that does not plainly bear on any listed issue.
+  issues: []
+  summary: Appointed MNP LLP as the City of North Vancouver's auditors for the fiscal years
+    2026 to 2030.
+  votes:
+    Buchanan: for
+    Bell: for
+    Valente: for
+    Girard: for
+    Robertson: for
+    Shahriari: for
+    Back: for
+  needs_check: []
+  checked_against_minutes: false
+  status: pending
+- vote_id: cnv-R2026-11-16/7
+  municipality: cnv
+  date: '2026-11-16'
+  title: Service Standards and Public Reporting for Building Permits and Business Licences
+  result: Carried
+  minutes: https://www.cnv.org/-/media/City-of-North-Vancouver/Documents/Council-Meeting-Minutes/2026/2026-11-16-Regular-Council-Meeting-Minutes-November-16-2026.pdf#page=5
+  official_text: 'WHEREAS the City is responsible for regulating building construction and
+    licensing businesses under the Community Charter, and for many residents, builders and
+    business owners, the permitting and licensing process is among their most direct interactions
+    with City Hall;
+
+    WHEREAS timely, predictable and transparent approval processes are essential to providing
+    excellent public service, reducing costs, carrying charges and uncertainty for applicants,
+    and supporting the delivery of housing, commercial space and employment opportunities
+    envisioned in the City''s Official Community Plan;
+
+    WHEREAS clear application requirements, established processing timelines and accessible
+    information about application status can improve the applicant experience, reduce incomplete
+    and repeat submissions, and support greater efficiency and accountability in municipal
+    service delivery;
+
+    WHEREAS municipalities that establish service standards, measure and publicly report on
+    performance, and provide applicants with clear information about the progress of their
+    applications can strengthen transparency, improve service delivery and build public confidence;
+
+    WHEREAS establishing measurable service standards and regularly reporting on performance
+    will better equip Council to assess service levels, identify opportunities for improvement,
+    make informed decisions about staffing, resources and fees, and mitigate the economic
+    and reputational risks associated with unpredictable approval timelines;
+
+    THEREFORE BE IT RESOLVED THAT Council direct staff to report back by the end of the second
+    quarter of 2027 with the following:
+
+    1. Current Processing Times: An assessment of current processing times for building permits
+    and business licences, broken down by application category and type, establishing a baseline
+    that measures both the total elapsed time from application submission to final decision
+    and the time attributable to active City review, applicant responses and external agency
+    requirements;
+
+    2. Proposed Service Standards: Recommended processing time standards for each permit and
+    licence category, expressed in business days, weeks or months, with clear definitions
+    of when processing timelines begin, pause and resume, including a same-day or next-business-day
+    service standard for low-risk business licences and renewals that do not require inspections
+    or referrals;
+
+    3. Clear Application Requirements: Plain-language application requirements for each permit
+    and licence category, supported by accessible checklists and pre-application guidance,
+    to ensure applicants understand what is required before submitting an application and
+    to help reduce incomplete and repeat submissions;
+
+    4. Application Status Transparency: A proposed approach and implementation timeline to
+    enable applicants to track the progress of their applications, including the current stage
+    of review, outstanding requirements and the party responsible for addressing them, and
+    an anticipated completion date, with proactive notification when delays occur;
+
+    5. Public Performance Reporting: A proposed framework and implementation timeline for
+    publicly reporting the City''s performance against established service standards on its
+    website, at least quarterly, including both total elapsed application timelines and City
+    processing times, with delays attributable to applicants or external agencies identified
+    separately, to strengthen transparency, accountability and continuous service improvement;
+
+    6. Regulatory and Process Improvements: Recommended amendments, where necessary, to the
+    Construction Regulation Bylaw, Business Licence Bylaw and applicable fee bylaws, together
+    with measures to streamline processes, reduce incomplete and repeat applications, and
+    support the achievement of established service standards;
+
+    AND THAT, following Council''s adoption of service standards, staff report annually on
+    the City''s performance against those standards, including overall application timelines,
+    the reasons for variances, opportunities for service improvement and recommended adjustments
+    to ensure the standards remain effective, achievable and responsive to community needs.'
+  municipality_categories: []
+  category_hints: []
+  proposed_issues:
+  - development-and-growth
+  - governance-and-transparency
+  proposal_reason: The motion directs staff to set processing-time standards and publicly
+    report performance on building permits and business licences, which bears on permitting
+    speed (development) and on openness and accountability (governance).
+  issues:
+  - development-and-growth
+  - governance-and-transparency
+  summary: Directed staff to report by mid-2027 on building permit and business licence processing
+    times, proposed service standards, application tracking and public performance reporting.
+  votes:
+    Buchanan: for
+    Bell: for
+    Valente: for
+    Girard: for
+    Robertson: for
+    Shahriari: for
+    Back: for
+  needs_check: []
+  checked_against_minutes: false
+  status: pending

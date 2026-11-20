@@ -1,0 +1,81 @@
+# "Promises and votes": what the 2026-2030 councils said during the campaign,
+# next to how each member has voted since taking office.
+#
+# The two municipalities publish their votes very differently, so each has its
+# own fetcher, and both write the same shape of file:
+#
+#   District  pipeline.fetch_dnv_votes   -> data/dnv_votes.json
+#             The District's own Council voting decisions table, with each
+#             member's vote recorded by the District. On at least one new-term
+#             row (2026-11-09) it still listed the old council, so a row is
+#             kept only when every member it names is on the new council.
+#
+#   City      pipeline.fetch_cnv_minutes -> data/cnv_votes.json
+#             The City publishes no vote table. Each member's vote is READ
+#             FROM THE MINUTES: who was present, and who the minutes name as
+#             opposed. Anyone present and not named as opposed is counted as
+#             voting for, which is what "CARRIED UNANIMOUSLY" and the City's
+#             "X opposed." convention mean. Mid-meeting exits are applied in
+#             order. Every result is still a draft until a person approves it.
+
+term_start: "2026-11-02"
+
+municipalities:
+  dnv:
+    source_page: https://www.dnv.org/page/council-voting-decisions
+    api_url: https://app.dnv.org/councilvotepublic/api/item
+    # Inaugural meeting: the District's past-meetings list, 2026-11-02.
+    # Candidate id -> every spelling the District's vote table might use.
+    members:
+      dnv-mayor-little-mike: ["Mike Little"]
+      dnv-council-pope-catherine: ["Catherine Pope"]
+      dnv-council-muri-lisa: ["Lisa Muri"]
+      dnv-council-back-jordan: ["Jordan Back"]
+      dnv-council-hanson-jim: ["Jim Hanson"]
+      dnv-council-bond-mathew: ["Mathew Bond", "Mat Bond", "Matthew Bond"]
+      dnv-council-anderson-daniel: ["Daniel Anderson", "Dan Anderson"]
+
+  cnv:
+    source_page: https://www.cnv.org/City-Hall/Council-Meetings/Council-Agendas,-Minutes-and-Videos
+    # Inaugural meeting: minutes of the Inaugural Council Meeting, 2026-11-02.
+    # Candidate id -> how the minutes refer to them ("Councillor Back",
+    # "Councillor H. Back", "Mayor Buchanan"): the surname is the key.
+    members:
+      cnv-mayor-buchanan-linda: ["Buchanan"]
+      cnv-council-bell-don: ["Bell"]
+      cnv-council-valente-tony: ["Valente"]
+      cnv-council-girard-angela: ["Girard"]
+      cnv-council-robertson-andrew: ["Robertson"]
+      cnv-council-shahriari-shervin: ["Shahriari"]
+      cnv-council-back-holly: ["Back"]
+
+# Starting hints for drafting matches: the District's own category on a vote
+# row, mapped to this site's issue ids. City rows have no category, so the
+# model draft (or a person) does all of it. A hint is only ever a draft.
+category_hints:
+  Development: [development-and-growth]
+  OCP: [development-and-growth]
+  Building: [development-and-growth]
+  Housing: [housing]
+  Finance: [taxes-and-spending]
+  Budget: [taxes-and-spending]
+  Transportation: [transportation]
+  Engineering: [transportation]
+  Parks: [parks-environment-climate]
+  Environment: [parks-environment-climate]
+  Climate: [parks-environment-climate]
+  Utilities: [taxes-and-spending]
+  Fire: [public-safety-emergency]
+  NSEM: [public-safety-emergency]
+  RCMP: [public-safety-emergency]
+  Community: [childcare-seniors-services]
+  Recreation: [childcare-seniors-services]
+  Library: [childcare-seniors-services]
+  Business: [local-economy]
+  Economic Development: [local-economy]
+  Governance: [governance-and-transparency]
+  Citizen engagement: [governance-and-transparency]
+  Communications: [governance-and-transparency]
+  Regulatory: []
+  Human resources: []
+  Museum & Archives: []

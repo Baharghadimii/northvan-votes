@@ -1,0 +1,30 @@
+{
+  "cnv-R2026-11-02/1:fce016a5a144d425": {
+    "issues": [],
+    "reason": "This is a routine inaugural-meeting appointment of the City's representatives to the Metro Vancouver board, a procedural item with no policy direction.",
+    "summary": "Endorsed the mayor as the City's director and a councillor as alternate director on the Metro Vancouver Regional District board for the four-year council term."
+  },
+  "cnv-R2026-11-02/2:f8c0e11cbf47f084": {
+    "issues": [],
+    "reason": "This is a routine endorsement of council members' committee appointments at the inaugural meeting, which is procedural and does not bear on any listed issue.",
+    "summary": "Endorsed the list of councillors' appointments to statutory, management and advisory committees for November 3, 2026 to December 31, 2027."
+  },
+  "cnv-R2026-11-16/5:a92ea56320672bc9": {
+    "issues": [],
+    "reason": "The motion only received and recorded the Chief Election Officer's certificate of election results, a routine procedural step that does not plainly bear on any listed issue.",
+    "summary": "Received the Chief Election Officer's certificate of the October 17, 2026 election results for mayor, councillors and school trustees and recorded it in the minutes."
+  },
+  "cnv-R2026-11-16/6:f5f987f248e64f4f": {
+    "issues": [],
+    "reason": "The motion appointed the City's external auditor for 2026 to 2030, a routine statutory appointment that does not plainly bear on any listed issue.",
+    "summary": "Appointed MNP LLP as the City of North Vancouver's auditors for the fiscal years 2026 to 2030."
+  },
+  "cnv-R2026-11-16/7:762757ea5ead3a6f": {
+    "issues": [
+      "development-and-growth",
+      "governance-and-transparency"
+    ],
+    "reason": "The motion directs staff to set processing-time standards and publicly report performance on building permits and business licences, which bears on permitting speed (development) and on openness and accountability (governance).",
+    "summary": "Directed staff to report by mid-2027 on building permit and business licence processing times, proposed service standards, application tracking and public performance reporting."
+  }
+}

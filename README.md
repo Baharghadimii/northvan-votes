@@ -28,6 +28,7 @@ config/rosters.yaml      seated 2022-2026 members, per municipality
 pipeline/                scrape -> tag -> build, all cached and reproducible
 data/raw/                every byte we fetched, committed so runs are auditable
 data/candidates.json     the canonical dataset
+VOTES.md                 the monthly Promises-and-votes routine
 site/                    Astro static site (one React island, for Compare)
 ```
 

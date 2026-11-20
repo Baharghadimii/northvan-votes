@@ -1,0 +1,128 @@
+---
+import Base from "~/layouts/Base.astro";
+import Avatar from "~/components/Avatar.astro";
+import Quote from "~/components/Quote.astro";
+import VoteItem from "~/components/VoteItem.astro";
+import CityVotesNote from "~/components/CityVotesNote.astro";
+import { MUNICIPALITIES, formatDate, type Candidate } from "~/lib/data";
+import {
+  ALL_MEMBERS, TERM_START, STATUS, SOURCE_LABEL, votesBy, issueRows, chamberReplies,
+} from "~/lib/votes";
+
+export function getStaticPaths() {
+  return ALL_MEMBERS.map((c) => ({ params: { id: c.id }, props: { member: c } }));
+}
+
+const { member } = Astro.props as { member: Candidate };
+const role = member.office === "mayor" ? "Mayor" : "Councillor";
+const muni = MUNICIPALITIES[member.municipality];
+const all = votesBy(member);
+const rows = issueRows(member);
+const status = STATUS[member.municipality];
+const hasChamber = chamberReplies(member).length > 0;
+---
+
+<Base
+  title={`${member.name}: promises and votes`}
+  description={`What ${member.name} said during the 2026 campaign, issue by issue, next to how they have voted on ${muni} council since taking office.`}
+>
+  <p style="font-size:0.88rem"><a href="/promises-and-votes/">← Promises and votes</a></p>
+
+  <div class="candidate-row" style="align-items:center; gap:18px; margin-bottom:6px">
+    <Avatar candidate={member} />
+    <div>
+      <h1 style="margin-bottom:2px">{member.name}</h1>
+      <p style="margin:0; color:var(--text-muted)">{role} · {muni}</p>
+    </div>
+  </div>
+
+  <p class="lede" style="margin-top:14px">
+    What they said during the 2026 campaign, issue by issue, next to how they
+    have voted since council took office on {formatDate(TERM_START)}. The
+    quotes are exactly as published before the election. The votes come from
+    {" "}{SOURCE_LABEL[member.municipality]}.{" "}
+    <a href={`/candidates/${member.id}/`}>Their full candidate page</a>.
+  </p>
+
+  {member.municipality === "cnv" && <CityVotesNote />}
+
+  {all.length === 0 && (
+    <div class="notice">
+      <p>
+        <strong>No votes to show yet.</strong> It's early in the term.
+        {status.awaiting_review > 0
+          ? ` ${status.awaiting_review} recent ${status.awaiting_review === 1 ? "vote is" : "votes are"} waiting for my review against the official record.`
+          : " The council's record has no votes by the new council yet."}
+        {" "}Last checked {formatDate(status.retrieved)}.
+      </p>
+    </div>
+  )}
+
+  {member.positions.length === 0 && (
+    <p class="pv-source">
+      {hasChamber
+        ? "They filed no candidate statement, and I found nothing on their campaign site I could quote. The campaign words below are their replies to the North Vancouver Chamber's questions."
+        : "They filed no candidate statement, and I found nothing on their campaign site I could quote."}
+    </p>
+  )}
+
+  {rows.map((r) => (
+    <section class="pv-issue">
+      <h2><a href={`/issues/${r.cat.id}/`} style="text-decoration:none">{r.cat.label}</a></h2>
+      <div class="pv-cols">
+        <div>
+          <h3 class="pv-sub">Said during the campaign</h3>
+          {r.quotes.length + r.chamber.length === 0 && (
+            <p class="pv-empty">Nothing I could quote on this issue.</p>
+          )}
+          {r.quotes.map((p) => <Quote candidate={member} position={p} />)}
+          {r.chamber.map((c) => (
+            <figure class="quote">
+              <blockquote style="margin:0">
+                {c.answer.split(/\n+/).filter(Boolean).map((p) => <p>{p}</p>)}
+              </blockquote>
+              <figcaption class="source-line">
+                <span class="srctag">Reply to the Chamber</span>
+                <span class="src-ref">
+                  Asked: “{c.question}” ·{" "}
+                  <a href={c.pdf} target="_blank" rel="noopener">source</a>
+                </span>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+        <div>
+          <h3 class="pv-sub">Votes on related items</h3>
+          {r.votes.length === 0 ? (
+            <p class="pv-empty">No votes matched to this issue yet.</p>
+          ) : (
+            <ul class="vote-list">
+              {r.votes.map((v) => <VoteItem vote={v} member={member} />)}
+            </ul>
+          )}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <section style="margin-top:40px">
+    <h2>Every vote this term</h2>
+    <p class="pv-source">
+      All of their votes I have reviewed so far, including ones that don't
+      relate to any issue above, newest first.
+      {status.awaiting_review > 0 && ` ${status.awaiting_review} more ${status.awaiting_review === 1 ? "is" : "are"} waiting for review.`}
+    </p>
+    {all.length === 0 ? (
+      <p class="pv-empty">None yet.</p>
+    ) : (
+      <ul class="vote-list">
+        {[...all].reverse().map((v) => <VoteItem vote={v} member={member} />)}
+      </ul>
+    )}
+  </section>
+
+  <p class="pv-source" style="margin-top:30px">
+    <a href="/promises-and-votes/#how">How votes are matched to issues</a>.
+    Spotted a mistake?{" "}<a href="mailto:corrections@northvanvotes.ca">corrections@northvanvotes.ca</a>.
+  </p>
+</Base>

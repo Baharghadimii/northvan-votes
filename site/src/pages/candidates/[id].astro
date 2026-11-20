@@ -7,6 +7,7 @@ import {
   formatDate, UNREADABLE_SITES, type Candidate,
 } from "~/lib/data";
 import { RESULTS_SOURCES, resultFor, formatVotes } from "~/lib/results";
+import { ALL_MEMBERS } from "~/lib/votes";
 
 export function getStaticPaths() {
   return candidates.map((c) => ({ params: { id: c.id }, props: { candidate: c } }));
@@ -74,6 +75,12 @@ const SOCIAL_LABELS: Record<string, string> = {
     {" "}{seats === 1 ? "One seat" : `${seats} seats`} for this office.{" "}
     <a href={resultsSource.url} target="_blank" rel="noopener">Official results</a>
   </p>
+  {ALL_MEMBERS.some((m) => m.id === candidate.id) && (
+    <p class="result-line" style="margin-top:4px">
+      <a href={`/promises-and-votes/${candidate.id}/`}>Promises and votes</a>:
+      what they said in the campaign next to how they have voted on council.
+    </p>
+  )}
   <p style="color:var(--text-faint); font-size:0.88rem">
     Everything below is what they said before the election, kept exactly as it
     was published.

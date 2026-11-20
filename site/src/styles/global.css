@@ -905,3 +905,46 @@ mark {
 .lang-en {
   display: block; font-size: 0.8rem; color: var(--text-faint); margin-top: 1px;
 }
+
+/* ---------- promises and votes ---------- */
+
+.pv-status { margin: 8px 0 0; padding-left: 18px; font-size: 0.92rem; }
+.pv-status li { margin-bottom: 3px; }
+.pv-source { font-size: 0.9rem; color: var(--text-muted); max-width: 46rem; }
+.pv-empty { font-size: 0.9rem; color: var(--text-faint); font-style: italic; margin: 4px 0 12px; }
+
+.pv-issue { margin-top: 34px; padding-top: 6px; border-top: 2px solid var(--border); }
+.pv-issue h2 { margin-bottom: 10px; }
+.pv-cols { display: grid; gap: 8px 32px; grid-template-columns: 1fr; }
+@media (min-width: 860px) { .pv-cols { grid-template-columns: 1.15fr 1fr; } }
+.pv-sub {
+  font-family: var(--font); font-size: 0.78rem; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--text-muted); margin: 6px 0 8px;
+}
+
+.vote-list { list-style: none; margin: 0; padding: 0; }
+.vote-item {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 12px 14px; margin-bottom: 10px;
+  box-shadow: var(--shadow-sm);
+}
+.vote-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; font-size: 0.84rem; }
+.vote-date { color: var(--text-muted); font-variant-numeric: tabular-nums; }
+.vote-decision { font-weight: 650; }
+.vote-for { color: var(--accent-text); }
+.vote-against { color: var(--warm); }
+.vote-absent, .vote-na { color: var(--text-muted); }
+.vote-result { color: var(--text-faint); }
+.vote-summary { margin: 6px 0 4px; font-size: 0.95rem; }
+.vote-ours {
+  display: inline-block; font-size: 0.7rem; letter-spacing: 0.04em; text-transform: uppercase;
+  color: var(--text-faint); border: 1px solid var(--border); border-radius: 999px;
+  padding: 0 7px; margin-left: 2px; vertical-align: 1px; white-space: nowrap;
+}
+.vote-note { margin: 0 0 4px; font-size: 0.82rem; color: var(--text-muted); }
+.vote-links { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px; font-size: 0.85rem; }
+.vote-links details { flex-basis: 100%; order: 2; }
+.vote-links details[open] { margin-top: 4px; }
+.vote-links summary { cursor: pointer; color: var(--accent-text); display: inline; }
+.vote-links details:not([open]) { flex-basis: auto; order: 0; }
+.vote-official { font-family: var(--font-serif); font-size: 0.9rem; margin: 6px 0; overflow-wrap: anywhere; }

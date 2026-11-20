@@ -1,0 +1,21 @@
+{
+  "retrieved": "2026-11-19",
+  "municipality": "dnv",
+  "source_page": "https://www.dnv.org/page/council-voting-decisions",
+  "api_url": "https://app.dnv.org/councilvotepublic/api/item",
+  "term_start": "2026-11-02",
+  "rows_in_table": 754,
+  "votes": [],
+  "held_back": [],
+  "no_motion": [
+    {
+      "id": "dnv-754",
+      "date": "2026-11-09",
+      "title": "Council Orientation Overview",
+      "meeting_type": "Council workshop",
+      "resolution_text": "No motion passed.",
+      "minutes_url": null,
+      "video_url": null
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+---
+import type { Candidate } from "~/lib/data";
+import { formatDate } from "~/lib/data";
+import { DECISION_LABEL, type Vote } from "~/lib/votes";
+
+interface Props { vote: Vote; member: Candidate; }
+const { vote, member } = Astro.props;
+const decision = vote.members[member.id];
+const fromMinutes = vote.source_kind === "city_minutes";
+---
+<li class="vote-item">
+  <div class="vote-head">
+    <span class="vote-date">{formatDate(vote.date)}</span>
+    <span class={`vote-decision vote-${decision === "n/a" ? "na" : decision}`}>
+      {DECISION_LABEL[decision]}
+    </span>
+    <span class="vote-result">Motion {vote.result.toLowerCase()}</span>
+  </div>
+  <p class="vote-summary">
+    {vote.summary}{" "}<span class="vote-ours">Our summary</span>
+  </p>
+  {fromMinutes && (
+    <p class="vote-note">
+      Vote read from the minutes{vote.minutes_adopted === false && ", which council has not yet adopted"}.
+    </p>
+  )}
+  <div class="vote-links">
+    <details>
+      <summary>Official wording</summary>
+      <p class="vote-official"><strong>{vote.title}</strong></p>
+      {vote.resolution_text.split(/\n+/).filter(Boolean).map((p) => (
+        <p class="vote-official">{p}</p>
+      ))}
+    </details>
+    {vote.minutes_url && (
+      <a href={vote.minutes_url} target="_blank" rel="noopener">Minutes</a>
+    )}
+    {vote.video_url && (
+      <a href={vote.video_url} target="_blank" rel="noopener">Video</a>
+    )}
+  </div>
+</li>

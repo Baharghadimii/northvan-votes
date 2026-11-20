@@ -1,0 +1,57 @@
+{
+  "term_start": "2026-11-02",
+  "members": {
+    "dnv": [
+      "dnv-mayor-little-mike",
+      "dnv-council-pope-catherine",
+      "dnv-council-muri-lisa",
+      "dnv-council-back-jordan",
+      "dnv-council-hanson-jim",
+      "dnv-council-bond-mathew",
+      "dnv-council-anderson-daniel"
+    ],
+    "cnv": [
+      "cnv-mayor-buchanan-linda",
+      "cnv-council-bell-don",
+      "cnv-council-valente-tony",
+      "cnv-council-girard-angela",
+      "cnv-council-robertson-andrew",
+      "cnv-council-shahriari-shervin",
+      "cnv-council-back-holly"
+    ]
+  },
+  "status": {
+    "dnv": {
+      "retrieved": "2026-11-19",
+      "source_page": "https://www.dnv.org/page/council-voting-decisions",
+      "awaiting_review": 0,
+      "held_back": 0,
+      "no_motion": [
+        {
+          "id": "dnv-754",
+          "date": "2026-11-09",
+          "title": "Council Orientation Overview",
+          "meeting_type": "Council workshop",
+          "resolution_text": "No motion passed.",
+          "minutes_url": null,
+          "video_url": null
+        }
+      ],
+      "procedural": 0,
+      "meetings_read": []
+    },
+    "cnv": {
+      "retrieved": "2026-11-19",
+      "source_page": "https://www.cnv.org/City-Hall/Council-Meetings/Council-Agendas,-Minutes-and-Videos",
+      "awaiting_review": 5,
+      "held_back": 0,
+      "no_motion": [],
+      "procedural": 8,
+      "meetings_read": [
+        "2026-11-16",
+        "2026-11-02"
+      ]
+    }
+  },
+  "published": []
+}
