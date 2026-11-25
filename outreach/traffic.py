@@ -15,17 +15,25 @@ bots now send an ordinary browser user agent, so counting "anything that says
 Mozilla" reported ~1,000 home-page views on 2026-11-23, when about a dozen
 people visited. So each network is sorted into one of:
 
-  confirmed  its browser also downloaded the page's stylesheet, fonts or
-             photos. A real browser does; nearly every bot does not.
+  confirmed  its browser downloaded the page's stylesheet, fonts or photos,
+             AND sent the headers a browser sends when a person opens a
+             page (Sec-Fetch-Mode: navigate and an Accept-Language). A
+             headless scraper that loads assets but sends neither walked
+             every member page at one per second on 2026-11-22.
   possible   no download, but its requests carry the headers a browser sends
              when a person opens a page (Sec-Fetch-Mode: navigate and an
              Accept-Language). Some are returning readers whose browser still
              had the stylesheet cached; some are bots imitating a browser.
              The truth is somewhere between the two figures.
   excluded   a known bot or tool, anything probing for files a scanner looks
-             for (.env, .php, /wp-admin ...), the server itself, and our own
-             network: whichever network sent the "northvanvotes-deploy-check"
-             user agent, which is what our deploy checks use.
+             for (.env, .php, /wp-admin ...), the server itself, our own
+             network (whichever sent the "northvanvotes-deploy-check" user
+             agent our deploy checks use), and imitators: networks that ask
+             for a page without its trailing slash while claiming to come
+             from a page on this site. Every link on the site ends in a
+             slash, so a real click never does that. A crawler spread over
+             a dozen residential networks did exactly this on 2026-11-22,
+             one page per network, to look like separate people.
 
 A network is a household or a phone carrier block, not a person: two people
 on one network count once, and a phone moving networks counts twice.
@@ -82,7 +90,7 @@ def day(ts):
     return d.astimezone(TZ).date().isoformat()
 
 ours = {network("''' + VPS + r'''")}
-loaded, probers = set(), set()
+loaded, probers, navigators, imitators = set(), set(), set(), set()
 views = []          # (day, network, path, referrer, browser-navigation?)
 bots = 0
 for line in log.splitlines():
@@ -111,13 +119,18 @@ for line in log.splitlines():
     if path.startswith(LOADS):
         loaded.add(net)
         continue
+    ref = h.get("referer", "")
+    if e.get("status") in (301, 308) and "northvanvotes.ca" in ref and not path.endswith("/"):
+        imitators.add(net)
     if path.endswith(ASSET) or e.get("status") not in (200, 304):
         continue
     navigate = h.get("sec-fetch-mode") == "navigate" and bool(h.get("accept-language"))
+    if navigate:
+        navigators.add(net)
     views.append((day(e.get("ts")), net, path, h.get("referer", ""), navigate))
 
-excluded = ours | probers
-confirmed = loaded - excluded
+excluded = ours | probers | imitators
+confirmed = (loaded & navigators) - excluded
 possible = {n for _, n, _, _, nav in views if nav} - confirmed - excluded
 
 by_day = collections.defaultdict(lambda: [0, set(), set()])
@@ -147,6 +160,7 @@ print(f"\n  {since}{' to ' + until if until else ''}{scope}\n")
 print(f"  confirmed readers: {len(people)} (their browser loaded the page), {sum(v[0] for v in by_day.values())} page views")
 print(f"  possible readers:  {len(maybe)} more (browser-like, loaded nothing: returning visitors or bots)")
 print(f"  excluded: {bots} bot and tool requests, {len(probers)} scanner networks, "
+      f"{len(imitators - probers - ours)} imitating networks, "
       f"{len(ours)} of our own (the server, and wherever our deploy checks ran)")
 
 if by_day:
